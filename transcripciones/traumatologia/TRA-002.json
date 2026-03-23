@@ -1,0 +1,356 @@
+{
+  "id": "TRA-002",
+  "especialidad": "Traumatología",
+  "resumen": "Paciente mujer de 68 años con gonartrosis primaria bilateral de larga evolución. Refiere dolor progresivo en ambas rodillas, limitación funcional y rigidez matutina. Se realiza evaluación radiológica confirmando degeneración articular avanzada. Se inicia tratamiento farmacológico con paracetamol, condroitín sulfato y se planifica fisioterapia.",
+  "diagnostico_principal": {
+    "nombre": "Gonartrosis primaria bilateral",
+    "cie10": "M17.0",
+    "snomed_ct": "239873007",
+    "snomed_termino": "Osteoarthritis of knee (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Obesidad",
+      "cie10": "E66.9",
+      "snomed_ct": "414915002",
+      "snomed_termino": "Obese (finding)"
+    },
+    {
+      "nombre": "Limitación funcional de extremidad inferior",
+      "cie10": "R26.2",
+      "snomed_ct": "228158008",
+      "snomed_termino": "Walking disability (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor de rodilla",
+      "cie10": "M25.56",
+      "snomed_ct": "30989003",
+      "snomed_termino": "Knee pain (finding)"
+    },
+    {
+      "nombre": "Rigidez matutina",
+      "cie10": "M02.9",
+      "snomed_ct": "60862001",
+      "snomed_termino": "Stiffness of joint (finding)"
+    },
+    {
+      "nombre": "Crujidos articulares",
+      "cie10": "R01.9",
+      "snomed_ct": "248674005",
+      "snomed_termino": "Clicking joint (finding)"
+    },
+    {
+      "nombre": "Derrame articular leve",
+      "cie10": "M25.46",
+      "snomed_ct": "127032003",
+      "snomed_termino": "Effusion of joint (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Radiografía de rodillas (posteroanterior, lateral y axial)",
+      "snomed_ct": "241624006",
+      "snomed_termino": "Plain radiography of knee (procedure)"
+    },
+    {
+      "nombre": "Exploración clínica de rodillas (Lachman, cajón anterior)",
+      "snomed_ct": "67845003",
+      "snomed_termino": "Physical examination of joint (procedure)"
+    },
+    {
+      "nombre": "Aplicación de crioterapia (hielo)",
+      "snomed_ct": "41821004",
+      "snomed_termino": "Cryotherapy (procedure)"
+    },
+    {
+      "nombre": "Evaluación índice de masa corporal y estado nutricional",
+      "snomed_ct": "16404004",
+      "snomed_termino": "Height and weight measurement (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Paracetamol",
+      "dosis": "500 mg",
+      "posologia": "1 comprimido cada 8 horas, máximo 3 gramos/día",
+      "atc": "N02BE01",
+      "snomed_ct": "387517004",
+      "snomed_termino": "Paracetamol (substance)",
+      "indicacion": "Analgesia sintomática"
+    },
+    {
+      "nombre": "Condroitín sulfato",
+      "dosis": "400 mg",
+      "posologia": "1 comprimido cada 8 horas",
+      "atc": "M01AX25",
+      "snomed_ct": "372565006",
+      "snomed_termino": "Chondroitin sulfate (substance)",
+      "indicacion": "Protección articular y efecto condroprotector"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 152,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 92,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 78,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 88,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 162,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 33.5,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con artrosis de larga evolución, probablemente iniciada hace 10-12 años.",
+    "Refiere que el dolor es peor por la mañana y al final del día después de actividad.",
+    "Vive con su marido, pueden realizar actividades básicas en el domicilio pero con dificultad.",
+    "Ha sido atendida previamente con antiinflamatorios tópicos, sin gran beneficio.",
+    "Se recomienda pérdida de peso progresiva, actividad física moderada y fisioterapia."
+  ],
+  "paciente": {
+    "nombre_ficticio": "María Dolores Vega Ramos",
+    "edad": 68,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Carmen Álvarez Serrano",
+    "especialidad": "Traumatología"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, señora Vega. Soy la doctora Álvarez. He visto en el sistema que tiene dolor de rodillas. Cuénteme, ¿cuánto tiempo lleva con este problema?",
+          "audio_tag": "02_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Ay, doctora, llevo años con esto. Al principio era de vez en cuando, pero ya hace varios años que me duele casi todos los días. Especialmente por la mañana cuando me levanto, es terrible. Los primeros minutos no puedo caminar bien.",
+          "audio_tag": "02_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Ambas rodillas le duelen por igual?",
+          "audio_tag": "02_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, las dos. Pero la derecha quizás un poquito más que la izquierda. A veces cuando llueve, el dolor empeora. Es como si los huesos me avisaran del cambio de tiempo.",
+          "audio_tag": "02_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Qué actividades le resultan más difíciles por el dolor?",
+          "audio_tag": "02_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Pues subir y bajar escaleras, por supuesto. Salir a pasear que me encantaba. Incluso estar de pie demasiado tiempo en la cocina me deja las rodillas resentidas. Y lo peor es que tengo una cierta rigidez por la mañana.",
+          "audio_tag": "02_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Ha tenido algún traumatismo previo en las rodillas? ¿Alguna caída o golpe importante?",
+          "audio_tag": "02_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] No que recuerde, doctora. Siempre he sido activa, quizás he jugado demasiado tenis de joven. Eso podría haber contribuido.",
+          "audio_tag": "02_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Interesante. ¿Problemas reumáticos en la familia?",
+          "audio_tag": "02_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Mi madre tenía artrosis, creo que en las manos. Pero en las rodillas no sé de nadie en particular.",
+          "audio_tag": "02_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Medicación habitual? ¿Alergias?",
+          "audio_tag": "02_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[straightforwardly] Tomo un diurético para la tensión desde hace años, y nada más. Alergia a la penicilina, eso lo sabe todo el mundo porque tuve una reacción hace años.",
+          "audio_tag": "02_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confirmatively] Muy bien. ¿Ha probado algo para el dolor? ¿Cremas, medicinas, fisioterapia?",
+          "audio_tag": "02_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[regretfully] Sí, he probado cremas antiinflamatorias, ibuprofeno de vez en cuando. Pero prefiero no tomar mucho porque me causa molestias en el estómago. He ido un par de veces a fisioterapia pero no vi mucha mejoría.",
+          "audio_tag": "02_014"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien, vamos a explorarla. Acuéstese en la camilla, por favor. Voy a palpar las rodillas y hacer algunos movimientos. Avíseme si le duele.",
+          "audio_tag": "02_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Vale, doctora.",
+          "audio_tag": "02_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Observo que hay algo de inflamación en ambas rodillas, especialmente la derecha. Al palpación se aprecia crepitación, esos crujidos característicos de la artrosis. Voy a hacer la maniobra de Lachman. [pause] Ligero movimiento anterior de la tibia. Maniobra del cajón positiva leve también. Rango de movimiento activo limitado.",
+          "audio_tag": "02_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Es grave eso, doctora?",
+          "audio_tag": "02_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es lo esperado en una gonartrosis. Voy a pesarla y medirla para calcular su índice de masa corporal. [pause] Bien, pesa ochenta y ocho kilos y mide un metro sesenta y dos centímetros. Eso nos da un IMC de treinta y tres coma cinco, lo que indica sobrepeso con tendencia a la obesidad.",
+          "audio_tag": "02_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Ya sé, me cuesta bajar de peso. Lo intento pero es difícil.",
+          "audio_tag": "02_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[understandingly] Lo sé. Es un círculo vicioso: el peso empeora las rodillas, y las rodillas duelen, lo que impide hacer ejercicio. Pero vamos a trabajar en ello. Ahora le voy a pedir radiografías de las rodillas para confirmar el grado de artrosis.",
+          "audio_tag": "02_021"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] He revisado las radiografías. Se aprecia artrosis moderada a severa en ambas rodillas. Hay pérdida de espacio articular, osteofitos marginales, esclerosis subcondral. En definitiva, una gonartrosis degenerativa bilateral avanzada.",
+          "audio_tag": "02_022"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Eso es irreversible, doctora?",
+          "audio_tag": "02_023"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Sí, lamentablemente. Una vez que el cartílago se ha degenerado no se regenera. Pero eso no significa que no podamos mejorar los síntomas considerablemente. Con tratamiento farmacológico, ejercicio y cambios en el estilo de vida, muchos pacientes mejoran mucho.",
+          "audio_tag": "02_024"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Y en el futuro? ¿Podría llegar a necesitar cirugía, un cambio de rodilla o algo así?",
+          "audio_tag": "02_025"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Es posible que en un futuro lejano, si el dolor no se controla con medidas conservadoras, podría considerarse una artroplastia de rodilla. Pero ahora mismo, de momento, vamos a intentar controlarla con medicamentos y rehabilitación.",
+          "audio_tag": "02_026"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Voy a prescribirle paracetamol quinientos miligramos, un comprimido cada ocho horas. Es seguro y efectivo. También condroitín sulfato, que ayuda a proteger el cartílago restante.",
+          "audio_tag": "02_027"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿No es mejor un antiinflamatorio?",
+          "audio_tag": "02_028"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explanatorily] El paracetamol es mejor a largo plazo porque no tiene los efectos secundarios gástricos del ibuprofeno. Si en una crisis aguda necesita algo más fuerte, podemos usar ibuprofeno puntualmente, pero no de manera crónica.",
+          "audio_tag": "02_029"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entiendo.",
+          "audio_tag": "02_030"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Le voy a remitir a fisioterapia. Ejercicios de fortalecimiento muscular son fundamentales para estabilizar la rodilla. También le recomiendo aplicar hielo quince minutos después de la actividad si hay dolor. Y muy importante: intentar perder peso progresivamente. Una pérdida de cinco kilos reduciría significativamente la carga sobre sus rodillas.",
+          "audio_tag": "02_031"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Lo voy a intentar, doctora. ¿Cuándo vuelvo a verla?",
+          "audio_tag": "02_032"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] En tres meses. Para entonces habrá hecho fisioterapia y habremos visto cómo responde al paracetamol y al condroitín. Si el dolor persiste, podemos considerar opciones como infiltraciones de ácido hialurónico. Pero primero intentemos estos pasos. ¿Alguna pregunta?",
+          "audio_tag": "02_033"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] No, doctora. Muchísimas gracias. Espero que esto me ayude.",
+          "audio_tag": "02_034"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Seguro que sí. Con disciplina y paciencia, conseguiremos que las rodillas le causen menos problemas. Adelante.",
+          "audio_tag": "02_035"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/traumatologia/TRA-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

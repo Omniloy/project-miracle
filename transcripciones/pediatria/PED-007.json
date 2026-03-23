@@ -1,0 +1,238 @@
+{
+  "id": "PED-007",
+  "especialidad": "Pediatría",
+  "resumen": "Niño de 8 años, Álvaro, presentado por su madre Ana con TDAH tipo combinado. Refiere desde kindergarten: dificultad de concentración, impulsividad, hiperactividad, problemas conductuales en colegio. Evaluación psicológica confirma TDAH. Se inicia tratamiento con metilfenidato de liberación inmediata.",
+  "diagnostico_principal": {
+    "nombre": "Trastorno por déficit de atención con hiperactividad, tipo combinado",
+    "cie10": "F90.2",
+    "snomed_ct": "406506008",
+    "snomed_termino": "Attention deficit hyperactivity disorder, combined type (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Falta de atención",
+      "cie10": "R41.8",
+      "snomed_ct": "406506008",
+      "snomed_termino": "Inattention (finding)"
+    },
+    {
+      "nombre": "Impulsividad",
+      "cie10": "R45.8",
+      "snomed_ct": "224161004",
+      "snomed_termino": "Impulsive behavior (finding)"
+    },
+    {
+      "nombre": "Hiperactividad",
+      "cie10": "F90.0",
+      "snomed_ct": "55214007",
+      "snomed_termino": "Hyperactivity (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Evaluación psicológica y escala de comportamiento CONNERS",
+      "snomed_ct": "386053000",
+      "snomed_termino": "Evaluation procedure (procedure)"
+    },
+    {
+      "nombre": "Historia clínica detallada con maestros",
+      "snomed_ct": "31968007",
+      "snomed_termino": "Patient evaluation procedure (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Metilfenidato",
+      "dosis": "5 mg",
+      "posologia": "5 mg por la mañana, evaluar respuesta. Rango terapéutico 5-20 mg/día en dosis divididas",
+      "atc": "N06BA04",
+      "snomed_ct": "373518005",
+      "snomed_termino": "Methylphenidate (substance)",
+      "indicacion": "Tratamiento de TDAH tipo combinado"
+    }
+  ],
+  "constantes_vitales": {},
+  "notas_adicionales": [
+    "Síntomas presentes desde edades tempranas (reportado desde kindergarten a los 4-5 años).",
+    "Afectación significativa en rendimiento académico y relaciones sociales.",
+    "Evaluación psicológica formal realizada, excluyendo otros diagnósticos diferenciales.",
+    "Niño con desarrollo normal en otros aspectos (lenguaje, motor, capacidades cognitivas).",
+    "Madre participa activamente en tratamiento, se proporciona asesoramiento conductual.",
+    "Se requiere monitorización regular de efectividad y efectos adversos del metilfenidato.",
+    "Revisión en 2-4 semanas para ajuste de dosis según respuesta clínica."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Álvaro Díaz Pérez",
+    "edad": 8,
+    "edad_unidad": "años",
+    "sexo": "masculino",
+    "guardian": "Ana Pérez (madre)"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena García Martínez",
+    "especialidad": "Pediatría"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Ana. Veo en la hoja que vienes por problemas de comportamiento de Álvaro. Cuéntame."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Doctora, Álvaro es un niño muy inquieto. No para quieto ni un momento, está siempre saltando, corriendo. En el colegio dice el profesor que no atiende, que se distrae constantemente, se porta mal."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Desde cuándo nota esto? ¿Ha sido siempre así?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Desde pequeñito, desde el jardín de infancia. Siempre ha sido un niño muy activo, pero ahora en tercero de primaria los maestros dicen que no puede seguir así, que necesita ayuda."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Cómo es en casa? ¿Problemas de comportamiento también?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Sí, es muy impulsivo. No obedece bien, se levanta del sofá constantemente, está toda la tarde de un lado para otro. No puede concentrarse en los deberes."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] De acuerdo. Dígame del desarrollo. ¿Embarazo y parto normal?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Sí, todo normal. Parto vaginal sin complicaciones, peso al nacer tres kilos dos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] ¿Desarrollo motor y lenguaje?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Gateaba al sexto mes, caminaba al año. El lenguaje normal, empezó a hablar pronto incluso."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiring] ¿Antecedentes familiares de TDAH, depresión, ansiedad?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Su padre, mi expareja, tiene TDAH. Siempre fue un niño como Álvaro, muy inquieto. Y mi hermano menor también tenía problemas de comportamiento."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Importante. ¿Ha tenido evaluación psicológica?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, el colegio me envió a un psicólogo. Me dijo que muy probablemente tiene TDAH. Pero quería traerlo aquí para que lo valore un pediatra."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Álvaro, ¿me cuentas cómo te va en el colegio? ¿Qué asignatura te gusta más?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing, after listening] Bien, veo que es un niño muy verbal, inteligente. Pero está muy inquieto incluso aquí en la consulta, se mueve constantemente, interrumpe."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professional observation] Realizo cuestionario CONNERS con Ana: puntuación en desatención veinticinco puntos, hiperactividad e impulsividad veintidós puntos. Ambas por encima del percentil noventa, compatible con TDAH."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Exploración física general: peso treinta y dos kilos, talla ciento treinta y tres centímetros, normales para edad. Desarrollo puberal Tanner uno. Neurológico normal, reflejos activos simétricos. Sin signos de problemas neurológicos."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Ana, basándome en la historia clínica, los síntomas presentes desde edades tempranas, la evaluación psicológica, y mi exploración clínica, puedo confirmar que Álvaro tiene TDAH tipo combinado."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Eso significa que es un problema mental? ¿Va a tener esto de por vida?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es una enfermedad mental, es un trastorno del desarrollo neurobiológico. Afecta cómo el cerebro regula la atención e impulsos. Algunos niños mejoran con edad, otros mantienen síntomas en la adultez, pero con tratamiento se maneja muy bien."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Le recomiendo tratamiento combinado: medicamento más intervención conductual. Empezamos con metilfenidato cinco miligramos por la mañana."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Es seguro? He oído cosas de estimulantes en niños."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es el estándar de oro para TDAH. La evidencia científica demuestra que es seguro cuando se usa adecuadamente. Pero requiere monitorización: presión arterial, frecuencia cardíaca, peso."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Además del medicamento, recomiendo intervención conductual: establecer rutinas, refuerzo positivo, límites claros. Voy a derivarlo a psicología para trabajar estas estrategias."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] ¿Y en el colegio qué hago?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Necesitas contactar con el colegio para que realicen adaptaciones. Ubicarlo cerca del profesor, menos distracciones, tareas divididas en partes pequeñas. Se lo explico en un informe que te doy."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vueltes en dos semanas para evaluar respuesta al metilfenidato. Si la respuesta es buena, vamos ajustando la dosis según necesidad. Si hay efectos secundarios, ajustamos o cambiamos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Eso nos da esperanza de que Álvaro mejore en el colegio."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/pediatria/PED-007.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

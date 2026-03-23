@@ -1,0 +1,387 @@
+{
+  "id": "GIN-010",
+  "especialidad": "Ginecología",
+  "resumen": "Paciente mujer de 18 años que acude por amenorrea primaria y rasgos físicos sugestivos de síndrome de Turner. Presenta talla baja, cuello alado, amenorrea primaria. Estudio cariotípico y hormonal confirma monosomía X. Se inicia tratamiento hormonal sustitutivo con estrogenia y progestinas.",
+  "diagnostico_principal": {
+    "nombre": "Síndrome de Turner",
+    "cie10": "Q96.9",
+    "snomed_ct": "38804009",
+    "snomed_termino": "Turner syndrome (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Amenorrea primaria",
+      "cie10": "N91.0",
+      "snomed_ct": "14410008",
+      "snomed_termino": "Primary amenorrhea (disorder)"
+    },
+    {
+      "nombre": "Talla baja",
+      "cie10": "E34.3",
+      "snomed_ct": "271870001",
+      "snomed_termino": "Short stature (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Amenorrea primaria",
+      "cie10": "N91.0",
+      "snomed_ct": "14410008",
+      "snomed_termino": "Primary amenorrhea (disorder)"
+    },
+    {
+      "nombre": "Talla baja",
+      "cie10": "E34.3",
+      "snomed_ct": "271870001",
+      "snomed_termino": "Short stature (disorder)"
+    },
+    {
+      "nombre": "Infertilidad",
+      "cie10": "N97",
+      "snomed_ct": "13928007",
+      "snomed_termino": "Infertility (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Cariotipo",
+      "snomed_ct": "32541008",
+      "snomed_termino": "Karyotype determination (procedure)"
+    },
+    {
+      "nombre": "Análisis hormonal completo (FSH, LH, estradiol)",
+      "snomed_ct": "12394003",
+      "snomed_termino": "Serum or plasma hormone measurement (procedure)"
+    },
+    {
+      "nombre": "Ecografía pélvica transvaginal",
+      "snomed_ct": "310733005",
+      "snomed_termino": "Transvaginal ultrasound scan (procedure)"
+    },
+    {
+      "nombre": "Ecocardiografía",
+      "snomed_ct": "40701008",
+      "snomed_termino": "Echocardiography (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Estradiol transdérmico",
+      "dosis": "0.05 mg/24h",
+      "posologia": "Un parche cada 24 horas, renovado cada 3 días",
+      "atc": "G03CA03",
+      "snomed_ct": "395786006",
+      "snomed_termino": "Estradiol transdermal patch (product)",
+      "indicacion": "Terapia hormonal sustitutiva para desarrollo sexual"
+    },
+    {
+      "nombre": "Medroxiprogesterona",
+      "dosis": "5 mg",
+      "posologia": "Un comprimido al día, durante 10 a 12 días cada mes",
+      "atc": "G03DC02",
+      "snomed_ct": "372649003",
+      "snomed_termino": "Medroxyprogesterone (substance)",
+      "indicacion": "Protección endometrial y regulación del ciclo"
+    }
+  ],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 70,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 68,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 45,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 140,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 22.9,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente de 18 años diagnosticada recientemente con síndrome de Turner.",
+    "Presenta talla baja progresiva desde infancia (< 3 percentil para edad).",
+    "Amenorrea primaria completa, nunca ha tenido menstruación.",
+    "Rasgos físicos: cuello alado, implantación baja de orejas, tórax ancho.",
+    "Cariotipo: 45,X (monosomía X clásica).",
+    "FSH muy elevada (>100 mUI/mL), LH elevada (>50 mUI/mL), estradiol bajo (<20 pg/mL).",
+    "Ecografía: gónadas fibrosas, útero pequeño pero presente.",
+    "Ecocardiograma: bicuspidación aórtica sin estenosis significativa.",
+    "Audición normal.",
+    "Función renal normal.",
+    "Iniciación de terapia hormonal sustitutiva para conseguir feminización y protección ósea.",
+    "Infertilidad definitiva; opciones reproductivas: ovodonación con pareja o técnicas de reproducción asistida."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Nerea Calvo Ortega",
+    "edad": 18,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Cristina García López",
+    "especialidad": "Ginecología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] Buenos días, Nerea. He visto todos sus resultados. Hemos llegado a un diagnóstico importante. Quería explicárselo bien. ¿Quiere que esté su madre presente?",
+          "audio_tag": "audio_010_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nerviosa] Sí, mejor con mi madre. Estoy preocupada, no sé qué tengo.",
+          "audio_tag": "audio_010_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[amablemente] Bien, vamos a explicar. Nerea, después de hacer el análisis cromosómico, los estudios hormonales y las pruebas de imagen, hemos diagnosticado síndrome de Turner.",
+          "audio_tag": "audio_010_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[asustada] ¿Síndrome de Turner? ¿Qué es eso?",
+          "audio_tag": "audio_010_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilamente] Es una condición cromosómica, no una enfermedad infecciosa ni hereditaria. Ocurre al azar, antes de nacer. Algunas personas tienen este cromosoma X faltante desde el inicio.",
+          "audio_tag": "audio_010_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confundida] ¿Cromosoma faltante? ¿Eso es grave?",
+          "audio_tag": "audio_010_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] Recuerdo: ¿cuándo notó que era más baja que sus amigas?",
+          "audio_tag": "audio_010_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensando] Desde siempre. En la primaria ya me daba cuenta de que era la más baja de la clase. Mis padres pensaban que era constitucional.",
+          "audio_tag": "audio_010_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuando] ¿Y nunca ha tenido menstruación?",
+          "audio_tag": "audio_010_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[avergonzada] No, nunca. Mis amigas empezaron a los 12, 13 años. Yo cumplí 16, 17 sin nada. Mi madre me llevó a varios médicos que dijeron que era normal que viniera más tarde.",
+          "audio_tag": "audio_010_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[investigando] ¿Ha notado otras cosas? ¿Problemas auditivos, cardiacos?",
+          "audio_tag": "audio_010_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negativamente] No, oigo bien. Y del corazón nada que sepa. Me hicieron un ecocardiograma hace poco para descartar.",
+          "audio_tag": "audio_010_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[técnicamente] ¿Ha tenido problemas renales? ¿Infecciones urinarias frecuentes?",
+          "audio_tag": "audio_010_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[brevemente] No, nunca. Tengo los análisis de función renal y está todo normal.",
+          "audio_tag": "audio_010_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[finalmente] ¿Vida sexual activa? ¿Pareja?",
+          "audio_tag": "audio_010_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sinceramente] Tengo pareja novio desde hace un año. Pero no hemos tenido relaciones por el tema de la menstruación que no viene. Estaba preocupada.",
+          "audio_tag": "audio_010_016"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instruyendo] Vamos a hacer un examen físico completo. Nerea, quítese por favor la ropa hasta la cintura.",
+          "audio_tag": "audio_010_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperativa] Vale.",
+          "audio_tag": "audio_010_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[observando] Veo claramente los rasgos característicos. Cuello notablemente alado. Tórax ancho. Implantación baja de orejas. Presión ciento dieciocho sobre setenta, frecuencia sesenta y ocho. Peso cuarenta y cinco kilos, talla ciento cuarenta centímetros. IMC veintitrés. Mamas en desarrollo Tanner tres, vello púbico Tanner dos.",
+          "audio_tag": "audio_010_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿Eso qué significa?",
+          "audio_tag": "audio_010_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] Que los genitales externos tienen desarrollo normal, pero no ha completado el desarrollo de mamas ni vello que debería tener a su edad. Voy a hacer ecografía pélvica. [pausa] Aquí está el útero, de tamaño pequeño pero presente. Los ovarios están muy pequeños, prácticamente fibrosos. Eso explica la falta de menstruación.",
+          "audio_tag": "audio_010_021"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[asustada] ¿No tengo ovarios?",
+          "audio_tag": "audio_010_022"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] Los tiene, pero disfuncionantes. En síndrome de Turner, los ovarios no se desarrollan bien y dejan de producir óvulos y hormonas.",
+          "audio_tag": "audio_010_023"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[claramente] Nerea, el diagnóstico es síndrome de Turner causado por monosomía X. Es decir, tiene un cromosoma X en lugar de dos, 45 cromosomas en lugar de 46.",
+          "audio_tag": "audio_010_024"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿Es grave? ¿Voy a vivir normal?",
+          "audio_tag": "audio_010_025"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] La expectativa de vida es normal en mujeres con síndrome de Turner. Aunque sí hay limitaciones, como la infertilidad. No puede tener hijos biológicos.",
+          "audio_tag": "audio_010_026"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[angustiada] ¿Nunca podré tener hijos? ¿Ni con mi novio?",
+          "audio_tag": "audio_010_027"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestamente] Con óvulos propios no. Pero hay opciones: ovodonación, es decir, usar óvulos de una donante, que se fecundan con esperma de su pareja y se implantan en su útero. Muchas mujeres con síndrome de Turner tienen hijos así.",
+          "audio_tag": "audio_010_028"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflexiva] Eso es posible en el futuro. ¿Y ahora? ¿Cómo se trata?",
+          "audio_tag": "audio_010_029"
+        },
+        {
+          "rol": "medico",
+          "texto": "[esperanzadora] Ahora empezamos tratamiento hormonal. Estrogenia y progestinas para favorecer el desarrollo sexual y tener menstruaciones regulares.",
+          "audio_tag": "audio_010_030"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[organizadamente] Voy a prescribir estradiol en parche transdérmico. Es estrogenia que se absorbe a través de la piel. Cambia cada tres días. Con esto iniciará desarrollo de mamas y menstruación.",
+          "audio_tag": "audio_010_031"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preguntando] ¿Habrá efectos secundarios?",
+          "audio_tag": "audio_010_032"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestamente] Los efectos secundarios son mínimos con la vía transdérmica. Algunos tensión mamaria, leve ganancia de peso. Nada grave. También voy a prescribir medroxiprogesterona para asegurar ciclos regulares y proteger el endometrio.",
+          "audio_tag": "audio_010_033"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[conforme] Entiendo. ¿Cuánto tiempo tendré que tomar esto?",
+          "audio_tag": "audio_010_034"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] Toda la vida probablemente. Hasta la edad normal de menopausia. Eso es aproximadamente a los 50 años.",
+          "audio_tag": "audio_010_035"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[asintiendo] Vale. ¿Y el crecimiento? ¿Puedo crecer más?",
+          "audio_tag": "audio_010_036"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestamente] Lamentablemente, las ganancias de altura serán limitadas. Pero con hormonas del crecimiento en fases tempranas, que no hemos hecho aún, quizá podría haber habido más ganancia. Es algo a valorar, pero ahora a los dieciocho es más tarde.",
+          "audio_tag": "audio_010_037"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sombría] Así que tendré que aprender a vivir con esto.",
+          "audio_tag": "audio_010_038"
+        },
+        {
+          "rol": "medico",
+          "texto": "[alentadora] Muchas mujeres con síndrome de Turner viven vidas completamente normales. Tienen parejas, empleos, realizaciones. La medicina moderna ha avanzado mucho. Trabajaremos juntas para que tenga la mejor calidad de vida.",
+          "audio_tag": "audio_010_039"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[agradecida] Muchas gracias, doctora. Tengo muchas cosas que procesar.",
+          "audio_tag": "audio_010_040"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reconfortante] Es normal. Tiene toda la apoyo. La veo en un mes para evaluar tolerancia a la medicación. Mientras tanto, no dude en llamar si tiene preguntas.",
+          "audio_tag": "audio_010_041"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/ginecologia/GIN-010.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

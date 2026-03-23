@@ -1,0 +1,322 @@
+{
+  "id": "DER-010",
+  "especialidad": "Dermatología",
+  "resumen": "Paciente varón de 22 años con ictiosis vulgar (enfermedad rara hereditaria autosómica dominante). Piel seca generalizada con queratosis pilaris, escalas oscuras. Se inicia tratamiento con emolientes con urea y se enfatiza manejo crónico e hidratación continua. Se realizan recomendaciones de autocuidado y control periódico.",
+  "diagnostico_principal": {
+    "nombre": "Ictiosis vulgar",
+    "cie10": "Q80.0",
+    "snomed_ct": "254155006",
+    "snomed_termino": "Ichthyosis vulgaris (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Xerosis cutánea generalizada",
+      "cie10": "L85.3",
+      "snomed_ct": "16386004",
+      "snomed_termino": "Dry skin (finding)"
+    },
+    {
+      "nombre": "Queratosis pilaris",
+      "cie10": "L85.8",
+      "snomed_ct": "67621000",
+      "snomed_termino": "Keratosis pilaris (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Escalas oscuras generalizadas",
+      "cie10": "R23.4",
+      "snomed_ct": "247441003",
+      "snomed_termino": "Scaling (finding)"
+    },
+    {
+      "nombre": "Piel seca extrema",
+      "cie10": "L85.3",
+      "snomed_ct": "16386004",
+      "snomed_termino": "Xerosis (finding)"
+    },
+    {
+      "nombre": "Queratosis pilaris en cara extensora de extremidades",
+      "cie10": "L85.8",
+      "snomed_ct": "67621000",
+      "snomed_termino": "Keratosis pilaris (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración dermatológica completa con patrón de escalas",
+      "snomed_ct": "15433301000119102",
+      "snomed_termino": "Dermatologic examination (procedure)"
+    },
+    {
+      "nombre": "Evaluación de distribución y severidad de ictiosis",
+      "snomed_ct": "385489003",
+      "snomed_termino": "Severity assessment (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Urea tópica",
+      "dosis": "10-20%",
+      "posologia": "Aplicar en todo el cuerpo después de ducha, una o dos veces al día",
+      "atc": "D02AE01",
+      "snomed_ct": "387000006",
+      "snomed_termino": "Urea (substance)",
+      "indicacion": "Queratolítico humectante para xerosis e ictiosis"
+    },
+    {
+      "nombre": "Emoliente intenso sin perfume",
+      "dosis": "sin dosis",
+      "posologia": "Aplicar generosamente en todo el cuerpo varias veces al día, especialmente después del baño",
+      "atc": "D02",
+      "snomed_ct": "420227002",
+      "snomed_termino": "Emollient bath preparation (substance)",
+      "indicacion": "Mantenimiento de hidratación y barrera cutánea en ictiosis vulgar"
+    }
+  ],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 70,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 120,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "peso": {
+      "valor": 72,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 179,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 22.5,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Ictiosis vulgar: enfermedad rara, autosómica dominante, defecto filagrina.",
+    "Antecedentes familiares: padre también afectado desde infancia.",
+    "Síntomas presentes desde los 2-3 años, predeciblemente peor en invierno y climas secos.",
+    "Impacto psicosocial leve: preocupación por aspecto estético.",
+    "Reciente cambio de clima (mudanza a país con inviernos muy secos) ha agravado síntomas.",
+    "Sin compromiso sistémico ni complicaciones graves.",
+    "Manejo crónico: énfasis en hidratación diaria y autocuidado.",
+    "Considerar derivación a dermatología general para casos refractarios o nuevos síntomas."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Hugo Prieto Castro",
+    "edad": 22,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Soledad Gómez Blanco",
+    "especialidad": "Dermatología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Hugo. He visto en tu historial que tienes ictiosis vulgar. ¿Cómo lo llevas actualmente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Pues la verdad es que bastante mal. Me mudé hace tres meses a un país con inviernos muy fríos y muy secos, y desde entonces la piel se me ha puesto muchísimo peor. Tengo unas escamas grises como de pescado en todo el cuerpo, especialmente en las piernas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Has tenido esto desde siempre o es reciente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[explaining] Desde pequeñito. Mi padre tiene lo mismo, así que es familiar. Cuando era niño la tenía bastante, pero en la adolescencia mejoró. Pero ahora con el cambio de clima ha vuelto fuerte."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Y aparte de las escamas qué otro síntoma tienes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[uncomfortable] La piel muy seca, áspera. A veces pica, aunque no mucho. Y en los brazos tengo esos puntitos rojos pequeños, como granos que no son espinillas."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Desde cuándo tienes este diagnóstico de ictiosis?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[recalling] Desde pequeño, lo diagnosticó un pediatra cuando tenía tres o cuatro años. Dijo que era hereditario."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Tu padre la tiene también, ¿verdad?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confirming] Sí, mi padre desde siempre. Mi madre no. Y mi hermana tampoco parece tenerla."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Algún tratamiento que hayas recibido que funcionara bien?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] De pequeño mi madre me ponía cremas muy hidratantes, especialmente en invierno. Eso me funcionaba bien. Pero hace años que no voy al dermatólogo, he estado bastante bien hasta el cambio de clima."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Alergias? ¿Problemas de salud?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No, nada. Salud perfecta."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Perfecto. Vamos a explorar. Quítate la camiseta. [pause] Veo una distribución típica. El tronco tiene escalas pequeñas pero visibles. Mira aquí, en los brazos y los antebrazos, especialmente en la superficie extensora, tienes esas pequeñas pápulas rojas con un puntito central de queratosis: es queratosis pilaris. Es característica de la ictiosis."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening carefully] Eso de los puntitos, ¿es malo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, es benigno. Solo es una manifestación de la ictiosis. [pause] En las piernas, aquí, veo las escalas mucho más marcadas. Son escalas oscuras, grisáceas, muy secas. Mira, cuando rasco un poco salen más escalas. Es típico de ictiosis vulgar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, se me cae la piel constantemente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] La palma de manos y plantas de pies están normales. Las pliegues también normales. No hay afectación de membranas mucosas. Esto es una ictiosis vulgar aislada, sin complicaciones sistémicas. Lo que tienes es una barrera cutánea defectuosa por un defecto en la filagrina."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Hugo, tu diagnóstico está confirmado: ictiosis vulgar. Es una enfermedad hereditaria que va a tener toda la vida, pero es completamente benigna. No afecta la salud general, solo la calidad de la piel."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Nunca se va a quitar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No se va a quitar, pero es muy controlable con el tratamiento adecuado. Lo que puedes esperar es tener períodos donde está mejor controlado, especialmente en clima cálido y húmedo, y períodos donde empeora, especialmente en invierno."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] El tratamiento es simple pero requiere disciplina: hidratación intensa. Voy a prescribirte urea tópica al 10 a 20%, que es queratolítica. Aplicas después de la ducha cuando la piel está aún un poco húmeda."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cómo funciona la urea?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] La urea ayuda a desprender las escamas muertas y a mantener hidratación dentro de la piel. Después de aplicar la urea, aplicas un emoliente muy potente, sin perfume, para sellar la hidratación."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[questioning] ¿Cuántas veces al día?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[practically] Mínimo una vez al día, después de la ducha. Pero idealmente dos veces si tienes tiempo. En invierno probablemente necesites aplicar más frecuentemente porque el ambiente está muy seco."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Y si viajo a lugares muy fríos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[thoughtfully] Tienes que llevar tus productos y usarlos más frecuentemente. El frío y la sequedad empeoran mucho la ictiosis. Si es posible, usa humidificador en la habitación. Y bebe mucha agua también."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Eso lo haré."
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] También, usa ropa de algodón preferentemente. Evita telas ásperas. Duchas con agua tibia, no caliente, porque el agua caliente reseca más. Y después de la ducha, aplica los productos mientras la piel esté todavía ligeramente húmeda."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Parece fácil, pero veo que requiere bastante cuidado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Requiere consistencia, pero una vez que lo integras en tu rutina diaria, es automatizado. Y los resultados van a ser muy buenos. Tu piel va a estar mucho mejor."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Cuándo debería volver?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[practically] En dos meses. Para entonces tendrás idea de cómo responde tu piel a los productos en el clima donde estás. Si va bien, podemos espaciar las visitas. Pero si empeora o tienes preguntas, me llamas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Vale, doctora. Muchas gracias."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, Hugo. Recuerda: hidratación es la clave. Mantén la disciplina y estarás bien. Es una enfermedad controlable, aunque requiere mantenimiento de por vida."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/dermatologia/DER-010.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "L89 → R23.4 (escalas oscuras) - L89 es úlcera por presión"
+    ]
+  }
+}

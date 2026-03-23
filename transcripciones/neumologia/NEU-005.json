@@ -1,0 +1,381 @@
+{
+  "id": "NEU-005",
+  "especialidad": "Neumología",
+  "resumen": "Paciente varón de 48 años que acude a consulta de neumología por sospecha de apnea obstructiva del sueño. Refiere ronquidos importantes y somnolencia diurna que afecta a sus actividades laborales. Su pareja refiere pausas respiratorias durante el sueño. Se realiza polisomnografía que confirma apnea obstructiva del sueño moderada. Se inicia tratamiento con CPAP (presión positiva continua en vías aéreas) con educación adecuada sobre su uso y seguimiento.",
+  "diagnostico_principal": {
+    "nombre": "Apnea obstructiva del sueño",
+    "cie10": "G47.33",
+    "snomed_ct": "78275009",
+    "snomed_termino": "Obstructive sleep apnea (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Sobrepeso",
+      "cie10": "E66.3",
+      "snomed_ct": "238131007",
+      "snomed_termino": "Overweight (finding)"
+    },
+    {
+      "nombre": "Hipertensión arterial",
+      "cie10": "I10",
+      "snomed_ct": "59621000",
+      "snomed_termino": "Essential hypertension (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Ronquidos",
+      "cie10": "R06.02",
+      "snomed_ct": "12060003",
+      "snomed_termino": "Snoring (finding)"
+    },
+    {
+      "nombre": "Somnolencia diurna excesiva",
+      "cie10": "G47.10",
+      "snomed_ct": "271782001",
+      "snomed_termino": "Excessive daytime somnolence (finding)"
+    },
+    {
+      "nombre": "Apnea durante el sueño",
+      "cie10": "R06.02",
+      "snomed_ct": "4386001",
+      "snomed_termino": "Apnea (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física con valoración de vías aéreas superiores",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of chest (procedure)"
+    },
+    {
+      "nombre": "Polisomnografía de sueño",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Índice de apnea-hipopnea (IAH)",
+      "snomed_ct": "408784001",
+      "snomed_termino": "Sleep apnea detection test (procedure)"
+    },
+    {
+      "nombre": "Instrucción en uso de CPAP",
+      "snomed_ct": "409073007",
+      "snomed_termino": "Education (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Amlodipina",
+      "dosis": "5 mg",
+      "posologia": "Un comprimido al día por la mañana",
+      "atc": "C08CA01",
+      "snomed_ct": "387264000",
+      "snomed_termino": "Amlodipine (substance)",
+      "indicacion": "Control de la hipertensión arterial"
+    }
+  ],
+  "dispositivos_medicos": [
+    {
+      "nombre": "CPAP (Continuous Positive Airway Pressure)",
+      "presion": "10-12 cmH2O",
+      "uso": "Todas las noches durante el sueño",
+      "indicacion": "Tratamiento de apnea obstructiva del sueño"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 142,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 86,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 84,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 98,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 178,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 30.9,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con sobrepeso importante (IMC 30.9), con antecedentes de hipertensión arterial diagnosticada hace 3 años.",
+    "Refiere dormir 6-7 horas noche, con ronquidos muy fuertes que molestan a su pareja.",
+    "Somnolencia matinal importante, ha tenido episodios de casi adormecerse al conducir.",
+    "Pareja ha presenciado múltiples pausas respiratorias durante el sueño.",
+    "Polisomnografía muestra IAH de 28 eventos/hora, clasificado como apnea moderada.",
+    "Se recomendaría también pérdida de peso y evitar alcohol y sedantes.",
+    "Se cita para seguimiento tras una semana de uso de CPAP para valorar tolerancia y ajustes de presión si es necesario."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Jesús Navarro Prieto",
+    "edad": 48,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Salazar Córdoba",
+    "especialidad": "Neumología"
+  },
+  "voces": {
+    "medico_voice_id": "RgXx32WYOGrd7gFNifSf",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Jesús. Veo que vienes derivado de tu médico de cabecera porque roncas y estás cansado. ¿Es así?",
+          "audio_tag": "NEU-005_001_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[embarrassed] Buenos días, doctor. Pues sí, la verdad es que ronco mucho. Mi mujer se queja constantemente, dice que no puede dormir por mis ronquidos. Y tienes razón, estoy fatal de cansado.",
+          "audio_tag": "NEU-005_002_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cuándo empezó el cansancio?",
+          "audio_tag": "NEU-005_003_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues llevo ya un par de años sintiéndome cansado cuando me levanto. Antes no era así, pero ahora dormiré bien ocho horas y aún así me levanto como si no hubiera dormido.",
+          "audio_tag": "NEU-005_004_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Qué tal en el trabajo? ¿Te cuesta mantener la concentración?",
+          "audio_tag": "NEU-005_005_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concernedly] Sí, bastante. Trabajo en una oficina y a media tarde me cuesta mucho concentrarme. Incluso he tenido situaciones que me da miedo decirlo, que estaba al volante en el coche yendo a una reunión y casi me quedo dormido. Me asustó bastante.",
+          "audio_tag": "NEU-005_006_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Eso es importante, Jesús. ¿Tu pareja nota algo raro cuando duermes? ¿Pausas de respiración?",
+          "audio_tag": "NEU-005_007_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, de hecho es ella quien más se da cuenta. Dice que ronco un rato, luego se para todo, como que dejo de respirar, y luego vuelvo a roncar. Dice que es como muy rítmico.",
+          "audio_tag": "NEU-005_008_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Tienes alguna enfermedad? ¿Tomas algún medicamento?",
+          "audio_tag": "NEU-005_009_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Sí, tengo la tensión un poco alta, me la diagnosticaron hace unos años. Tomo amlodipina, una pastilla al día.",
+          "audio_tag": "NEU-005_010_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Alcoholismo? ¿Fumas?",
+          "audio_tag": "NEU-005_011_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[honestly] No fumo. Alcohol sí, especialmente los fines de semana con los amigos, cervecitas o algo. Pero nada exagerado.",
+          "audio_tag": "NEU-005_012_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Cómo es tu peso? ¿Has ganado kilos en los últimos años?",
+          "audio_tag": "NEU-005_013_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Sí, la verdad es que sí. He ganado como quince kilos en los últimos cinco años. Tenía una barriguilla y ahora tengo una barrigota. He intentado perder peso pero es difícil.",
+          "audio_tag": "NEU-005_014_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarte. Quítate la camisa y siéntate en la camilla. Primero tomo las constantes vitales.",
+          "audio_tag": "NEU-005_015_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro, adelante.",
+          "audio_tag": "NEU-005_016_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tensión ciento cuarenta y dos sobre ochenta y seis, frecuencia cardíaca ochenta y cuatro latidos, todo dentro de lo esperado. Ahora te peso y te mido. Noventa y ocho kilos, ciento setenta y ocho centímetros. Eso nos da un índice de masa corporal de treinta coma nueve, que es sobrepeso importante, casi rozando la obesidad.",
+          "audio_tag": "NEU-005_017_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[embarrassed] Sí, ya lo sabía más o menos.",
+          "audio_tag": "NEU-005_018_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Ahora voy a mirar tu garganta y tu cuello. Abre la boca bien, por favor. [Mirando] Sí, veo que tienes la úvula un poco edematosa y es un espacio un poco reducido. Eso puede contribuir a los ronquidos y la apnea.",
+          "audio_tag": "NEU-005_019_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿Eso es grave?",
+          "audio_tag": "NEU-005_020_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es grave per se, pero sí es compatible con apnea obstructiva del sueño. Por eso te vamos a hacer una prueba especial para confirmar.",
+          "audio_tag": "NEU-005_021_medico"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Lo que voy a hacer es derivarte a nuestro laboratorio de sueño. Te van a hacer una polisomnografía, que es una prueba que registra cómo respiras mientras duermes, tu oxígeno en sangre, y tu ritmo cardíaco.",
+          "audio_tag": "NEU-005_022_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Tengo que dormir en un sitio raro? ¿En un hospital?",
+          "audio_tag": "NEU-005_023_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí, tienes que pasar una noche en nuestro laboratorio de sueño. Es como una habitación normal, con una cama cómoda. Te ponemos unos sensores sin dolor en el pecho y la cabeza, y dormimos normalmente mientras los aparatos registran todo.",
+          "audio_tag": "NEU-005_024_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Vale, eso suena llevadera.",
+          "audio_tag": "NEU-005_025_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] Exacto. Con los resultados de esa prueba podremos ver cuántas apneas tienes por hora de sueño, cuánto se te baja el oxígeno, y a partir de ahí decidimos el tratamiento.",
+          "audio_tag": "NEU-005_026_medico"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Basándome en lo que me cuentas, en la exploración de las vías aéreas, y en los antecedentes de somnolencia diurna y pausas respiratorias que tu pareja ha visto, estoy bastante seguro de que tienes apnea obstructiva del sueño.",
+          "audio_tag": "NEU-005_027_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Y eso es serio?",
+          "audio_tag": "NEU-005_028_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Sí lo es. La apnea del sueño no tratada aumenta el riesgo de infarto de miocardio, de ictus, de arritmias cardíacas. Por eso es importante diagnosticarla y tratarla cuanto antes.",
+          "audio_tag": "NEU-005_029_medico"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Después de la polisomnografía, si se confirma la apnea, que prácticamente estoy seguro de que se va a confirmar, te voy a prescribir un dispositivo que se llama CPAP. Es una máquina que te pones en la nariz o en la boca antes de dormir y emite una presión de aire constante que mantiene abiertos tus conductos respiratorios.",
+          "audio_tag": "NEU-005_030_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Una máquina? ¿Todas las noches?",
+          "audio_tag": "NEU-005_031_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Sí, todas las noches. Al principio puede parecer incómodo, pero la mayoría de los pacientes se acostumbran rápido, especialmente cuando notan la mejoría.",
+          "audio_tag": "NEU-005_032_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] ¿Y eso mejora el cansancio?",
+          "audio_tag": "NEU-005_033_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Mucho. Normalmente en una o dos semanas de usar el CPAP notas una mejoría importante en el cansancio. Algunos pacientes dicen que es como descubrir la vida de nuevo.",
+          "audio_tag": "NEU-005_034_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[more hopeful] Eso suena bien.",
+          "audio_tag": "NEU-005_035_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Además, hay otras cosas que puedes hacer. Perder peso te ayudaría mucho, evitar el alcohol especialmente antes de dormir, y no tomar tranquilizantes o pastillas para dormir sin consultarme.",
+          "audio_tag": "NEU-005_036_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentive] ¿Cuándo empieza lo de la polisomnografía?",
+          "audio_tag": "NEU-005_037_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Mi secretaria te va a dar cita para dentro de dos o tres semanas en el laboratorio de sueño. Cuando tengas los resultados, vuelves a verme y comenzamos el CPAP. Si en el intervalo tienes alguna duda, llama a la clínica.",
+          "audio_tag": "NEU-005_038_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctor. Espero que esto resuelva mi cansancio.",
+          "audio_tag": "NEU-005_039_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confidently] Estoy seguro de que lo va a resolver. Vamos a devolverte la energía. Nos vemos cuando tengas los resultados.",
+          "audio_tag": "NEU-005_040_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Perfecto. Hasta pronto, doctor.",
+          "audio_tag": "NEU-005_041_paciente"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neumologia/NEU-005.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

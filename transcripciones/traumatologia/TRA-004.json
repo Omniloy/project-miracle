@@ -1,0 +1,357 @@
+{
+  "id": "TRA-004",
+  "especialidad": "Traumatología",
+  "resumen": "Paciente mujer de 43 años con hernia discal lumbar sintomática. Presenta dolor radicular severo con irradiación a miembro inferior izquierdo e hiporreflexia del reflejo aquíleo. La tomografía computada y resonancia magnética confirman hernia discal L4-L5 con compresión radicular. Se inicia tratamiento conservador con pregabalina, ibuprofeno y rehabilitación.",
+  "diagnostico_principal": {
+    "nombre": "Hernia discal lumbar",
+    "cie10": "M51.1",
+    "snomed_ct": "76107001",
+    "snomed_termino": "Prolapse of lumbar intervertebral disc (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Radiculopatía lumbosacra",
+      "cie10": "M54.15",
+      "snomed_ct": "6059004",
+      "snomed_termino": "Radiculopathy of lumbosacral region (disorder)"
+    },
+    {
+      "nombre": "Dolor de espalda baja",
+      "cie10": "M54.5",
+      "snomed_ct": "202763000",
+      "snomed_termino": "Low back pain (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor radicular en extremidad inferior",
+      "cie10": "M54.15",
+      "snomed_ct": "271703003",
+      "snomed_termino": "Pain in lower limb (finding)"
+    },
+    {
+      "nombre": "Parestesia en miembro inferior",
+      "cie10": "R20.2",
+      "snomed_ct": "91530003",
+      "snomed_termino": "Paresthesia (finding)"
+    },
+    {
+      "nombre": "Hiporreflexia aquílea",
+      "cie10": "R29.1",
+      "snomed_ct": "63161005",
+      "snomed_termino": "Absent or diminished reflex (finding)"
+    },
+    {
+      "nombre": "Limitación funcional para la marcha",
+      "cie10": "R26.2",
+      "snomed_ct": "228158008",
+      "snomed_termino": "Walking disability (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Resonancia magnética de columna lumbar",
+      "snomed_ct": "241657009",
+      "snomed_termino": "Magnetic resonance imaging of lumbosacral spine (procedure)"
+    },
+    {
+      "nombre": "Tomografía computada de columna lumbar",
+      "snomed_ct": "241741005",
+      "snomed_termino": "Computed tomography of lumbosacral spine (procedure)"
+    },
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "68609003",
+      "snomed_termino": "Neurological examination (procedure)"
+    },
+    {
+      "nombre": "Medición de fuerzas musculares y reflejos",
+      "snomed_ct": "56979009",
+      "snomed_termino": "Muscle strength testing (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Pregabalina",
+      "dosis": "150 mg",
+      "posologia": "1 comprimido cada 12 horas, aumentar según tolerancia",
+      "atc": "N03AX16",
+      "snomed_ct": "386832000",
+      "snomed_termino": "Pregabalin (substance)",
+      "indicacion": "Dolor neuropático por compresión radicular"
+    },
+    {
+      "nombre": "Ibuprofeno",
+      "dosis": "600 mg",
+      "posologia": "1 comprimido cada 8 horas con comida",
+      "atc": "M01AE01",
+      "snomed_ct": "387207008",
+      "snomed_termino": "Ibuprofen (substance)",
+      "indicacion": "Analgesia y control de inflamación"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 138,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 85,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 82,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 72,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 166,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 26.1,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente refiere inicio del dolor hace 4 semanas tras levantar peso en el trabajo.",
+    "El dolor es principalmente en la cara lateral y posterior del muslo izquierdo.",
+    "Ha intentado reposo relativo pero no ha mejorado significativamente.",
+    "No tiene déficit motor completo, pero sí debilidad de la dorsiflexión del pie izquierdo.",
+    "Se descarta indicación quirúrgica urgente (no hay síndrome de cauda equina).",
+    "Se remite a fisioterapia con énfasis en estabilización lumbar."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Beatriz Herrera López",
+    "edad": 43,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Patricia López Fernández",
+    "especialidad": "Traumatología"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Beatriz. Soy la doctora López. Veo que consulta por dolor de espalda con irradiación a la pierna. Cuénteme cómo empezó esto.",
+          "audio_tag": "04_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[wincing] Doctora, hace aproximadamente cuatro semanas estaba levantando unos cartones en el trabajo, cajas bastante pesadas, y de repente sentí un dolor muy fuerte en la espalda baja. No fue un golpe, fue algo que hice mal al levantar.",
+          "audio_tag": "04_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y desde entonces el dolor persiste?",
+          "audio_tag": "04_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustratedly] Sí, todos los días. Al principio pensé que se me pasaría con descanso, pero no. Además, hace una semana empecé a sentir dolor también en la pierna, principalmente en la parte de atrás del muslo y hacia el lateral.",
+          "audio_tag": "04_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿En una sola pierna o en las dos?",
+          "audio_tag": "04_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[clearly] Solo en la izquierda. Y a veces me baja hasta el pie. Además, siento como hormigueos, cosquillas raras en el muslo.",
+          "audio_tag": "04_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Ha tenido episodios previos de dolor de espalda? ¿Problemas lumbares anteriormente?",
+          "audio_tag": "04_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] No, algo ocasional cuando me fuerzo mucho, pero nada serio. Siempre he tenido una espalda relativamente buena.",
+          "audio_tag": "04_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Medicación habitual? ¿Alergias?",
+          "audio_tag": "04_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[straightforwardly] No tomo nada de manera regular. Tengo alergia a la cefalexina, me causa urticaria.",
+          "audio_tag": "04_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Entendido. ¿Cómo es su trabajo? ¿Postura, movimientos repetitivos?",
+          "audio_tag": "04_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[explanatorily] Trabajo en un almacén. Sí, levanto cosas, aunque hay carretillas para facilitar. Es trabajo físico. Pero lo que pasó fue un gesto puntual incorrecto.",
+          "audio_tag": "04_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿El dolor mejora o empeora con ciertos movimientos o posturas?",
+          "audio_tag": "04_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] Empeora mucho al inclinarme hacia adelante, especialmente si intento levantar algo. También me duele cuando estoy de pie durante mucho rato. La postura de tumbada me alivia un poco.",
+          "audio_tag": "04_014"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien, vamos a explorarla. Quítese la camiseta, por favor. Voy a hacer una exploración de la espalda. [pause] Observo buena alineación. No hay deformidad obvia. Presento presión sobre los espacios intervertebrales. ¿Aquí le duele?",
+          "audio_tag": "04_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[wincing] Sí, ahí me duele mucho.",
+          "audio_tag": "04_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Voy a hacer la maniobra de Laségue. Levanto su pierna izquierda extendida. [pause] ¿A qué ángulo siente dolor?",
+          "audio_tag": "04_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grimacing] Ya me duele a unos cuarenta y cinco grados.",
+          "audio_tag": "04_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Muy positiva. Es muy sugestivo de irritación radicular. Voy a explorar fuerza muscular. Dorsiflexión del pie izquierdo, por favor. [pause] Hay debilidad, probablemente no llega a grado cuatro. Reflejo aquíleo izquierdo... hiporreflexico. La sensibilidad está conservada.",
+          "audio_tag": "04_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Doctor, ¿qué significa todo eso?",
+          "audio_tag": "04_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Significa que hay compresión de un nervio en la espalda, probablemente a nivel de la columna lumbar. Es compatible con una hernia discal. Vamos a hacer una resonancia para verlo con detalle.",
+          "audio_tag": "04_021"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] He revisado la resonancia magnética de su columna lumbar. Se aprecia hernia discal a nivel L4-L5, en el lado izquierdo, con compresión de la raíz nerviosa L5. Eso explica perfectamente su dolor radicular, la debilidad y los hormigueos.",
+          "audio_tag": "04_022"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Es grave? ¿Hay que operarse?",
+          "audio_tag": "04_023"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] No es una emergencia quirúrgica. No hay síndrome de cauda equina. La mayoría de hernias discales se mejoran con tratamiento conservador: medicamentos, reposo relativo, fisioterapia. La cirugía se reserva para casos resistentes o con déficit neurológico progresivo.",
+          "audio_tag": "04_024"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Cuánto tiempo tarda en mejorar?",
+          "audio_tag": "04_025"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Depende. Algunos pacientes mejoran en semanas, otros tardan meses. Con tratamiento activo, la mayoría experimenta mejoría significativa en 4-6 semanas.",
+          "audio_tag": "04_026"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Voy a prescribirle pregabalina seiscientos miligramos al día, empezando con ciento cincuenta miligramos cada doce horas. Es excelente para el dolor neuropático. También ibuprofeno seiscientos miligramos cada ocho horas para el control del dolor e inflamación.",
+          "audio_tag": "04_027"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Puedo seguir trabajando?",
+          "audio_tag": "04_028"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Debería tomar baja laboral por al menos dos o tres semanas. Trabajar en un almacén levantando cosas no es compatible con esta lesión ahora mismo. Una vez mejore, podrá ir reintegrándose gradualmente.",
+          "audio_tag": "04_029"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Bien, voy a solicitar la baja.",
+          "audio_tag": "04_030"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Voy a remitirla a fisioterapia. Ejercicios de estabilización lumbar, estiramientos, y técnicas de movilización. También recomiendo evitar flexión de la columna por ahora. Duerma con una almohada bajo las rodillas si está boca arriba. Aplique calor local cuando quiera.",
+          "audio_tag": "04_031"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] De acuerdo, doctora. ¿Cuándo debo volver a visitarla?",
+          "audio_tag": "04_032"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] En cuatro semanas. Para entonces debería haber mejorado bastante con la medicación y la fisioterapia. Si empeora, si pierde control de esfínteres, o siente debilidad progresiva importante, me llama inmediatamente. ¿Alguna pregunta más?",
+          "audio_tag": "04_033"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] No, muchas gracias doctora. Confío en que esto mejore.",
+          "audio_tag": "04_034"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Seguro que sí, con disciplina. Adelante.",
+          "audio_tag": "04_035"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/traumatologia/TRA-004.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

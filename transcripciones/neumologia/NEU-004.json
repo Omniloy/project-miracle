@@ -1,0 +1,428 @@
+{
+  "id": "NEU-004",
+  "especialidad": "Neumología",
+  "resumen": "Paciente mujer de 61 años que acude a consulta de neumología con síntomas de disnea progresiva y dolor torácico lateral. En la radiografía de tórax se aprecia derrame pleural ipsilateral importante. Se realiza toracocentesis diagnóstica para identificar la etiología del derrame y obtener muestras para análisis bioquímico y citológico. El derrame se clasifica como exudativo, sospechándose origen infeccioso o neoplásico.",
+  "diagnostico_principal": {
+    "nombre": "Derrame pleural no especificado",
+    "cie10": "J90",
+    "snomed_ct": "60046008",
+    "snomed_termino": "Pleural effusion (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Hipertensión arterial esencial",
+      "cie10": "I10",
+      "snomed_ct": "59621000",
+      "snomed_termino": "Essential hypertension (disorder)"
+    },
+    {
+      "nombre": "Hiperlipidemia",
+      "cie10": "E78.5",
+      "snomed_ct": "55822004",
+      "snomed_termino": "Hyperlipidemia (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Disnea",
+      "cie10": "R06.02",
+      "snomed_ct": "267036007",
+      "snomed_termino": "Dyspnea (finding)"
+    },
+    {
+      "nombre": "Dolor torácico lateral",
+      "cie10": "R07.9",
+      "snomed_ct": "29650001",
+      "snomed_termino": "Chest pain (finding)"
+    },
+    {
+      "nombre": "Tos seca",
+      "cie10": "R05.9",
+      "snomed_ct": "16331000",
+      "snomed_termino": "Dry cough (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física con auscultación pulmonar",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of chest (procedure)"
+    },
+    {
+      "nombre": "Radiografía de tórax",
+      "snomed_ct": "399208008",
+      "snomed_termino": "Plain chest X-ray (procedure)"
+    },
+    {
+      "nombre": "Tomografía computarizada de tórax",
+      "snomed_ct": "243553007",
+      "snomed_termino": "Computed tomography of thorax (procedure)"
+    },
+    {
+      "nombre": "Ecografía torácica",
+      "snomed_ct": "399166000",
+      "snomed_termino": "Ultrasound of thorax (procedure)"
+    },
+    {
+      "nombre": "Toracocentesis diagnóstica",
+      "snomed_ct": "19314006",
+      "snomed_termino": "Thoracentesis (procedure)"
+    },
+    {
+      "nombre": "Análisis de líquido pleural: bioquímica y citología",
+      "snomed_ct": "122554008",
+      "snomed_termino": "Pleural fluid analysis (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Enalapril",
+      "dosis": "10 mg",
+      "posologia": "Un comprimido al día",
+      "atc": "C09AA02",
+      "snomed_ct": "372658000",
+      "snomed_termino": "Enalapril (substance)",
+      "indicacion": "Control de la hipertensión arterial"
+    },
+    {
+      "nombre": "Atorvastatina",
+      "dosis": "20 mg",
+      "posologia": "Un comprimido al día por la noche",
+      "atc": "C10AA05",
+      "snomed_ct": "373444002",
+      "snomed_termino": "Atorvastatin (substance)",
+      "indicacion": "Tratamiento de la hiperlipidemia"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 148,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 88,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 88,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 22,
+      "unidad": "rpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 94,
+      "unidad": "%"
+    },
+    "temperatura": {
+      "valor": 37.0,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con antecedentes de hipertensión y dislipidemia en buen control farmacológico.",
+    "Vive con su marido. Independiente para las actividades de la vida diaria.",
+    "Antecedente de tabaquismo en el pasado (25 paquetes/año, dejó hace 10 años).",
+    "Refiere inicio gradual de disnea hace tres semanas, progresiva.",
+    "Niega fiebre, pérdida de peso o síntomas constitucionales importantes.",
+    "Se obtienen 600 mL de líquido pleural en la toracocentesis sin incidencias.",
+    "Análisis preliminar de líquido pleural sugiere exudado con posible origen infeccioso o maligno, pendiente de citología completa.",
+    "Se cita para seguimiento en una semana después de resultados definitivos de análisis."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Esperanza Gómez Vega",
+    "edad": 61,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena Molina García",
+    "especialidad": "Neumología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Esperanza. Veo que tu médico de cabecera te ha mandado porque tienes dificultad para respirar. ¿Hace cuánto que empezó?",
+          "audio_tag": "NEU-004_001_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Buenos días, doctora. Pues hace como tres semanas que empecé a notar que me costaba más respirar, así poco a poco. Al principio pensé que era nada, que había ido más al sofá de lo normal, pero se va haciendo cada vez peor.",
+          "audio_tag": "NEU-004_002_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y ese dolor que tienes en el lado? ¿Cuándo empezó eso?",
+          "audio_tag": "NEU-004_003_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[rubbing side] Pues el dolor lo tengo más desde hace una semana. Es aquí en el lado izquierdo, como un dolor sordo, que empeora cuando me acuesto de ese lado. Cuando respiro profundo también me duele un poco.",
+          "audio_tag": "NEU-004_004_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tienes fiebre? ¿Tos?",
+          "audio_tag": "NEU-004_005_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, fiebre no tengo, ni tampoco tos. Es solo la dificultad para respirar y ese dolor.",
+          "audio_tag": "NEU-004_006_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Has notado pérdida de peso últimamente? ¿Cansancio?",
+          "audio_tag": "NEU-004_007_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[casually] No, peso más o menos igual. Cansancio sí, pero supongo que es por el esfuerzo de respirar.",
+          "audio_tag": "NEU-004_008_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] Cuéntame sobre tus antecedentes médicos. ¿Tienes enfermedades crónicas?",
+          "audio_tag": "NEU-004_009_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Sí, tengo tensión alta y un poco de colesterol, pero están bien controlados con pastillas. La tensión me la controlo bastante bien y el colesterol también.",
+          "audio_tag": "NEU-004_010_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Alergias a medicamentos?",
+          "audio_tag": "NEU-004_011_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, ninguna que yo sepa.",
+          "audio_tag": "NEU-004_012_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Fumaste alguna vez?",
+          "audio_tag": "NEU-004_013_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[slightly sheepish] Sí, fumé bastante cuando era más joven, pero lo dejé hace unos diez años. Ahora no fumo nada.",
+          "audio_tag": "NEU-004_014_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiring] ¿Contacto con personas enfermas recientemente?",
+          "audio_tag": "NEU-004_015_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] No, que yo recuerde no. Mi marido está bien, la familia está bien.",
+          "audio_tag": "NEU-004_016_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarte. Quítate la blusa y siéntate en la camilla. Primero tomo las constantes vitales.",
+          "audio_tag": "NEU-004_017_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] De acuerdo, adelante.",
+          "audio_tag": "NEU-004_018_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tensión ciento cuarenta y ocho sobre ochenta y ocho, frecuencia cardíaca ochenta y ocho latidos, frecuencia respiratoria veintidós, saturación de oxígeno noventa y cuatro por ciento, temperatura normal. Todo relativamente bien.",
+          "audio_tag": "NEU-004_019_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿Eso es normal?",
+          "audio_tag": "NEU-004_020_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] La saturación está un poco baja, pero no es malo. Ahora voy a auscultar tu tórax. Respira hondo, por favor.",
+          "audio_tag": "NEU-004_021_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathing deeply] Mmm... [pause] Sí.",
+          "audio_tag": "NEU-004_022_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] En la auscultación, en la base izquierda disminuye mucho el murmullo vesicular, que es muy típico de derrame pleural. También está más apagado el sonido de la percusión en esa zona. El resto del tórax está bien, los pulmones suenan claros. Corazón normal, sin soplos.",
+          "audio_tag": "NEU-004_023_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Derrame pleural? ¿Eso es grave?",
+          "audio_tag": "NEU-004_024_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Primero mira, vamos a revisar la radiografía de tórax que te hicieron. Se ve claramente una opacidad en la base izquierda que es compatible con derrame pleural, que es un acúmulo de líquido entre los pulmones y la pared del tórax.",
+          "audio_tag": "NEU-004_025_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Acúmulo de qué? ¿Pus?",
+          "audio_tag": "NEU-004_026_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clarifying] No sabemos exactamente qué es sin analizar el líquido. Por eso te vamos a hacer una prueba que se llama toracocentesis, que es como un pinchazo para sacar algo de ese líquido y analizarlo.",
+          "audio_tag": "NEU-004_027_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Un pinchazo? ¿Duele mucho?",
+          "audio_tag": "NEU-004_028_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, no duele prácticamente nada. Te ponemos anestesia local y es un procedimiento rápido. Además, como sacamos el líquido, es probable que te sientas mejor al respirar después.",
+          "audio_tag": "NEU-004_029_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Bueno, si es para saber qué tengo, adelante.",
+          "audio_tag": "NEU-004_030_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien. Te voy a colocar de lado, sobre tu lado derecho. Así. Coloca los brazos sobre el pecho, porque necesito que estés quieta durante el procedimiento.",
+          "audio_tag": "NEU-004_031_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Está bien así, ¿verdad?",
+          "audio_tag": "NEU-004_032_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Perfecto. Ahora voy a desinfectar la zona con un antiséptico. Esto está frío. Ahora te voy a poner la anestesia local. Sentirás un pinchazo pequeñito.",
+          "audio_tag": "NEU-004_033_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[tensely] [Inhalando fuerte] Ay, sí, lo noto.",
+          "audio_tag": "NEU-004_034_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Ya pasó. Ahora espera a que actúe la anestesia unos segundos. Cuando estés lista, voy a introducir la aguja para extraer el líquido. No sentirás dolor, solo presión.",
+          "audio_tag": "NEU-004_035_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] De acuerdo, doctora.",
+          "audio_tag": "NEU-004_036_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Perfecto, voy a introducir la aguja. [Pausa] Ya está dentro. Ahora voy a extraer el líquido. [Pausa de unos segundos] Excelente. He sacado unos seiscientos mililitros de líquido. ¿Cómo te sientes?",
+          "audio_tag": "NEU-004_037_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Vaya, sí que noto que respiro mejor. ¿De verdad ha sido todo?",
+          "audio_tag": "NEU-004_038_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Sí, ya terminamos. Te voy a poner una gasa con esparadrapo. Ahora descansa un poco en la camilla antes de volver a casa.",
+          "audio_tag": "NEU-004_039_medico"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] El líquido que hemos sacado es un exudado, lo que significa que no es simplemente un acúmulo pasivo. Probablemente hay inflamación importante, que puede ser por infección o por otra causa.",
+          "audio_tag": "NEU-004_040_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Qué otras causas pueden ser?",
+          "audio_tag": "NEU-004_041_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Podría ser por infección, por inflamación, o incluso por procesos malignos. Por eso los análisis van a ser muy importantes. Tendremos los resultados en unos días.",
+          "audio_tag": "NEU-004_042_medico"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Por ahora no cambio tu medicación. Sigue con el enalapril y la atorvastatina como estabas. Reposa hoy, evita esfuerzos. Es normal que tengas algo de molestia en la zona del pinchazo, pero debería pasarse en uno o dos días.",
+          "audio_tag": "NEU-004_043_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuándo te veo de nuevo?",
+          "audio_tag": "NEU-004_044_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te cito para dentro de una semana. Para entonces tendremos los resultados completos del líquido pleural y sabremos exactamente qué tienes. Mientras tanto, si tienes mucha más dificultad para respirar, dolor intenso, o cualquier cosa que te preocupe, llama a urgencias.",
+          "audio_tag": "NEU-004_045_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Espero que sea nada grave.",
+          "audio_tag": "NEU-004_046_medico"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Vamos a averiguar qué es y luego actuaremos en consecuencia. De todas formas, ya te sientes mejor, ¿verdad?",
+          "audio_tag": "NEU-004_047_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[smiling] Sí, la verdad es que sí. Respiro mejor. Nos vemos en una semana.",
+          "audio_tag": "NEU-004_048_paciente"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neumologia/NEU-004.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

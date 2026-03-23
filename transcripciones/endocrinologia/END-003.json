@@ -1,0 +1,309 @@
+{
+  "id": "END-003",
+  "especialidad": "Endocrinología",
+  "resumen": "Paciente varón de 49 años con nódulo tiroideo solitario no tóxico detectado en ecografía. Acude a endocrinología para evaluación y manejo. Se realiza ecografía detallada con características benignas según TIRADS. Se propone punción-aspiración con aguja fina para citología. Función tiroidea normal. Se planifica seguimiento ecográfico periódico.",
+  "diagnostico_principal": {
+    "nombre": "Nódulo tiroideo solitario no tóxico",
+    "cie10": "E04.1",
+    "snomed_ct": "237495005",
+    "snomed_termino": "Non-toxic nodule of thyroid (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [],
+  "procedimientos": [
+    {
+      "nombre": "Ecografía tiroidea de alta resolución",
+      "snomed_ct": "241604004",
+      "snomed_termino": "Ultrasound scan of thyroid gland (procedure)"
+    },
+    {
+      "nombre": "Punción-aspiración con aguja fina de nódulo tiroideo",
+      "snomed_ct": "86581004",
+      "snomed_termino": "Fine needle aspiration biopsy (procedure)"
+    },
+    {
+      "nombre": "Determinación de TSH sérico",
+      "snomed_ct": "104200008",
+      "snomed_termino": "Thyroid stimulating hormone measurement (procedure)"
+    },
+    {
+      "nombre": "Determinación de T4 libre",
+      "snomed_ct": "16114001",
+      "snomed_termino": "Thyroxine measurement (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 134,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 84,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 76,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 84,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 178,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 26.5,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Nódulo tiroideo detectado incidentalmente en ecografía cervical solicitada por otra causa hace un mes.",
+    "Tamaño del nódulo: 1.8 cm en su mayor diámetro.",
+    "Características ecográficas: hipoecogénico, con bordes bien definidos, sin vascularización anómala.",
+    "Clasificación TIRADS: categoría 3 (bajo riesgo de malignidad).",
+    "TSH basal: 2.1 mIU/L (normal).",
+    "T4 libre: 1.0 ng/dL (normal).",
+    "Sin anticuerpos anti-TPO detectados.",
+    "Función tiroidea completamente normal.",
+    "Sin síntomas de hipertiroidismo ni hipotiroidismo.",
+    "Nódulo no causa síntomas de compresión (sin disfagia, sin disfonía, sin disnea)."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Andrés Calvo Ramos",
+    "edad": 49,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena García Martínez",
+    "especialidad": "Endocrinología"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Andrés. Te han derivado de radiología porque encontraron un nódulo en la tiroides. ¿Sabías que tenías eso?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] No, para nada. Me hicieron una ecografía cervical porque tenía un poco de tensión en el cuello, nada grave. Y el radiólogo me dijo que tenía un bultito en la tiroides y que visitara al endocrinólogo.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No te preocupes. Los nódulos tiroideos son muy frecuentes, especialmente a partir de los cuarenta años. La mayoría son benignos. ¿Has notado algo raro en el cuello? ¿Algo que te moleste al tragar?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, nada. Me encuentro bien. Ni siquiera noté que tenía el nódulo. Fue el radiólogo quien lo vio.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Bien. ¿Has tenido cambios en la voz? ¿Alguna ronquera? ¿Dificultad para respirar?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] No, nada de eso. Respiro perfectamente.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Cuéntame un poco de ti. ¿Tienes antecedentes de enfermedades tiroideas en la familia?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues mi abuela tenía hipotiroidismo, creo. Pero nada que recuerde grave.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Y tú? ¿Cansancio, cambios de peso, intolerancia al calor o al frío?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] La verdad es que no. Me encuentro bien de energía. Mi peso es estable desde hace años.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tomas alguna medicación actualmente?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[casually] No. Algún analgésico de vez en cuando para dolores de cabeza, pero nada crónico.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Antecedentes de exposición a radiación? ¿Tratamientos radioterápicos en cabeza o cuello alguna vez?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, nunca. Tengo bastante buena salud en general.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, Andrés. Ahora voy a examinar tu cuello y palpar la tiroides. Pon la cabeza un poco hacia atrás, relájate. [performs examination] Palpable, firme, aproximadamente de un centímetro y medio, bien circunscrito, no doloroso.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿Está mal?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No parece nada preocupante por la palpación. Ahora te voy a tomar la tensión arterial. [pause] Ciento treinta y cuatro sobre ochenta y cuatro. Un poco elevada, pero nada grave. Frecuencia cardíaca setenta y seis. Peso ochenta y cuatro kilos, talla ciento setenta y ocho centímetros. Índice de masa corporal veintiséis coma cinco, ligeramente sobrepeso.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighs] Sí, podría perder unos kilos.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clinically] Ausculto el corazón: rítmico, sin soplos. Pulmones claros. Abdomen blando. Sin adenopatías cervicales palpables. [pause] Ahora te voy a hacer una ecografía más detallada de la tiroides para ver mejor ese nódulo.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Claro, hágalo.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[performing ultrasound] Voy a aplicar gel aquí. [pause, scanning] Mira en la pantalla: aquí está el nódulo, ¿lo ves? Tiene este aspecto hipoecogénico, bordes bien definidos, no hay mucha vascularización anómala. Es un nódulo de bajo riesgo según los criterios TIRADS.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] ¿Significa que es benigno?",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Los hallazgos ecográficos son consistentes con un nódulo tiroideo benigno. La clasificación TIRADS es tres, que es bajo riesgo. El riesgo de malignidad en los nódulos TIRADS tres es menor del cinco por ciento. Además, tu función tiroidea es completamente normal. TSH dos coma uno, T4 libre uno coma cero, todo perfecto.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pleased] Muy bien. ¿Y eso significa que no tengo que hacer nada?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, hay dos opciones. La primera es simplemente hacer seguimiento ecográfico cada seis o doce meses para ver si el nódulo cambia de tamaño o características. La segunda opción es hacer ahora una punción-aspiración con aguja fina, una PAAF, que es una pequeña biopsia con aguja fina para ver las células del nódulo y confirmar que es benigno. Es muy segura, rápida y sin apenas molestias.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] ¿Duele la punción?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Muy poco. Es como un pinchazo rápido. Muchos pacientes no sienten casi nada. Además, te haré una anestesia local con una crema para adormecerlo. [pause]",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[decisively] ¿Qué te parece si hacemos la punción hoy? Así salimos de dudas y tienes la tranquilidad de saber que es benigno por citología.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[agreeing] Está bien, hagámoslo hoy si podemos. Prefiero saber.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Perfecto. Te voy a explicar el procedimiento: me ayudará un colega, te colocaremos en la camilla en posición tumbada con la cabeza un poco hacia atrás, te pondré una crema anestésica unos minutos. Luego introduzco la aguja bajo visión ecográfica directamente en el nódulo, hago unos pocos movimientos de succión y retiro la aguja. El material se coloca en un portaobjetos para estudio citológico. Es muy rápido, cinco minutos máximo.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] De acuerdo. ¿Cuándo tengo los resultados?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] En unos diez a quince días tenemos el informe citológico. Te daremos cita para valorar los resultados. En el noventa y cinco por ciento de casos como el tuyo, la citología confirma benignidad. Si así es, entonces seguimiento con ecografías cada doce meses es suficiente.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Bien. ¿Y después de la punción puedo hacer vida normal?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Completamente. Algunos pacientes notan un poco de molestia leve las primeras horas, pero sin más. Puedes trabajar tranquilamente. Solo evita masaje cervical agresivo durante una semana. [pause] Ahora vamos a hacer la punción. Te voy a presentar a mi colega que me ayudará.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] De nada, Andrés. En dos semanas nos vemos con los resultados. Tranquilo, todo esto es muy rutinario.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/endocrinologia/END-003.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

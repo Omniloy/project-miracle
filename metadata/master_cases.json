@@ -1,0 +1,721 @@
+{
+  "proyecto": "Transcripciones y Audios Clínicos Sintéticos con CIE-10 y SNOMED CT",
+  "total_casos": 100,
+  "especialidades": 10,
+  "voces": {
+    "doctores_masculinos": ["erKgR0s8Y67t4iiHuA9R", "CdAqYBLnsNjmTqYgD5Ha", "wnKyx1zkUEUnfURKiuaP"],
+    "doctoras_femeninas": ["RgXx32WYOGrd7gFNifSf", "tXgbXPnsMpKXkuTgvE3h", "SDVJaMLoJa7wc3s2sn7d"],
+    "pacientes_masculinos": ["tGjegxe7yxhGMzd3SOmH", "erKgR0s8Y67t4iiHuA9R", "CdAqYBLnsNjmTqYgD5Ha"],
+    "pacientes_femeninas": ["KHCvMklQZZo0O30ERnVn", "eRS3faIyd3KSRjzmhPxE", "RgXx32WYOGrd7gFNifSf"],
+    "restricciones": {
+      "tGjegxe7yxhGMzd3SOmH": "solo paciente masculino",
+      "KHCvMklQZZo0O30ERnVn": "solo paciente femenina",
+      "eRS3faIyd3KSRjzmhPxE": "solo paciente femenina"
+    }
+  },
+  "casos": [
+    {
+      "id": "MF-001", "especialidad": "Medicina de familia", "estado": "completado",
+      "diagnostico": "Hipertensión arterial esencial", "cie10": "I10", "snomed_ct": "59621000", "es_rara": false
+    },
+    {
+      "id": "MF-002", "especialidad": "Medicina de familia",
+      "diagnostico": "Diabetes mellitus tipo 2 sin complicaciones", "cie10": "E11.9", "snomed_ct": "44054006", "es_rara": false,
+      "paciente": {"nombre": "Carmen Delgado Ruiz", "edad": 62, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Ana Belén Torres Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "MF-003", "especialidad": "Medicina de familia",
+      "diagnostico": "Infección aguda de vías respiratorias superiores", "cie10": "J06.9", "snomed_ct": "54150009", "es_rara": false,
+      "paciente": {"nombre": "Javier Muñoz Soto", "edad": 34, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Carlos Navarro Ruiz", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "MF-004", "especialidad": "Medicina de familia",
+      "diagnostico": "Lumbalgia", "cie10": "M54.5", "snomed_ct": "279039007", "es_rara": false,
+      "paciente": {"nombre": "Pilar Gómez Herrera", "edad": 48, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Luis Ramírez Peña", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "MF-005", "especialidad": "Medicina de familia",
+      "diagnostico": "Trastorno de ansiedad generalizada", "cie10": "F41.1", "snomed_ct": "21897009", "es_rara": false,
+      "paciente": {"nombre": "Roberto Iglesias Campos", "edad": 41, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Marta Vega López", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "MF-006", "especialidad": "Medicina de familia",
+      "diagnostico": "Hipotiroidismo no especificado", "cie10": "E03.9", "snomed_ct": "40930008", "es_rara": false,
+      "paciente": {"nombre": "Lucía Herrero Pascual", "edad": 55, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Carlos Navarro Ruiz", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "MF-007", "especialidad": "Medicina de familia",
+      "diagnostico": "Dislipemia mixta", "cie10": "E78.2", "snomed_ct": "398036000", "es_rara": false,
+      "paciente": {"nombre": "Fernando Blanco Serrano", "edad": 52, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Ana Belén Torres Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "MF-008", "especialidad": "Medicina de familia",
+      "diagnostico": "Infección urinaria, sitio no especificado", "cie10": "N39.0", "snomed_ct": "68566005", "es_rara": false,
+      "paciente": {"nombre": "Elena Prieto Molina", "edad": 29, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Luis Ramírez Peña", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "MF-009", "especialidad": "Medicina de familia",
+      "diagnostico": "Enfermedad de Addison", "cie10": "E27.1", "snomed_ct": "363732003", "es_rara": true,
+      "paciente": {"nombre": "Sergio Calvo Díaz", "edad": 37, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Marta Vega López", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "MF-010", "especialidad": "Medicina de familia",
+      "diagnostico": "Porfiria cutánea tarda", "cie10": "E80.1", "snomed_ct": "17613001", "es_rara": true,
+      "paciente": {"nombre": "Isabel Ramos Fuentes", "edad": 44, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Carlos Navarro Ruiz", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+
+    {
+      "id": "PED-001", "especialidad": "Pediatría",
+      "diagnostico": "Otitis media aguda, no especificada", "cie10": "H66.9", "snomed_ct": "65363002", "es_rara": false,
+      "paciente": {"nombre": "Pablo Martín Ruiz (madre: Sonia Ruiz)", "edad": 4, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Laura Sánchez Mora", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "PED-002", "especialidad": "Pediatría",
+      "diagnostico": "Bronquiolitis aguda debida a virus sincitial respiratorio", "cie10": "J21.0", "snomed_ct": "4120002", "es_rara": false,
+      "paciente": {"nombre": "Marta Fernández Gil (padre: Andrés Fernández)", "edad": 8, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Miguel Ángel Pérez Roca", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "PED-003", "especialidad": "Pediatría",
+      "diagnostico": "Dermatitis atópica", "cie10": "L20.9", "snomed_ct": "24079001", "es_rara": false,
+      "paciente": {"nombre": "Lucas García Vidal (madre: Patricia Vidal)", "edad": 6, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Laura Sánchez Mora", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "PED-004", "especialidad": "Pediatría",
+      "diagnostico": "Gastroenteritis aguda por rotavirus", "cie10": "A08.0", "snomed_ct": "186150001", "es_rara": false,
+      "paciente": {"nombre": "Sara López Bravo (madre: Cristina Bravo)", "edad": 3, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Miguel Ángel Pérez Roca", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "PED-005", "especialidad": "Pediatría",
+      "diagnostico": "Asma, no especificado", "cie10": "J45.9", "snomed_ct": "195967001", "es_rara": false,
+      "paciente": {"nombre": "Diego Navarro Soto (padre: Raúl Navarro)", "edad": 9, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Laura Sánchez Mora", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "PED-006", "especialidad": "Pediatría",
+      "diagnostico": "Faringoamigdalitis aguda estreptocócica", "cie10": "J02.0", "snomed_ct": "43878008", "es_rara": false,
+      "paciente": {"nombre": "Carla Jiménez Prieto (madre: Rosa Prieto)", "edad": 7, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Miguel Ángel Pérez Roca", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "PED-007", "especialidad": "Pediatría",
+      "diagnostico": "Trastorno por déficit de atención con hiperactividad, tipo combinado", "cie10": "F90.2", "snomed_ct": "406506008", "es_rara": false,
+      "paciente": {"nombre": "Álvaro Herrero Blanco (madre: Ana Blanco)", "edad": 8, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Laura Sánchez Mora", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "PED-008", "especialidad": "Pediatría",
+      "diagnostico": "Varicela sin complicaciones", "cie10": "B01.9", "snomed_ct": "38907003", "es_rara": false,
+      "paciente": {"nombre": "Irene Molina Torres (padre: David Molina)", "edad": 5, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Miguel Ángel Pérez Roca", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "PED-009", "especialidad": "Pediatría",
+      "diagnostico": "Fibrosis quística con manifestaciones pulmonares", "cie10": "E84.0", "snomed_ct": "190905008", "es_rara": true,
+      "paciente": {"nombre": "Marcos Díaz Romero (madre: Laura Romero)", "edad": 10, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Laura Sánchez Mora", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "PED-010", "especialidad": "Pediatría",
+      "diagnostico": "Enfermedad de Kawasaki", "cie10": "M30.3", "snomed_ct": "75053002", "es_rara": true,
+      "paciente": {"nombre": "Valeria Ramos Gómez (padre: Pedro Ramos)", "edad": 4, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Miguel Ángel Pérez Roca", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+
+    {
+      "id": "CAR-001", "especialidad": "Cardiología",
+      "diagnostico": "Fibrilación auricular paroxística", "cie10": "I48.0", "snomed_ct": "282825002", "es_rara": false,
+      "paciente": {"nombre": "Antonio García Ramos", "edad": 67, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Elena Martín Sánchez", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "CAR-002", "especialidad": "Cardiología",
+      "diagnostico": "Infarto agudo de miocardio de pared anterior", "cie10": "I21.0", "snomed_ct": "54329005", "es_rara": false,
+      "paciente": {"nombre": "José Luis Fernández Ortega", "edad": 59, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Alejandro Ruiz Castillo", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "CAR-003", "especialidad": "Cardiología",
+      "diagnostico": "Insuficiencia cardíaca congestiva", "cie10": "I50.0", "snomed_ct": "42343007", "es_rara": false,
+      "paciente": {"nombre": "Rosa María López Vega", "edad": 74, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Elena Martín Sánchez", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "CAR-004", "especialidad": "Cardiología",
+      "diagnostico": "Estenosis aórtica reumática con insuficiencia", "cie10": "I06.2", "snomed_ct": "60234000", "es_rara": false,
+      "paciente": {"nombre": "Francisco Moreno Blanco", "edad": 71, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Alejandro Ruiz Castillo", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "CAR-005", "especialidad": "Cardiología",
+      "diagnostico": "Angina de pecho inestable", "cie10": "I20.0", "snomed_ct": "4557003", "es_rara": false,
+      "paciente": {"nombre": "Dolores Sánchez Herrera", "edad": 63, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Elena Martín Sánchez", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "CAR-006", "especialidad": "Cardiología",
+      "diagnostico": "Miocardiopatía dilatada", "cie10": "I42.0", "snomed_ct": "195021004", "es_rara": false,
+      "paciente": {"nombre": "Miguel Ángel Torres Peña", "edad": 54, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Alejandro Ruiz Castillo", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "CAR-007", "especialidad": "Cardiología",
+      "diagnostico": "Hipertensión arterial secundaria a enfermedad renal", "cie10": "I15.1", "snomed_ct": "194783001", "es_rara": false,
+      "paciente": {"nombre": "Amparo Vidal Campos", "edad": 58, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Elena Martín Sánchez", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "CAR-008", "especialidad": "Cardiología",
+      "diagnostico": "Pericarditis aguda no especificada", "cie10": "I30.9", "snomed_ct": "3238004", "es_rara": false,
+      "paciente": {"nombre": "Andrés Prieto Gil", "edad": 32, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Alejandro Ruiz Castillo", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "CAR-009", "especialidad": "Cardiología",
+      "diagnostico": "Síndrome de Brugada", "cie10": "I49.8", "snomed_ct": "418818005", "es_rara": true,
+      "paciente": {"nombre": "Pablo Herrero Díaz", "edad": 38, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Elena Martín Sánchez", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "CAR-010", "especialidad": "Cardiología",
+      "diagnostico": "Amiloidosis cardíaca", "cie10": "E85.4", "snomed_ct": "68820003", "es_rara": true,
+      "paciente": {"nombre": "María Teresa Calvo Serrano", "edad": 69, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Alejandro Ruiz Castillo", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+
+    {
+      "id": "DER-001", "especialidad": "Dermatología",
+      "diagnostico": "Psoriasis vulgar", "cie10": "L40.0", "snomed_ct": "9014002", "es_rara": false,
+      "paciente": {"nombre": "Raquel Morales Vega", "edad": 35, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. David Sanz Rojo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "DER-002", "especialidad": "Dermatología",
+      "diagnostico": "Dermatitis atópica", "cie10": "L20.9", "snomed_ct": "24079001", "es_rara": false,
+      "paciente": {"nombre": "Alejandro Ruiz Pascual", "edad": 28, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Cristina Ortega Lara", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "DER-003", "especialidad": "Dermatología",
+      "diagnostico": "Acné vulgar", "cie10": "L70.0", "snomed_ct": "88616000", "es_rara": false,
+      "paciente": {"nombre": "Marina Calvo Ruiz", "edad": 17, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. David Sanz Rojo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "DER-004", "especialidad": "Dermatología",
+      "diagnostico": "Melanoma maligno de piel del tronco", "cie10": "C43.5", "snomed_ct": "372244006", "es_rara": false,
+      "paciente": {"nombre": "Pedro Domínguez Fuentes", "edad": 56, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Cristina Ortega Lara", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "DER-005", "especialidad": "Dermatología",
+      "diagnostico": "Herpes zóster sin complicaciones", "cie10": "B02.9", "snomed_ct": "4740000", "es_rara": false,
+      "paciente": {"nombre": "Josefina Blanco Herrero", "edad": 68, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. David Sanz Rojo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "DER-006", "especialidad": "Dermatología",
+      "diagnostico": "Urticaria, no especificada", "cie10": "L50.9", "snomed_ct": "126485001", "es_rara": false,
+      "paciente": {"nombre": "Daniel Serrano Molina", "edad": 24, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Cristina Ortega Lara", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "DER-007", "especialidad": "Dermatología",
+      "diagnostico": "Rosácea", "cie10": "L71.9", "snomed_ct": "398909004", "es_rara": false,
+      "paciente": {"nombre": "Ana María Iglesias Peña", "edad": 42, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. David Sanz Rojo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "DER-008", "especialidad": "Dermatología",
+      "diagnostico": "Dermatitis seborreica, no especificada", "cie10": "L21.9", "snomed_ct": "50563003", "es_rara": false,
+      "paciente": {"nombre": "Carlos Alberto Ramos Gil", "edad": 31, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Cristina Ortega Lara", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "DER-009", "especialidad": "Dermatología",
+      "diagnostico": "Epidermólisis bullosa adquirida", "cie10": "L12.3", "snomed_ct": "402697001", "es_rara": true,
+      "paciente": {"nombre": "Teresa Gómez Vidal", "edad": 39, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. David Sanz Rojo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "DER-010", "especialidad": "Dermatología",
+      "diagnostico": "Ictiosis vulgar", "cie10": "Q80.0", "snomed_ct": "254155006", "es_rara": true,
+      "paciente": {"nombre": "Hugo Prieto Castro", "edad": 22, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Cristina Ortega Lara", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+
+    {
+      "id": "TRA-001", "especialidad": "Traumatología",
+      "diagnostico": "Fractura de la epífisis inferior del radio", "cie10": "S52.50", "snomed_ct": "263225007", "es_rara": false,
+      "paciente": {"nombre": "Enrique Muñoz Blanco", "edad": 45, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Jorge Castilla Peña", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "TRA-002", "especialidad": "Traumatología",
+      "diagnostico": "Gonartrosis primaria bilateral", "cie10": "M17.0", "snomed_ct": "239873007", "es_rara": false,
+      "paciente": {"nombre": "María Dolores Vega Ramos", "edad": 68, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Nuria Pardo Soto", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "TRA-003", "especialidad": "Traumatología",
+      "diagnostico": "Rotura del ligamento cruzado anterior", "cie10": "S83.50", "snomed_ct": "275454005", "es_rara": false,
+      "paciente": {"nombre": "Adrián Gómez Fuentes", "edad": 26, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Jorge Castilla Peña", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "TRA-004", "especialidad": "Traumatología",
+      "diagnostico": "Hernia discal lumbar", "cie10": "M51.1", "snomed_ct": "76107001", "es_rara": false,
+      "paciente": {"nombre": "Beatriz Herrera López", "edad": 43, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Nuria Pardo Soto", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "TRA-005", "especialidad": "Traumatología",
+      "diagnostico": "Síndrome del túnel carpiano", "cie10": "G56.0", "snomed_ct": "57406009", "es_rara": false,
+      "paciente": {"nombre": "Ricardo Delgado Prieto", "edad": 51, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Jorge Castilla Peña", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "TRA-006", "especialidad": "Traumatología",
+      "diagnostico": "Tendinitis del manguito rotador", "cie10": "M75.1", "snomed_ct": "67801009", "es_rara": false,
+      "paciente": {"nombre": "Carmen Rosa Gil Navarro", "edad": 55, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Nuria Pardo Soto", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "TRA-007", "especialidad": "Traumatología",
+      "diagnostico": "Esguince de tobillo, ligamento lateral", "cie10": "S93.40", "snomed_ct": "44465007", "es_rara": false,
+      "paciente": {"nombre": "Iván Pascual Torres", "edad": 22, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Jorge Castilla Peña", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "TRA-008", "especialidad": "Traumatología",
+      "diagnostico": "Fractura del cuello del fémur", "cie10": "S72.00", "snomed_ct": "5913000", "es_rara": false,
+      "paciente": {"nombre": "Josefa Calvo Herrero", "edad": 82, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Nuria Pardo Soto", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "TRA-009", "especialidad": "Traumatología",
+      "diagnostico": "Osteogénesis imperfecta tipo I", "cie10": "Q78.0", "snomed_ct": "78314001", "es_rara": true,
+      "paciente": {"nombre": "Natalia Ruiz Campos", "edad": 16, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Jorge Castilla Peña", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "TRA-010", "especialidad": "Traumatología",
+      "diagnostico": "Displasia fibrosa poliostótica", "cie10": "Q78.1", "snomed_ct": "254113005", "es_rara": true,
+      "paciente": {"nombre": "Óscar Ramos Delgado", "edad": 30, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Nuria Pardo Soto", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+
+    {
+      "id": "GIN-001", "especialidad": "Ginecología",
+      "diagnostico": "Leiomioma uterino, no especificado", "cie10": "D25.9", "snomed_ct": "95315005", "es_rara": false,
+      "paciente": {"nombre": "Marta Serrano López", "edad": 42, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Pablo Iglesias Mora", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "GIN-002", "especialidad": "Ginecología",
+      "diagnostico": "Endometriosis del útero", "cie10": "N80.0", "snomed_ct": "129103003", "es_rara": false,
+      "paciente": {"nombre": "Silvia Peña Blanco", "edad": 33, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Isabel Romero Díaz", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "GIN-003", "especialidad": "Ginecología",
+      "diagnostico": "Síndrome de ovario poliquístico", "cie10": "E28.2", "snomed_ct": "69878008", "es_rara": false,
+      "paciente": {"nombre": "Laura Prieto Gómez", "edad": 26, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Pablo Iglesias Mora", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "GIN-004", "especialidad": "Ginecología",
+      "diagnostico": "Vaginitis aguda", "cie10": "N76.0", "snomed_ct": "30800001", "es_rara": false,
+      "paciente": {"nombre": "Andrea Navarro Ruiz", "edad": 29, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Isabel Romero Díaz", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "GIN-005", "especialidad": "Ginecología",
+      "diagnostico": "Displasia cervical leve (CIN 1)", "cie10": "N87.0", "snomed_ct": "285836003", "es_rara": false,
+      "paciente": {"nombre": "Clara Herrero Vidal", "edad": 31, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Pablo Iglesias Mora", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "GIN-006", "especialidad": "Ginecología",
+      "diagnostico": "Menorragia con ciclo regular", "cie10": "N92.0", "snomed_ct": "386692008", "es_rara": false,
+      "paciente": {"nombre": "Eva Gil Moreno", "edad": 38, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Isabel Romero Díaz", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "GIN-007", "especialidad": "Ginecología",
+      "diagnostico": "Menopausia y estado climatérico femenino", "cie10": "N95.1", "snomed_ct": "161712005", "es_rara": false,
+      "paciente": {"nombre": "Pilar Delgado Torres", "edad": 52, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Pablo Iglesias Mora", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "GIN-008", "especialidad": "Ginecología",
+      "diagnostico": "Quiste de ovario, no especificado", "cie10": "N83.2", "snomed_ct": "79883001", "es_rara": false,
+      "paciente": {"nombre": "Patricia Vega Sánchez", "edad": 24, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Isabel Romero Díaz", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "GIN-009", "especialidad": "Ginecología",
+      "diagnostico": "Síndrome de Asherman", "cie10": "N85.6", "snomed_ct": "70209005", "es_rara": true,
+      "paciente": {"nombre": "Alicia Ramos Herrero", "edad": 34, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Pablo Iglesias Mora", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "GIN-010", "especialidad": "Ginecología",
+      "diagnostico": "Síndrome de Turner", "cie10": "Q96.9", "snomed_ct": "38804009", "es_rara": true,
+      "paciente": {"nombre": "Nerea Calvo Ortega", "edad": 18, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Isabel Romero Díaz", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+
+    {
+      "id": "NEU-001", "especialidad": "Neumología",
+      "diagnostico": "EPOC con exacerbación aguda", "cie10": "J44.1", "snomed_ct": "195951007", "es_rara": false,
+      "paciente": {"nombre": "Manuel Herrero Pascual", "edad": 66, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Sara Molina Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NEU-002", "especialidad": "Neumología",
+      "diagnostico": "Asma predominantemente alérgica", "cie10": "J45.0", "snomed_ct": "389145006", "es_rara": false,
+      "paciente": {"nombre": "Sara Blanco Ruiz", "edad": 28, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Roberto Díaz Calvo", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "NEU-003", "especialidad": "Neumología",
+      "diagnostico": "Neumonía bacteriana, no especificada", "cie10": "J15.9", "snomed_ct": "53084003", "es_rara": false,
+      "paciente": {"nombre": "Gregorio López Serrano", "edad": 72, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Sara Molina Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NEU-004", "especialidad": "Neumología",
+      "diagnostico": "Derrame pleural no clasificado en otra parte", "cie10": "J90", "snomed_ct": "60046008", "es_rara": false,
+      "paciente": {"nombre": "Esperanza Gómez Vega", "edad": 61, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Roberto Díaz Calvo", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "NEU-005", "especialidad": "Neumología",
+      "diagnostico": "Apnea obstructiva del sueño", "cie10": "G47.33", "snomed_ct": "78275009", "es_rara": false,
+      "paciente": {"nombre": "Jesús Navarro Prieto", "edad": 48, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Sara Molina Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NEU-006", "especialidad": "Neumología",
+      "diagnostico": "Bronquiectasias", "cie10": "J47.9", "snomed_ct": "12295008", "es_rara": false,
+      "paciente": {"nombre": "Concha Ramos López", "edad": 58, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Roberto Díaz Calvo", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "NEU-007", "especialidad": "Neumología",
+      "diagnostico": "Tromboembolismo pulmonar sin cor pulmonale agudo", "cie10": "I26.9", "snomed_ct": "59282003", "es_rara": false,
+      "paciente": {"nombre": "Ángel Torres Herrero", "edad": 55, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Sara Molina Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NEU-008", "especialidad": "Neumología",
+      "diagnostico": "Neumotórax espontáneo primario", "cie10": "J93.1", "snomed_ct": "31939003", "es_rara": false,
+      "paciente": {"nombre": "Claudia Gil Morales", "edad": 23, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Roberto Díaz Calvo", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "NEU-009", "especialidad": "Neumología",
+      "diagnostico": "Fibrosis pulmonar idiopática", "cie10": "J84.1", "snomed_ct": "700250006", "es_rara": true,
+      "paciente": {"nombre": "Santiago Peña Campos", "edad": 64, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Sara Molina Gil", "voice_id": "RgXx32WYOGrd7gFNifSf"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NEU-010", "especialidad": "Neumología",
+      "diagnostico": "Linfangioleiomiomatosis", "cie10": "J84.8", "snomed_ct": "277844007", "es_rara": true,
+      "paciente": {"nombre": "Virginia Calvo Ortega", "edad": 36, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Roberto Díaz Calvo", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+
+    {
+      "id": "NRL-001", "especialidad": "Neurología",
+      "diagnostico": "Migraña con aura", "cie10": "G43.1", "snomed_ct": "4473006", "es_rara": false,
+      "paciente": {"nombre": "Patricia Moreno Vidal", "edad": 32, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Javier Moreno Castillo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "NRL-002", "especialidad": "Neurología",
+      "diagnostico": "Epilepsia con crisis generalizadas tónico-clónicas", "cie10": "G40.3", "snomed_ct": "230422008", "es_rara": false,
+      "paciente": {"nombre": "Alberto Sánchez Prieto", "edad": 24, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Beatriz Herrero Lara", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NRL-003", "especialidad": "Neurología",
+      "diagnostico": "Enfermedad de Parkinson, primaria", "cie10": "G20", "snomed_ct": "49049000", "es_rara": false,
+      "paciente": {"nombre": "Francisco Javier Ruiz Peña", "edad": 68, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Javier Moreno Castillo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NRL-004", "especialidad": "Neurología",
+      "diagnostico": "Ictus isquémico cerebral", "cie10": "I63.9", "snomed_ct": "422504002", "es_rara": false,
+      "paciente": {"nombre": "Mercedes Gil Navarro", "edad": 73, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Beatriz Herrero Lara", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "NRL-005", "especialidad": "Neurología",
+      "diagnostico": "Esclerosis múltiple remitente-recurrente", "cie10": "G35", "snomed_ct": "24700007", "es_rara": false,
+      "paciente": {"nombre": "David Vega Delgado", "edad": 29, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Javier Moreno Castillo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NRL-006", "especialidad": "Neurología",
+      "diagnostico": "Enfermedad de Alzheimer de inicio tardío", "cie10": "G30.1", "snomed_ct": "416975007", "es_rara": false,
+      "paciente": {"nombre": "Dolores Calvo Herrero (acompañada por su hija Alicia)", "edad": 78, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Beatriz Herrero Lara", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "NRL-007", "especialidad": "Neurología",
+      "diagnostico": "Neuropatía del nervio ciático", "cie10": "G57.0", "snomed_ct": "128196005", "es_rara": false,
+      "paciente": {"nombre": "Tomás Iglesias Romero", "edad": 47, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Javier Moreno Castillo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "NRL-008", "especialidad": "Neurología",
+      "diagnostico": "Cefalea tensional crónica", "cie10": "G44.2", "snomed_ct": "398057008", "es_rara": false,
+      "paciente": {"nombre": "Sonia Blanco Ramos", "edad": 36, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Beatriz Herrero Lara", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "NRL-009", "especialidad": "Neurología", "estado": "completado",
+      "diagnostico": "Ataxia de Friedreich", "cie10": "G11.11", "snomed_ct": "10394003", "es_rara": true
+    },
+    {
+      "id": "NRL-010", "especialidad": "Neurología",
+      "diagnostico": "Esclerosis lateral amiotrófica", "cie10": "G12.21", "snomed_ct": "86044005", "es_rara": true,
+      "paciente": {"nombre": "Rafael Morales Peña", "edad": 56, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Javier Moreno Castillo", "voice_id": "CdAqYBLnsNjmTqYgD5Ha"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+
+    {
+      "id": "END-001", "especialidad": "Endocrinología",
+      "diagnostico": "Diabetes mellitus tipo 1 sin complicaciones", "cie10": "E10.9", "snomed_ct": "46635009", "es_rara": false,
+      "paciente": {"nombre": "Marta Pascual Romero", "edad": 22, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Sergio Morales Gil", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "END-002", "especialidad": "Endocrinología",
+      "diagnostico": "Hipertiroidismo por enfermedad de Graves", "cie10": "E05.0", "snomed_ct": "353295004", "es_rara": false,
+      "paciente": {"nombre": "Cristina López Fuentes", "edad": 34, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Paula Soto Herrero", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "END-003", "especialidad": "Endocrinología",
+      "diagnostico": "Nódulo tiroideo solitario no tóxico", "cie10": "E04.1", "snomed_ct": "237495005", "es_rara": false,
+      "paciente": {"nombre": "Andrés Calvo Ramos", "edad": 49, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Sergio Morales Gil", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "END-004", "especialidad": "Endocrinología",
+      "diagnostico": "Obesidad mórbida", "cie10": "E66.01", "snomed_ct": "83911000119104", "es_rara": false,
+      "paciente": {"nombre": "Rosa Herrero Blanco", "edad": 45, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Paula Soto Herrero", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "END-005", "especialidad": "Endocrinología",
+      "diagnostico": "Insuficiencia suprarrenal primaria (Addison)", "cie10": "E27.1", "snomed_ct": "363732003", "es_rara": false,
+      "paciente": {"nombre": "Luis Alberto Prieto Vega", "edad": 40, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Sergio Morales Gil", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "END-006", "especialidad": "Endocrinología",
+      "diagnostico": "Osteoporosis posmenopáusica con fractura patológica", "cie10": "M80.0", "snomed_ct": "102588006", "es_rara": false,
+      "paciente": {"nombre": "Carmen Delgado Gil", "edad": 67, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Paula Soto Herrero", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "END-007", "especialidad": "Endocrinología",
+      "diagnostico": "Hiperparatiroidismo primario", "cie10": "E21.0", "snomed_ct": "36348003", "es_rara": false,
+      "paciente": {"nombre": "Javier Serrano Torres", "edad": 53, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Sergio Morales Gil", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "END-008", "especialidad": "Endocrinología",
+      "diagnostico": "Síndrome metabólico", "cie10": "E88.81", "snomed_ct": "237602007", "es_rara": false,
+      "paciente": {"nombre": "Pilar Navarro Gómez", "edad": 57, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Paula Soto Herrero", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "END-009", "especialidad": "Endocrinología",
+      "diagnostico": "Síndrome de Cushing", "cie10": "E24.9", "snomed_ct": "47270006", "es_rara": true,
+      "paciente": {"nombre": "Nuria Vega Herrero", "edad": 38, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Sergio Morales Gil", "voice_id": "wnKyx1zkUEUnfURKiuaP"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "END-010", "especialidad": "Endocrinología",
+      "diagnostico": "Feocromocitoma", "cie10": "D35.0", "snomed_ct": "302835009", "es_rara": true,
+      "paciente": {"nombre": "Ignacio Ruiz Calvo", "edad": 44, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Paula Soto Herrero", "voice_id": "tXgbXPnsMpKXkuTgvE3h"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+
+    {
+      "id": "URO-001", "especialidad": "Urología",
+      "diagnostico": "Hiperplasia prostática benigna con obstrucción urinaria", "cie10": "N40.1", "snomed_ct": "266569009", "es_rara": false,
+      "paciente": {"nombre": "Gonzalo Herrero Sánchez", "edad": 65, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Iván Romero Gil", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "URO-002", "especialidad": "Urología",
+      "diagnostico": "Litiasis ureteral", "cie10": "N20.1", "snomed_ct": "95570007", "es_rara": false,
+      "paciente": {"nombre": "Rubén Molina Torres", "edad": 38, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Ana Peña Ramos", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "URO-003", "especialidad": "Urología",
+      "diagnostico": "Infección urinaria recurrente", "cie10": "N39.0", "snomed_ct": "197927001", "es_rara": false,
+      "paciente": {"nombre": "Amparo Gómez Calvo", "edad": 54, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Iván Romero Gil", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "URO-004", "especialidad": "Urología",
+      "diagnostico": "Vejiga hiperactiva", "cie10": "N32.81", "snomed_ct": "397732007", "es_rara": false,
+      "paciente": {"nombre": "Teresa Prieto Navarro", "edad": 62, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Ana Peña Ramos", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "URO-005", "especialidad": "Urología",
+      "diagnostico": "Cáncer de próstata localizado", "cie10": "C61", "snomed_ct": "399068003", "es_rara": false,
+      "paciente": {"nombre": "Rafael Blanco Peña", "edad": 69, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Iván Romero Gil", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "URO-006", "especialidad": "Urología",
+      "diagnostico": "Prostatitis aguda", "cie10": "N41.0", "snomed_ct": "9713002", "es_rara": false,
+      "paciente": {"nombre": "Marcos Serrano Díaz", "edad": 34, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Ana Peña Ramos", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "URO-007", "especialidad": "Urología",
+      "diagnostico": "Varicocele", "cie10": "I86.1", "snomed_ct": "50295007", "es_rara": false,
+      "paciente": {"nombre": "Hugo Delgado Moreno", "edad": 27, "sexo": "masculino"},
+      "medico": {"nombre": "Dr. Iván Romero Gil", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    },
+    {
+      "id": "URO-008", "especialidad": "Urología",
+      "diagnostico": "Incontinencia urinaria de esfuerzo", "cie10": "N39.3", "snomed_ct": "111848001", "es_rara": false,
+      "paciente": {"nombre": "Marisol Vega Ruiz", "edad": 58, "sexo": "femenino"},
+      "medico": {"nombre": "Dra. Ana Peña Ramos", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+    },
+    {
+      "id": "URO-009", "especialidad": "Urología",
+      "diagnostico": "Cistitis intersticial (síndrome de vejiga dolorosa)", "cie10": "N30.1", "snomed_ct": "197834003", "es_rara": true,
+      "paciente": {"nombre": "Elena Ramos Ortega", "edad": 41, "sexo": "femenino"},
+      "medico": {"nombre": "Dr. Iván Romero Gil", "voice_id": "erKgR0s8Y67t4iiHuA9R"},
+      "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+    },
+    {
+      "id": "URO-010", "especialidad": "Urología",
+      "diagnostico": "Tumor de Wilms (nefroblastoma)", "cie10": "C64.9", "snomed_ct": "302849000", "es_rara": true,
+      "paciente": {"nombre": "Nicolás Torres Fuentes (padre: Antonio Torres)", "edad": 5, "sexo": "masculino"},
+      "medico": {"nombre": "Dra. Ana Peña Ramos", "voice_id": "SDVJaMLoJa7wc3s2sn7d"},
+      "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "id": "NRL-005",
+  "especialidad": "Neurología",
+  "resumen": "Paciente varón de 29 años con diagnóstico de esclerosis múltiple remitente-recurrente de cuatro años de evolución. Presenta historia de brotes recurrentes con síntomas variables: oftalmitis, parestesias, debilidad en miembros inferiores. Actualmente en remisión con deficitología neurológica residual leve. Resonancia magnética cerebral muestra múltiples lesiones desmielinizantes. Inicia tratamiento con interferón beta para modificar la enfermedad y reducir frecuencia de brotes.",
+  "diagnostico_principal": {
+    "nombre": "Esclerosis múltiple remitente-recurrente",
+    "cie10": "G35",
+    "snomed_ct": "24700007",
+    "snomed_termino": "Multiple sclerosis (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Neuritis óptica",
+      "cie10": "H46",
+      "snomed_ct": "17155008",
+      "snomed_termino": "Optic neuritis (disorder)"
+    },
+    {
+      "nombre": "Parestesias en miembros",
+      "cie10": "R20.2",
+      "snomed_ct": "91019004",
+      "snomed_termino": "Paresthesia (finding)"
+    },
+    {
+      "nombre": "Debilidad en miembros inferiores",
+      "cie10": "M62.5",
+      "snomed_ct": "26544005",
+      "snomed_termino": "Muscle weakness (finding)"
+    },
+    {
+      "nombre": "Fatiga neurológica",
+      "cie10": "R53.8",
+      "snomed_ct": "84968008",
+      "snomed_termino": "Fatigue (finding)"
+    },
+    {
+      "nombre": "Dificultad cognitiva",
+      "cie10": "R41.8",
+      "snomed_ct": "386806002",
+      "snomed_termino": "Impaired cognition (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "84728005",
+      "snomed_termino": "Neurologic examination (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética cerebral con contraste",
+      "snomed_ct": "241623006",
+      "snomed_termino": "Magnetic resonance imaging of brain (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética medular",
+      "snomed_ct": "394537008",
+      "snomed_termino": "Magnetic resonance imaging of spinal cord (procedure)"
+    },
+    {
+      "nombre": "Potenciales evocados visuales",
+      "snomed_ct": "245472005",
+      "snomed_termino": "Visual evoked potential (procedure)"
+    },
+    {
+      "nombre": "Punción lumbar y análisis de líquido cefalorraquídeo",
+      "snomed_ct": "86174004",
+      "snomed_termino": "Lumbar puncture (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Interferón beta-1a",
+      "dosis": "30 microgramos",
+      "posologia": "1 inyección intramuscular semanal",
+      "atc": "L03AB07",
+      "snomed_ct": "386827005",
+      "snomed_termino": "Interferon beta-1a (substance)",
+      "indicacion": "Terapia modificadora de la enfermedad para reducir frecuencia de brotes"
+    },
+    {
+      "nombre": "Metilprednisolona",
+      "dosis": "1 gramo",
+      "posologia": "En caso de brote: infusión intravenosa durante 3-5 días",
+      "atc": "H02AB04",
+      "snomed_ct": "373464007",
+      "snomed_termino": "Methylprednisolone (substance)",
+      "indicacion": "Pulsos de corticoides para brotes agudos"
+    }
+  ],
+  "notas_adicionales": [
+    "Enfermedad desmielinizante con curso impredecible. Requiere seguimiento a largo plazo.",
+    "Importante educación al paciente sobre posibles efectos secundarios del interferón: síntomas parecidos a gripe, reacciones en inyección.",
+    "Cambios en el habla, visión o debilidad súbita requieren atención inmediata.",
+    "Evitar infecciones, mantener esquema de vacunación actualizado.",
+    "La fatiga es un síntoma muy frecuente, ayuda la actividad física moderada.",
+    "Valorar apoyo psicológico, enfermedad es crónica y genera ansiedad.",
+    "Seguimiento cada 3 meses con resonancia anual para monitorizar actividad de enfermedad.",
+    "Considerar cambio a otros medicamentos si brotes persisten."
+  ],
+  "paciente": {
+    "nombre_ficticio": "David Vega Delgado",
+    "edad": 29,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Roberto Morales Jiménez",
+    "especialidad": "Neurología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenas tardes, David. Veo que tienes esclerosis múltiple diagnosticada hace cuatro años. ¿Cómo has estado estos últimos meses?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Bueno, hace unos tres meses tuve un brote fuerte. Vi borroso el ojo izquierdo durante una semana."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Solo visión borrosa? ¿Dolor ocular?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, me dolía cuando movía el ojo. Me dijeron que era neuritis óptica. Pasó en una semana, pero no tengo la visión exactamente igual que antes."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Y ahora mismo? ¿Síntomas actuales?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] La fatiga es lo peor. Me canso mucho, incluso después de dormir bien. Y tengo como hormigueos en las piernas, especialmente por las noches."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Con qué frecuencia tienes los brotes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Pues entre dos y tres al año. Es impredecible. Algunos duran una semana, otros varias."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] Dime, ¿cómo fue el diagnóstico inicial?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[recalling] Hace cuatro años, de repente no veía bien, tenía visión borrosa. Fui al oftalmólogo y me derivó al neurólogo. Me hicieron una resonancia magnética y veían varias manchas en el cerebro."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Desde entonces has tenido tratamiento?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, de momento solo he tomado medicamentos cuando tengo brotes. Cortisona intravenosa. Pero nunca me han puesto un tratamiento para evitar los brotes."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Eso es lo que hoy queremos hablar. ¿Tienes antecedentes médicos importantes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, estoy sano. No tomo nada normalmente. Trabajo como programador, tengo trabajo de oficina."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Y cómo te afecta la enfermedad en el trabajo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Bastante, si soy honesto. Cuando tengo fatiga no rindo igual. Los brotes me sacan de circulación durante semanas. Mis jefes entienden pero es complicado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[empathetically] Es normal. ¿Y el ánimo? ¿Cómo estás psicológicamente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Bueno, hay días que estoy más ansioso. La incertidumbre de no saber cuándo viene el próximo brote genera estrés."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es una reacción muy comprensible. Vamos a intentar mejorar la situación con un tratamiento preventivo."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] David, voy a hacer una exploración neurológica para valorar tu situación actual. Primero, sígueme el dedo con los ojos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concentrating] Sí, le sigo con la vista."
+        },
+        {
+          "rol": "medico",
+          "texto": "[observing] Bien. ¿Visión clara en ambos ojos? ¿Algún punto oscuro?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] En el ojo izquierdo aún tengo un poco de visión borrosa en la periferia, aunque mejor que hace meses."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Eso es recuperación. Levanta los brazos, aprieta mis manos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] ¿Así está bien?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Fuerza normal. Ahora camina hasta la puerta y vuelve."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Así voy, ¿está bien?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully observing] Marcha prácticamente normal. Voy a explorar la sensibilidad. Toco aquí con esto suave. ¿Sientes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[responding] Sí, siento perfectamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[checking legs] En las piernas también normal. Los reflejos están normales. En conclusión, tienes muy pocos signos neurológicos en estos momentos, lo que sugiere que estás en remisión de brote."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] David, los datos que tenemos: múltiples brotes en cuatro años, lesiones desmielinizantes en la resonancia cerebral, óptica y médular, confirman que tienes esclerosis múltiple forma remitente-recurrente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Entendido."
+        },
+        {
+          "rol": "medico",
+          "texto": "[educatingly] Esta forma es la más frecuente, el 85% de los casos comienzan así. Caracterizada por brotes de síntomas nuevos o empeoramiento, seguidos de remisión parcial o total."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Hay cura?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] No hay cura, pero tenemos medicamentos muy eficaces que reducen la frecuencia y severidad de los brotes. El objetivo es modificar la enfermedad y prevenir que avance."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Eso significa que tendré menos brotes?"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Exactamente. Te voy a proponer interferón beta-1a. Es una proteína que modula el sistema inmunológico. Se administra por inyección intramuscular una vez a la semana."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Una inyección cada semana? ¿De por vida?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Sí, serán inyecciones periódicas. Ahora mismo no hay curación, así que el tratamiento es continuado. Algunos pacientes, si tienen remisión prolongada, podemos replantear, pero la mayoría continúa."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] ¿Y los efectos secundarios?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] Puede causar síntomas parecidos a gripe después de la inyección: fiebre, dolores musculares. También reacciones en el sitio de la inyección, enrojecimiento o hinchazón. Son tolerables generalmente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Hay riesgo de infecciones?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] El interferón no aumenta mucho el riesgo de infecciones graves. Pero es importante mantener la vacunación al día. Antes de empezar, haremos análisis de sangre para descartar cualquier problema."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Cuándo puedo empezar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Te haremos análisis esta semana, resonancia magnética para documentar el estado actual, y si todo está bien, empezamos el interferón. Te enseñaremos la técnica de inyección. Muchos pacientes se la ponen ellos mismos en casa."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] De acuerdo. Me alegra que haya opciones de tratamiento. ¿Cada cuándo nos vemos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te vemos en un mes para valorar tolerancia. Luego cada tres meses. Si tienes síntomas nuevos antes, llámame. Vamos a controlar esto juntos, David."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neurologia/NRL-005.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

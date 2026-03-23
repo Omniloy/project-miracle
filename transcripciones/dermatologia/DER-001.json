@@ -1,0 +1,300 @@
+{
+  "id": "DER-001",
+  "especialidad": "Dermatología",
+  "resumen": "Paciente mujer de 35 años que acude a consulta por lesiones eritematosas descamativas en codos, rodillas y cuero cabelludo de varios meses de evolución. Se diagnostica psoriasis vulgar y se inicia tratamiento tópico con betametasona y calcipotriol, además de recomendaciones de cuidados e hidratación.",
+  "diagnostico_principal": {
+    "nombre": "Psoriasis vulgar",
+    "cie10": "L40.0",
+    "snomed_ct": "9014002",
+    "snomed_termino": "Psoriasis (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Seborrea",
+      "cie10": "L21.9",
+      "snomed_ct": "50563003",
+      "snomed_termino": "Seborrheic dermatitis (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Lesiones eritematosas descamativas",
+      "cie10": "R21",
+      "snomed_ct": "247441003",
+      "snomed_termino": "Erythematous patch (finding)"
+    },
+    {
+      "nombre": "Prurito",
+      "cie10": "L29.9",
+      "snomed_ct": "418290006",
+      "snomed_termino": "Itching (finding)"
+    },
+    {
+      "nombre": "Descamación",
+      "cie10": "L21.9",
+      "snomed_ct": "247441003",
+      "snomed_termino": "Scaling (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración dermatológica completa",
+      "snomed_ct": "15433301000119102",
+      "snomed_termino": "Dermatologic examination (procedure)"
+    },
+    {
+      "nombre": "Evaluación de índice de gravedad de psoriasis",
+      "snomed_ct": "385489003",
+      "snomed_termino": "Severity scale score (assessment scale)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Betametasona",
+      "dosis": "0.05%",
+      "posologia": "Aplicar en lesiones dos veces al día",
+      "atc": "D07AC01",
+      "snomed_ct": "126095005",
+      "snomed_termino": "Betamethasone (substance)",
+      "indicacion": "Antiinflamatorio tópico para psoriasis"
+    },
+    {
+      "nombre": "Calcipotriol",
+      "dosis": "50 mcg/g",
+      "posologia": "Aplicar en lesiones una o dos veces al día",
+      "atc": "D05AX02",
+      "snomed_ct": "387270008",
+      "snomed_termino": "Calcipotriol (substance)",
+      "indicacion": "Análogo de vitamina D para psoriasis"
+    }
+  ],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 72,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 120,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 80,
+      "unidad": "mmHg"
+    },
+    "peso": {
+      "valor": 68,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 165,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 24.9,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Antecedentes familiares de psoriasis (abuela materna).",
+    "Refiere que las lesiones empeoran con estrés e infecciones respiratorias.",
+    "Paciente muy preocupada por el aspecto de la piel y su impacto social.",
+    "Se proporciona información sobre factores desencadenantes y manejo de la enfermedad."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Raquel Morales Vega",
+    "edad": 35,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María Gómez Santos",
+    "especialidad": "Dermatología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Raquel. Veo que vienes por problemas de piel. Cuéntame qué te ha traído hoy a la consulta."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Buenos días, doctora. Pues mire, hace unos cinco o seis meses que tengo estas manchas rojas y con escamas en los codos y las rodillas. Cada vez me pican más y la verdad es que me afecta bastante emocionalmente, sobre todo en verano cuando llevo manga corta."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Entiendo, eso es comprensible. ¿Es la primera vez que tienes lesiones de este tipo? ¿O las has padecido antes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[uncertainly] No, la verdad es que no. Hace años tuve una pequeña mancha en la cabeza pero se me fue con champús normales. Pero esto de ahora es diferente, es mucho más extendido."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Y aparte de los codos y las rodillas tienes más lesiones en otros sitios?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, ahora que lo menciona, en el cuero cabelludo también tengo descamación, especialmente en la raya del pelo. Y he notado que cuando me ducho y me seco el pelo, se me cae mucha más caspa que antes."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, vamos a repasar un poco tu historia. ¿Tienes antecedentes de alguna enfermedad cutánea o dermatitis?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[casually] No, nada importante. Ni alergias a medicamentos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿En tu familia hay alguien con problemas de piel? ¿Psoriasis, eccema, dermatitis?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues sí, ahora que lo dices, mi abuela materna tenía unas manchas rojas en los brazos toda la vida. Mi madre decía que era psoriasis, pero nunca se trató mucho."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso es importante saberlo. La predisposición genética juega un papel muy importante en esta enfermedad. ¿Has notado si las lesiones empeoran con algo? ¿Con el estrés, el frío, infecciones?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflective] Sí, doctora. Coinciden con épocas de estrés en el trabajo. Y justo después de tener una gripe el año pasado es cuando empezaron a extenderse más."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Muy importante ese dato. ¿Tomas alguna medicación actualmente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] Solo anticonceptivos orales, la píldora. Nada más."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Perfecto. Ahora vamos a explorar. Ponte cómoda, sólo necesito que me muestres los codos, rodillas y el cuero cabelludo. [pause] A ver, en el codo derecho... veo una placa eritematosa bien delimitada, aproximadamente de ocho centímetros, con escamas plateadas adheridas. El codo izquierdo es similar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Mucho olor a escama ahí, doctora?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, no te preocupes. En las rodillas igual: plaques eritematosas bien limitadas con descamación. En el cuero cabelludo, veo eritema y descamación principalmente en la zona parietal. [pause] Voy a hacer una pequeña maniobra para confirmarte algo. Si rasco levemente, ¿ves? Sale más escama fácilmente, es el signo de la vela."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, es verdad. Siempre se me queda la ropa con esas cosas blancas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Aquí en los codos y rodillas el eritema tiene ese aspecto de gota invertida típico. Por suerte no veo lesiones en palmas ni plantas, ni tampoco afectación ungueal importante. Las mucosas están normales. El resto de la piel está bien."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Raquel, con lo que hemos visto, la historia que me cuentas y la exploración, tengo un diagnóstico bastante claro: psoriasis vulgar. Es una enfermedad crónica de la piel, de origen autoinmunitario, que afortunadamente no es contagiosa."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Psoriasis? ¿Es grave eso? ¿Se va a quedar para siempre?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es una enfermedad que acompañará, pero que se controla muy bien con tratamiento. Hay períodos donde mejora mucho y otros donde puede rebrotar. Lo importante es que con las medidas que vamos a tomar, conseguiremos que tengas una buena calidad de vida y que las lesiones se mantengan controladas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved, quiet] Bueno, al menos no es contagiosa. Tenía ese miedo."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Vamos a empezar con un tratamiento tópico, que es lo más efectivo para psoriasis leve a moderada como la tuya. Te voy a prescribir betametasona al 0,05%, es una pomada corticoide que aplicarás en las lesiones dos veces al día. Reduce la inflamación rápidamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y eso no daña la piel? ¿Puedo usarlo indefinidamente?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] La betametasona es segura para uso tópico si la utilizas correctamente. La usarás estas ocho semanas, luego evaluaremos. Es importante que no sobrepases ese tiempo sin revisión. Además, te voy a dar calcipotriol, que es un análogo de vitamina D. Este lo aplicas una o dos veces al día y funciona muy bien con la betametasona."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[questioningly] ¿Son dos productos diferentes que me aplico en el mismo sitio?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] Sí, exacto. La betametasona por la mañana y por la tarde, y el calcipotriol por la noche. Alterna entre ellos. Ambos están indicados para psoriasis y van a potenciar su efecto mutuamente. También te voy a recomendar que uses cremas emolientes después de la ducha, sin fragancia, para mantener la piel hidratada."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Vale, entendido. ¿Y algo más?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Sí. Intenta evitar aquello que sabes que empeora tu psoriasis. El estrés es un factor desencadenante importante, así que cuida eso. Evita productos irritantes, perfumes fuertes, detergentes muy agresivos. Dúchate con agua tibia, no caliente. Y si tienes otra infección respiratoria, llama porque a veces necesitas refuerzo del tratamiento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muy bien, doctora. He tomado nota de todo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te cito en seis semanas. Para entonces veremos cómo responde tu piel al tratamiento. Si en el camino las lesiones se inflaman mucho o tienes dudas sobre cómo aplicar los productos, llámame sin problema. Y recuerda: esta enfermedad es crónica, pero controlable."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Muchas gracias, doctora. Me quedo mucho más tranquila."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, Raquel. Ánimo con el tratamiento."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/dermatologia/DER-001.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "L89 → R21 (eritema), L89 → L21.9 (descamación) - L89 es úlcera por presión, no lesión cutánea"
+    ]
+  }
+}

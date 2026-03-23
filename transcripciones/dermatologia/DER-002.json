@@ -1,0 +1,317 @@
+{
+  "id": "DER-002",
+  "especialidad": "Dermatología",
+  "resumen": "Paciente varón de 28 años con dermatitis atópica recurrente desde la infancia que se ha agudizado. Presenta lesiones eritematosas excoriadas con xerosis extensa. Se inicia tratamiento con tacrolimus tópico y se refuerzan medidas de hidratación e higiene para control de la enfermedad.",
+  "diagnostico_principal": {
+    "nombre": "Dermatitis atópica",
+    "cie10": "L20.9",
+    "snomed_ct": "24079001",
+    "snomed_termino": "Atopic dermatitis (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Xerosis cutánea",
+      "cie10": "L85.3",
+      "snomed_ct": "16386004",
+      "snomed_termino": "Dry skin (finding)"
+    },
+    {
+      "nombre": "Infección secundaria de la piel",
+      "cie10": "L08.9",
+      "snomed_ct": "399009004",
+      "snomed_termino": "Bacterial infection of skin (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Prurito intenso",
+      "cie10": "L29.9",
+      "snomed_ct": "418290006",
+      "snomed_termino": "Itching (finding)"
+    },
+    {
+      "nombre": "Lesiones excoriadas",
+      "cie10": "L08.9",
+      "snomed_ct": "247441003",
+      "snomed_termino": "Excoriation (finding)"
+    },
+    {
+      "nombre": "Piel seca generalizada",
+      "cie10": "L85.3",
+      "snomed_ct": "16386004",
+      "snomed_termino": "Dry skin (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración dermatológica completa",
+      "snomed_ct": "15433301000119102",
+      "snomed_termino": "Dermatologic examination (procedure)"
+    },
+    {
+      "nombre": "Evaluación de índice SCORAD",
+      "snomed_ct": "385489003",
+      "snomed_termino": "Severity assessment (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Tacrolimus tópico",
+      "dosis": "0.1%",
+      "posologia": "Aplicar en lesiones dos veces al día durante 2-3 semanas",
+      "atc": "D11AH01",
+      "snomed_ct": "372574004",
+      "snomed_termino": "Tacrolimus (substance)",
+      "indicacion": "Inmunosupresor tópico para dermatitis atópica moderada"
+    },
+    {
+      "nombre": "Emoliente con ceramidas",
+      "dosis": "sin dosis",
+      "posologia": "Aplicar generosamente después de ducha, al menos 2-3 veces al día",
+      "atc": "D02",
+      "snomed_ct": "420227002",
+      "snomed_termino": "Emollient bath preparation (substance)",
+      "indicacion": "Tratamiento base para xerosis y mantenimiento de la barrera cutánea"
+    }
+  ],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 74,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "peso": {
+      "valor": 78,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 180,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 24.1,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Historia de dermatitis atópica desde los 3 años, controlada hasta hace 6 meses.",
+    "Refiere empeoramiento asociado a cambios de estación y productos cosméticos inadecuados.",
+    "Antecedentes de rinitis alérgica y asma leve en infancia.",
+    "Trabaja en ambiente con aire acondicionado que empeora la xerosis.",
+    "Se enfatiza la importancia del uso de emolientes sin fragancias."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Alejandro Ruiz Pascual",
+    "edad": 28,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Fernando López Martín",
+    "especialidad": "Dermatología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Alejandro. ¿Qué te trae por la consulta hoy?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Pues mira, doctor, tengo un brote de eccema que no me deja vivir. Hace unos meses que la tenía controlada pero de repente ha vuelto con más fuerza. Me pica muchísimo, especialmente por las noches, y no puedo dormir bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Cuéntame un poco más sobre cuándo empezó y dónde tienes las lesiones."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[gesturing] Hace como tres meses que noté que empezaba en las manos, en los pliegues, aquí entre los dedos y en las muñecas. Pero ahora ha avanzado: tengo en el cuello, en los antebrazos, y un poco también en las rodillas. Está pelada la piel, seca, y cada vez que me rasco sale más irritada."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Es la primera vez que tienes estos síntomas o ya lo has padecido antes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] No, no es la primera vez. Tuve este problema desde pequeño, desde que tenía tres años. Pero se me controlaba bastante bien, hace años que no tenía un brote así. Mi madre dice que es lo de siempre, el eccema, pero que antes lo controlaba mejor."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. Vamos a repasar tu historia. ¿Tienes alergia a algo? ¿Medicamentos, alimentos, ácaros?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues la verdad es que no sé muy bien. Cuando era pequeño tenía rinitis alérgica, me daban muchos estornudos en primavera. Y en la adolescencia tuve asma leve pero se me pasó casi completamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso es típico en la dermatitis atópica. Muchas veces van asociadas esa triada: eccema, rinitis y asma. ¿En tu familia hay alguien con alergias o eccema?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] Mi madre tiene sensibilidad en la piel, dice que es sensible a ciertos jabones. Y mi tía paterna tiene asma alérgica."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Hay algo que hayas notado que empeore el eccema? ¿Algún producto, algún detergente, ropa?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflective] Sí, lo he notado. Cambié de lugar de trabajo hace un par de meses, ahora trabajo en una oficina con mucho aire acondicionado y la piel se me seca muchísimo. También he estado usando un gel de ducha nuevo, muy perfumado, y creo que eso ha acelerado todo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Eso puede ser muy importante. Los productos muy perfumados irritan mucho la piel atópica. ¿Tomas alguna medicación actualmente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] Nada, ninguna medicación. Ni alergias farmacológicas que tenga constancia."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Perfecto. Ahora vamos a explorar. Quítate la camiseta por favor y siéntate. [pause] Veo que tienes lesiones extensas. En el cuello hay eritema y descamación clara, con algunas excoriaciones por rascado. En los antebrazos, especialmente en las flexuras de los codos, hay plaques edematosas, eritematosas y liquenificadas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[uncomfortably] Sí, es que me rasco sin parar, sobre todo por la noche."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] En las muñecas hay excoriaciones profundas, algunos erosiones ya de tanto rascar. [pause] Las manos... mira aquí, los espacios entre los dedos están muy afectados, con grietas y erosiones. En las rodillas también hay lesiones. [pause] Lo que me llama la atención es la xerosis extensa: toda la piel tiene ese aspecto seco, escamoso, sin brillo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Eso es porque no tengo nada de grasa en la piel."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Exacto. Es característica de la dermatitis atópica. La barrera cutánea está dañada. Mira, presiono la piel y se queda una marca de sequedad. Los pliegues inguinales están normales, afortunadamente no hay afectación generalizada. Las uñas están normales, sin cambios. [pause] Voy a ver si hay signos de infección bacteriana secundaria."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[quietly] A veces veo que supura un poco cuando me rasco mucho."
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Eso es frecuente cuando hay excoriaciones tan profundas. Hay riesgo de sobreinfección si no controlamos bien el picor."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Alejandro, con tu historia y lo que veo aquí en la exploración tengo claro: es dermatitis atópica en fase de brote moderado. La buena noticia es que es una enfermedad que se controla muy bien si seguimos el tratamiento correcto."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Va a quitarse del todo o es para siempre?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] La dermatitis atópica es crónica, pero con los cuidados adecuados puedes tener largos períodos sin lesiones o con lesiones muy mínimas. Ahora mismo tienes que actuar rápido porque los rascazos pueden infectarse. Además, el prurito es agotador. Vamos a controlarlo."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] El tratamiento fundamental para ti es el emoliente. Vas a usar una crema sin perfume ni alcohol, con ceramidas, después de cada ducha. Generosamente, en todo el cuerpo. Esto es lo más importante."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuál me recomiendas?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Hay varias marcas hypoalergénicas. Te voy a hacer una prescripción. Además, voy a darte tacrolimus al 0,1% para aplicar en las zonas más afectadas: cuello, antebrazos, manos. Dos veces al día durante un máximo de tres semanas. Es un inmunosupresor que controla muy bien el prurito y la inflamación."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[questioningly] ¿Eso no lleva corticoides?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] No, es diferente. Los corticoides son útiles pero queremos evitar usarlos continuamente en la cara y el cuello para no adelgazar la piel. El tacrolimus es mejor para esas zonas delicadas. También te voy a recomendar que uses agua tibia, no caliente, al duchar. Y usa un jabón sin perfume, específicamente para piel atópica."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Y el prurito? ¿Qué hago por las noches que no puedo dormir?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[thoughtfully] Intenta resistir los rascazos, lo sé que es difícil pero los rascazos empeoran todo. Aplica el emoliente antes de dormir, date una ducha tibia aunque sea breve, e intenta mantener las manos ocupadas. Si realmente no puedes evitarlo, podríamos plantear un antihistamínico por las noches, pero primero probamos con esto."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Vale, muy bien. ¿Y en el trabajo, qué hago con el aire acondicionado?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[practically] Intenta hidratarte mucho, y aplica el emoliente también durante el día, al menos una vez a media mañana. Si es posible, evita el ambiente tan seco o pide que modernicen un poco el aire acondicionado. [pause] También, revisa todos los productos de higiene que uses. Nada de geles perfumados. Todo específico para piel sensible."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido, doctora. ¿Cuándo vuelvo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te veo en tres semanas. Si antes ves que hay signos de infección, enrojecimiento importante o supuración, avísame. Vamos a ver cómo evoluciona tu piel con estas medidas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Muchas gracias, doctora."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada. Ánimo con la disciplina del emoliente, es la clave."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/dermatologia/DER-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

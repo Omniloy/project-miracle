@@ -1,0 +1,376 @@
+{
+  "id": "NEU-002",
+  "especialidad": "Neumología",
+  "resumen": "Paciente mujer de 28 años con diagnóstico de asma predominantemente alérgica que acude a revisión anual de su enfermedad. Refiere síntomas ocasionales de tos y disnea leve, principalmente al ejercicio y en épocas de polen. Actualmente bien controlada con budesonida/formoterol en mantenimiento y salbutamol de rescate. En la exploración, función pulmonar conservada. Se enfatiza el control ambiental de alérgenos y la adherencia terapéutica.",
+  "diagnostico_principal": {
+    "nombre": "Asma predominantemente alérgica",
+    "cie10": "J45.0",
+    "snomed_ct": "389145006",
+    "snomed_termino": "Allergic asthma (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Rinitis alérgica",
+      "cie10": "J30.9",
+      "snomed_ct": "61582004",
+      "snomed_termino": "Allergic rhinitis (disorder)"
+    },
+    {
+      "nombre": "Alergia a pólenes",
+      "cie10": "T78.1",
+      "snomed_ct": "420174000",
+      "snomed_termino": "Allergy to pollen (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Tos",
+      "cie10": "R05.9",
+      "snomed_ct": "49727002",
+      "snomed_termino": "Cough (finding)"
+    },
+    {
+      "nombre": "Disnea de esfuerzo",
+      "cie10": "R06.02",
+      "snomed_ct": "37980006",
+      "snomed_termino": "Dyspnea on exertion (finding)"
+    },
+    {
+      "nombre": "Sibilancias",
+      "cie10": "R06.02",
+      "snomed_ct": "12675008",
+      "snomed_termino": "Wheezing (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física con auscultación pulmonar",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of chest (procedure)"
+    },
+    {
+      "nombre": "Prueba de función pulmonar (espirometría)",
+      "snomed_ct": "23426006",
+      "snomed_termino": "Spirometry (procedure)"
+    },
+    {
+      "nombre": "Test de provocación bronquial con metacolina",
+      "snomed_ct": "24068005",
+      "snomed_termino": "Methacholine challenge test (procedure)"
+    },
+    {
+      "nombre": "Prueba de alergia (prick test)",
+      "snomed_ct": "397937008",
+      "snomed_termino": "Allergy skin test (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Budesonida/Formoterol",
+      "dosis": "80/4.5 mcg",
+      "posologia": "Una o dos inhalaciones dos veces al día según necesidad",
+      "atc": "R03AK07",
+      "snomed_ct": "428694003",
+      "snomed_termino": "Combination product containing budesonide and formoterol (product)",
+      "indicacion": "Tratamiento de mantenimiento del asma alérgica"
+    },
+    {
+      "nombre": "Salbutamol",
+      "dosis": "100 mcg",
+      "posologia": "Una o dos inhalaciones según sea necesario para síntomas agudos",
+      "atc": "R03AC04",
+      "snomed_ct": "372897004",
+      "snomed_termino": "Salbutamol (substance)",
+      "indicacion": "Broncodilatador de rescate"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 72,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 98,
+      "unidad": "%"
+    },
+    "temperatura": {
+      "valor": 36.8,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con buen control actual del asma. Síntomas principalmente estacionales coincidiendo con polinización.",
+    "Antecedentes alérgicos familiares: madre con asma, padre con rinitis alérgica.",
+    "Realiza actividad física regular (trotador, tres veces por semana) sin limitaciones significativas.",
+    "Trabaja en oficina. Entorno laboral sin exposición a irritantes específicos.",
+    "Negó síntomas nocturnos, despertares por tos o disnea en el último mes.",
+    "Se recomienda continuar tratamiento actual, reforzar medidas de control ambiental (cambio frecuente de filtros de aire, evitar exposición a polen)."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Sara Blanco Ruiz",
+    "edad": 28,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena Molina García",
+    "especialidad": "Neumología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Sara. Veo que es tu revisión anual del asma. ¿Cómo te ha ido este año con los síntomas?",
+          "audio_tag": "NEU-002_001_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cheerfully] Buenos días, doctora. Pues bastante bien, la verdad. He estado prácticamente sin síntomas. Ahora en primavera noto un poco de tos y me cuesta un poquito al correr, pero es poco.",
+          "audio_tag": "NEU-002_002_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y durante el invierno? ¿Has tenido síntomas nocturnos, despertares por tos?",
+          "audio_tag": "NEU-002_003_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confidently] No, prácticamente nada. La verdad es que el invierno pasado estuvo bien. Es en primavera cuando se pone peor, sobre todo cuando hay mucho polen en el aire.",
+          "audio_tag": "NEU-002_004_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Cómo estás llevando el tratamiento que ya tienes? ¿Lo tomas todos los días?",
+          "audio_tag": "NEU-002_005_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Sí, doctora. Todos los días me hago los dos puffs del budesonida/formoterol por la mañana y por la noche. Y el azul lo tengo guardado pero apenas lo necesito.",
+          "audio_tag": "NEU-002_006_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Te han enseñado bien la técnica de inhalación? ¿La cambias de vez en cuando?",
+          "audio_tag": "NEU-002_007_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Sí, me la enseñaron bien. La verdad es que siempre intento hacerlo igual, así que supongo que estaré haciéndolo bien.",
+          "audio_tag": "NEU-002_008_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Y en casa? ¿Tienes mascotas que pudieran hacer más alérgenos?",
+          "audio_tag": "NEU-002_009_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[smiling] No, no tengo mascotas. Vivo con mi novio en un piso. Procuramos que sea limpio, cambio bastante los filtros del aire acondicionado en primavera.",
+          "audio_tag": "NEU-002_010_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Antecedentes familiares de alergia o asma?",
+          "audio_tag": "NEU-002_011_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[somberly] Sí, mi madre tiene asma también. Bastante controlado, pero lo tiene. Y mi padre tiene alergia a muchas cosas, rinitis alérgica.",
+          "audio_tag": "NEU-002_012_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Trabajas en un ambiente con humo u otros irritantes?",
+          "audio_tag": "NEU-002_013_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, trabajo en una oficina muy normal. Es un despacho de abogados, bastante limpio todo.",
+          "audio_tag": "NEU-002_014_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Muy bien, vamos a explorarte. Quítate la blusa y siéntate en la camilla. Primero te tomo las constantes vitales.",
+          "audio_tag": "NEU-002_015_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro, adelante.",
+          "audio_tag": "NEU-002_016_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. Tensión ciento dieciocho sobre setenta y seis, frecuencia cardíaca setenta y dos latidos, frecuencia respiratoria dieciséis respiraciones, saturación de oxígeno noventa y ocho por ciento, temperatura treinta y seis coma ocho.",
+          "audio_tag": "NEU-002_017_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Todo bien, ¿verdad?",
+          "audio_tag": "NEU-002_018_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Perfectamente normal. Ahora voy a auscultar tu tórax. Respira hondo por la boca, por favor.",
+          "audio_tag": "NEU-002_019_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathing deeply] Mmm... [pause] Sí.",
+          "audio_tag": "NEU-002_020_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] En la auscultación bilateral oigo murmullo vesicular conservado, sin sibilancias. Corazón rítmico sin soplos. Pulsos periféricos normales.",
+          "audio_tag": "NEU-002_021_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Eso suena bien.",
+          "audio_tag": "NEU-002_022_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Ahora vamos a hacerte la prueba de función pulmonar, la espirometría, para ver cómo está tu función respiratoria. Es muy sencillo, te pito en una boquilla y respiras profundamente.",
+          "audio_tag": "NEU-002_023_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Igual que las otras veces?",
+          "audio_tag": "NEU-002_024_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Exacto, igual. Cuando te diga que respires, lo haces lo máximo que puedas. Vamos a hacerlo tres veces para asegurar que sale bien.",
+          "audio_tag": "NEU-002_025_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[determined] Vale, entendido. [pausa] [Haciendo espirometría]",
+          "audio_tag": "NEU-002_026_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[satisfied] Excelente. Los resultados están muy bien. El FEV1 está en un noventa y ocho por ciento del teórico, eso es completamente normal. La curva flujo-volumen es completamente normal. Tu función pulmonar está perfecta.",
+          "audio_tag": "NEU-002_027_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Qué bien, doctora.",
+          "audio_tag": "NEU-002_028_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Sara, lo que veo hoy es que tu asma está muy bien controlada. La exploración es normal, la función pulmonar está perfecta, y me dices que apenas tienes síntomas.",
+          "audio_tag": "NEU-002_029_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[happily] Eso es lo mejor que podía oír.",
+          "audio_tag": "NEU-002_030_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[assuringly] El régimen de budesonida/formoterol está haciendo muy buen efecto. Lo importante es que sigas así, que mantengas la adherencia al tratamiento aunque te encuentres bien. Es muy común que los pacientes dejen la medicación cuando no tienen síntomas y luego vuelven a descompensarse.",
+          "audio_tag": "NEU-002_031_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[seriously] Entendido, doctora. Seguiré igual aunque me encuentre bien.",
+          "audio_tag": "NEU-002_032_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Continuamos con lo que estás tomando. Puedes mantener el budesonida/formoterol dos veces al día. Y el salbutamol lo tienes para cuando lo necesites, aunque parece que no lo usas mucho.",
+          "audio_tag": "NEU-002_033_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Hay algo que pueda hacer para mejorar más?",
+          "audio_tag": "NEU-002_034_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Lo que te recomiendo es que sigas con el control ambiental. En primavera, especialmente con los pólenes altos, intenta mantener las ventanas cerradas, cambia regularmente los filtros de aire del aire acondicionado, y si puedes, dúchate antes de dormir para quitarte el polen del cabello y la piel.",
+          "audio_tag": "NEU-002_035_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Vale, eso ya lo estoy haciendo más o menos.",
+          "audio_tag": "NEU-002_036_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] También, ahora en primavera, podrías plantearte un antihistamínico nasal o un corticoide nasal si la rinitis alérgica se pone fuerte. Eso ayuda a controlar mejor el asma también.",
+          "audio_tag": "NEU-002_037_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Bueno, lo consideraré si empeora en primavera.",
+          "audio_tag": "NEU-002_038_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Te cito para el próximo año en esta misma época. Si tienes síntomas que te preocupen antes, llama a la clínica sin dudar. Y sobre todo, sigue con el tratamiento aunque te encuentres bien. Eso es lo que mantiene el asma controlada.",
+          "audio_tag": "NEU-002_039_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Perfecto, doctora. Muchas gracias por todo.",
+          "audio_tag": "NEU-002_040_medico"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neumologia/NEU-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

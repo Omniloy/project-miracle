@@ -1,0 +1,356 @@
+{
+  "id": "END-009",
+  "especialidad": "Endocrinología",
+  "resumen": "Paciente mujer de 38 años con síndrome de Cushing diagnosticado recientemente. Presenta características clínicas claras: redistribución grasa central, estrías purpúreas, facies lunar, hipertensión e intolerancia a la glucosa. Acude a endocrinología para confirmación diagnóstica y determinación de etiología. Se requieren pruebas de confirmación (cortisol 24h, supresión con dexametasona) e imagen de hipófisis/suprarrenales.",
+  "diagnostico_principal": {
+    "nombre": "Síndrome de Cushing",
+    "cie10": "E24.9",
+    "snomed_ct": "47270006",
+    "snomed_termino": "Cushing syndrome (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Hipertensión arterial secundaria a síndrome de Cushing",
+      "cie10": "I15.1",
+      "snomed_ct": "71701000",
+      "snomed_termino": "Hypertension secondary to other renal disorders (disorder)"
+    },
+    {
+      "nombre": "Diabetes mellitus secundaria",
+      "cie10": "E13.9",
+      "snomed_ct": "440375002",
+      "snomed_termino": "Secondary diabetes mellitus (disorder)"
+    },
+    {
+      "nombre": "Osteoporosis",
+      "cie10": "M81.9",
+      "snomed_ct": "64859006",
+      "snomed_termino": "Osteoporosis (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Obesidad central",
+      "cie10": "E66.0",
+      "snomed_ct": "83911000119104",
+      "snomed_termino": "Morbid obesity (disorder)"
+    },
+    {
+      "nombre": "Estrías purpúreas",
+      "cie10": "L90.6",
+      "snomed_ct": "59467004",
+      "snomed_termino": "Striae distensae (disorder)"
+    },
+    {
+      "nombre": "Hipertensión",
+      "cie10": "I10",
+      "snomed_ct": "59621000",
+      "snomed_termino": "Essential hypertension (disorder)"
+    },
+    {
+      "nombre": "Debilidad muscular proximal",
+      "cie10": "M62.8",
+      "snomed_ct": "26544005",
+      "snomed_termino": "Muscle weakness (finding)"
+    },
+    {
+      "nombre": "Labilidad emocional",
+      "cie10": "F39",
+      "snomed_ct": "46206005",
+      "snomed_termino": "Mood disorder (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Determinación de cortisol en orina 24 horas",
+      "snomed_ct": "104209004",
+      "snomed_termino": "24-hour urinary cortisol measurement (procedure)"
+    },
+    {
+      "nombre": "Prueba de supresión con dexametasona baja dosis nocturna",
+      "snomed_ct": "28261004",
+      "snomed_termino": "Dexamethasone suppression test (procedure)"
+    },
+    {
+      "nombre": "Determinación de cortisol sérico matutino",
+      "snomed_ct": "250953006",
+      "snomed_termino": "Serum cortisol level (procedure)"
+    },
+    {
+      "nombre": "Determinación de ACTH",
+      "snomed_ct": "104200006",
+      "snomed_termino": "Adrenocorticotropic hormone measurement (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética de hipófisis",
+      "snomed_ct": "306323008",
+      "snomed_termino": "Magnetic resonance imaging of pituitary gland (procedure)"
+    },
+    {
+      "nombre": "Tomografía computarizada de glándulas suprarrenales",
+      "snomed_ct": "302826002",
+      "snomed_termino": "Computerized tomography of adrenal glands (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 156,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 98,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 92,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 86,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 162,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 32.8,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con síndrome de Cushing diagnosticado hace tres meses tras investigación de hipertensión resistente.",
+    "Presentación clínica clásica: facies luna (cara redonda), joroba dorsal (adiposidad supraclavicular), obesidad central, estrías purpúreas extensas en abdomen y muslos.",
+    "Debilidad muscular proximal severa, con dificultad para subir escaleras.",
+    "Cambios de humor frecuentes, depresión leve.",
+    "Cortisol en orina 24 horas: 285 microgramos/24h (normal < 90).",
+    "Cortisol después de dexametasona 1 mg nocturna: 12.5 microgramos/dL (no suprimido, normal < 1.8).",
+    "ACTH: 68 pg/mL (elevada, sugiere Cushing dependiente de ACTH).",
+    "Cortisol matutino: 24.3 microgramos/dL (elevado).",
+    "RMN hipófisis: microadenoma hipofisario de 6 mm compatible con adenoma productor de ACTH.",
+    "Etiología: Síndrome de Cushing dependiente de ACTH por adenoma hipofisario (Enfermedad de Cushing)."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Nuria Vega Herrero",
+    "edad": 38,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Patricia López Martín",
+    "especialidad": "Endocrinología"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Buenos días, Nuria. He revisado todos tus resultados. Tenemos confirmación de que tienes síndrome de Cushing. Quería hablar contigo en detalle sobre qué significa eso y cuál es el siguiente paso.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] Doctora, estoy asustada. Siento que mi cuerpo se ha transformado en poco tiempo. He subido de peso, tengo esas marcas en el cuerpo, me siento débil. No entiendo qué me está pasando.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[empathetically] Entiendo. Es una enfermedad rara y seria, pero es tratável. Cuéntame, ¿cuándo empezaste a notar los cambios?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Hace como un año empecé a notar que ganaba peso, pero en lugares raros, solo en la barriga y la cara, no en las piernas ni los brazos. Al mismo tiempo, la presión se me subió muchísimo, y el médico de atención primaria me mandó más y más pastillas pero no se controlaba.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y las marcas rojas en la piel? ¿Las estrías?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[upset] Sí, aparecieron hace unos seis meses. Empecé a verlas en el abdomen, en los muslos, en los brazos. Y no es por embarazo, ni he ganado peso de repente en esos lugares. Fue muy raro. Mi madre me dijo que fuera al médico.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. Ahora quiero que repasemos tu historia. ¿Alguien en la familia ha tenido problemas de glándulas endocrinas?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, que yo sepa. Mi familia es sana.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Ha habido algún traumatismo en la cabeza? ¿Accidente, golpe?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No. Nada de eso.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Dolor de cabeza? ¿Problemas de visión?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Sí, a veces tengo dolores de cabeza, especialmente cuando la presión está alta. Y en el último mes he notado que una visión borrosa cuando miro hacia los lados.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Eso es importante. ¿Cambios emocionales? ¿Depresión, ansiedad?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sadly] Sí, mucha depresión. Estoy triste, irritable, lloro por cualquier cosa. Mi familia me dice que no soy la misma de antes. Hasta he tenido pensamientos oscuros alguna vez, aunque no graves.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Voy a examinarte ahora. Primero, la tensión arterial. [pause] Ciento cincuenta y seis sobre noventa y ocho. Eso está muy elevado y es típico del Cushing. Frecuencia cardíaca noventa y dos. Peso ochenta y seis kilos, talla ciento sesenta y dos. IMC treinta y dos coma ocho, obesidad clase uno.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighs] Hace un año pesaba sesenta y ocho.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Ahora observo la cara: notablemente redondeada, facies lunar típica del Cushing. Hay acúmulo de grasa supraclavicular, lo que llamamos joroba dorsal. [continues] En el abdomen hay estrías purpúreas extensas, muy características. En los muslos también, de aspecto reciente. La piel está frágil, fácil de lesionar.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[ashamed] Es horrible verme así.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[supportively] Es la enfermedad, Nuria. No es tu culpa. [continues examination] Ahora pruebo la fuerza muscular. Levanta la pelvis de la camilla usando los brazos. [pause] Hay debilidad proximal evidente, cuesta mucho trabajo. También hay atrofia muscular en las piernas. Ausculto el corazón: rítmico, sin soplos. Pulmones claros. Abdomen blando, adiposo.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Nuria, basándonos en la clínica y los análisis, esto es síndrome de Cushing, sin duda. El cortisol en orina de veinticuatro horas está muy elevado en doscientos ochenta y cinco. La prueba de supresión con dexametasona, el cortisol no baja como debería. La ACTH está elevada en sesenta y ocho, lo que significa que esto es Cushing dependiente de ACTH, es decir, originado en la hipófisis.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Cuál es la causa? ¿Un tumor?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] La resonancia magnética de la hipófisis mostró un pequeño adenoma de seis milímetros que probablemente produce ACTH. Se llama Enfermedad de Cushing. Es decir, tienes un tumor benigno en la hipófisis, que es una glándula del tamaño de una arveja dentro del cráneo.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Es cáncer?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, es un tumor benigno. No es cáncer. Pero produce demasiada ACTH, que a su vez estimula las suprarrenales a producir demasiado cortisol. Y ese exceso de cortisol es lo que causa todos tus síntomas: la hipertensión, la debilidad, los cambios emocionales, las estrías, todo.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[decisively] El tratamiento es quirúrgico. Necesitas una cirugía para extirpar ese adenoma hipofisario. Es una operación llamada hipofisectomía transesfenoidal, es decir, se accede a la hipófisis a través de la nariz. Es una cirugía mínimamente invasiva.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Quirúrgica? ¿Es peligrosa?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Es segura en manos expertas. Voy a remitirte con un neurocirujano especialista en estos adenomas hipofisarios. Él te explicará la técnica y los riesgos. Pero básicamente, extirpa el adenoma por vía endoscópica por la nariz.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuándo?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] La remisión te llegará en una semana. Idealmente debería ser lo antes posible, en las próximas cuatro a seis semanas. Mientras tanto, voy a comenzar con medicamento para bajar el cortisol. Voy a prescribir mitotano, que es un medicamento que inhibe la función suprarrenal y baja los niveles de cortisol.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Eso me ayudará?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[affirmingly] Sí. Bajará el cortisol y mejorará los síntomas mientras esperas la cirugía. También necesitamos tratar la hipertensión, la diabetes. Voy a iniciar amlodipino para la presión y también metformina por la diabetes secundaria.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Doctora, ¿después de la cirugía me curaré?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Si la cirugía es exitosa, que esperamos que lo sea, sí, te curará. El cortisol volverá a la normalidad. Los síntomas desaparecerán gradualmente. Pero tardaremos unos meses a un año en recuperarnos completamente, en ganar fuerza muscular, en perder el peso. La remisión al cirujano te llega pronto. Ánimo, Nuria.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/endocrinologia/END-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "E66.01 → E66.0, M62.81 → M62.8 (códigos CM convertidos a Internacional)"
+    ]
+  }
+}

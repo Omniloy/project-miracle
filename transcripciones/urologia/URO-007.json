@@ -1,0 +1,292 @@
+{
+  "id": "URO-007",
+  "especialidad": "Urología",
+  "resumen": "Paciente varón de 27 años que acude a consulta de urología por varicocele. Se detecta mediante palpación clínica un varicocele izquierdo grado 2. Se realiza ecografía doppler que confirma el diagnóstico. Se discute la posible afectación de la fertilidad y opciones de tratamiento.",
+  "diagnostico_principal": {
+    "nombre": "Varicocele",
+    "cie10": "I86.1",
+    "snomed_ct": "50295007",
+    "snomed_termino": "Varicose veins of scrotum (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Sensación de masa escrotal",
+      "cie10": "R19.8",
+      "snomed_ct": "300257003",
+      "snomed_termino": "Feeling of abdominal mass (finding)"
+    },
+    {
+      "nombre": "Dolor testicular leve",
+      "cie10": "R10.2",
+      "snomed_ct": "40733001",
+      "snomed_termino": "Scrotal pain (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Examen físico con palpación escrotal",
+      "snomed_ct": "127794003",
+      "snomed_termino": "Physical examination of genitalia (procedure)"
+    },
+    {
+      "nombre": "Ecografía doppler escrotal",
+      "snomed_ct": "267693003",
+      "snomed_termino": "Scrotal ultrasound (procedure)"
+    },
+    {
+      "nombre": "Análisis de semen",
+      "snomed_ct": "275801009",
+      "snomed_termino": "Semen analysis (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 120,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 68,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 78,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 180,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 24.1,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Varicocele izquierdo grado 2, palpable en posición de pie, no visible.",
+    "Ecografía doppler: dilatación de venas pampiniforme izquierda hasta 3,8 mm, reflujo venoso con valsalva.",
+    "Testículos de tamaño normal, sin masas.",
+    "Espermograma inicial normal.",
+    "Se considera tratamiento conservador vs. cirugía según evolución y deseos reproductivos."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Hugo Delgado Moreno",
+    "edad": 27,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Pérez Guzmán",
+    "especialidad": "Urología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, señor Delgado. Soy el doctor Pérez. Veo que le han derivado por una sospecha de varicocele. ¿Qué lo trae hoy?",
+          "audio_tag": "medico_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[slightly embarrassed] Buenos días, doctor. Pues mire, mi médico de cabecera me notó algo raro cuando me exploró. Dijo que podría ser varices en los testículos. Yo mismo he notado que se siente como bolsitas dentro del escroto.",
+          "audio_tag": "paciente_001"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tiene dolor? ¿Molestias?",
+          "audio_tag": "medico_002"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] A veces una molestia leve, especialmente si me paso el día de pie. Pero nada grave. Lo que me preocupa es que escuché que esto puede afectar la fertilidad.",
+          "audio_tag": "paciente_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Eso es una pregunta muy válida. Primero déjeme explorarle y confirmar el diagnóstico.",
+          "audio_tag": "medico_003"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Ha tenido antecedentes de inflamación testicular o infecciones genitales?",
+          "audio_tag": "medico_004"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shakes head] No, nada de eso. Mis testículos han sido normales siempre.",
+          "audio_tag": "paciente_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Tiene pareja? ¿Desea tener hijos en el futuro?",
+          "audio_tag": "medico_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Sí tengo pareja, llevamos dos años juntos. Y sí, algún día nos gustaría tener hijos. Eso es lo que me asusta de esto.",
+          "audio_tag": "paciente_005"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Entiendo. Pero tranquilo, muchos hombres con varicocele tienen una fertilidad normal. ¿Alguna enfermedad?",
+          "audio_tag": "medico_006"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[quickly] No, soy completamente sano. No tomo nada.",
+          "audio_tag": "paciente_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Cirugías previas?",
+          "audio_tag": "medico_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shakes head] Ninguna.",
+          "audio_tag": "paciente_007"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Muy bien. Voy a explorarle. Por favor, colóquese de pie. Voy a palpar los testículos.",
+          "audio_tag": "medico_008"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[compliant] Sí, claro.",
+          "audio_tag": "paciente_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Veo un patrón típico de sacos varicosos en el lado izquierdo. No es visible a simple vista, pero se siente bien al palpar. Grado dos. El testículo izquierdo está de tamaño normal, no hay masas. El lado derecho es normal.",
+          "audio_tag": "medico_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿Y eso está mal? ¿Va a empeorar?",
+          "audio_tag": "paciente_009"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] No tiene por qué empeorar. Un varicocele grado dos es moderado. Ahora voy a hacer una ecografía doppler escrotal para confirmar el diagnóstico y valorar el tamaño de los testículos con precisión.",
+          "audio_tag": "medico_010"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relaxed] Adelante.",
+          "audio_tag": "paciente_010"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[after imaging] La ecografía doppler confirma un varicocele izquierdo. Las venas del plexo pampiniforme están dilatadas, con un diámetro máximo de tres coma ocho milímetros. Se ve claramente reflujo venoso cuando usted hace la maniobra de Valsalva.",
+          "audio_tag": "medico_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Eso qué significa exactamente?",
+          "audio_tag": "paciente_011"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] Significa que las venas que drenan la sangre del testículo están dilatadas y con un flujo inverso. Es como si las válvulas de esas venas no funcionasen bien. Esto puede afectar la temperatura del testículo y potencialmente la producción de esperma.",
+          "audio_tag": "medico_012"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Voy a ser infértil?",
+          "audio_tag": "paciente_012"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No automáticamente. Hay estudios que demuestran que entre un 40 a 50 por ciento de hombres con varicocele tienen una fertilidad normal. Es importante hacer un análisis de semen para saber cómo está su fertilidad actualmente.",
+          "audio_tag": "medico_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Y eso duele o es complicado?",
+          "audio_tag": "paciente_013"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] No duele nada. Solo tiene que proporcionar una muestra de semen en el laboratorio. Es simple.",
+          "audio_tag": "medico_014"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentive] Entendido. ¿Y si el análisis sale mal?",
+          "audio_tag": "paciente_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Si hay alteraciones en la fertilidad, tenemos dos opciones. Una es el tratamiento conservador: esperar, hacer análisis periódicos, y si nota cambios. La otra es la cirugía, que se llama varicocelectomía. Es una operación mínimamente invasiva para ligar las venas dilatadas.",
+          "audio_tag": "medico_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿Y si operarme mejora la fertilidad?",
+          "audio_tag": "paciente_015"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] En muchos casos sí. Se estima que entre un 60 a 70 por ciento de hombres que se operan mejoran los parámetros del semen. Pero es una decisión que tomamos juntos después de tener más información.",
+          "audio_tag": "medico_016"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Vale, doctor. Muchas gracias por explicar todo.",
+          "audio_tag": "paciente_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] De nada. Vamos a hacer el análisis de semen, y según los resultados, decidimos juntos si necesita tratamiento quirúrgico o seguimiento conservador. Espero poder darle buenas noticias.",
+          "audio_tag": "medico_017"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/urologia/URO-007.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

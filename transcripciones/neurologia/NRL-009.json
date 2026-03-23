@@ -1,0 +1,326 @@
+{
+  "id": "NRL-009",
+  "especialidad": "Neurología",
+  "resumen": "Paciente mujer de 19 años derivada desde medicina de familia por inestabilidad progresiva de la marcha y torpeza en las manos de dos años de evolución. La exploración neurológica revela ataxia cerebelosa, arreflexia, signo de Babinski bilateral y disartria leve. Se sospecha ataxia de Friedreich y se solicita estudio genético del gen FXN, resonancia magnética cerebral y medular, ecocardiograma y analítica. Se trata de una enfermedad rara hereditaria autosómica recesiva.",
+  "diagnostico_principal": {
+    "nombre": "Ataxia de Friedreich",
+    "cie10": "G11.11",
+    "snomed_ct": "10394003",
+    "snomed_termino": "Friedreich ataxia (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Ataxia de la marcha",
+      "cie10": "R26.0",
+      "snomed_ct": "250029000",
+      "snomed_termino": "Gait ataxia (finding)"
+    },
+    {
+      "nombre": "Disartria",
+      "cie10": "R47.1",
+      "snomed_ct": "8011004",
+      "snomed_termino": "Dysarthria (finding)"
+    },
+    {
+      "nombre": "Torpeza manual / disdiadococinesia",
+      "cie10": "R27.8",
+      "snomed_ct": "52760003",
+      "snomed_termino": "Dysdiadochokinesia (finding)"
+    },
+    {
+      "nombre": "Escoliosis",
+      "cie10": "M41.9",
+      "snomed_ct": "298382003",
+      "snomed_termino": "Scoliosis deformity of spine (disorder)"
+    },
+    {
+      "nombre": "Pie cavo bilateral",
+      "cie10": "Q66.7",
+      "snomed_ct": "205091006",
+      "snomed_termino": "Congenital pes cavus (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "84728005",
+      "snomed_termino": "Neurologic examination (procedure)"
+    },
+    {
+      "nombre": "Solicitud de estudio genético del gen FXN (expansión GAA)",
+      "snomed_ct": "405824009",
+      "snomed_termino": "Genetic test (procedure)"
+    },
+    {
+      "nombre": "Solicitud de resonancia magnética cerebral y medular",
+      "snomed_ct": "241601008",
+      "snomed_termino": "Magnetic resonance imaging of brain and spinal cord (procedure)"
+    },
+    {
+      "nombre": "Solicitud de ecocardiograma transtorácico",
+      "snomed_ct": "40701008",
+      "snomed_termino": "Echocardiography (procedure)"
+    },
+    {
+      "nombre": "Solicitud de electromiograma y estudio de conducción nerviosa",
+      "snomed_ct": "42803009",
+      "snomed_termino": "Electromyography (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Idebenona",
+      "dosis": "150 mg",
+      "posologia": "1 comprimido cada 8 horas con las comidas",
+      "atc": "N06BX13",
+      "snomed_ct": "391761004",
+      "snomed_termino": "Idebenone (substance)",
+      "indicacion": "Neuroprotección y potencial mejora de la cardiomiopatía hipertrófica asociada a ataxia de Friedreich"
+    },
+    {
+      "nombre": "Gabapentina",
+      "dosis": "300 mg",
+      "posologia": "1 cápsula por la noche, incrementar según tolerancia",
+      "atc": "N03AX12",
+      "snomed_ct": "386845007",
+      "snomed_termino": "Gabapentin (substance)",
+      "indicacion": "Tratamiento de dolor neuropático y espasticidad asociada"
+    }
+  ],
+  "notas_adicionales": [
+    "Enfermedad rara de herencia autosómica recesiva por expansión de tripletes GAA en el gen FXN (cromosoma 9q21.11).",
+    "Prevalencia estimada: 1-2 por cada 50.000 habitantes en población europea.",
+    "Paciente refiere que una prima paterna también presenta dificultades de la marcha sin diagnóstico, posible caso familiar no diagnosticado.",
+    "Importante descartar miocardiopatía hipertrófica asociada mediante ecocardiograma, ya que es la principal causa de morbimortalidad.",
+    "Se deriva a rehabilitación para fisioterapia y terapia ocupacional. Se ofrece derivación a asociación de pacientes con ataxia (FEDAES).",
+    "Pendiente de resultados genéticos para confirmación diagnóstica definitiva. Siguiente cita en 6 semanas."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Lucía Romero Vidal",
+    "edad": 19,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Moreno Castillo",
+    "especialidad": "Neurología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenas tardes, Lucía. Soy el doctor Moreno, neurólogo. Pasa y siéntate. He recibido el parte de derivación de tu médica de cabecera. Cuéntame, ¿qué es lo que te pasa?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously, frustrated] Buenas tardes, doctor. Pues verá, llevo ya como dos años que cada vez ando peor. Al principio me tropezaba mucho, mis amigas se reían porque parecía que iba borracha. Pero ahora ya me cuesta hasta bajar escaleras y se me caen las cosas de las manos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y esto ha ido a más poco a poco o fue de repente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Poco a poco. Al principio casi no me di cuenta, pero este último año ha ido a peor bastante rápido. Ya me cuesta escribir a mano y a veces noto que hablo un poco raro, como arrastrando las palabras."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Entiendo. Vamos a repasar algunas cosas. ¿Tienes alguna enfermedad conocida? ¿Tomas alguna medicación?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[casually] No tengo nada diagnosticado. No tomo medicación, solo ibuprofeno cuando me duele la espalda, que últimamente es bastante."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Te duele la espalda? ¿Desde cuándo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Desde hace unos años. En el instituto ya me dijeron que tenía la espalda un poco torcida, escoliosis creo que me dijo el traumatólogo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[leaning forward, interested] ¿Y algún familiar tiene problemas parecidos? ¿Dificultades para caminar, problemas neurológicos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Mi prima, la hija del hermano de mi padre, también anda un poco mal. Tiene veintidós años y lleva unos años igual, tropezándose mucho. Pero no tiene diagnóstico tampoco."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting carefully] Eso es importante. ¿Tus padres son sanos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[naturally] Sí, mis padres están bien. Bueno, mi padre dice que tiene algo de diabetes, pero camina perfectamente y todo normal."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Has tenido algún problema de visión o de audición?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[uncertainly] De oído no, pero a veces sí que noto como que veo un poco borroso cuando muevo los ojos rápido, como que tarda en enfocar."
+        },
+        {
+          "rol": "medico",
+          "texto": "[gently] ¿Y el corazón? ¿Te has notado palpitaciones, fatiga al hacer ejercicio, falta de aire?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflecting] Pues ahora que lo dice, sí que me canso más que antes subiendo cuestas. Pero pensaba que era porque ya no hago deporte como antes, desde que empecé a andar mal lo dejé."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[encouraging] Muy bien, Lucía, vamos a hacer una exploración neurológica completa. Primero quiero verte caminar. Levántate y camina hasta la puerta y vuelve, a tu ritmo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously, laughs softly] Vale, pero avíseme si me tambaleo mucho."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Tranquila, estoy aquí. [observing carefully] Bien, ya veo. Observo una marcha atáxica con aumento de la base de sustentación, es decir, caminas con las piernas más separadas de lo normal para mantener el equilibrio. Ahora intenta caminar poniendo un pie delante del otro, en tándem, como si fueras por una cuerda floja."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[struggling, embarrassed] Uy, esto no puedo, me caigo para los lados."
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] No te preocupes, siéntate. Voy a explorar los reflejos. Relaja las piernas. Voy a golpear suavemente con el martillo. [pause] Bien, observo arreflexia en miembros inferiores, es decir, los reflejos rotulianos y aquíleos están abolidos. Ahora te paso este objeto por la planta del pie. [pause] Aquí tenemos un signo de Babinski positivo bilateral, lo que indica afectación de la vía piramidal."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Eso es malo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[patiently] Nos indica que hay un problema en ciertas vías nerviosas, ahora te explico más. Déjame seguir. Toca mi dedo con tu dedo índice y después toca tu nariz, rápido, ida y vuelta. [observing] Bien, veo dismetría leve, te pasas un poco del objetivo. Ahora haz movimientos rápidos con las manos, como si atornillaras una bombilla. [pause] Hay disdiadococinesia, que significa dificultad para hacer movimientos alternantes rápidos. Por último, quítate los zapatos. [examining] Veo pies cavos bilaterales, con el arco del pie muy marcado, y los dedos un poco en garra."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[resigned] Sí, siempre he tenido los pies raros, me cuesta encontrar zapatos."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously, compassionately] Lucía, te voy a explicar lo que pienso. Los hallazgos que hemos encontrado hoy, la ataxia progresiva, la pérdida de reflejos, el Babinski bilateral, la disartria, los pies cavos y la escoliosis, todo junto con tu edad y el hecho de que tu prima pueda tener algo parecido, me hacen pensar en una enfermedad que se llama ataxia de Friedreich."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confused, worried] ¿Ataxia de Friedreich? No he oído nunca eso. ¿Qué es?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[gently, explaining] Es una enfermedad neurológica hereditaria, poco frecuente. Se debe a una alteración genética que afecta a una proteína llamada frataxina, que es importante para el funcionamiento de las mitocondrias, las centrales de energía de las células. Sin suficiente frataxina, las células nerviosas y las del corazón se van dañando poco a poco."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[surprised] ¿Es hereditaria? Pero mis padres están bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[patiently, didactically] Es de herencia autosómica recesiva, lo que significa que tus padres pueden ser portadores sin tener la enfermedad. Los dos llevarían una copia alterada del gen y tú habrías heredado las dos copias alteradas. Tu prima podría estar en la misma situación."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[voice trembling] ¿Y tiene cura?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly, hopeful] Ahora mismo no existe una cura definitiva, pero hay tratamientos que pueden ayudar a mejorar los síntomas y sobre todo a prevenir complicaciones. Hay mucha investigación en marcha y cada vez hay más opciones terapéuticas. Lo importante es confirmar el diagnóstico y empezar a cuidarte cuanto antes."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[organized, clearly] El plan es el siguiente. Primero, necesitamos confirmar el diagnóstico con un estudio genético, que es un análisis de sangre especial donde se busca la mutación en el gen FXN. Eso tarda unas semanas en salir."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] ¿Solo un análisis de sangre?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Para la genética sí. Pero además te voy a pedir una resonancia magnética del cerebro y la médula espinal para ver cómo están las estructuras. Un ecocardiograma para comprobar el corazón, porque esta enfermedad puede afectarle. Y un electromiograma para estudiar la conducción nerviosa."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Y de momento me da algo para mejorar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confidently] Sí, te voy a recetar idebenona, ciento cincuenta miligramos cada ocho horas con las comidas. Es un antioxidante que puede ayudar especialmente al corazón. Y gabapentina, trescientos miligramos por la noche para empezar, para el dolor de espalda y las molestias neuropáticas, e iremos subiendo la dosis según la toleres."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively, nodding] Vale, idebenona y gabapentina."
+        },
+        {
+          "rol": "medico",
+          "texto": "[supportively] Además te voy a derivar a rehabilitación para que empieces fisioterapia y terapia ocupacional. Cuanto antes empieces, mejor para mantener la funcionalidad. Y quiero que conozcas la Federación de Ataxias de España, FEDAES, tienen grupos de apoyo y mucha información útil para pacientes y familias."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[emotionally, voice cracking slightly] Muchas gracias, doctor. La verdad es que da un poco de miedo todo esto, pero al menos ahora sé lo que puede ser."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly, empathetically] Es normal sentirse así, Lucía. Pero no estás sola en esto. Vamos a ir paso a paso. Te cito en seis semanas, para entonces tendremos los resultados genéticos y de las pruebas. Si mientras tanto notas que empeoras mucho o tienes algún problema, llámanos. ¿De acuerdo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful, composing herself] De acuerdo. Muchas gracias, doctor Moreno."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly, warmly] A ti, Lucía. Ánimo y nos vemos pronto."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neurologia/NRL-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "G11.1 → G11.11 (Ataxia de Friedreich - código terminal)",
+      "SNOMED 10394001 → 10394003 (Friedreich ataxia concept)",
+      "SNOMED 205083003 → 205091006 (Congenital pes cavus)"
+    ]
+  }
+}

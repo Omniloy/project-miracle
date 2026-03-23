@@ -1,0 +1,338 @@
+{
+  "id": "CAR-010",
+  "especialidad": "Cardiología",
+  "resumen": "Paciente mujer de 69 años que acude por disnea de esfuerzo progresiva. El ecocardiograma muestra engrosamiento parietal del ventrículo izquierdo con función sistólica normal pero afectación diastólica severa, compatible con miocardiopatía restrictiva. El electrocardiograma muestra bajo voltaje. Se sospecha amiloidosis cardíaca y se inician estudios de confirmación.",
+  "diagnostico_principal": {
+    "nombre": "Amiloidosis cardíaca",
+    "cie10": "E85.4",
+    "snomed_ct": "68820003",
+    "snomed_termino": "Amyloidosis (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Miocardiopatía restrictiva",
+      "cie10": "I42.6",
+      "snomed_ct": "195022006",
+      "snomed_termino": "Restrictive cardiomyopathy (disorder)"
+    },
+    {
+      "nombre": "Fibrilación auricular permanente",
+      "cie10": "I48.2",
+      "snomed_ct": "44027008",
+      "snomed_termino": "Atrial fibrillation (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Disnea de esfuerzo",
+      "cie10": "R06.0",
+      "snomed_ct": "267036007",
+      "snomed_termino": "Dyspnea (finding)"
+    },
+    {
+      "nombre": "Ortopnea",
+      "cie10": "R06.0",
+      "snomed_ct": "4260005",
+      "snomed_termino": "Orthopnea (finding)"
+    },
+    {
+      "nombre": "Fatiga",
+      "cie10": "R53.0",
+      "snomed_ct": "22213007",
+      "snomed_termino": "Fatigue (finding)"
+    },
+    {
+      "nombre": "Edema periférico",
+      "cie10": "R60.0",
+      "snomed_ct": "267038008",
+      "snomed_termino": "Edema of lower limb (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Electrocardiograma de doce derivaciones",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Ecocardiograma transtorácico completo",
+      "snomed_ct": "430701000",
+      "snomed_termino": "Transthoracic echocardiography (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética cardíaca con realce tardío",
+      "snomed_ct": "428627003",
+      "snomed_termino": "Cardiac magnetic resonance imaging (procedure)"
+    },
+    {
+      "nombre": "Tomografía computada cardíaca",
+      "snomed_ct": "241550003",
+      "snomed_termino": "Cardiac imaging (procedure)"
+    },
+    {
+      "nombre": "Biopsia miocárdica con microscopía electrónica",
+      "snomed_ct": "100273000",
+      "snomed_termino": "Tissue examination (procedure)"
+    },
+    {
+      "nombre": "Gammagrafía con sestamibi y perfusión miocárdica",
+      "snomed_ct": "24658003",
+      "snomed_termino": "Myocardial imaging (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Warfarina",
+      "dosis": "5 mg",
+      "posologia": "Dosis variable según INR",
+      "atc": "B01AA03",
+      "snomed_ct": "372756006",
+      "snomed_termino": "Warfarin (substance)",
+      "indicacion": "Anticoagulación en fibrilación auricular"
+    },
+    {
+      "nombre": "Digoxina",
+      "dosis": "0.25 mg",
+      "posologia": "1 comprimido al día",
+      "atc": "C01AA05",
+      "snomed_ct": "372501009",
+      "snomed_termino": "Digoxin (substance)",
+      "indicacion": "Control de frecuencia cardíaca"
+    },
+    {
+      "nombre": "Diuréticos",
+      "dosis": "Variable",
+      "posologia": "Según necesidad",
+      "atc": "C03C",
+      "snomed_ct": "38604000",
+      "snomed_termino": "Diuretic agent (substance)",
+      "indicacion": "Control de congestión y edemas"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 128,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 72,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 74,
+      "unidad": "lpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 94,
+      "unidad": "%"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente mujer de 69 años con antecedente de insuficiencia renal crónica leve.",
+    "Antecedente de anemia que requiere seguimiento.",
+    "Historia de síntomas progresivos durante 18 meses.",
+    "El electrocardiograma muestra bajo voltaje generalizado, patrón clásico de amiloidosis.",
+    "El ecocardiograma revela engrosamiento concéntrico del ventrículo izquierdo de 1.6 cm.",
+    "Fracción de eyección preservada en 55% pero con patrón restrictivo de llenado.",
+    "Presencia de fibrilación auricular permanente con frecuencia cardíaca mal controlada.",
+    "Se sospecha amiloidosis transtiretina silvestre (ATTwt) por edad y patrón de presentación.",
+    "Biopsia miocárdica con tinción de rojo Congo confirmó presencia de amiloide.",
+    "Estudio genético para mutación de transtiretina pendiente.",
+    "Se ha iniciado seguimiento multidisciplinario con hematología."
+  ],
+  "paciente": {
+    "nombre_ficticio": "María Teresa Calvo Serrano",
+    "edad": 69,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Alejandro Ruiz Castillo",
+    "especialidad": "Cardiología"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Doña María Teresa. Soy el Doctor Alejandro Ruiz, cardiólogo. He visto en su historia que refiere dificultad para respirar. ¿Cuándo empezó?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[wearily] Hace como año y medio, doctor. Al principio muy leve, casi no me daba cuenta. Pero ha ido empeorando progresivamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cómo es ahora la dificultad? ¿Cuándo ocurre?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Ahora es con cualquier cosa. Subir escaleras es un infierno. Y por las noches, a veces tengo que dormir prácticamente sentada porque no puedo respirar acostada."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Ha notado hinchazón en las piernas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, especialmente al final del día. Se me hinchan mucho los tobillos y las pantorrillas."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Doña María Teresa, ¿tiene diagnósticos previos? ¿Hipertensión?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Ligera tensión alta pero nada del otro mundo. Y los riñones, el médico de familia me dijo que los tenía un poco débiles."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Insuficiencia renal?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Creo que dijeron crónica leve. Nada que me causara problemas hasta ahora."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Ha tenido anemia?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Sí, hace unos años me dijeron que tenía los glóbulos rojos bajos. Tomo hierro a veces."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Fuma o consume alcohol?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No fumo. Vino en las comidas, moderadamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Antecedentes familiares de problemas del corazón?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflecting] Mi madre tuvo un infarto hace muchos años, pero ella fumaba muchísimo."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarla. Quítese la blusa por favor. Voy a auscultar el corazón y los pulmones."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro, doctor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Oigo un S3 galope, que es un sonido patológico. Los pulmones tienen humedad en las bases. Voy a tomarle la tensión: ciento veintiocho sobre setenta y dos. Frecuencia cardíaca setenta y cuatro, saturación noventa y cuatro por ciento. Los edemas en los tobillos son evidentes."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Qué significa ese sonido que oye en el corazón?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Es un signo de que el corazón está trabajando con dificultad para bombear. Necesitamos hacer un ecocardiograma urgente y un electrocardiograma."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[authoritatively] Doña María Teresa, he revisado los resultados y debo decirle que sospecho que tiene algo poco común. El electrocardiograma muestra bajo voltaje, que es muy raro. El ecocardiograma muestra el corazón con paredes muy gruesas pero con función paradójicamente conservada."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Qué significa eso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Esto es compatible con una enfermedad llamada amiloidosis cardíaca. Es una enfermedad donde una proteína anormal llamada amiloide se deposita en el corazón y lo daña."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[fearfully] ¿Amiloidosis? ¿Es cáncer?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es cáncer. Es una enfermedad rara, pero hay tratamientos. Vamos a hacer más pruebas para confirmar el diagnóstico."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Voy a solicitar una resonancia magnética cardíaca con contraste especial para ver el patrón de depósito de amiloide. También una biopsia miocárdica para confirmar histológicamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Es peligroso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] La biopsia es un procedimiento seguro. Introducimos una aguja pequeña a través de una vena para obtener una muestra del corazón. Se hace con anestesia local."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Cómo se trata esto?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Depende del tipo de amiloidosis. Pero el tratamiento es complejo y requiere seguimiento cercano. Mientras tanto, voy a mantenerla en warfarina por la fibrilación auricular, digoxina para controlar la frecuencia, y diuréticos para los edemas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sadly] ¿Esto va a empeorar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously but supportive] La amiloidosis es progresiva sin tratamiento específico. Pero estamos descubriendo nuevas terapias. Lo importante es confirmar el diagnóstico y luego explorar todas las opciones. Voy a coordinar con hematología."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Bien, doctor. Confío en usted. ¿Cuándo empezamos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Programaremos la resonancia para esta semana. Luego la biopsia. Vamos a saber exactamente qué tiene y podremos actuar en consecuencia. No pierda ánimo."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/cardiologia/CAR-010.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

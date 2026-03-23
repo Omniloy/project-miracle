@@ -1,0 +1,288 @@
+{
+  "id": "CAR-009",
+  "especialidad": "Cardiología",
+  "resumen": "Paciente varón de 38 años referido por síncope durante descanso. El electrocardiograma muestra patrón típico de Brugada. Se diagnostica síndrome de Brugada como causa de muerte súbita. Presenta importante antecedente familiar de muerte súbita en pacientes jóvenes. Se valora para implante de desfibrilador automático implantable.",
+  "diagnostico_principal": {
+    "nombre": "Síndrome de Brugada",
+    "cie10": "I49.8",
+    "snomed_ct": "418818005",
+    "snomed_termino": "Brugada syndrome (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Síncope",
+      "cie10": "R55.0",
+      "snomed_ct": "417996009",
+      "snomed_termino": "Syncope and collapse (finding)"
+    },
+    {
+      "nombre": "Palpitaciones",
+      "cie10": "R00.2",
+      "snomed_ct": "80313002",
+      "snomed_termino": "Palpitation (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Electrocardiograma de doce derivaciones de alta amplitud",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Test de ajmalina",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Ecocardiograma transtorácico",
+      "snomed_ct": "430701000",
+      "snomed_termino": "Transthoracic echocardiography (procedure)"
+    },
+    {
+      "nombre": "Estudio electrofisiológico",
+      "snomed_ct": "416815000",
+      "snomed_termino": "Electrophysiology study (procedure)"
+    },
+    {
+      "nombre": "Test genético de canalopatías cardíacas",
+      "snomed_ct": "386359008",
+      "snomed_termino": "Genetic studies (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Sin medicación actual",
+      "dosis": "N/A",
+      "posologia": "N/A",
+      "atc": "N/A",
+      "snomed_ct": "N/A",
+      "snomed_termino": "N/A",
+      "indicacion": "El tratamiento principal es el implante de DAI"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 74,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 68,
+      "unidad": "lpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 98,
+      "unidad": "%"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente joven sin comorbilidades.",
+    "Antecedente familiar muy importante: tío fallecido de muerte súbita a los 35 años.",
+    "Primo segundo con diagnóstico de síndrome de Brugada.",
+    "El síncope ocurrió durante el descanso, lo cual es típico del síndrome de Brugada.",
+    "El electrocardiograma muestra el patrón tipo 1 de Brugada con elevación coved del ST en V1-V2.",
+    "Se ha confirmado el diagnóstico con test de ajmalina que reproduce el patrón.",
+    "Se han realizado test genéticos que confirman mutación en gen SCN5A.",
+    "Se va a implantar un desfibrilador automático implantable para prevención primaria.",
+    "Se aconseja evitar fiebre, esfuerzos intensos y ciertos medicamentos."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Pablo Herrero Díaz",
+    "edad": 38,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena Martín Sánchez",
+    "especialidad": "Cardiología"
+  },
+  "voces": {
+    "medico_voice_id": "RgXx32WYOGrd7gFNifSf",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Pablo. Soy la Doctora Elena Martín, cardióloga. He visto en tu historia que tuviste un síncope. Cuéntame qué pasó."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Doctora, fue hace dos semanas. Estaba simplemente descansando en el sofá viendo la tele y de repente me desmayé. Me desperté en el suelo sin saber qué había pasado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Sin aviso previo? ¿Sin mareos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, fue completamente de repente. Ahora estoy preocupadísimo. ¿Qué me pasa, doctora?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Ha tenido síncopes previos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] No, nunca. Y ahora estoy muerto de miedo de que vuelva a pasar."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Pablo, cuéntame sobre tu familia. ¿Hay antecedentes de problemas del corazón?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[seriously] Pues sí, mi tío materno murió hace años, muy joven, de repente. Debe haber sido alrededor de los treinta y cinco años. Dijeron que fue del corazón pero nunca se aclaró bien qué fue."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso es importante. ¿Otros parientes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflecting] Mi primo segundo, el hijo de otra tía, tiene algo del corazón. No sé exactamente qué, pero lo visitó un cardiólogo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Tienes antecedentes personales? ¿Tensión alta, diabetes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, nada. Siempre he estado sano. Hago deporte con regularidad."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Fumas, alcohol?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] No fumo. Cerveza ocasionalmente el fin de semana, nada más."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Tomas alguna medicación?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, absolutamente nada."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorar. Quítate la camiseta por favor. Voy a auscultar el corazón y los pulmones."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro."
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Corazón rítmico, sin soplos. Los pulmones están completamente limpios. Te voy a tomar la tensión: ciento dieciocho sobre setenta y cuatro. Frecuencia cardíaca sesenta y ocho, saturación noventa y ocho por ciento. Todo está normal en la exploración."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Pero entonces, ¿por qué me desmayé?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Vamos a hacer un electrocardiograma ahora mismo. Es esencial para entender qué está pasando."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[authoritatively] Pablo, he visto el electrocardiograma y tengo una sospecha muy seria. Veo un patrón muy característico: elevación coved del segmento ST en V1 y V2. Combinado con tu síncope, tu historia familiar, todo apunta a síndrome de Brugada."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[fearfully] ¿Síndrome de Brugada? ¿Qué es eso? ¿Es como lo que tuvo mi tío?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Es una enfermedad cardíaca rara causada por un defecto en los canales iónicos del corazón. Es hereditaria. Aumenta mucho el riesgo de muerte súbita, especialmente durante el descanso o cuando hay fiebre."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[desperately] ¿Voy a morir? ¿Es grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No si lo tratamos adecuadamente. El síncope que tuviste fue un evento potencialmente letal, pero estás vivo. Necesitamos hacer más pruebas para confirmar el diagnóstico."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Voy a solicitar varias pruebas. Una prueba de ajmalina para confirmar el patrón de Brugada. Un estudio electrofisiológico para ver si tienes arritmias inducibles. Y test genético para confirmar la mutación."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuánto tiempo toma eso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Una o dos semanas para los resultados. Mientras tanto, es importante que evites ciertos medicamentos que pueden empeorar el patrón. Y evita fiebre si es posible."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Y si me vuelve a pasar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Si tienes síntomas como palpitaciones severas o mareos, debes ir a urgencias inmediatamente. El tratamiento definitivo es un desfibrilador automático implantable, que es un dispositivo que previene la muerte súbita."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] ¿Un aparato en el corazón?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí, es pequeño, del tamaño de una moneda. Se implanta bajo la clavícula. Puede salvar tu vida. Muchos atletas y jóvenes lo tienen."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[serious] Entiendo. ¿Qué debo hacer ahora?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vamos a programar las pruebas. Debes hacer reposo relativo por ahora, nada de ejercicio intenso. La buena noticia es que sabemos qué tienes y podemos tratarlo. Vamos a evitar que tengas otro evento."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/cardiologia/CAR-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

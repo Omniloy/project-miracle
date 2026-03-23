@@ -1,0 +1,79 @@
+{
+  "nombre_dataset": "Transcripciones y Audios Clínicos Sintéticos con CIE-10 y SNOMED CT",
+  "version": "1.0",
+  "fecha_creacion": "2026-03-23",
+  "descripcion": "Dataset sintético de 100 transcripciones clínicas médico-paciente en español con codificación CIE-10, SNOMED CT y ATC, acompañadas de audio generado por IA.",
+  "idioma": "es",
+  "total_transcripciones": 100,
+  "total_especialidades": 10,
+  "total_dialogos": 3735,
+  "total_caracteres": 469462,
+  "estadisticas_codigos": {
+    "cie10_unicos": 300,
+    "snomed_ct_unicos": 673,
+    "atc_unicos": 115
+  },
+  "estadisticas_audio": {
+    "total_archivos": 100,
+    "tamano_total_mb": 443.3,
+    "tamano_promedio_mb": 4.4
+  },
+  "fuentes_validacion": [
+    "https://icd.who.int/browse10/2019/en",
+    "https://browser.ihtsdotools.org",
+    "https://www.whocc.no/atc_ddd_index"
+  ],
+  "modelo_audio": "eleven_v3 (ElevenLabs Text to Dialogue)",
+  "especialidades": {
+    "Cardiología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Dermatología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Endocrinología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Ginecología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Medicina de familia": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Neumología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Neurología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Pediatría": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Traumatología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    },
+    "Urología": {
+      "total": 10,
+      "comunes": 8,
+      "raras": 2
+    }
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "id": "MF-009",
+  "especialidad": "Medicina de familia",
+  "resumen": "Paciente varón de 37 años que consulta por astenia progresiva, hipotensión ortostática, hiperpigmentación cutánea generalizada y pérdida de peso sin causa aparente durante 4-5 meses. Hallazgos clínicos y bioquímicos compatibles con insuficiencia adrenal primaria (enfermedad de Addison). Se inicia tratamiento con hidrocortisona y fludrocortisona. Se solicita confirmación diagnóstica mediante pruebas endocrinas específicas.",
+  "diagnostico_principal": {
+    "nombre": "Enfermedad de Addison",
+    "cie10": "E27.1",
+    "snomed_ct": "363732003",
+    "snomed_termino": "Addison's disease (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Astenia severa",
+      "cie10": "R53.1",
+      "snomed_ct": "13791008",
+      "snomed_termino": "Asthenia (finding)"
+    },
+    {
+      "nombre": "Hiperpigmentación cutánea",
+      "cie10": "L81.9",
+      "snomed_ct": "95320000",
+      "snomed_termino": "Hyperpigmentation (finding)"
+    },
+    {
+      "nombre": "Pérdida de peso",
+      "cie10": "R63.4",
+      "snomed_ct": "89362005",
+      "snomed_termino": "Weight loss (finding)"
+    },
+    {
+      "nombre": "Hipotensión",
+      "cie10": "I95.9",
+      "snomed_ct": "45007003",
+      "snomed_termino": "Hypotension (disorder)"
+    },
+    {
+      "nombre": "Síncope ortostático",
+      "cie10": "R42",
+      "snomed_ct": "404640003",
+      "snomed_termino": "Dizziness (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Medición de presión arterial en decúbito y bipedestación",
+      "snomed_ct": "46973005",
+      "snomed_termino": "Blood pressure taking (procedure)"
+    },
+    {
+      "nombre": "Evaluación de hiperpigmentación",
+      "snomed_ct": "248373001",
+      "snomed_termino": "Physical examination procedure (procedure)"
+    },
+    {
+      "nombre": "Solicitud de cortisol plasmático basal",
+      "snomed_ct": "17150003",
+      "snomed_termino": "Serum corticosteroid measurement (procedure)"
+    },
+    {
+      "nombre": "Solicitud de ACTH (Hormona adrenocorticotropa)",
+      "snomed_ct": "101040000",
+      "snomed_termino": "Adrenocorticotropic hormone level (observable entity)"
+    },
+    {
+      "nombre": "Solicitud de prueba de estimulación con ACTH (Tanner)",
+      "snomed_ct": "395203009",
+      "snomed_termino": "ACTH stimulation test (procedure)"
+    },
+    {
+      "nombre": "Analítica de electrolitos plasmáticos",
+      "snomed_ct": "104118001",
+      "snomed_termino": "Electrolyte panel (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Hidrocortisona",
+      "dosis": "20-30 mg",
+      "posologia": "Dividido en 2-3 dosis diarias: 10 mg por la mañana, 10 mg al mediodía, 5-10 mg por la tarde",
+      "atc": "H02AB09",
+      "snomed_ct": "387440006",
+      "snomed_termino": "Hydrocortisone (substance)",
+      "indicacion": "Reemplazo de cortisol en insuficiencia adrenal primaria"
+    },
+    {
+      "nombre": "Fludrocortisona",
+      "dosis": "0.1 mg",
+      "posologia": "Un comprimido cada mañana",
+      "atc": "H02AA02",
+      "snomed_ct": "387476008",
+      "snomed_termino": "Fludrocortisone (substance)",
+      "indicacion": "Reemplazo de mineralocorticoide en insuficiencia adrenal primaria"
+    }
+  ],
+  "constantes_vitales": {
+    "peso": {
+      "valor": 71,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 175,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 23.2,
+      "unidad": "kg/m²"
+    },
+    "tension_arterial_sistolica_decubito": {
+      "valor": 95,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica_decubito": {
+      "valor": 60,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_sistolica_bipedestacion": {
+      "valor": 85,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica_bipedestacion": {
+      "valor": 55,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca_decubito": {
+      "valor": 72,
+      "unidad": "lpm"
+    },
+    "frecuencia_cardiaca_bipedestacion": {
+      "valor": 95,
+      "unidad": "lpm"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente refiere astenia progresiva durante 4-5 meses.",
+    "Hiperpigmentación generalizada, particularmente en areolas, escroto, cicatrices viejas.",
+    "Pérdida de peso de 6-7 kg en los últimos 4 meses sin cambios dietarios.",
+    "Hipotensión ortostática marcada: diferencia sistólica de 10 mmHg entre decúbito y bipedestación.",
+    "Aumento de frecuencia cardíaca con el cambio postural.",
+    "Refiere anorexia, náuseas ocasionales, dolor abdominal leve.",
+    "Niega historia de TB, fungal, malignancy o autoimmunidad conocida previamente.",
+    "Hallazgo incidental de hiponatremia y potasio elevado sugieren pérdida adrenal.",
+    "Diagnóstico presuntivo: insuficiencia adrenal primaria (enfermedad de Addison).",
+    "Se inicia tratamiento inmediato con glucocorticoides y mineralocorticoides.",
+    "Derivación a endocrinología para confirmación diagnóstica y manejo a largo plazo."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Sergio Calvo Díaz",
+    "edad": 37,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Marta Vega López",
+    "especialidad": "Medicina de familia"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Sergio. ¿Qué le trae hoy?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[weakly] Buenos días, doctora. Pues me encuentro muy mal desde hace meses. Estoy cansadísimo, no tengo fuerzas ni para levantarme de la cama algunos días."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cuántos meses lleva así?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing heavily] Cuatro, quizá cinco meses. Ha sido gradual. Al principio pensé que era estrés del trabajo, pero ha ido a peor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Solo cansancio o hay otros síntomas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Tengo mareos, especialmente cuando me levanto. A veces casi pierdo el conocimiento. He perdido seis o siete kilos sin intención. Y noto que tengo la piel más oscura, especialmente en ciertos lugares."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Ha tenido fiebre, sudoración nocturna?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] No fiebre, pero sí que sudo bastante por las noches. Y tengo poco apetito, a veces me asquean las cosas que normalmente como."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Náuseas, vómitos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, náuseas de vez en cuando, especialmente por las mañanas. Dolor de barriga leve también."
+        },
+        {
+          "rol": "medico",
+          "texto": "[asking] ¿Ha tenido diarrea o estreñimiento?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Diarrea ocasional, pero no es lo peor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[exploring] ¿Antecedentes de tuberculosis, infecciones graves, cirugía abdominal?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nunca. Nunca he tenido nada importante. Mi salud siempre ha sido buena."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Antecedentes familiares de problemas endocrinos, tiroideos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] No que yo sepa. Mi familia está bien de salud."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Medicaciones? ¿Alergias?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] Nada. No tomo medicamentos. Alergia a penicilina, tengo."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarle. Siéntese aquí, por favor. Le voy a tomar la presión en dos posiciones. Primero acostado. [pause, measuring] Noventa y cinco sobre sesenta, frecuencia cardíaca setenta y dos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[waiting] Okay."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Ahora incorpórese lentamente y hagamos la medición de nuevo. [pause] Ochenta y cinco sobre cincuenta y cinco. La frecuencia subió a noventa y cinco."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[dizzy] Uy, me mareo un poco al levantarme."
+        },
+        {
+          "rol": "medico",
+          "texto": "[concerned] Exacto, eso es hipotensión ortostática. Veamos la piel. [examining] Nota la hiperpigmentación generalizada, especialmente en las areolas, el escroto, y en estas cicatrices viejas. ¿Cuándo comenzó esto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Gradualmente con lo demás, hace meses."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Ahora le peso. Suba a la báscula. [pause] Setenta y uno kilos, metro setenta y cinco de talla. Índice de masa corporal de veintitrés coma dos, bajo-normal para su complexión."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] He perdido mucho peso."
+        },
+        {
+          "rol": "medico",
+          "texto": "[physically examining] Ausculto el corazón [pause] ritmo regular, sin soplos. Los pulmones limpios. El abdomen [palpating] blando, sin masas, sensible vagamente en la región epigástrica. No hay edemas. ¿Ha notado cambios en los genitales o pérdida de vello?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[awkwardly] Bueno, creo que sí, menos vello que antes."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Sergio, el cuadro que presenta es muy sugestivo de insuficiencia adrenal primaria, lo que conocemos como enfermedad de Addison."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[alarmed] ¿Enfermedad de Addison? ¿Qué es eso? ¿Es grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es una enfermedad rara, donde las glándulas adrenales, que están encima de los riñones, no producen suficientes hormonas. Es grave si no se trata, pero con medicación es completamente controlable."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Voy a necesitar ingreso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] De momento no, pero necesitamos confirmar el diagnóstico rápidamente. Voy a solicitar análisis urgentes y vamos a iniciar tratamiento ya."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Voy a prescribir dos medicamentos: hidrocortisona y fludrocortisona. La hidrocortisona es un glucocorticoide que reemplaza el cortisol que sus adrenales no están produciendo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cómo se toma?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] En dosis divididas: diez miligramos por la mañana con el desayuno, diez al mediodía, y cinco o diez por la tarde. La fludrocortisona es media a un comprimido por la mañana, reemplaza otro tipo de hormona que también falta."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Va a mejorar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí, debería notar mejoría en días. El cansancio mejora, la tensión sube, desaparecen las náuseas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Ahora, necesito hacer análisis urgentes. Cortisol, ACTH, electrolitos. También le voy a hacer una prueba de estimulación con ACTH para confirmar el diagnóstico."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] ¿Cuándo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Mañana o pasado en el laboratorio. Es importante hacerlo rápido. Mientras tanto, importante: si tiene mareos muy severos, vómitos persistentes, o fiebre, venga a urgencias inmediatamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Y necesito que le vea un endocrinólogo pronto. Le voy a dar una cita urgente. Esta enfermedad requiere seguimiento especializado."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Gracias, doctora. Confío en que mejore."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Va a mejorar, Sergio. Es una sorpresa encontrarse con esto, pero está todo controlable. Vuelva tan pronto tenga los resultados de los análisis."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/medicina_familia/MF-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

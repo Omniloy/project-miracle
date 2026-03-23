@@ -1,0 +1,330 @@
+{
+  "id": "CAR-006",
+  "especialidad": "Cardiología",
+  "resumen": "Paciente varón de 54 años que acude por fatiga progresiva y disnea de esfuerzo de dos meses. El ecocardiograma muestra dilatación importante de ambos ventrículos con fracción de eyección del 25%. Se diagnostica miocardiopatía dilatada con disfunción sistólica severa. Se inicia tratamiento con inhibidor de la ECA, betabloqueante y aldosterona antagonista.",
+  "diagnostico_principal": {
+    "nombre": "Miocardiopatía dilatada",
+    "cie10": "I42.0",
+    "snomed_ct": "195021004",
+    "snomed_termino": "Dilated cardiomyopathy (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Insuficiencia cardíaca sistólica",
+      "cie10": "I50.2",
+      "snomed_ct": "25544004",
+      "snomed_termino": "Left ventricular systolic dysfunction (disorder)"
+    },
+    {
+      "nombre": "Arritmias ventriculares potencialmente malignas",
+      "cie10": "I49.9",
+      "snomed_ct": "6374002",
+      "snomed_termino": "Arrhythmia (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Fatiga",
+      "cie10": "R53.0",
+      "snomed_ct": "22213007",
+      "snomed_termino": "Fatigue (finding)"
+    },
+    {
+      "nombre": "Disnea de esfuerzo",
+      "cie10": "R06.0",
+      "snomed_ct": "267036007",
+      "snomed_termino": "Dyspnea (finding)"
+    },
+    {
+      "nombre": "Palpitaciones",
+      "cie10": "R00.2",
+      "snomed_ct": "80313002",
+      "snomed_termino": "Palpitation (finding)"
+    },
+    {
+      "nombre": "Dolor precordial leve",
+      "cie10": "R07.9",
+      "snomed_ct": "29650008",
+      "snomed_termino": "Chest pain (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Electrocardiograma de doce derivaciones",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Ecocardiograma transtorácico completo",
+      "snomed_ct": "430701000",
+      "snomed_termino": "Transthoracic echocardiography (procedure)"
+    },
+    {
+      "nombre": "Radiografía de tórax",
+      "snomed_ct": "399208008",
+      "snomed_termino": "Plain chest X-ray (procedure)"
+    },
+    {
+      "nombre": "Holter de 24 horas",
+      "snomed_ct": "268504007",
+      "snomed_termino": "Cardiac monitoring (procedure)"
+    },
+    {
+      "nombre": "Analítica sanguínea con BNP",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Enalapril",
+      "dosis": "10 mg",
+      "posologia": "1 comprimido cada doce horas",
+      "atc": "C09AA02",
+      "snomed_ct": "372658000",
+      "snomed_termino": "Enalapril (substance)",
+      "indicacion": "Inhibidor de la ECA para miocardiopatía"
+    },
+    {
+      "nombre": "Metoprolol",
+      "dosis": "50 mg",
+      "posologia": "1 comprimido cada doce horas",
+      "atc": "C07AB02",
+      "snomed_ct": "372714009",
+      "snomed_termino": "Metoprolol (substance)",
+      "indicacion": "Betabloqueante para reducir demanda miocárdica"
+    },
+    {
+      "nombre": "Espironolactona",
+      "dosis": "25 mg",
+      "posologia": "1 comprimido al día",
+      "atc": "C03DA01",
+      "snomed_ct": "372511007",
+      "snomed_termino": "Spironolactone (substance)",
+      "indicacion": "Antagonista de aldosterona"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 112,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 68,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 96,
+      "unidad": "lpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 96,
+      "unidad": "%"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente refiere que comenzó con fatiga hace aproximadamente dos meses, sin causa aparente.",
+    "La etiología de la miocardiopatía es probable idiopática, aunque se investigará origen viral previo.",
+    "Antecedente reciente de infección viral respiratoria hace tres meses.",
+    "Fracción de eyección del ventrículo izquierdo medida en 25% (disfunción sistólica severa).",
+    "Diámetro diastólico del ventrículo izquierdo: 66 mm (dilatación importante).",
+    "Se ha derivado a programa de insuficiencia cardíaca avanzada.",
+    "Se valora para implante de desfibrilador automático implantable si no mejora con tratamiento.",
+    "Seguimiento semanal por cardiólogo hasta estabilización."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Miguel Ángel Torres Peña",
+    "edad": 54,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Alejandro Ruiz Castillo",
+    "especialidad": "Cardiología"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Don Miguel Ángel. Soy el Doctor Alejandro Ruiz, cardiólogo. Veo que ha venido porque se siente cansado. ¿Cuándo empezó a notar esto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[wearily] Hace dos meses, doctor. Al principio pensé que era estrés del trabajo, pero no me pasa. Me levanto cansado y llego a la noche agotado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Ha notado dificultad para respirar?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, especialmente cuando subo escaleras o cuando intento hacer algo de esfuerzo. Me falta el aire rápidamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Palpitaciones? ¿Sensación de latidos acelerados?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] A veces, sí. Especialmente por la noche. Noto que el corazón me va muy deprisa."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Don Miguel Ángel, ¿ha estado enfermo recientemente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Ahora que lo dice, hace tres meses tuve una infección de las vías respiratorias, catarro muy fuerte con tos. Estuve una semana enfermo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso es relevante. ¿Tiene diabetes o tensión alta?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] No, ninguna de las dos cosas. Siempre he estado bien de salud."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Fuma o consume alcohol?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No fumo. Alcohol ocasionalmente en fiestas, pero poco."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Y en su familia? ¿Problemas cardíacos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No que yo sepa. Mi abuelo tuvo algo del corazón pero hace mucho tiempo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Toma alguna medicación?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No, nada. Solo vitaminas a veces."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarle. Quítese la camisa y siéntese aquí. Voy a auscultar el corazón y los pulmones."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro, doctor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Oigo un soplo holosistólico en foco mitral, consistente con insuficiencia mitral funcional. Los pulmones tienen algo de humedad en las bases. Voy a tomarle la tensión: ciento doce sobre sesenta y ocho."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Es bajo eso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Un poco bajo, pero no es grave en este momento. Frecuencia cardíaca noventa y seis, un poco acelerada. Saturación noventa y seis por ciento, aceptable. Voy a solicitar un ecocardiograma urgente."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Don Miguel Ángel, el ecocardiograma muestra algo importante. Los ventrículos están muy dilatados y el corazón no está bombeando eficientemente. La fracción de eyección está en veinticinco por ciento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Qué significa eso? ¿Es grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[authoritatively] Significa que el corazón está debilitado. Los ventrículos están aumentados de tamaño en un intento de compensar. Esto se llama miocardiopatía dilatada."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[fearfully] ¿Voy a necesitar un transplante?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No necesariamente. Primero vamos a intentar con el tratamiento médico. Muchos pacientes mejoran significativamente con los medicamentos adecuados."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Le voy a iniciar tres medicamentos que son fundamentales. Enalapril, diez miligramos cada doce horas, para dilatar los vasos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Entendido."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Metoprolol, cincuenta miligramos cada doce horas, que reduce la carga del corazón. Y espironolactona, veinticinco miligramos diarios."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] ¿Tengo que cambiar mi estilo de vida?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Sí, es importante. Reduzca la sal drasticamente, evite el alcohol completamente. Haga ejercicio ligero pero regularmente, como caminar. Ningún esfuerzo intenso de momento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Cuánto tiempo tengo que tomar estos medicamentos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Probablemente de por vida. Voy a hacerle un seguimiento semanal las próximas cuatro semanas para ver cómo responde al tratamiento. Si no mejora o empeora, habrá que plantear otras opciones como un desfibrilador automático."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[gratefully] Bien, doctor. Espero mejorar con esto."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Muchos pacientes mejoran. Es importante cumplir con los medicamentos y seguir las recomendaciones. Mucho ánimo."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/cardiologia/CAR-006.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "id": "NRL-002",
+  "especialidad": "Neurología",
+  "resumen": "Paciente varón de 24 años con antecedente de epilepsia reciente (hace seis meses) que presenta crisis tónico-clónicas generalizadas. Describe pródromo con ansiedad y sensación de vértigo. Crisis con pérdida de conciencia, caídas traumáticas y período posictal con confusión. Se realiza electroencefalograma que muestra actividad epileptiforme. Se inicia tratamiento con levetiracetam y se dan recomendaciones de seguridad. Requiere seguimiento para optimizar tratamiento antiepiléptico.",
+  "diagnostico_principal": {
+    "nombre": "Epilepsia con crisis tónico-clónicas generalizadas",
+    "cie10": "G40.3",
+    "snomed_ct": "230422008",
+    "snomed_termino": "Generalized tonic-clonic seizure disorder (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Traumatismo craneoencefálico menor",
+      "cie10": "S06.9",
+      "snomed_ct": "82271004",
+      "snomed_termino": "Closed traumatic brain injury of head (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Crisis tónico-clónica",
+      "cie10": "R56.8",
+      "snomed_ct": "29100004",
+      "snomed_termino": "Tonic-clonic seizure (finding)"
+    },
+    {
+      "nombre": "Pérdida de conciencia",
+      "cie10": "R40.2",
+      "snomed_ct": "419184004",
+      "snomed_termino": "Loss of consciousness (finding)"
+    },
+    {
+      "nombre": "Confusión posictal",
+      "cie10": "R41.0",
+      "snomed_ct": "25953004",
+      "snomed_termino": "Confusion (finding)"
+    },
+    {
+      "nombre": "Pródromo con vértigo",
+      "cie10": "R42",
+      "snomed_ct": "399153001",
+      "snomed_termino": "Dizziness (finding)"
+    },
+    {
+      "nombre": "Incontinencia urinaria durante la crisis",
+      "cie10": "R39.1",
+      "snomed_ct": "6231001",
+      "snomed_termino": "Urinary incontinence (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "84728005",
+      "snomed_termino": "Neurologic examination (procedure)"
+    },
+    {
+      "nombre": "Electroencefalograma",
+      "snomed_ct": "54550000",
+      "snomed_termino": "Electroencephalogram (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética cerebral",
+      "snomed_ct": "241623006",
+      "snomed_termino": "Magnetic resonance imaging of brain (procedure)"
+    },
+    {
+      "nombre": "Analítica de sangre completa",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Levetiracetam",
+      "dosis": "500 mg",
+      "posologia": "1 comprimido cada 12 horas",
+      "atc": "N03AX14",
+      "snomed_ct": "396087000",
+      "snomed_termino": "Levetiracetam (substance)",
+      "indicacion": "Tratamiento de epilepsia con crisis tónico-clónicas generalizadas"
+    }
+  ],
+  "notas_adicionales": [
+    "Importante educar al paciente sobre la licencia de conducción, prohibida hasta control de crisis.",
+    "Recomendar llevar identificación médica indicando epilepsia.",
+    "Evitar factores desencadenantes: privación de sueño, estrés, alcohol.",
+    "Si vuelven las crisis o se tienen cambios en la frecuencia, avisar inmediatamente.",
+    "Seguimiento cada 4 semanas inicialmente para valorar tolerancia y respuesta al fármaco.",
+    "Si crisis persisten, considerar segunda línea de fármacos antiepilépticos.",
+    "Importante comunicar con familia y allegados sobre procedimientos de seguridad durante una crisis."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Alberto Sánchez Prieto",
+    "edad": 24,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Luis Fernández Hidalgo",
+    "especialidad": "Neurología"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenas tardes, Alberto. Tu médico me ha enviado un informe sobre unas crisis que has sufrido. ¿Puedes contarme qué pasó?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] Sí, doctor. Hace seis meses tuve la primera crisis. Estaba en casa viendo televisión y de repente sentí una sensación muy extraña. Como si tuviera un mareo pero más fuerte, como un presentimiento que algo malo iba a pasar."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y luego qué?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] Pues en ese momento noté que no controlaba mi cuerpo. Me sentía rígido, como si me congelara. Y lo siguiente que recuerdo es despertar en el suelo, dolorido, mis padres estaban llamando a la ambulancia."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Recuerdas algo del momento de la caída?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada. Es como si me perdiera el tiempo. Mi padre me contó que tuve contracciones por todo el cuerpo, como espasmos. Duró unos minutos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Y desde entonces?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] Ha tenido dos crisis más en estos seis meses. Una hace tres meses y otra hace un mes. Me asusta mucho porque no sé cuándo pueden venir."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[carefully] Entiendo que es abrumador. Dime, ¿hay algo que desencadene las crisis? ¿Luces brillantes, sonidos fuertes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] No, que yo sepa no. Aunque la segunda crisis fue cuando no había dormido bien. Había estado estudiando toda la noche antes de un examen."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Interesante, la falta de sueño es un factor desencadenante común. ¿Y antecedentes familiares de epilepsia o convulsiones?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Mi abuelo paterno tuvo algo similar, creo. Mi padre no está muy seguro, pero su hermana dice que de joven tuvo crisis, pero le pasaron."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Traumatismos craneales previos, fiebres muy altas, meningitis?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nada de eso. Tengo buena salud en general. No tomo medicamentos normalmente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Consumes alcohol o drogas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[honestly] Socialmente, alcohol de vez en cuando. Nunca he probado drogas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Es importante que sepas que el alcohol puede precipitar crisis. ¿Y cuéntame cómo te sientes después de las crisis?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Muy confuso. Tengo dolor de cabeza fuerte, los músculos me duelen como si hubiera estado corriendo, y estoy muy cansado. A veces duermo varias horas después de una crisis."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Bien, Alberto, voy a hacer una exploración neurológica. Primero, camina hacia la puerta, por favor."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Así, ¿está bien?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[observing] Bien, marcha normal. Ahora dame la mano con fuerza. [checking strength] Perfecto, fuerza normal en ambos lados. Voy a revisarte los reflejos. [tapping with hammer] Excelente, reflejos normales en miembros superiores e inferiores."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relaxed] ¿Está todo bien entonces?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] La exploración neurológica está completamente normal. Eso es buena señal. Ahora necesitamos hacer pruebas complementarias para confirmar el diagnóstico de epilepsia."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Epilepsia? ¿Seguro?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Los síntomas que describes y la forma de presentación son compatibles con epilepsia. El electroencefalograma y la resonancia magnética nos confirmarán el diagnóstico y nos dirán si hay algo estructural en el cerebro."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Algo estructural? ¿Eso quiere decir que tengo un tumor o algo?"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, no es un tumor. Es importante descartar cualquier lesión cerebral que pudiera estar causando las crisis. Pero dada tu historia clínica, probablemente es epilepsia idiopática, es decir, sin una causa estructural clara."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Eso suena mejor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[educatingly] La epilepsia es un trastorno neurológico caracterizado por una predisposición a sufrir crisis. Las crisis tónico-clónicas que describes son las más espectaculares, pero hay muchos tipos. El objetivo ahora es controlar las crisis con medicamentos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Y si tomo medicamentos dejará de pasar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Hay un 70% de probabilidades de que el primer fármaco que probemos controle las crisis completamente. Si no funciona el primero, podemos intentar otros. Lo importante es encontrar el que mejor te va."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y tendré que tomar medicamentos de por vida?"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] Te voy a prescribir levetiracetam, un medicamento antiepiléptico de primera línea. Quinientos miligramos cada doce horas. Bien tolerado y menos interacciones que otros fármacos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Y los efectos secundarios?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Algunos pacientes refieren cambios de humor, irritabilidad o insomnio. Otros no tienen ninguno. Empezamos con esta dosis y vamos ajustando según cómo te encuentres."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[seriously] ¿Y qué pasa si tengo otra crisis?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[advising] Si tienes una crisis, avisa inmediatamente a emergencias. Es importante saber que puedes tener lesiones durante la caída, así que es recomendable usar protección, especialmente en la cabeza. Nada de conducir hasta que las crisis estén bajo control."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Cuánto tiempo sin conducir?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] En España, necesitas estar sin crisis durante un período que varía, normalmente un año sin medicación o tres meses con medicación si estás bien controlado. Lo comprobaremos con tus pruebas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido. ¿Hay algo más que pueda hacer?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[advisably] Muy importante: duerme lo suficiente, evita el estrés, evita el alcohol. Lleva una vida ordenada. Te haré un electroencefalograma la próxima semana y una resonancia magnética también. Te vemos en cuatro semanas para ver cómo va el medicamento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctor. Me siento mejor habiendo hablado contigo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] De nada, Alberto. Somos un equipo para controlar esto. Nos vemos en un mes."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neurologia/NRL-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

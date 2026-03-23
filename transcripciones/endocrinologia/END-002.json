@@ -1,0 +1,373 @@
+{
+  "id": "END-002",
+  "especialidad": "Endocrinología",
+  "resumen": "Paciente mujer de 34 años con hipertiroidismo debido a enfermedad de Graves diagnosticado hace seis meses. Acude a revisión de control durante tratamiento farmacológico con metimazol. Se evalúan síntomas de hipertiroidismo, tolerancia al fármaco y cambios en constantes vitales. Se mantiene tratamiento debido a control adecuado de TSH y T4 libre.",
+  "diagnostico_principal": {
+    "nombre": "Hipertiroidismo por enfermedad de Graves",
+    "cie10": "E05.0",
+    "snomed_ct": "353295004",
+    "snomed_termino": "Graves disease (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Taquicardia sinusal",
+      "cie10": "R00.0",
+      "snomed_ct": "6285007",
+      "snomed_termino": "Sinus tachycardia (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Palpitaciones",
+      "cie10": "R00.2",
+      "snomed_ct": "80313002",
+      "snomed_termino": "Palpitations (finding)"
+    },
+    {
+      "nombre": "Intolerancia al calor",
+      "cie10": "R68.82",
+      "snomed_ct": "34653009",
+      "snomed_termino": "Excessive heat intolerance (finding)"
+    },
+    {
+      "nombre": "Pérdida de peso no intencionada",
+      "cie10": "R63.4",
+      "snomed_ct": "89362005",
+      "snomed_termino": "Weight loss (finding)"
+    },
+    {
+      "nombre": "Ansiedad",
+      "cie10": "R45.1",
+      "snomed_ct": "48694002",
+      "snomed_termino": "Anxiety (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Determinación de TSH sérico",
+      "snomed_ct": "104200008",
+      "snomed_termino": "Thyroid stimulating hormone measurement (procedure)"
+    },
+    {
+      "nombre": "Determinación de T4 libre",
+      "snomed_ct": "16114001",
+      "snomed_termino": "Thyroxine measurement (procedure)"
+    },
+    {
+      "nombre": "Determinación de T3 libre",
+      "snomed_ct": "271239004",
+      "snomed_termino": "Serum triiodothyronine level (procedure)"
+    },
+    {
+      "nombre": "Ecografía tiroidea",
+      "snomed_ct": "241604004",
+      "snomed_termino": "Ultrasound scan of thyroid gland (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Metimazol",
+      "dosis": "10 mg",
+      "posologia": "1 comprimido cada ocho horas",
+      "atc": "H03BB02",
+      "snomed_ct": "35584004",
+      "snomed_termino": "Methimazole (substance)",
+      "indicacion": "Tratamiento del hipertiroidismo por Graves"
+    },
+    {
+      "nombre": "Propranolol",
+      "dosis": "40 mg",
+      "posologia": "1 comprimido cada doce horas",
+      "atc": "C07AA05",
+      "snomed_ct": "372732009",
+      "snomed_termino": "Propranolol (substance)",
+      "indicacion": "Control de síntomas adrenérgicos en hipertiroidismo"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 128,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 82,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 98,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 62,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 168,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 21.9,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente diagnosticada con enfermedad de Graves tras presentar síntomas cardinales de hipertiroidismo.",
+    "Anticuerpos anti-TPO y anti-receptor TSH positivos en el momento del diagnóstico.",
+    "Inició metimazol hace seis meses con buena respuesta clínica.",
+    "TSH actual: 1.2 mIU/L (dentro de rango normal); T4 libre: 1.1 ng/dL (normalizado).",
+    "Los síntomas de hipertiroidismo han mejorado significativamente.",
+    "Persiste leve taquicardia, por ello se mantiene propranolol.",
+    "No oftalmología clínica (sin exoftalmos ni diplopia).",
+    "Se plantea suspender propranolol en próxima revisión si TSH se mantiene normal."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Cristina López Fuentes",
+    "edad": 34,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Martínez Rojas",
+    "especialidad": "Endocrinología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[cheerfully] Buenos días, Cristina. ¿Qué tal las cosas? ¿Cómo te encuentras?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Hola, doctor. Mucho mejor que hace meses, la verdad. Ya no tengo esos ataques de pánico que me daban antes.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Excelente noticia. ¿Y el calor? ¿Sigues con esa intolerancia excesiva al calor?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Sí, pero mucho menos. Ahora puedo estar con mis amigos sin estar todo el tiempo sudando. Sigo sin tolerancia al calor, pero es moderada.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Bien. ¿Y las palpitaciones? ¿Notas que tu corazón late acelerado?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] A veces, especialmente si me altero o cuando subo escaleras. Pero no es como antes, que no podía ni caminar sin sentir que se me salía el corazón.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Has notado cambios en tu peso? ¿Sigues perdiendo peso o se ha estabilizado?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[happily] Se ha estabilizado, sí. He ganado dos o tres kilos desde la última visita y me siento mejor.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Muy bien. Repasemos un poco la historia. Tú hace seis meses que empezaste con metimazol y propranolol, ¿verdad? ¿Cómo te has adaptado a la medicación?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Sí, al principio era un poco molesto tomar medicinas cada ocho horas, pero me he acostumbrado. No he tenido efectos secundarios importantes, la verdad.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Ningún síntoma extraño? ¿Erupciones en la piel, molestias en el abdomen, cambios de sabor?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Bueno, a veces me duele un poco la cabeza, pero nada grave. Mi madre dice que quizá sea estrés del trabajo.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] El metimazol puede causar dolores de cabeza leves en algunos casos, pero hay que vigilar. [pause] ¿Cuál es tu actividad laboral?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighs] Soy directora de proyecto en una empresa de telecomunicaciones. Es muy estresante, muchas reuniones, plazos ajustados.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[knowingly] Eso no ayuda al hipertiroidismo. ¿Practicas algo para relajarte? ¿Deporte, meditación?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[smiling] Sí, desde hace poco empecé yoga dos veces a la semana. Y paseo un poco por las tardes cuando puedo.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[approvingly] Perfecto. Eso es muy positivo para el control.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Cristina, ahora voy a explorar tu tiroides. Pon la cabeza hacia atrás un poco. [performs examination] Noto que la glándula tiroides está menos aumentada que hace seis meses. Buena señal.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curiously] ¿Eso significa que va mejor?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[affirming] Exacto. La glándula se está normalizando con el tratamiento. Ahora te mido la tensión arterial. [pause] Ciento veintiocho sobre ochenta y dos. Un poco elevada, pero mejor que en la última visita. Frecuencia cardíaca noventa y ocho latidos por minuto. Aún hay algo de taquicardia, pero es mejoría clara.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Me alegra.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] Peso sesenta y dos kilos, talla ciento sesenta y ocho. Índice de masa corporal veintiuno coma nueve, perfecto. Ausculto el corazón: aún con tendencia a la taquicardia, pero rítmico, sin soplos. Pulmones claros. Abdomen sin masas. Manos sin temblor.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Bien, eso es buena noticia.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[satisfactorily] Cristina, estoy muy contento con tu evolución. Los resultados de laboratorio de hoy muestran que tu TSH está en uno coma dos, que es normal. La T4 libre en uno coma uno nanogramos por decilitro, también normalizado. La T3 libre también está bien.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pleased] ¿Significa que me estoy curando?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Bueno, la enfermedad de Graves es una enfermedad autoinmune crónica, así que no se cura del todo. Pero con el tratamiento farmacológico hemos conseguido controlar muy bien la función tiroidea. Clínicamente estás mucho mejor: sin ansiedad, peso estable, taquicardia leve.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Entiendo. ¿Y cuánto tiempo más tendré que tomar medicinas?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Generalmente con metimazol se recomienda de dieciocho a veinticuatro meses de tratamiento. Estamos en los seis, así que aún nos quedan como mínimo un año. Pero iremos valorando según la evolución.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[decisively] Vamos a mantener tu mismo tratamiento: metimazol diez miligramos cada ocho horas, y propranolol cuarenta miligramos cada doce horas. Pero en la próxima revisión, si el TSH se mantiene normal y la taquicardia desaparece, podemos intentar suprimir el propranolol.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Bien, mantengo igual entonces.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Sí. Ahora bien, hay algo importante: el metimazol, aunque es seguro, puede causar en raras ocasiones un descenso de los glóbulos blancos. Es muy raro, pero tú debes estar atenta a síntomas como fiebre, infecciones frecuentes, úlceras en la boca. Si eso ocurre, vienes inmediatamente a urgencias. ¿Entendido?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned but understanding] Sí, claro. Eso suena serio.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No te asustes, es muy poco frecuente, pero es importante saberlo. También sigue con el yoga, maneja el estrés todo lo que puedas, duerme bien. [pause] Te voy a pedir análisis cada tres meses para vigilar los anticuerpos y la función tiroidea.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Claro, ¿dónde me hago los análisis?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Aquí mismo, en el laboratorio del hospital. Te darán una cita. Ven en ayunas. Y te voy a dar una recomendación: evita el yodo excesivo, especialmente algas y suplementos con yodo. Eso puede inflamar más la tiroides. Alimentación normal, lo importante es el equilibrio.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] De acuerdo, doctor. ¿Y cuándo vuelvo?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te cito para dentro de tres meses. Para entonces tendremos los nuevos resultados y veremos la evolución. Si entre tanto tienes fiebre, infecciones o síntomas extraños, me llamas sin esperar. Aquí está mi número.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Muchas gracias, doctor. Me siento mucho mejor que hace meses.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Sigue así, Cristina. Vas en buen camino. Nos vemos en tres meses.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/endocrinologia/END-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

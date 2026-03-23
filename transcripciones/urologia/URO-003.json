@@ -1,0 +1,360 @@
+{
+  "id": "URO-003",
+  "especialidad": "Urología",
+  "resumen": "Paciente mujer de 54 años que acude a consulta de urología por infecciones urinarias recurrentes. Refiere múltiples episodios de cistitis en el último año, con disuria, polaquiuria y urgencia miccional. Se realiza estudio de imagen para descartar patología urológica.",
+  "diagnostico_principal": {
+    "nombre": "Infección urinaria recurrente",
+    "cie10": "N39.0",
+    "snomed_ct": "197927001",
+    "snomed_termino": "Recurrent urinary tract infection (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Cistitis aguda",
+      "cie10": "N30.90",
+      "snomed_ct": "46654001",
+      "snomed_termino": "Acute cystitis without hematuria (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Disuria",
+      "cie10": "R30.0",
+      "snomed_ct": "90389006",
+      "snomed_termino": "Dysuria (finding)"
+    },
+    {
+      "nombre": "Polaquiuria",
+      "cie10": "R35.0",
+      "snomed_ct": "28152004",
+      "snomed_termino": "Polyuria (finding)"
+    },
+    {
+      "nombre": "Urgencia miccional",
+      "cie10": "R30.1",
+      "snomed_ct": "162452001",
+      "snomed_termino": "Urgency of micturition (finding)"
+    },
+    {
+      "nombre": "Hematuria microscópica",
+      "cie10": "R31.1",
+      "snomed_ct": "386627006",
+      "snomed_termino": "Microscopic hematuria (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Análisis de orina con sedimento y cultivo",
+      "snomed_ct": "27944006",
+      "snomed_termino": "Routine urinalysis (procedure)"
+    },
+    {
+      "nombre": "Cultivo bacteriano de orina",
+      "snomed_ct": "104177005",
+      "snomed_termino": "Urine culture (procedure)"
+    },
+    {
+      "nombre": "Ecografía abdominal y pélvica",
+      "snomed_ct": "10159009",
+      "snomed_termino": "Ultrasound of abdomen (procedure)"
+    },
+    {
+      "nombre": "Cistoscopia",
+      "snomed_ct": "84625006",
+      "snomed_termino": "Cystoscopy (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Cefixima",
+      "dosis": "400 mg",
+      "posologia": "1 comprimido cada doce horas durante 7 días",
+      "atc": "J01DD08",
+      "snomed_ct": "372636009",
+      "snomed_termino": "Cefixime (substance)",
+      "indicacion": "Tratamiento de infección urinaria"
+    },
+    {
+      "nombre": "Fosfomicina",
+      "dosis": "3 gramos",
+      "posologia": "Sobre disuelto en agua una sola dosis",
+      "atc": "J01XX01",
+      "snomed_ct": "372734000",
+      "snomed_termino": "Fosfomycin (substance)",
+      "indicacion": "Tratamiento de infección urinaria aguda"
+    }
+  ],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 132,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 79,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 76,
+      "unidad": "lpm"
+    },
+    "temperatura": {
+      "valor": 37.1,
+      "unidad": "°C"
+    },
+    "peso": {
+      "valor": 68,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 162,
+      "unidad": "cm"
+    }
+  },
+  "notas_adicionales": [
+    "Ha padecido más de cuatro episodios de cistitis en los últimos doce meses.",
+    "Menopáusica desde hace tres años.",
+    "Antecedentes de prolapso genital grado 1.",
+    "Se considera profilaxis antibiótica de larga duración tras descartar patología anatómica.",
+    "Se recomienda medidas higiénicas, hidratación abundante y micción después del coito."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Amparo Gómez Calvo",
+    "edad": 54,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Pérez Guzmán",
+    "especialidad": "Urología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, señora Gómez. Soy el doctor Pérez, urólogo. Siéntese, por favor. He visto en sus antecedentes que tiene problemas frecuentes de infecciones de orina, ¿verdad?",
+          "audio_tag": "medico_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Sí, doctor. Es muy cansino. Cada dos meses me vuelve a pasar. Empiezo con ardor al orinar, ganas de ir al servicio constantemente, y en un par de días tengo que ir al médico de cabecera.",
+          "audio_tag": "paciente_001"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cuántos episodios ha tenido en el último año?",
+          "audio_tag": "medico_002"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[counting on fingers] Pues... he perdido la cuenta. Creo que más de cuatro, quizás cinco. Es muy frecuente.",
+          "audio_tag": "paciente_003"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Fiebre? ¿Dolor en los costados?",
+          "audio_tag": "medico_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shakes head] No, fiebre no. A veces una décima. El dolor es abajo, en la vejiga, o si no en el bajo vientre.",
+          "audio_tag": "paciente_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Sangre en la orina?",
+          "audio_tag": "medico_004"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] A veces creo ver algo de color rosa en la orina, sí. Muy poquito.",
+          "audio_tag": "paciente_005"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Qué medicamentos tomó en los episodios anteriores?",
+          "audio_tag": "medico_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[recalling] El médico de cabecera siempre me da antibióticos. A veces cefixima, a veces fosfomicina. Funcionan rápido, pero luego vuelve.",
+          "audio_tag": "paciente_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Ha tenido alguna operación en el útero o los ovarios?",
+          "audio_tag": "medico_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Me quitaron los ovarios hace unos tres años por un quiste ovárico. Desde entonces estoy en menopausia.",
+          "audio_tag": "paciente_007"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso puede influir. ¿Algún prolapso genital que le hayan comentado?",
+          "audio_tag": "medico_008"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirmatively] Sí, eso me lo dijeron hace años, que tengo una caída pequeña de la vejiga, pero nada grave.",
+          "audio_tag": "paciente_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tiene relaciones sexuales actualmente?",
+          "audio_tag": "medico_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Ocasionalmente, con mi pareja. Casi nunca durante la infección, claro.",
+          "audio_tag": "paciente_009"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarla. Por favor, acuéstese. Primero le tomo las constantes.",
+          "audio_tag": "medico_010"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[compliant] Sí, claro.",
+          "audio_tag": "paciente_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] Tensión ciento treinta y dos sobre setenta y nueve. Frecuencia cardíaca setenta y seis. Temperatura treinta y siete coma uno. Bien.",
+          "audio_tag": "medico_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relaxed] Vale.",
+          "audio_tag": "paciente_011"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Palpación abdominal: blando, sin masas, ligera molestia a la presión suprapúbica. Puño percutor negativo en flancos. Exploración genital: vulva normal, mucosa vaginal atrófica, hiato uretral inflamado.",
+          "audio_tag": "medico_012"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[questioning] ¿Eso es algo serio?",
+          "audio_tag": "paciente_012"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, es por la falta de estrógenos después de la menopausia. La mucosa se vuelve más delgada y seca, lo que favorece las infecciones. Además, como mencionó, el pequeño prolapso también puede no ayudar a que se vacíe bien la vejiga.",
+          "audio_tag": "medico_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] Ah, entiendo. ¿Eso tiene solución?",
+          "audio_tag": "paciente_013"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Sí. Primero vamos a descartar que no haya nada grave con las pruebas. Luego evaluaremos opciones de prevención a largo plazo.",
+          "audio_tag": "medico_014"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Y eso quiere decir que dejaré de tener infecciones?",
+          "audio_tag": "paciente_014"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Eso es lo que intentaremos. Ahora mismo tiene una infección activa, así que le prescribo cefixima. Si presenta fiebre alta, dolor lumbar o no mejora en tres días, avíseme.",
+          "audio_tag": "medico_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentive] Entendido.",
+          "audio_tag": "paciente_015"
+        },
+        {
+          "rol": "medico",
+          "texto": "[informatively] Además, necesito que me traiga una muestra de orina para cultivo, para saber exactamente qué bacteria está causando esto y si es resistente a algo.",
+          "audio_tag": "medico_016"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Claro, la hago en el laboratorio.",
+          "audio_tag": "paciente_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Y voy a solicitar una ecografía abdominal y pélvica para ver cómo están los riñones, la vejiga y el útero. Si todo está bien, igual algún día la sometemos a una cistoscopia para ver el interior de la vejiga.",
+          "audio_tag": "medico_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervous] ¿Eso duele?",
+          "audio_tag": "paciente_017"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Se hace bajo sedación, es incómodo pero no duele. De todas formas, es solo si es necesario. Primero veamos los resultados de las pruebas.",
+          "audio_tag": "medico_018"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Bien, doctor. Muchas gracias.",
+          "audio_tag": "paciente_019"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Mientras tanto, beba mucha agua, at least dos litros diarios. Orine después de las relaciones sexuales. Y evite los productos irritantes, como los desodorantes vaginales o duchas vaginales.",
+          "audio_tag": "medico_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[noting] Anotado. Agua, orinar después de relaciones, y cuidado con los productos.",
+          "audio_tag": "paciente_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Exacto. Vuelva en dos semanas con la ecografía hecha. Seguro que encontramos una solución para que deje de tener estos problemas.",
+          "audio_tag": "medico_020"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/urologia/URO-003.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

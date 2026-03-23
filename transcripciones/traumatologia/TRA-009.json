@@ -1,0 +1,358 @@
+{
+  "id": "TRA-009",
+  "especialidad": "Traumatología",
+  "resumen": "Paciente mujer de 16 años con osteogénesis imperfecta tipo I, enfermedad rara del tejido conectivo. Presenta fragilidad ósea extrema, múltiples fracturas previas recurrentes desde infancia, escleras azuladas características, y talla baja. Evaluación integral para manejo de su fragilidad ósea con bifosfonatos (pamidronato) y suplementación de calcio y vitamina D.",
+  "diagnostico_principal": {
+    "nombre": "Osteogénesis imperfecta tipo I",
+    "cie10": "Q78.0",
+    "snomed_ct": "78314001",
+    "snomed_termino": "Osteogenesis imperfecta (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Fragilidad ósea",
+      "cie10": "M89.81",
+      "snomed_ct": "59739009",
+      "snomed_termino": "Bone fragility (finding)"
+    },
+    {
+      "nombre": "Talla baja",
+      "cie10": "R63.2",
+      "snomed_ct": "248229000",
+      "snomed_termino": "Short stature (finding)"
+    },
+    {
+      "nombre": "Antecedente de múltiples fracturas",
+      "cie10": "Z87.81",
+      "snomed_ct": "312826004",
+      "snomed_termino": "History of fracture (situation)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor óseo generalizado",
+      "cie10": "M89.84",
+      "snomed_ct": "45326000",
+      "snomed_termino": "Bone pain (finding)"
+    },
+    {
+      "nombre": "Limitación funcional",
+      "cie10": "R26.2",
+      "snomed_ct": "228158008",
+      "snomed_termino": "Walking disability (finding)"
+    },
+    {
+      "nombre": "Escleras azuladas",
+      "cie10": "H21.8",
+      "snomed_ct": "247475004",
+      "snomed_termino": "Blue sclera (finding)"
+    },
+    {
+      "nombre": "Hipoacusia progresiva",
+      "cie10": "H91.9",
+      "snomed_ct": "15688002",
+      "snomed_termino": "Hearing loss (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Radiografías óseas seriadas (seguimiento)",
+      "snomed_ct": "168537006",
+      "snomed_termino": "Plain radiography of wrist (procedure)"
+    },
+    {
+      "nombre": "Densitometría ósea (DEXA)",
+      "snomed_ct": "76006002",
+      "snomed_termino": "Bone density study (procedure)"
+    },
+    {
+      "nombre": "Evaluación genética y análisis molecular",
+      "snomed_ct": "363898002",
+      "snomed_termino": "Genetic analysis (procedure)"
+    },
+    {
+      "nombre": "Infusión de pamidronato (bifosfonato)",
+      "snomed_ct": "34363-5",
+      "snomed_termino": "Pamidronate infusion (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Pamidronato (bifosfonato)",
+      "dosis": "3 mg/kg",
+      "posologia": "Infusión intravenosa cada 3-4 meses",
+      "atc": "M05BA03",
+      "snomed_ct": "372535006",
+      "snomed_termino": "Pamidronate (substance)",
+      "indicacion": "Fortalecimiento óseo en osteogénesis imperfecta"
+    },
+    {
+      "nombre": "Calcio carbonato",
+      "dosis": "1200 mg/día",
+      "posologia": "Suplementación oral diaria",
+      "atc": "A12AA04",
+      "snomed_ct": "387408001",
+      "snomed_termino": "Calcium carbonate (substance)",
+      "indicacion": "Aporte de calcio"
+    },
+    {
+      "nombre": "Vitamina D3 (colecalciferol)",
+      "dosis": "1000 UI/día",
+      "posologia": "Suplementación oral diaria",
+      "atc": "A11CC05",
+      "snomed_ct": "372834002",
+      "snomed_termino": "Vitamin D3 (substance)",
+      "indicacion": "Absorción de calcio y metabolismo óseo"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 75,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 82,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 48,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 152,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 20.8,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente diagnosticada en infancia con OI tipo I tras múltiples fracturas recurrentes.",
+    "Característica escleras azuladas presentes desde nacimiento.",
+    "Antecedente de fractura de costillas, húmero, fémur en múltiples ocasiones.",
+    "Hipoacusia ligera, en seguimiento audiológico.",
+    "En seguimiento multidisciplinario: traumatología, genética, otorrinolaringología.",
+    "Medicación con pamidronato desde hace 5 años con buena respuesta.",
+    "Requiere precaución extrema en procedimientos médicos y manejo del paciente."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Natalia Ruiz Campos",
+    "edad": 16,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Rafael Sánchez Gutierrez",
+    "especialidad": "Traumatología (especialista en enfermedades del tejido óseo)"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Natalia. Soy el doctor Rafael Sánchez. Veo en tu historial que tienes osteogénesis imperfecta y hoy vienes para seguimiento. ¿Cómo te has encontrado desde la última visita?",
+          "audio_tag": "09_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Hola doctor. Bueno, más o menos. He tenido algún dolor óseo ocasional pero sin fractura nueva, así que eso es bueno. La verdad es que el pamidronato parece estar ayudando.",
+          "audio_tag": "09_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Me alegra. ¿Alguna caída recientemente o golpe que te haya preocupado?",
+          "audio_tag": "09_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Hace un mes me caí en el colegio, en las escaleras. Todos en casa teníamos miedo de que fuera fractura, pero con la radiografía solo vimos contusión. Fue suerte.",
+          "audio_tag": "09_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Es importante que tengas mucho cuidado en actividades que puedan resultar en caídas. Con tu condición, cualquier golpe puede ser peligroso. ¿Cómo está la escuela? ¿Educación física?",
+          "audio_tag": "09_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Pues la educación física la tengo limitada. No participo en deportes de contacto ni actividades de alto riesgo de caída. Es un poco frustrante tener que siempre estar apartada en las clases.",
+          "audio_tag": "09_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Entiendo perfectamente que es difícil. Pero con tu fragilidad ósea, es absolutamente necesario. ¿Cómo es tu dolor óseo? ¿Ha cambiado?",
+          "audio_tag": "09_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] El dolor es principalmente en piernas y caderas. Es como un dolor sordo, no es agudo. A veces empeora con el movimiento o si estoy de pie mucho tiempo. Tomo paracetamol cuando es muy molesto.",
+          "audio_tag": "09_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Problemas auditivos? Sabemos que la OI a veces afecta la audición.",
+          "audio_tag": "09_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[honestly] Sí, tengo una pérdida auditiva ligera en frecuencias altas. Los otorrinos dicen que es característica de la OI, pero que es leve. De momento no necesito aparatos auditivos.",
+          "audio_tag": "09_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Medicación? ¿Algún problema con el pamidronato?",
+          "audio_tag": "09_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Tomo calcio, vitamina D, y cada tres meses viene el tratamiento con pamidronato. El último fue hace un mes. Tengo algún efecto secundario leve: fiebre baja unos días después de la infusión, pero pasa rápido.",
+          "audio_tag": "09_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Eso es típico, no es peligroso. ¿Alergias?",
+          "audio_tag": "09_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] No, ninguna alergia que sepa.",
+          "audio_tag": "09_014"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Muy bien. Voy a explorarte. Primero observo los signos característicos: escleras azuladas, que son muy típicas de la OI tipo uno. Palpación ósea sistemática: costillas, espina dorsal, pelvis. ¿Algún punto doloroso?",
+          "audio_tag": "09_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Aquí en las costillas, cuando presiona, note un poco de dolor.",
+          "audio_tag": "09_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Sí, veo sensibilidad. Eso es normal en tu condición. Evaluación de movilidad: camina un poco para mí. [pause] Hay una marcha normal pero con cierta cautela, probablemente por temor a caídas. Rango de movimiento articular: normal, sin limitaciones. Las extremidades muestran deformidad leve, probablemente por fracturas previas curadas.",
+          "audio_tag": "09_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, tengo un poco de curvatura en las piernas, creo.",
+          "audio_tag": "09_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Es frecuente. Las fracturas repetidas pueden dejar deformidades. He revisado densitometría ósea anterior: ha mejorado con el pamidronato, que es excelente noticia. Voy a pedir nuevas radiografías de rutina y una DEXA actualizada para comparar.",
+          "audio_tag": "09_019"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] Natalia, basándome en tu historia, tus signos característicos y tus estudios previos, confirmo que tienes osteogénesis imperfecta tipo uno. Es una enfermedad genética rara que afecta el colágeno óseo, haciéndolo muy frágil.",
+          "audio_tag": "09_020"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Eso ya lo sé desde pequeña, doctor. ¿Cómo está la progresión?",
+          "audio_tag": "09_021"
+        },
+        {
+          "rol": "medico",
+          "texto": "[positively] La buena noticia es que la progresión se ha estabilizado bien con el tratamiento. La densitometría ha mejorado. El número de fracturas nuevas ha disminuido. Eso significa que el pamidronato está funcionando.",
+          "audio_tag": "09_022"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Significa que podré tener una vida más normal?",
+          "audio_tag": "09_023"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] La normalidad es relativa. Tendrás que ser cautelosa siempre, evitar actividades de alto riesgo. Pero con el tratamiento adecuado, muchos pacientes con OI tipo uno consiguen buena calidad de vida, incluso pueden ir a la universidad, trabajar, formar familia.",
+          "audio_tag": "09_024"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Vamos a continuar con el plan actual: calcio diario, vitamina D, y pamidronato cada tres meses. Vamos a repetir DEXA en un año para monitorizar progresión.",
+          "audio_tag": "09_025"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Hay algún riesgo de que empeore en el futuro?",
+          "audio_tag": "09_026"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] La OI tipo uno es la forma más leve de osteogénesis imperfecta. El pronóstico es generalmente bueno. No suele haber progresión a formas más severas. Pero hay que mantener vigilancia y continuar con el tratamiento de por vida.",
+          "audio_tag": "09_027"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿De por vida? ¿Seré dependiente de estos medicamentos siempre?",
+          "audio_tag": "09_028"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Probablemente sí. La OI es una enfermedad genética crónica. Pero el tratamiento es bien tolerado y ha mejorado enormemente la calidad de vida de los pacientes. También trabajaremos con genética para entender mejor tu caso específico.",
+          "audio_tag": "09_029"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido, doctor.",
+          "audio_tag": "09_030"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Natalia, quiero que sepas que eres una paciente valiente. Muchas chicas de tu edad con OI se desmoralizan, pero tú tienes una actitud excelente. Sigue así. Próxima cita en tres meses tras tu próxima infusión de pamidronato. Si algo urgente sucede, me llamas. Ánimo.",
+          "audio_tag": "09_031"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Gracias, doctor. Aprecio mucho su apoyo.",
+          "audio_tag": "09_032"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/traumatologia/TRA-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

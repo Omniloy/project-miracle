@@ -1,0 +1,347 @@
+{
+  "id": "MF-006",
+  "especialidad": "Medicina de familia",
+  "resumen": "Paciente mujer de 55 años que acude para revisión de síntomas compatibles con hipotiroidismo: cansancio, aumento de peso y sequedad de piel. Se realiza palpación tiroidea sin particularidades evidentes. Se solicita analítica de función tiroidea (TSH y T4 libre). Se inicia sospecha de hipotiroidismo y se prescribará levotiroxina tras confirmación diagnóstica con pruebas complementarias.",
+  "diagnostico_principal": {
+    "nombre": "Hipotiroidismo no especificado",
+    "cie10": "E03.9",
+    "snomed_ct": "40930008",
+    "snomed_termino": "Hypothyroidism (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Aumento de peso",
+      "cie10": "R63.5",
+      "snomed_ct": "8943002",
+      "snomed_termino": "Weight gain (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Asthenia",
+      "cie10": "R53.1",
+      "snomed_ct": "13791008",
+      "snomed_termino": "Asthenia (finding)"
+    },
+    {
+      "nombre": "Aumento de peso",
+      "cie10": "R63.5",
+      "snomed_ct": "8943002",
+      "snomed_termino": "Weight gain (finding)"
+    },
+    {
+      "nombre": "Sequedad de piel",
+      "cie10": "L85.3",
+      "snomed_ct": "16386004",
+      "snomed_termino": "Dry skin (finding)"
+    },
+    {
+      "nombre": "Intolerancia al frío",
+      "cie10": "R68.2",
+      "snomed_ct": "89546004",
+      "snomed_termino": "Chilliness (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Palpación de glándula tiroidea",
+      "snomed_ct": "248373001",
+      "snomed_termino": "Physical examination procedure (procedure)"
+    },
+    {
+      "nombre": "Solicitud de TSH (Hormona estimulante de la tiroides)",
+      "snomed_ct": "19080271",
+      "snomed_termino": "Thyroid stimulating hormone level (observable entity)"
+    },
+    {
+      "nombre": "Solicitud de T4 libre",
+      "snomed_ct": "104088003",
+      "snomed_termino": "Free thyroxine (T4) level (observable entity)"
+    },
+    {
+      "nombre": "Evaluación del metabolismo basal",
+      "snomed_ct": "248373001",
+      "snomed_termino": "Physical examination procedure (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Levotiroxina",
+      "dosis": "50 mcg",
+      "posologia": "Un comprimido por la mañana en ayunas, una hora antes de desayunar, dosis a ajustar según TSH",
+      "atc": "H03AA01",
+      "snomed_ct": "372887000",
+      "snomed_termino": "Levothyroxine (substance)",
+      "indicacion": "Tratamiento del hipotiroidismo (a iniciar tras confirmación diagnóstica)"
+    }
+  ],
+  "constantes_vitales": {
+    "peso": {
+      "valor": 68,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 160,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 26.6,
+      "unidad": "kg/m²"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 58,
+      "unidad": "lpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 78,
+      "unidad": "mmHg"
+    },
+    "temperatura": {
+      "valor": 36.4,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente refiere cansancio generalizado desde hace 3-4 meses.",
+    "Ha ganado 5 kg en los últimos 6 meses sin cambios significativos en hábitos alimentarios.",
+    "Piel más seca de lo habitual, especialmente en extremidades.",
+    "Refiere intolerancia al frío, se pone jersey cuando otros tienen calor.",
+    "Pulso en los 58 latidos por minuto, más bajo de lo esperado.",
+    "Glándula tiroidea no palpable, sin nódulos evidentes.",
+    "Sin antecedentes de radiación cervical o cirugía tiroidea.",
+    "Niega consumo de medicamentos que pudieran interferer.",
+    "Se solicitará TSH y T4 libre para confirmar diagnóstico.",
+    "Levotiroxina se iniciará tras confirmación diagnóstica, con seguimiento semanal de síntomas."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Lucía Herrero Pascual",
+    "edad": 55,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Carlos Navarro Ruiz",
+    "especialidad": "Medicina de familia"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Lucía. ¿Cómo está? ¿Qué le trae hoy?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Buenos días, doctor. Pues mire, hace ya varios meses que no me siento bien. Me cansa todo, estoy permanentemente cansada. No tengo energía ni para mis cosas de casa."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Entiendo. ¿Cuándo empezó ese cansancio?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Hace unos tres o cuatro meses, más o menos gradualmente. Al principio no le di mucha importancia, pensé que era estrés o algo así."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Ha notado otros cambios? ¿En el peso, por ejemplo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Sí, eso es lo que me tiene más preocupada. He ganado casi cinco kilos sin hacer nada diferente, sin comer más. Mi marido dice que estoy comiendo lo mismo de siempre, pero la ropa me queda pequeña."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, vamos a repasar. ¿Ha sentido cambios en la piel?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, ahora que lo dice, tengo la piel muy seca. Las manos sobre todo, las tengo resecas. Y también noto que tengo frío constantemente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Frío? ¿Cómo es? ¿Tiembla?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] No es que tiemble, pero me pongo jersey cuando los demás tienen calor, me apetece estar tapada. Antes no era así."
+        },
+        {
+          "rol": "medico",
+          "texto": "[asking] ¿Ha tenido cambios en el cabello? ¿Lo siente más frágil, que se cae más?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Ahora que lo dice sí, se me cae más que antes. Y lo tengo más apagado, menos brilloso."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiring] ¿Antecedentes de problemas de tiroides en la familia?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirmatively] Mi madre tomaba medicinas para la tiroides, sí. Decía que tenía la tiroides lenta."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Toma usted alguna medicación? ¿Algún suplemento?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No, nada. Solo de vez en cuando vitaminas, pero nada regularmente."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a hacer la exploración. Póngase de pie frente a mí, por favor. Primero voy a revisarle el cuello. Incline la cabeza un poco hacia atrás. [pause] Voy a palpar la glándula tiroidea con cuidado."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] ¿Duele?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, es indoloro. Relájese. [pause, palpating] La glándula se siente de tamaño normal, sin nódulos palpables, blanda, móvil. Bien."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Ahora vamos a tomar las constantes. Siéntese aquí. [pause, measuring] Peso: sesenta y ocho kilos. Talla un metro sesenta. Eso nos da un índice de masa corporal de veintiséis coma seis."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Sobrepeso."
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Ligero sobrepeso. Tensión arterial: ciento dieciocho sobre setenta y ocho, normal. Frecuencia cardíaca: cincuenta y ocho latidos por minuto. [pause] Eso es un poco bajo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Es malo tener la frecuencia baja?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es malo per se, pero junto con los síntomas que me cuenta sugiere que el metabolismo está enlentecido."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Voy a auscultar el corazón. [pause] Sonido normal, sin soplos. Los pulmones limpios. El abdomen blando. ¿Ha tenido hinchazón de tobillos o cara?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, eso no."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Lucía, el cuadro que presenta es muy compatible con hipotiroidismo. El cansancio progresivo, el aumento de peso sin razón aparente, la sequedad de piel, la intolerancia al frío, la bradicardia, todo apunta en esa dirección."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Hipotiroidismo? ¿Es grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es grave. Es una condición muy frecuente, especialmente en mujeres de su edad, y se controla perfectamente con medicación."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Medicación de por vida?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Posiblemente sí. El hipotiroidismo es crónico, pero la levotiroxina es muy segura y bien tolerada. Vamos a confirmarlo primero con analítica."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Le voy a solicitar una analítica. Necesitamos medir el TSH, que es la hormona estimulante de la tiroides, y la T4 libre, que es la hormona tiroidea en sí."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y eso cuándo me lo hago?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] En el laboratorio de aquí del centro, puede ir cuando le venga bien. Es un análisis de sangre normal. Llame cuando tenga los resultados."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] De acuerdo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Si los resultados confirman hipotiroidismo, voy a iniciarle levotiroxina. Es una hormona tiroidea sintética, muy segura. La toma en ayunas por la mañana, una hora antes de desayunar, porque el café y la comida interfieren con su absorción."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Mejorará el cansancio?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí, debería notar mejoría en el cansancio en dos o tres semanas, y el peso debería estabilizarse. También la piel y el cabello mejoran. Pero hay que ajustar la dosis según cómo responda usted."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] Eso sería estupendo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Llame cuando tenga los resultados y empezamos el tratamiento. Mientras tanto, intente mantener una dieta equilibrada y actividad física moderada. ¿De acuerdo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muy bien, doctor. Muchas gracias por la explicación."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, Lucía. Vamos a dejarla como nueva."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/medicina_familia/MF-006.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

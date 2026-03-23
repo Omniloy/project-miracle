@@ -1,0 +1,390 @@
+{
+  "id": "NEU-007",
+  "especialidad": "Neumología",
+  "resumen": "Paciente varón de 55 años que acude a urgencias con disnea aguda, dolor torácico pleurítico y taquicardia. Presenta factores de riesgo para tromboembolismo pulmonar: inmovilidad reciente por viaje en avión de larga distancia hace 3 días. Se realiza angiografía pulmonar por TC que confirma embolia pulmonar subsegmentaria. Se inicia anticoagulación inmediata con heparina seguida de rivaroxabán en régimen ambulatorio con seguimiento estrecho.",
+  "diagnostico_principal": {
+    "nombre": "Tromboembolismo pulmonar no especificado",
+    "cie10": "I26.9",
+    "snomed_ct": "59282003",
+    "snomed_termino": "Pulmonary embolism (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Trombosis venosa profunda",
+      "cie10": "I80.9",
+      "snomed_ct": "404223003",
+      "snomed_termino": "Deep vein thrombosis of lower extremity (disorder)"
+    },
+    {
+      "nombre": "Taquicardia",
+      "cie10": "R00.0",
+      "snomed_ct": "3424008",
+      "snomed_termino": "Tachycardia (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Disnea aguda",
+      "cie10": "R06.02",
+      "snomed_ct": "267036007",
+      "snomed_termino": "Dyspnea (finding)"
+    },
+    {
+      "nombre": "Dolor torácico pleurítico",
+      "cie10": "R07.9",
+      "snomed_ct": "29650001",
+      "snomed_termino": "Chest pain (finding)"
+    },
+    {
+      "nombre": "Taquicardia sinusal",
+      "cie10": "R00.0",
+      "snomed_ct": "3424008",
+      "snomed_termino": "Tachycardia (finding)"
+    },
+    {
+      "nombre": "Ansiedad",
+      "cie10": "R41.1",
+      "snomed_ct": "48694002",
+      "snomed_termino": "Anxiety (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física con auscultación pulmonar",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of chest (procedure)"
+    },
+    {
+      "nombre": "Electrocardiograma",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Radiografía de tórax",
+      "snomed_ct": "399208008",
+      "snomed_termino": "Plain chest X-ray (procedure)"
+    },
+    {
+      "nombre": "Angiografía pulmonar por tomografía computarizada",
+      "snomed_ct": "55014005",
+      "snomed_termino": "Computed tomography angiography of pulmonary arteries (procedure)"
+    },
+    {
+      "nombre": "Ecografía doppler de miembros inferiores",
+      "snomed_ct": "252537004",
+      "snomed_termino": "Doppler ultrasound of lower extremity (procedure)"
+    },
+    {
+      "nombre": "Análisis de sangre con D-dímero, troponina, BNP",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Heparina sódica",
+      "dosis": "5000 UI bolo, seguida de 1000-1200 UI/hora",
+      "posologia": "Infusión continua intravenosa en urgencias",
+      "atc": "B01AB01",
+      "snomed_ct": "372877000",
+      "snomed_termino": "Heparin (substance)",
+      "indicacion": "Anticoagulación inmediata en tromboembolismo pulmonar"
+    },
+    {
+      "nombre": "Rivaroxabán",
+      "dosis": "15 mg",
+      "posologia": "Carga inicial 15 mg dos veces diarias durante 21 días, seguida de mantenimiento 20 mg una vez al día",
+      "atc": "B01AF01",
+      "snomed_ct": "386216002",
+      "snomed_termino": "Rivaroxaban (substance)",
+      "indicacion": "Anticoagulación oral a largo plazo"
+    },
+    {
+      "nombre": "Oxígeno",
+      "dosis": "2-4 L/min",
+      "posologia": "Según saturación de oxígeno",
+      "atc": "N02BH32",
+      "snomed_ct": "74668003",
+      "snomed_termino": "Oxygen (substance)",
+      "indicacion": "Mantener saturación de oxígeno >92%"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 128,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 112,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 26,
+      "unidad": "rpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 88,
+      "unidad": "%"
+    },
+    "temperatura": {
+      "valor": 37.1,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con factor de riesgo importante: vuelo transatlántico de 10 horas hace 3 días, sedentario durante el vuelo.",
+    "Antecedentes: sobrepeso (IMC 28.5), tabaquismo activo de 10 cigarrillos/día.",
+    "Niega anticonceptivos orales o terapia hormonal reciente.",
+    "Presentación clínica aguda en urgencias con disnea, dolor torácico y taquicardia importante.",
+    "ECG: cambios inespecíficos, sin infarto de miocardio.",
+    "Radiografía de tórax normal, sin consolidaciones ni derrames.",
+    "TC angiografía pulmonar: embolia pulmonar subsegmentaria bilateral.",
+    "Ecodoppler MMII: sin evidencia de TVP aguda.",
+    "Se inicia heparina en urgencias, pasa a rivaroxabán en régimen ambulatorio.",
+    "Se recomienda: movilización precoz, uso de medias de compresión, seguimiento con analíticas de control, uso de IQR si nuevo viaje."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Ángel Torres Herrero",
+    "edad": 55,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Salazar Córdoba",
+    "especialidad": "Neumología"
+  },
+  "voces": {
+    "medico_voice_id": "RgXx32WYOGrd7gFNifSf",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[urgently] Buenos días, Ángel. Veo que has llegado a urgencias hace poco con dificultad para respirar. Cuéntame exactamente qué pasó.",
+          "audio_tag": "NEU-007_001_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathlessly] Doctora, empezó todo hace poco, no llevo ni una hora con esto. Me desperté de la siesta con una falta de aire terrible, como si no me llegara el aire. Y tengo dolor en el pecho, aquí, como un dolor punzante.",
+          "audio_tag": "NEU-007_002_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y ese dolor empeora cuando respiras hondo?",
+          "audio_tag": "NEU-007_003_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[panicked] Sí, exactamente. Cuando respiro profundo me duele más. Y tengo el corazón acelerado, lo noto en el pecho como latidos muy rápidos. Estoy asustado, doctora.",
+          "audio_tag": "NEU-007_004_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tranquilo, vamos a averiguar qué pasa. Cuéntame, ¿has viajado recientemente? ¿Algún vuelo?",
+          "audio_tag": "NEU-007_005_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, sí. Hace tres días volví de Nueva York. Un viaje de negocios, estuve en el avión como diez horas. Iba sentado todo el tiempo sin moverme mucho.",
+          "audio_tag": "NEU-007_006_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Eso es importante, Ángel. Esa inmovilidad durante vuelos largos es un factor de riesgo importante para lo que sospecho. ¿Dolor en las piernas? ¿Hinchazón?",
+          "audio_tag": "NEU-007_007_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Ahora que lo mencionas, creo que sí tenía un poco de hinchazón en la pierna izquierda después del vuelo, pero pensé que era por estar sentado. Y ahora que pienso, sí duele un poco.",
+          "audio_tag": "NEU-007_008_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] ¿Antecedentes de trombosis? ¿Alguien en la familia con problemas de coágulos?",
+          "audio_tag": "NEU-007_009_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] No que yo sepa. Tengo mi salud bastante normal. Fui fumador pero sigo fumando, unos diez cigarrillos al día.",
+          "audio_tag": "NEU-007_010_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] Medicamentos. ¿Tomas algo?",
+          "audio_tag": "NEU-007_011_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada. La verdad es que soy de esos que no voy mucho al médico. Nunca me han encontrado nada importante.",
+          "audio_tag": "NEU-007_012_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien. Vamos a explorarte ahora mismo. Siéntate aquí en la camilla. Te voy a tomar primero las constantes. Abre la boca para el termómetro.",
+          "audio_tag": "NEU-007_013_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro, adelante.",
+          "audio_tag": "NEU-007_014_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. Saturación de oxígeno ochenta y ocho por ciento, eso está bajo. Tensión ciento veintiocho sobre setenta y seis, frecuencia cardíaca ciento doce, muy elevada, frecuencia respiratoria veintiséis, también elevada. Temperatura treinta y siete coma uno.",
+          "audio_tag": "NEU-007_015_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿La saturación tan baja?",
+          "audio_tag": "NEU-007_016_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Ahora te pongo oxígeno para subirla. Respira tranquilo. Voy a auscultar tu tórax. Respira hondo.",
+          "audio_tag": "NEU-007_017_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathing heavily] Mmm... [pause] Vale.",
+          "audio_tag": "NEU-007_018_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Murmullo vesicular conservado, sin estertores. Corazón con taquicardia pero rítmico. Ahora voy a examinar las piernas. Extiéndelas, por favor. Sí, veo que la pierna izquierda tiene algo de edema, hinchazón. ¿Duele cuando aprieto aquí?",
+          "audio_tag": "NEU-007_019_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grimacing] Sí, duele bastante, doctora.",
+          "audio_tag": "NEU-007_020_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Ángel, necesitamos hacer varias pruebas urgentes. Primero un electrocardiograma para ver cómo está el corazón. Luego una radiografía de tórax, análisis de sangre, y lo más importante, una tomografía angiográfica pulmonar para ver si hay un coágulo en los pulmones.",
+          "audio_tag": "NEU-007_021_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Un coágulo en los pulmones? ¿Eso es grave?",
+          "audio_tag": "NEU-007_022_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Sí lo es, pero se trata. Por eso actuamos rápido. Vamos a hacerte todas las pruebas ahora mismo. Mientras tanto, voy a empezar un tratamiento anticoagulante por vía intravenosa para que el coágulo no crezca.",
+          "audio_tag": "NEU-007_023_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Vale, doctora. Haga lo que sea necesario.",
+          "audio_tag": "NEU-007_024_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[after tests] Ángel, tengo los resultados. La tomografía angiográfica pulmonar confirma la presencia de tromboembolismo pulmonar, un coágulo en las arterias pulmonares. Está localizado en la zona subsegmentaria, lo que significa que no es lo más grave, pero necesita tratamiento inmediato.",
+          "audio_tag": "NEU-007_025_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Voy a necesitar cirugía?",
+          "audio_tag": "NEU-007_026_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, no. Con el tratamiento anticoagulante que ya has empezado, el cuerpo va a disolver el coágulo poco a poco. La mayoría de pacientes como tú se recuperan bien.",
+          "audio_tag": "NEU-007_027_medico"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Ahora mismo te estoy dando heparina por vía intravenosa, que es el anticoagulante más rápido. Cuando estés estabilizado, en unos días, te voy a cambiar a una pastilla que se llama rivaroxabán que tomas en casa.",
+          "audio_tag": "NEU-007_028_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuánto tiempo tengo que estar con esto?",
+          "audio_tag": "NEU-007_029_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Mínimo tres meses, probablemente más. Depende de si es la primera vez que pasa. Ahora mismo es la primera, así que estimamos al menos seis meses de anticoagulación.",
+          "audio_tag": "NEU-007_030_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Seis meses de pastillas. Eso es bastante.",
+          "audio_tag": "NEU-007_031_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Sí, pero es muy importante para evitar que vuelva a pasar. Y durante todo este tiempo, nada de viajes largos sin tomar precauciones, no puedes estar inmovilizado.",
+          "audio_tag": "NEU-007_032_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido. ¿Voy a necesitar quedarme ingresado?",
+          "audio_tag": "NEU-007_033_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Probablemente una noche aquí en observación para asegurarme de que responde bien al tratamiento. Si todo va bien mañana, puedes irte a casa con la medicación y seguimiento regular.",
+          "audio_tag": "NEU-007_034_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Doctora, muchas gracias. Me asustó mucho, pero me siento más tranquilo ahora que sé qué es.",
+          "audio_tag": "NEU-007_035_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] De nada, Ángel. Vamos a sacarte adelante. Ahora descansa y deja que el tratamiento actúe. Dentro de poco te vas a encontrar mejor. Mis enfermeras están aquí si necesitas algo.",
+          "audio_tag": "NEU-007_036_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Vale, doctora. Gracias de nuevo.",
+          "audio_tag": "NEU-007_037_paciente"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neumologia/NEU-007.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

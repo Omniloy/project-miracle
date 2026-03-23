@@ -1,0 +1,331 @@
+{
+  "id": "END-008",
+  "especialidad": "Endocrinología",
+  "resumen": "Paciente mujer de 57 años con síndrome metabólico que reúne criterios diagnósticos: obesidad abdominal, hipertensión, dislipidemia y alteración de la glucosa en ayunas. Acude a consulta de endocrinología para valoración integral y estratificación cardiovascular. Se propone plan de modificación de estilo de vida, optimización de tratamiento farmacológico e inicio de terapia hipolipemiante.",
+  "diagnostico_principal": {
+    "nombre": "Síndrome metabólico",
+    "cie10": "E88.81",
+    "snomed_ct": "237602007",
+    "snomed_termino": "Metabolic syndrome (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Hipertensión arterial esencial",
+      "cie10": "I10",
+      "snomed_ct": "59621000",
+      "snomed_termino": "Essential hypertension (disorder)"
+    },
+    {
+      "nombre": "Dislipidemia",
+      "cie10": "E78.5",
+      "snomed_ct": "84698008",
+      "snomed_termino": "Disorder of lipoprotein metabolism (disorder)"
+    },
+    {
+      "nombre": "Prediabetes",
+      "cie10": "R73.03",
+      "snomed_ct": "15777000",
+      "snomed_termino": "Pre-diabetes (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Fatiga",
+      "cie10": "R53.83",
+      "snomed_ct": "84229001",
+      "snomed_termino": "Fatigue (finding)"
+    },
+    {
+      "nombre": "Cefalea ocasional",
+      "cie10": "R51.9",
+      "snomed_ct": "25064002",
+      "snomed_termino": "Headache (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Determinación de glucosa en ayunas",
+      "snomed_ct": "251776001",
+      "snomed_termino": "Blood glucose measurement (procedure)"
+    },
+    {
+      "nombre": "Prueba de tolerancia oral a la glucosa",
+      "snomed_ct": "104200008",
+      "snomed_termino": "Glucose tolerance test (procedure)"
+    },
+    {
+      "nombre": "Perfil lipídico completo",
+      "snomed_ct": "57369002",
+      "snomed_termino": "Lipid panel (procedure)"
+    },
+    {
+      "nombre": "Electrocardiograma de reposo",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Determinación de PCR ultrasensible",
+      "snomed_ct": "104200010",
+      "snomed_termino": "C-reactive protein measurement (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 144,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 92,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 84,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 92,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 165,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 33.8,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente posmenopáusica que reúne los cinco componentes del síndrome metabólico.",
+    "Perímetro abdominal: 102 cm (> 88 cm en mujeres).",
+    "Tensión arterial: 144/92 mmHg (elevada, en tratamiento con hidroclorotiazida y lisinopril).",
+    "Glucosa en ayunas: 118 mg/dL (alterada).",
+    "Glucosa a los dos horas de tolerancia: 156 mg/dL (intolerancia a la glucosa).",
+    "Hemoglobina glicosilada: 6.2% (prediabetes).",
+    "Colesterol total: 256 mg/dL; LDL: 172 mg/dL; HDL: 41 mg/dL; Triglicéridos: 198 mg/dL.",
+    "PCR ultrasensible: 4.8 mg/L (elevada, riesgo cardiovascular aumentado).",
+    "ECG: sin cambios isquémicos, ritmo sinusal normal.",
+    "Índice de riesgo cardiovascular SCORE > 3%."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Pilar Navarro Gómez",
+    "edad": 57,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Miguel Rodríguez Sáenz",
+    "especialidad": "Endocrinología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Buenos días, Pilar. He visto tus resultados de laboratorio y quería hablar contigo sobre tu salud cardiovascular. ¿Cómo te encuentras?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Pues bien, doctor. Aunque a veces me cansa un poco, pero bueno, a esta edad es normal, ¿verdad?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] La fatiga puede ser un síntoma. ¿Y la presión? ¿Cómo la controlas? ¿Tomas medicinas?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[casually] Sí, tomo un medicamento para la presión, una pastilla. El médico de cabecera me la puso hace unos años. Y para el colesterol también, una estatina.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Bien. ¿Cómo es tu vida diaria? ¿Haces ejercicio? ¿Cómo es tu alimentación?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighs] La verdad es que no hago mucho ejercicio. Trabajo de secretaria, paso mucho tiempo sentada. Y la alimentación, pues como de todo, incluidas cosas con mucha grasa y sal. Sé que no es lo ideal.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Pilar, hay varios factores en tu vida que quiero que evaluemos juntos. Primero, ¿antecedentes de enfermedad en la familia?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues mi padre tuvo un infarto a los setenta años, y mi madre es diabética. Mi hermano también tiene presión alta.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Eso es importante. ¿Y tú? ¿Algún síntoma de angina? ¿Dolor en el pecho con el esfuerzo?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, nada de eso. Me cansa cuando subo escaleras, pero sin dolor.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Cuándo fue tu última regla?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Hace unos doce años. Pasé la menopausia sin demasiados síntomas.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tomas terapia hormonal sustitutiva?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[no] No, decidí no tomarla.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. Ahora voy a miderte. [pause] Ciento cuarenta y cuatro sobre noventa y dos de presión. Eso está elevado. Frecuencia cardíaca ochenta y cuatro. Peso noventa y dos kilos, talla ciento sesenta y cinco. El índice de masa corporal treinta y tres coma ocho, obesidad clase uno.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sad] Sí, he ganado peso desde la menopausia.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] Ahora voy a medirte el perímetro abdominal. [pause] Ciento dos centímetros. Eso es importante, porque en las mujeres, por encima de ochenta y ocho centímetros ya es obesidad abdominal de riesgo.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Es malo?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clinically] Ausculto el corazón: rítmico, sin soplos. Pulmones claros. Abdomen prominente, sin masas. Pulsos periféricos normales. [pause] Los resultados de la ecografía abdominal muestran esteatosis hepática leve, es decir, grasa en el hígado, lo que es común en esta condición.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Pilar, lo que tienes se llama síndrome metabólico. Es un conjunto de condiciones que juntas aumentan mucho el riesgo de enfermedad del corazón e ictus. Reúnes varios criterios: obesidad central, presión elevada, azúcar alterada en ayunas, colesterol malo alto, colesterol bueno bajo, y triglicéridos elevados.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Eso suena grave, doctor.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es serio, pero manejable. Tus resultados de hoy muestran glucosa en ayunas ciento dieciocho, hemoglobina glicosilada seis coma dos, lo que es prediabetes. Colesterol total doscientos cincuenta y seis, LDL ciento setenta y dos que está muy alto, HDL solo cuarenta y uno que está bajo, triglicéridos ciento noventa y ocho que están elevados.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Y eso qué significa?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] Que tu corazón está en riesgo. El electrocardiograma de hoy es normal, bien. Pero tienes inflamación cardiovascular, la PCR ultrasensible está elevada en cuatro coma ocho. Si no hacemos cambios, dentro de unos años podrías tener un infarto como tu padre.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[decisively] Vamos a hacer un plan integral. Primero, debo optimizar tu medicación. Voy a añadir una estatina más potente, una atorvastatina ochenta miligramos. La presión también necesita mejor control, voy a subir el lisinopril. Y vamos a iniciar aspirina baja dosis para prevención cardiovascular.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] De acuerdo. ¿Y qué más?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Lo más importante es el cambio de estilo de vida. Necesitas perder peso, al menos un diez por ciento de tu peso actual, unos diez kilos. Y necesitas movimiento: caminar treinta minutos diarios, cinco días a la semana como mínimo. Natación también es excelente, sin carga en las articulaciones.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] El ejercicio me cuesta, doctor.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[firmly] Lo sé, pero es vital. Empieza poco a poco, media hora caminando. Luego aumentas. También voy a referirte a nutricionista para una dieta personalizada: nada de ultraprocesados, poco sodio, poco azúcar, mucha fibra, pescado blanco y azul, aceite de oliva.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperative] Bien, voy a intentarlo.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Perfecto. También evita completamente el tabaco si fumas, y modera el alcohol. Te citaré en un mes para ver cómo va la adaptación a la medicación nueva. Luego cada tres meses para monitorizar la glucosa, colesterol, presión. Cualquier síntoma de pecho, disnea, acude a urgencias.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Gracias, doctor. Entiendo la seriedad de todo esto.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Adelante, Pilar. Este síndrome es reversible con dedicación. Nos vemos en un mes.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/endocrinologia/END-008.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "id": "NRL-010",
+  "especialidad": "Neurología",
+  "resumen": "Paciente varón de 56 años que acude por debilidad progresiva en miembros superiores de seis meses de evolución. Presenta fasciculaciones visibles en brazos y antebrazos, atrofia muscular incipiente, dificultad en precisión manual. Exploración neurológica con debilidad de miembros superiores sin compromiso sensitivo. Electromiograma muestra cambios denervación aguda y crónica. Resonancia magnética cervical descarta compresión. Diagnóstico presuntivo de esclerosis lateral amiotrófica. Caso raro y emotivo con impacto familiar significativo. Se remite a equipos multidisciplinares para valoración y seguimiento.",
+  "diagnostico_principal": {
+    "nombre": "Esclerosis lateral amiotrófica",
+    "cie10": "G12.21",
+    "snomed_ct": "86044005",
+    "snomed_termino": "Amyotrophic lateral sclerosis (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Debilidad progresiva de miembros superiores",
+      "cie10": "M62.5",
+      "snomed_ct": "26544005",
+      "snomed_termino": "Muscle weakness (finding)"
+    },
+    {
+      "nombre": "Fasciculaciones musculares",
+      "cie10": "R25.3",
+      "snomed_ct": "82120001",
+      "snomed_termino": "Muscle fasciculation (finding)"
+    },
+    {
+      "nombre": "Atrofia muscular",
+      "cie10": "M62.5",
+      "snomed_ct": "13331007",
+      "snomed_termino": "Muscular atrophy (disorder)"
+    },
+    {
+      "nombre": "Dificultad en actividades manuales precisas",
+      "cie10": "R27.9",
+      "snomed_ct": "25057002",
+      "snomed_termino": "Coordination abnormality (finding)"
+    },
+    {
+      "nombre": "Rigidez en extremidades",
+      "cie10": "M62.8",
+      "snomed_ct": "271587009",
+      "snomed_termino": "Muscle rigidity (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "84728005",
+      "snomed_termino": "Neurologic examination (procedure)"
+    },
+    {
+      "nombre": "Electromiograma y estudio de conducción nerviosa",
+      "snomed_ct": "42803009",
+      "snomed_termino": "Electromyography (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética de columna cervical",
+      "snomed_ct": "241614005",
+      "snomed_termino": "Magnetic resonance imaging of cervical spine (procedure)"
+    },
+    {
+      "nombre": "Analítica de sangre completa incluyendo CK",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    },
+    {
+      "nombre": "Pruebas de función pulmonar",
+      "snomed_ct": "23426006",
+      "snomed_termino": "Pulmonary function test (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Riluzol",
+      "dosis": "50 mg",
+      "posologia": "1 comprimido cada 12 horas con las comidas",
+      "atc": "N06DX05",
+      "snomed_ct": "373441004",
+      "snomed_termino": "Riluzole (substance)",
+      "indicacion": "Prolongación de supervivencia en ELA, ralentiza progresión"
+    }
+  ],
+  "notas_adicionales": [
+    "Esclerosis lateral amiotrófica es enfermedad neurodegenerativa rara, progresiva e irreversible.",
+    "Diagnóstico difícil que requiere criterios clínicos, electrofisiológicos e imagenológicos.",
+    "Impacto emocional significativo: paciente y familia requieren apoyo psicológico.",
+    "Necesaria evaluación multidisciplinar: neurología, neumología, logopedia, nutrición, psicología.",
+    "Riluzol tiene eficacia modesta, prolonga supervivencia aproximadamente 2-3 meses.",
+    "Importante monitorización de función respiratoria, riesgo de insuficiencia respiratoria progresiva.",
+    "Nutrición y deglución deben evaluarse regularmente.",
+    "Planificación avanzada de cuidados y decisiones sobre ventilación mecánica crucial.",
+    "Derivación a centros especializados en ELA para mejor manejo y calidad de vida.",
+    "Seguimiento muy frecuente (mensual) durante el curso de la enfermedad.",
+    "Participación en ensayos clínicos si disponibles."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Rafael Morales Peña",
+    "edad": 56,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Andrés Sánchez Alcázar",
+    "especialidad": "Neurología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly, professionally] Buenos días, Rafael. Veo en tu informe que vienes derivado por debilidad muscular. Cuéntame qué ha pasado."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Hace unos seis meses noté que no tenía la misma fuerza en los brazos. Al principio pensé que era por la edad o estaría cansado, pero ha ido empeorando."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cómo ha sido la progresión?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] Pues ha sido bastante rápida. Hace seis meses empecé con dificultad para abrir frascos, para escribir. Ahora cada vez me cuesta más hacer cosas con las manos. Abrocharme los botones es complicado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Hay algo más? ¿Contracturas, movimientos raros en los músculos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Sí, precisamente eso me asusta. Veo en los brazos como pequeñas contracciones, como si los músculos se movieran solos bajo la piel. Mi esposa también las ve."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Y la sensibilidad? ¿Sientes adormecimiento, hormigueos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, la sensibilidad está bien. Es solo que los músculos están más débiles."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Rafael, ¿hay antecedentes familiares de enfermedades neuromusculares?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] No, que yo sepa no. Mi padre murió de infarto a los setenta. Mi madre está viva y sana."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Otros antecedentes médicos? ¿Diabetes, problemas cardiacos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] No, la verdad es que he estado bastante sano. Sí que me operaron de hernia discal hace tres años de la espalda, pero eso se recuperó bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Trabajas actualmente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sadly] Sí, soy ingeniero. Llevo veinticinco años en la misma empresa. Pero con esto que me está pasando, cada vez tengo más dificultad para trabajar. Mis colegas notan que algo me pasa."
+        },
+        {
+          "rol": "medico",
+          "texto": "[empathetically] Entiendo que esto es muy difícil."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[emotionally] La verdad es que estoy asustado, doctor. No sé qué me está pasando. He estado buscando en internet y algunas cosas me asustan mucho."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es normal tener miedo cuando no sabemos qué nos pasa. Por eso haremos pruebas para llegar a un diagnóstico. ¿Tomas medicamentos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada habitualmente."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Bien, Rafael, voy a hacer una exploración neurológica detallada. Levanta los brazos hacia delante."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[straining] Los brazos me tiemblan un poco."
+        },
+        {
+          "rol": "medico",
+          "texto": "[observing carefully] Observo que los brazos no se elevan completamente. Hay debilidad. Además, veo fasciculaciones en los brazos, esos movimientos pequeños del músculo que mencionabas. Ahora aprieta mis manos con fuerza."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[effortfully] No tengo mucha fuerza."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Hay debilidad significativa en la mano derecha, y algo menos en la izquierda. Levanta los dedos del suelo, flexiona las muñecas. [observing] Hay atrofia muscular visible en los antebrazos. Ahora toca la punta de tu nariz con el dedo índice."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[straining] Me cuesta un poco, doctor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] La coordinación está conservada. La sensibilidad está normal. Levanta las piernas, aprieta mis manos con los pies."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] Así, ¿vale?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Las piernas están fuertes, sin fasciculaciones, sin atrofia. Solo las extremidades superiores están afectadas. Los reflejos en los brazos están algo exagerados. Eso es un dato importante."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously, carefully] Rafael, basándome en lo que he encontrado en la exploración, necesitamos descartar varias cosas. La combinación de debilidad progresiva, fasciculaciones, atrofia muscular, y reflejos exagerados me hace pensar en una enfermedad neuromuscular seria."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Qué tipo de enfermedad?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[compassionately] Hay varias posibilidades que necesitamos descartar con pruebas. Puede ser una compresión de la médula espinal, una enfermedad inflamatoria, una enfermedad degenerativa. Por eso necesitamos un electromiograma, una resonancia de la columna cervical, análisis de sangre."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Hay riesgo de que sea algo grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Necesito ser sincero contigo: los hallazgos que he encontrado pueden sugerir una enfermedad importante. Pero hasta que no tengamos las pruebas, no puedo decirte con certeza. Vamos a investigar exhaustivamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[trembling voice] ¿Es mortal?"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Rafael, este es el plan inmediato. Primera, electromiograma esta semana. Es una prueba que mide la actividad eléctrica de los músculos. No es invasiva, aunque es un poco incómoda."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Entendido, doctor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Segunda, resonancia magnética de la columna cervical para descartar compresión. Tercera, analítica de sangre completa incluyendo enzima CK, que se eleva cuando hay daño muscular. Y pruebas de función pulmonar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Función pulmonar? ¿Estoy teniendo problemas del pulmón?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es precaución. Si los músculos respiratorios se afectaran, necesitaríamos saberlo. Mientras tanto, voy a recetarte riluzol. Es el único medicamento aprobado para algunas enfermedades neuromusculares. Cincuenta miligramos cada doce horas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Eso me va a curar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] No te cura, pero puede ayudar a ralentizar la progresión. Tenemos que esperar los resultados de las pruebas para ser más específicos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[emotionally] ¿Y cuáles son mis opciones?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[compassionately] Una vez tengamos el diagnóstico, haremos un plan completo. Posiblemente necesites trabajar con fisioterapeutas, logopedas, nutricionistas. También apoyo psicológico es importante."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[trembling] ¿Puedo seguir trabajando?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Dependerá de la progresión y del diagnóstico. Pero recomiendo que hables con tu empresa sobre posibles adaptaciones. Vamos a ir día a día, Rafael. Te cito en una semana después de la electromiografía."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[overwhelmed, voice breaking] Esto es mucho para procesar, doctor. Tengo miedo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly, supportively] Es completamente comprensible. Pero estamos aquí para ayudarte. Tienes que hablar con tu familia, con tu esposa. El apoyo es crucial. Te derivaré con un psicólogo y también con especialistas en enfermedades neuromusculares. No estás solo en esto."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neurologia/NRL-010.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

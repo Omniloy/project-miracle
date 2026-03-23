@@ -1,0 +1,277 @@
+{
+  "id": "PED-001",
+  "especialidad": "Pediatría",
+  "resumen": "Lactante varón de 4 meses presentado por su madre Sonia Ruiz con otitis media aguda. Refiere fiebre desde hace 3 días, irritabilidad y llanto persistente. Exploración otoscópica muestra eritema y abombamiento de membrana timpánica derecha. Se inicia tratamiento antibiótico con amoxicilina e ibuprofeno para analgesia.",
+  "diagnostico_principal": {
+    "nombre": "Otitis media aguda",
+    "cie10": "H66.9",
+    "snomed_ct": "65363002",
+    "snomed_termino": "Otitis media, unspecified (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Fiebre",
+      "cie10": "R50.9",
+      "snomed_ct": "386661006",
+      "snomed_termino": "Fever (finding)"
+    },
+    {
+      "nombre": "Irritabilidad",
+      "cie10": "R45.4",
+      "snomed_ct": "55929007",
+      "snomed_termino": "Feeling irritable (finding)"
+    },
+    {
+      "nombre": "Otorrea",
+      "cie10": "H92.1",
+      "snomed_ct": "307704006",
+      "snomed_termino": "Purulent ear discharge (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Otoscopia",
+      "snomed_ct": "37687000",
+      "snomed_termino": "Otoscopy (procedure)"
+    },
+    {
+      "nombre": "Medición de temperatura",
+      "snomed_ct": "56342008",
+      "snomed_termino": "Temperature taking (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Amoxicilina",
+      "dosis": "125 mg",
+      "posologia": "1 ml (125 mg) tres veces al día durante 10 días",
+      "atc": "J01CA04",
+      "snomed_ct": "372687004",
+      "snomed_termino": "Amoxicillin (substance)",
+      "indicacion": "Tratamiento de otitis media aguda de probable origen bacteriano"
+    },
+    {
+      "nombre": "Ibuprofeno",
+      "dosis": "50 mg",
+      "posologia": "2.5 ml (50 mg) cada 6-8 horas, máximo 150 mg/día",
+      "atc": "M01AE01",
+      "snomed_ct": "372475002",
+      "snomed_termino": "Ibuprofen (substance)",
+      "indicacion": "Analgesia y control de la fiebre"
+    }
+  ],
+  "constantes_vitales": {
+    "temperatura": {
+      "valor": 38.6,
+      "unidad": "°C"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 145,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 42,
+      "unidad": "resp/min"
+    },
+    "saturacion_oxigeno": {
+      "valor": 98,
+      "unidad": "%"
+    }
+  },
+  "notas_adicionales": [
+    "Lactante a demanda, con ganancia de peso adecuada.",
+    "Vacunación completa para la edad según calendario, incluyendo neumococo conjugada.",
+    "Madre refiere haber notado que el niño se tira de la oreja derecha frecuentemente.",
+    "Se recomienda mantener la lactancia materna y seguimiento telefónico en 2 días."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Pablo García Ruiz",
+    "edad": 4,
+    "edad_unidad": "meses",
+    "sexo": "masculino",
+    "guardian": "Sonia Ruiz (madre)"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Isabel Martínez López",
+    "especialidad": "Pediatría"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Sonia. Pase, por favor. ¿Qué tal está Pablo hoy? ¿Qué le trae por la consulta?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Buenos días, doctora. Pues mire, Pablo lleva tres días con mucha fiebre, llegaremos a treinta y ocho y medio. No hace bien las tomas, y está muy irritable, llora constantemente. Anoche me di cuenta de que se tira mucho de la oreja derecha."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Ha notado si le sale algo del oído? ¿Algún tipo de secreción?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, eso es lo que más me asusta. He visto un poco de pus en la almohada esta mañana."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Tranquila, es muy frecuente en estos meses. Parece que puede ser una otitis. Vamos a explorarle bien y saldremos de dudas. ¿Ha tenido algún catarro antes de esto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues sí, hace una semana más o menos se constipó, tuvo un poco de mucosidad. Parecía que iba pasándole, pero luego llegó la fiebre."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] De acuerdo. Cuénteme, ¿cómo ha sido el embarazo y el parto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Totalmente normal. Parto vaginal sin complicaciones, peso al nacer tres kilos trescientos gramos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Y cómo va la alimentación? ¿Es lactancia materna exclusiva?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[proudly] Sí, exclusivamente pecho. Hace sus tomas bien, cinco o seis al día. Está ganando peso muy bien, la última pesada hace una semana fue de seis kilos cien gramos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Excelente. ¿Ha tenido alguna enfermedad antes? ¿Alguna hospitalización?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada. Está siendo un bebé muy sano. Vacunas todas al día según el calendario."
+        },
+        {
+          "rol": "medico",
+          "texto": "[gently] ¿En la familia hay antecedentes de alergias, asma o problemas de oídos frecuentes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflexively] Mi hermana tiene asma de pequeña, aunque luego se la quitó. Pero nada de problemas de oído que yo sepa."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien, voy a examinarle ahora. Siéntese en la silla, por favor, y apoye a Pablo sobre su brazo izquierdo. Así está bien."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] Vale, doctora."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Le tomo primero la temperatura. Treinta y ocho coma seis grados centígrados. La frecuencia cardíaca ciento cuarenta y cinco latidos por minuto, frecuencia respiratoria cuarenta y dos respiraciones, saturación de oxígeno noventa y ocho por ciento. Todo dentro de lo esperado para la edad."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Ahora le voy a mirar los oídos con el otoscopio. Quietecito, Pablo... Miro el oído izquierdo primero. Membrana timpánica grisácea, normal. Ahora el derecho. Aquí sí veo eritema importante, la membrana está roja y abombada, hay exudado detrás. Eso es típico de otitis media aguda."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Significa eso que se le ha infectado?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Sí, hay infección del oído medio, la cavidad detrás de la membrana timpánica. Es muy frecuente en bebés menores de un año, sobre todo después de catarros. Le ausculto el pecho por si acaso. Pulmones limpios, buenos sonidos respiratorios bilaterales. Corazón rítmico sin soplos."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Sonia, el diagnóstico es claro: otitis media aguda, probablemente de origen bacteriano dado que hay exudado y abombamiento de membrana. Esto explica la fiebre y la irritabilidad de Pablo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Esto puede causarle sordera? He oído que los oídos son importantes para el lenguaje."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es una preocupación muy válida, pero la mayoría de otitis medias agudas se resuelven completamente sin secuelas si se tratan bien. Lo importante es no dejar que se cronifique. Con antibióticos y analgésicos, la mayoría de casos resuelven muy bien."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Le voy a prescribir amoxicilina. La dosis es de ciento veinticinco miligramos cada ocho horas durante diez días. Es un mililitro cada vez. La anoté en la receta."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y el término no es importante en la amoxicilina completar los diez días?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[emphatically] Exactamente, completar toda la pauta aunque Pablo esté mejor a los tres o cuatro días. Eso es crucial para evitar resistencias y recaídas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] También le doy ibuprofeno, cincuenta miligramos cada seis u ocho horas para la fiebre y el dolor. Máximo ciento cincuenta miligramos al día. Eso le quitará también el malestar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Y si tiene alergias a estos medicamentos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Por eso le pregunto: ¿Pablo ha tomado amoxicilina o ibuprofeno antes sin problemas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nunca ha tomado nada. No tiene alergias conocidas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Perfecto. Espero que en dos o tres días la fiebre baje y esté más contento. Le vuelvo a ver dentro de una semana para asegurarme de que ha respondido bien al tratamiento. Si en dos días no mejora nada o empeora, me llama sin dudarlo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Muy bien, doctora. Muchas gracias por todo. Eso nos deja más tranquila."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, Sonia. Ánimo, es algo muy controlable a esta edad con tratamiento. Hasta la próxima semana."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/pediatria/PED-001.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

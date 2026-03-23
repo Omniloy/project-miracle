@@ -1,0 +1,336 @@
+{
+  "id": "GIN-005",
+  "especialidad": "Ginecología",
+  "resumen": "Paciente mujer de 31 años que acude por hallazgo de displasia cervical leve (CIN 1) en citología de screening. Se realiza colposcopia y toma de biopsias confirmatorias. Se establece plan de seguimiento y vigilancia.",
+  "diagnostico_principal": {
+    "nombre": "Displasia cervical leve CIN 1",
+    "cie10": "N87.0",
+    "snomed_ct": "285836003",
+    "snomed_termino": "Cervical intraepithelial neoplasia grade 1 (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Infección por virus del papiloma humano de bajo riesgo",
+      "cie10": "B97.7",
+      "snomed_ct": "413266002",
+      "snomed_termino": "Human papillomavirus (organism)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Asintomática",
+      "cie10": "Z00.0",
+      "snomed_ct": "41189005",
+      "snomed_termino": "Asymptomatic disease (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Citología cervical",
+      "snomed_ct": "866151001",
+      "snomed_termino": "Cytopathology procedure (procedure)"
+    },
+    {
+      "nombre": "Colposcopia",
+      "snomed_ct": "37687000",
+      "snomed_termino": "Colposcopy (procedure)"
+    },
+    {
+      "nombre": "Biopsia cervical",
+      "snomed_ct": "272091008",
+      "snomed_termino": "Cervical biopsy (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 120,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 68,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 60,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 159,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 23.7,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con citología de screening rutinaria que muestra displasia leve.",
+    "Antecedentes de sexarquía con 18 años, parejas múltiples.",
+    "No ha sido vacunada contra VPH (edad fuera del rango habitual de vacunación).",
+    "Fumadora de 10 cigarrillos/día, factor de riesgo para progresión.",
+    "Pareja con historia de verrugas genitales.",
+    "Biopsia confirma CIN 1 con inflamación asociada.",
+    "Plan: seguimiento citológico cada 6 meses. Vigilancia colposcópica si progresa.",
+    "Se recomienda dejar de fumar y uso de preservativo."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Clara Herrero Vidal",
+    "edad": 31,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Isabel Fernández Muñoz",
+    "especialidad": "Ginecología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] Buenos días, Clara. He revisado sus resultados de citología cervical de hace dos semanas. He encontrado algo que necesitamos valorar bien. ¿Sabe de qué le hablo?",
+          "audio_tag": "audio_005_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] No, el resultado no me lo explicaron bien en el centro. Solo me dijeron que tenía que venir a consultarla.",
+          "audio_tag": "audio_005_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmadamente] En la citología se ve algo llamado displasia cervical leve, o CIN uno. No es cáncer, pero son células que han sufrido cambios y necesitamos vigilarlas bien.",
+          "audio_tag": "audio_005_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[asustada] ¿CIN? ¿Eso es precáncer?",
+          "audio_tag": "audio_005_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] Puede sonarle grave, pero CIN uno es la forma más leve. Muchas mujeres tienen esto y la mayoría se cura sola sin progresar.",
+          "audio_tag": "audio_005_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[ansiosa] Pero ¿hay riesgo de que progrese?",
+          "audio_tag": "audio_005_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] Hay factores que aumentan el riesgo. Dígame: ¿ha tenido muchas parejas sexuales?",
+          "audio_tag": "audio_005_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensativamente] Pues sí, en mi juventud tuve varias parejas. He tenido relaciones con bastantes personas hasta conocer a mi pareja actual hace cinco años.",
+          "audio_tag": "audio_005_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[anotando] ¿A qué edad comenzó su vida sexual?",
+          "audio_tag": "audio_005_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[brevemente] Quite y ocho años, con dieciocho. Bastante joven.",
+          "audio_tag": "audio_005_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuando] ¿Fuma? ¿Consume drogas?",
+          "audio_tag": "audio_005_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sinceramente] Fumo, sí. Unos diez cigarrillos al día, llevo fumando desde los dieciséis. Drogas no, solo tabaco y alcohol ocasionalmente.",
+          "audio_tag": "audio_005_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[señalando] El tabaco es un factor de riesgo importante. Empeora la progresión del cambio cervical.",
+          "audio_tag": "audio_005_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[incomodamente] Ya, pero es difícil dejarlo.",
+          "audio_tag": "audio_005_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[técnicamente] ¿Ha tenido infecciones de transmisión sexual? ¿VPH conocido?",
+          "audio_tag": "audio_005_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensando] No que yo sepa. Bueno, mi pareja actual tuviera verrugas hace años, pero a mí no me han diagnosticado nada hasta ahora.",
+          "audio_tag": "audio_005_016"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instruyendo] Bien, vamos a realizar una colposcopia. Es un examen para visualizar mejor el cuello del útero. Quítese la ropa de cintura para abajo, por favor.",
+          "audio_tag": "audio_005_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperativa] Vale.",
+          "audio_tag": "audio_005_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[midiendo] Presión ciento veinte sobre setenta y seis, frecuencia sesenta y ocho. Peso sesenta kilos, talla ciento cincuenta y nueve centímetros. IMC veintitrés coma siete. Perfecto.",
+          "audio_tag": "audio_005_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[tranquila] Bien.",
+          "audio_tag": "audio_005_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explorando] Voy a introducir el colposcopio, que es como un microscopio especial. Relájese. [pausa] Veo el cuello uterino. Ahora voy a aplicar ácido acético para hacer visible la displasia. [pausa] Aquí está la zona de transformación. Hay una zona blanca, de cambio, que corresponde a la displasia leve.",
+          "audio_tag": "audio_005_021"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[incómoda] ¿Es doloroso?",
+          "audio_tag": "audio_005_022"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] No duele. Puede sentir presión nada más. Voy a tomar una pequeña muestra de biopsia para confirmar el diagnóstico. [pausa] Ya está.",
+          "audio_tag": "audio_005_023"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[aliviada] Ah, ya está.",
+          "audio_tag": "audio_005_024"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[claramente] Clara, la colposcopia confirma una displasia cervical leve. Es decir, cambios celulares precancerosos en el cuello del útero, vinculados a infección por VPH.",
+          "audio_tag": "audio_005_025"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿VPH? ¿Eso qué es exactamente?",
+          "audio_tag": "audio_005_026"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] VPH significa virus del papiloma humano. Es muy frecuente, la mayoría de personas sexualmente activas lo han tenido en algún momento. El problema es que algunos tipos pueden causar cambios celulares como los que usted tiene.",
+          "audio_tag": "audio_005_027"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confundida] ¿Entonces es de transmisión sexual?",
+          "audio_tag": "audio_005_028"
+        },
+        {
+          "rol": "medico",
+          "texto": "[afirmando] Sí, se transmite por contacto sexual. Probablemente adquirido de una pareja pasada. La buena noticia es que su sistema inmune, en la mayoría de casos, es capaz de limpiar el virus en uno o dos años.",
+          "audio_tag": "audio_005_029"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[aliviada] ¿Se puede curar solo?",
+          "audio_tag": "audio_005_030"
+        },
+        {
+          "rol": "medico",
+          "texto": "[esperanzadora] Sí, en muchos casos. Por eso en CIN uno no hacemos tratamiento inmediato, hacemos vigilancia.",
+          "audio_tag": "audio_005_031"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[organizadamente] El plan es el siguiente: vamos a hacer citología cervical cada seis meses para vigilar. Si empeora, reconsideramos opciones de tratamiento. Si mejora, perfecto.",
+          "audio_tag": "audio_005_032"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿No hay tratamiento ahora?",
+          "audio_tag": "audio_005_033"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] En CIN uno, la evidencia demuestra que el tratamiento inmediato no es mejor que la vigilancia. Porque en el setenta u ochenta por ciento de los casos, el virus se limpia solo.",
+          "audio_tag": "audio_005_034"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[conforme] Entiendo. ¿Y hay algo que pueda hacer?",
+          "audio_tag": "audio_005_035"
+        },
+        {
+          "rol": "medico",
+          "texto": "[aconsejando] Sí. Lo más importante es dejar de fumar. El tabaco suprime el sistema inmune y favorece que el virus persista. Además, use preservativo con su pareja para evitar reinfecciones.",
+          "audio_tag": "audio_005_036"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[asintiendo] Entiendo. Voy a intentar dejar de fumar.",
+          "audio_tag": "audio_005_037"
+        },
+        {
+          "rol": "medico",
+          "texto": "[alentadora] Excelente. Le voy a dar datos de programas de cese del tabaco. Vuelvo a citarla en seis meses para nueva citología. Entre tanto, cualquier síntoma o sangrado anómalo, me avisa.",
+          "audio_tag": "audio_005_038"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[agradecida] Muchas gracias, doctora. Queda tranquila saber que no es cáncer.",
+          "audio_tag": "audio_005_039"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] Exacto. Es un cambio precoz que vigilamos. Con cuidado y vigilancia, debería resolverse bien. Nos vemos en seis meses.",
+          "audio_tag": "audio_005_040"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/ginecologia/GIN-005.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "id": "TRA-008",
+  "especialidad": "Traumatología",
+  "resumen": "Paciente mujer de 82 años que presenta fractura de cuello del fémur tras caída fortuita en el domicilio. Paciente geriátrica con múltiples comorbilidades. Se realiza evaluación preoperatoria urgente y se programa cirugía de osteosíntesis con placa DHS o prótesis parcial de cadera según estabilidad de la fractura.",
+  "diagnostico_principal": {
+    "nombre": "Fractura del cuello del fémur",
+    "cie10": "S72.00",
+    "snomed_ct": "5913000",
+    "snomed_termino": "Fracture of neck of femur (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Caída fortuita",
+      "cie10": "W19",
+      "snomed_ct": "472923004",
+      "snomed_termino": "Fall (finding)"
+    },
+    {
+      "nombre": "Inmovilidad por fractura",
+      "cie10": "R26.2",
+      "snomed_ct": "228158008",
+      "snomed_termino": "Walking disability (finding)"
+    },
+    {
+      "nombre": "Hipertensión arterial",
+      "cie10": "I10",
+      "snomed_ct": "59621000",
+      "snomed_termino": "Essential hypertension (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor de cadera",
+      "cie10": "M25.55",
+      "snomed_ct": "30989003",
+      "snomed_termino": "Knee pain (finding)"
+    },
+    {
+      "nombre": "Impotencia funcional de miembro inferior",
+      "cie10": "R26.2",
+      "snomed_ct": "228158008",
+      "snomed_termino": "Walking disability (finding)"
+    },
+    {
+      "nombre": "Dolor a la palpación de cadera",
+      "cie10": "M25.55",
+      "snomed_ct": "30989003",
+      "snomed_termino": "Knee pain (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Radiografía de pelvis y cadera (anteroposterior y axial)",
+      "snomed_ct": "241720007",
+      "snomed_termino": "Plain radiography of pelvis (procedure)"
+    },
+    {
+      "nombre": "Tomografía computada de cadera para análisis de trazo de fractura",
+      "snomed_ct": "241729002",
+      "snomed_termino": "Computed tomography of hip (procedure)"
+    },
+    {
+      "nombre": "Evaluación anestésica preoperatoria",
+      "snomed_ct": "19250004",
+      "snomed_termino": "Pre-anaesthetic assessment (procedure)"
+    },
+    {
+      "nombre": "Fijación quirúrgica con placa DHS o prótesis de cadera",
+      "snomed_ct": "82061000",
+      "snomed_termino": "Surgical operation on hip (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Paracetamol",
+      "dosis": "1000 mg",
+      "posologia": "Intravenoso, cada 8 horas",
+      "atc": "N02BE01",
+      "snomed_ct": "387517004",
+      "snomed_termino": "Paracetamol (substance)",
+      "indicacion": "Analgesia perioperatoria"
+    },
+    {
+      "nombre": "Enalapril",
+      "dosis": "10 mg",
+      "posologia": "1 comprimido diario (medicación basal)",
+      "atc": "C09AA02",
+      "snomed_ct": "372658000",
+      "snomed_termino": "Enalapril (substance)",
+      "indicacion": "Control de hipertensión"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 158,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 92,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 88,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 20,
+      "unidad": "rpm"
+    },
+    "peso": {
+      "valor": 62,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 158,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 24.8,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Mecanismo: caída en el domicilio, golpe con escalón.",
+    "Paciente vive sola, refiere autonomía previa.",
+    "Antecedentes: hipertensión, osteoporosis, catarata bilateral operada.",
+    "Fractura extracapsular del cuello del fémur (tipo Pauwels, probablemente tipo II).",
+    "Urgencia quirúrgica: intervalo <48h desde traumatismo.",
+    "Evaluación geriátrica completa necesaria preoperatoria."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Josefa Calvo Herrero",
+    "edad": 82,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María Teresa Gómez Molina",
+    "especialidad": "Traumatología / Cirugía Ortopédica"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, doña Josefa. Soy la doctora María Teresa Gómez, traumatóloga. He visto que ha tenido una caída y una lesión de cadera. Cuénteme qué sucedió.",
+          "audio_tag": "08_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[in pain] Ay, doctora. Esta mañana me caí en las escaleras de casa. Resbalé en el escalón y bajé un par de escalones dándome un golpe muy fuerte en la cadera. Me duele muchísimo, no puedo moverme.",
+          "audio_tag": "08_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[gently] ¿Ha recibido tratamiento ya?",
+          "audio_tag": "08_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, mis vecinas llamaron a ambulancia. Me trajeron aquí a urgencias hace una hora. Me han hecho radiografías y análisis.",
+          "audio_tag": "08_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Había sufrido caídas previas? ¿Problemas de equilibrio, mareos?",
+          "audio_tag": "08_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[straightforwardly] No, doctora. Siempre he sido ágil. Esta vez simplemente no vi bien el escalón y resbalé.",
+          "audio_tag": "08_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Medicación habitual? ¿Enfermedades conocidas?",
+          "audio_tag": "08_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listing] Tengo la tensión alta, tomo enalapril. También tengo unos problemas con los huesos, me dijeron que tenía osteoporosis hace años. Para eso no tomo nada. Y me operaron de cataratas hace unos años, eso está bien.",
+          "audio_tag": "08_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Alergias a medicamentos?",
+          "audio_tag": "08_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] No tengo alergias que sepa.",
+          "audio_tag": "08_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Vive sola?",
+          "audio_tag": "08_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sadly] Sí, desde que falleció mi marido hace ocho años. Sola en la casa pero con buena autonomía. Mis hijos viven fuera de la ciudad pero vienen los fines de semana.",
+          "audio_tag": "08_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Puede decirnos su edad exacta?",
+          "audio_tag": "08_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Ochenta y dos años, doctora.",
+          "audio_tag": "08_014"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien, doña Josefa, voy a explorar la cadera. Tiene el miembro inferior derecho en posición característica: ligeramente flexionado, abducido y en rotación externa. Es la posición típica de fractura de cadera. Hay dolor importante a la palpación en la región inguinal.",
+          "audio_tag": "08_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[wincing] Sí, me duele mucho.",
+          "audio_tag": "08_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] No intentamos movilizar la cadera por el riesgo de desplazamiento. He revisado radiografías: se ve claramente una fractura de cuello del fémur, extracapsular, tipo Pauwels probablemente dos. Los análisis de sangre están dentro de los límites, aunque reflejan la edad. También hemos hecho un electrocardiograma que está normal.",
+          "audio_tag": "08_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Doctora, ¿es grave?",
+          "audio_tag": "08_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Es una fractura seria, sí. Pero es quirúrgica, se puede reparar. La buena noticia es que no hay riesgo inmediato para la vida. La mala noticia es que necesita cirugía urgentemente.",
+          "audio_tag": "08_019"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] Doña Josefa, tiene una fractura de cuello del fémur derecho. Eso significa que el hueso del fémur se ha roto en el área del cuello. Desafortunadamente, a su edad y con su fragilidad ósea, es una lesión que requiere cirugía.",
+          "audio_tag": "08_020"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Cirugía? ¿A mis ochenta y dos años?",
+          "audio_tag": "08_021"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí, pero es más seguro operarla que dejarla sin operar. Operada podrá volver a caminar y a su vida normal. Sin cirugía, la complicación más grave sería una embolia pulmonar por inmovilidad prolongada.",
+          "audio_tag": "08_022"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worriedly] ¿Es peligrosa la operación?",
+          "audio_tag": "08_023"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tiene riesgos como toda operación a su edad, pero son manejables. El anestesista la evaluará completo. La mayoría de pacientes de su edad se operan de cadera sin complicaciones graves.",
+          "audio_tag": "08_024"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Vamos a operarla mañana por la mañana. Haremos una fijación quirúrgica: probablemente una placa DHS con tornillos, o posiblemente una prótesis parcial. Dependerá de exactamente cómo está la fractura cuando entremos en quirófano.",
+          "audio_tag": "08_025"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Mañana? ¿Tan rápido?",
+          "audio_tag": "08_026"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Sí, es urgente. Cuanto antes operemos, mejor. Ha pasado ya casi doce horas desde la caída. El anestesista la visitará esta tarde para completar la evaluación. Tiene que estar en ayunas desde medianoche.",
+          "audio_tag": "08_027"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido.",
+          "audio_tag": "08_028"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Mantendremos la analgesia adecuada esta noche. Mañana después de la operación, comenzará rehabilitación muy pronto, con movilización progresiva. El objetivo es que vuelva a caminar en pocas semanas.",
+          "audio_tag": "08_029"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopefully] ¿Podré volver a mi casa y caminar como antes?",
+          "audio_tag": "08_030"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Muchos pacientes de su edad se recuperan completamente tras cirugía de cadera y vuelven a su vida previa. Confío en que usted también lo hará. Tiene que ser paciente con la rehabilitación y confiar en el equipo. ¿Alguna pregunta?",
+          "audio_tag": "08_031"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] No doctora. Muchas gracias por todo. Espero que salga todo bien.",
+          "audio_tag": "08_032"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Adelante. Estaremos aquí para cuidarla. Ánimo.",
+          "audio_tag": "08_033"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/traumatologia/TRA-008.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

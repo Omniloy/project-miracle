@@ -1,0 +1,323 @@
+{
+  "id": "END-001",
+  "especialidad": "Endocrinología",
+  "resumen": "Paciente mujer de 22 años con diabetes mellitus tipo 1 sin complicaciones diagnosticada hace tres años. Acude a revisión endocrinológica periódica. Se evalúa control glucémico, adherencia al tratamiento insulínico y ajuste de dosis. Hemoglobina glicosilada dentro de rango aceptable. Se refuerzan educación diabetológica y pautas de autocuidado.",
+  "diagnostico_principal": {
+    "nombre": "Diabetes mellitus tipo 1 sin complicaciones",
+    "cie10": "E10.9",
+    "snomed_ct": "46635009",
+    "snomed_termino": "Type 1 diabetes mellitus (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Polipsia",
+      "cie10": "R63.1",
+      "snomed_ct": "247658003",
+      "snomed_termino": "Polydipsia (finding)"
+    },
+    {
+      "nombre": "Poliuria",
+      "cie10": "R35.8",
+      "snomed_ct": "28178003",
+      "snomed_termino": "Polyuria (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Determinación de hemoglobina glicosilada",
+      "snomed_ct": "43396009",
+      "snomed_termino": "Hemoglobin A1c measurement (procedure)"
+    },
+    {
+      "nombre": "Perfil de glucosa capilar",
+      "snomed_ct": "251776001",
+      "snomed_termino": "Blood glucose measurement (procedure)"
+    },
+    {
+      "nombre": "Revisión de automonitorización glucémica",
+      "snomed_ct": "119417008",
+      "snomed_termino": "Glucose self-monitoring (procedure)"
+    },
+    {
+      "nombre": "Examen de pies diabéticos",
+      "snomed_ct": "413269006",
+      "snomed_termino": "Diabetic foot examination (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Insulina glargina",
+      "dosis": "20 unidades",
+      "posologia": "Inyección subcutánea una vez al día por la noche",
+      "atc": "A10AE04",
+      "snomed_ct": "325122001",
+      "snomed_termino": "Insulin glargine (substance)",
+      "indicacion": "Tratamiento de diabetes mellitus tipo 1"
+    },
+    {
+      "nombre": "Insulina lispro",
+      "dosis": "Variable",
+      "posologia": "Inyección subcutánea con las comidas principales",
+      "atc": "A10AB04",
+      "snomed_ct": "325114005",
+      "snomed_termino": "Insulin lispro (substance)",
+      "indicacion": "Tratamiento intensivo de diabetes mellitus tipo 1"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 72,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 58,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 165,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 21.3,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente diagnosticada con DM tipo 1 a los 19 años tras presentar cetoacidosis diabética.",
+    "Realiza glucemias capilares 4 veces al día con buenos registros.",
+    "Usa régimen intensivo de insulina con análogo basal-bolo.",
+    "Hemoglobina glicosilada 7.2% (objetivo bien conseguido).",
+    "Sin complicaciones microvasculares ni macrovasculares en la actualidad.",
+    "Normotensa, sin proteinuria.",
+    "Sigue educación diabetológica con nutricionista especializada."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Marta Pascual Romero",
+    "edad": 22,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Patricia López Martín",
+    "especialidad": "Endocrinología"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Marta. Me alegra verte. ¿Cómo te ha ido desde la última revisión?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cheerfully] Hola, doctora. Pues bien, la verdad. He seguido controlando mis glucemias todos los días como me dijiste. He anotado los valores en la libreta.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[approving] Excelente. Eso es fundamental. ¿Has notado algún cambio en cómo te sientes? ¿Cansancio, sed excesiva, ganas de orinar más?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] La verdad es que no. Me encuentro bien. Quizás algo de sed cuando entreno en el gimnasio, pero eso es normal, ¿verdad?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nods] Completamente normal, especialmente con el ejercicio. ¿Has tenido algún episodio hipoglucémico? ¿Algún mareo o temblores?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Una o dos veces al mes me bajo un poco la glucosa, pero me doy cuenta cuando empiezo a notar los síntomas y como algo rápido, una galleta o un caramelo.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, Marta. Recordemos que hace tres años te diagnosticamos la diabetes tipo 1 después de ese episodio de cetoacidosis. ¿Cómo ha sido tu adaptación a la enfermedad?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflectively] Al principio fue duro, la verdad. No entendía bien qué me pasaba. Pero con la ayuda de la nutricionista y viendo que puedo hacer vida normal, pues mira, ahora ya es parte de mi día a día.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Practicas algún deporte regularmente?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[enthusiastically] Sí, voy al gimnasio tres o cuatro veces a la semana. Hago pesas y algo de cardio. He aprendido cómo ajustar mis inyecciones cuando entreno.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[satisfied] Perfecto. ¿Y la administración de las insulinas? ¿Cómo te llevas con las inyecciones? ¿Algún problema con las dosis?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Al principio me daba miedo, pero ahora es mecánico. Llevo bien el esquema basal-bolo. Aunque a veces me cuesta calcular bien los hidratos de carbono.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[supportively] Eso es lo más complicado. Toma, te doy esta tabla actualizada con índices glucémicos de alimentos comunes. ¿Tienes alguna pregunta sobre la medicación o algo más?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] La verdad es que tengo un novio nuevo y me preguntaba si la diabetes afecta a la vida sexual o algo así.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Eso es completamente normal y buena pregunta. No hay inconveniente. Sólo asegúrate de que llevas algo dulce contigo por si hay una bajada. Ahora déjame que te examine. Quítate los calcetines, por favor.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complies] Claro, doctora. [pause]",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Te tomo ahora la tensión arterial. [pause] Bien, ciento dieciocho sobre setenta y seis. Perfecto. Frecuencia cardíaca setenta y dos. Ahora la peso: cincuenta y ocho kilos con talla de ciento sesenta y cinco centímetros. Índice de masa corporal veintiuno coma tres, muy bien.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Me alegra, he estado comiendo mejor.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Ahora te voy a examinar los pies. Esto es importante en los diabéticos, para detectar cualquier lesión o cambio de sensibilidad. [performs examination] Muy bien, pies sin lesiones, sensibilidad normal. Los pulsos periféricos están presentes y normales. Ausculto el corazón: rítmico, sin soplos. Pulmones limpios. Perfecto.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Me da tranquilidad que todo esté bien.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Marta, tienes muy buen control de tu diabetes. Los valores de glucemia capilar que me traes están muy bien distribuidos, entre ciento y ciento treinta en ayunas, y post-comidas entre ciento treinta y ciento ochenta, que es aceptable.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pleased] ¿En serio? Me esfuerzo bastante.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confirming] Tu hemoglobina glicosilada de hoy es de siete coma dos por ciento, que está dentro de nuestro objetivo. Quiere decir que los últimos tres meses tu glucosa promedio ha sido muy buena. Sin evidencia de complicaciones microvasculares: no hay proteína en la orina y el fondo de ojo de hace seis meses era normal. Y macrovasculares tampoco tenemos signos. Estás haciéndolo muy bien.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[happily] Eso me anima a seguir así.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[decisively] Vamos a mantener tu mismo tratamiento por ahora. La insulina glargina veinte unidades por la noche, e insulina lispro con comidas. Tus dosis están bien. Continúa con la automonitorización diaria, es fundamental. [pause]",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Bien, continúo igual. ¿Y los análisis?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Hoy te haremos un análisis completo: glucosa basal, hemoglobina glicosilada, perfil lipídico, función renal y tiroidea. También revisaremos la microalbuminuria en la orina de veinticuatro horas. Es importante detectar cualquier complicación temprano.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Vale, ¿dónde me pinchan?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Aquí en el laboratorio de abajo, en este mismo edificio. Pídele al personal que sea con la menor molestia posible. [pause] Además, quería recomendarte que sigas estas pautas: mantén una dieta equilibrada, sigue el ejercicio regular, sobre todo caminar o natación que es excelente. Duerme bien, evita el estrés excesivo.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] De acuerdo. ¿Y cuándo vuelvo?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te cito para dentro de tres meses. Así revisamos los resultados de hoy, vemos cómo ha evolucionado todo y ajustamos si es necesario. Si entre tanto tienes alguna duda o un episodio hipoglucémico grave, me llamas sin problema. Aquí está mi número en la tarjeta.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Eres muy atenta. Me siento apoyada.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Tú sigue así, Marta. La diabetes es una enfermedad seria, pero tú la estás controlando de maravilla. Ánimo, nos vemos en tres meses.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/endocrinologia/END-001.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "id": "URO-008",
+  "especialidad": "Urología",
+  "resumen": "Paciente mujer de 58 años que acude a consulta de urología por incontinencia urinaria de esfuerzo. Refiere pérdida involuntaria de orina con los esfuerzos, tos, estornudos y ejercicio físico. Se realiza estudio urodinámico que confirma insuficiencia del esfínter urinario. Se indica programa de rehabilitación del suelo pélvico.",
+  "diagnostico_principal": {
+    "nombre": "Incontinencia urinaria de esfuerzo",
+    "cie10": "N39.3",
+    "snomed_ct": "111848001",
+    "snomed_termino": "Stress incontinence of urine (finding)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Debilidad del suelo pélvico",
+      "cie10": "N81.9",
+      "snomed_ct": "702673005",
+      "snomed_termino": "Pelvic floor dysfunction (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Incontinencia urinaria con tos",
+      "cie10": "N39.3",
+      "snomed_ct": "111848001",
+      "snomed_termino": "Stress incontinence of urine (finding)"
+    },
+    {
+      "nombre": "Incontinencia urinaria con estornudos",
+      "cie10": "N39.3",
+      "snomed_ct": "111848001",
+      "snomed_termino": "Stress incontinence of urine (finding)"
+    },
+    {
+      "nombre": "Incontinencia urinaria durante ejercicio",
+      "cie10": "N39.3",
+      "snomed_ct": "111848001",
+      "snomed_termino": "Stress incontinence of urine (finding)"
+    },
+    {
+      "nombre": "Limitación de actividades físicas",
+      "cie10": "R53.8",
+      "snomed_ct": "267023002",
+      "snomed_termino": "Lack of energy (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Análisis de orina",
+      "snomed_ct": "27944006",
+      "snomed_termino": "Routine urinalysis (procedure)"
+    },
+    {
+      "nombre": "Estudio urodinámico completo",
+      "snomed_ct": "75367002",
+      "snomed_termino": "Urodynamic evaluation (procedure)"
+    },
+    {
+      "nombre": "Ecografía pélvica",
+      "snomed_ct": "10159009",
+      "snomed_termino": "Ultrasound of abdomen (procedure)"
+    },
+    {
+      "nombre": "Fisioterapia del suelo pélvico",
+      "snomed_ct": "91065002",
+      "snomed_termino": "Pelvic floor physiotherapy (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 130,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 78,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 72,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 70,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 162,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 26.7,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Menopáusica desde hace 5 años.",
+    "Tres partos vaginales, último hace 20 años.",
+    "Antecedente de esfuerzo físico frecuente por trabajo.",
+    "Estudio urodinámico: capacidad cistométrica 420 ml, presión máxima de cierre uretral 45 cm H2O (baja).",
+    "Se prescribe programa de entrenamiento de musculatura del suelo pélvico con fisioterapeuta especializado."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Marisol Vega Ruiz",
+    "edad": 58,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María Rodríguez Serrano",
+    "especialidad": "Urología"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, señora Vega. Soy la doctora Rodríguez. He visto que tiene problemas de incontinencia urinaria. Cuénteme cómo es exactamente.",
+          "audio_tag": "medico_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Doctora, es muy incómodo. Cuando toso, o estornudo, o cuando hago ejercicio, se me escapa la orina. Es como una gota o a veces más. Es muy vergonzoso.",
+          "audio_tag": "paciente_001"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cuánto tiempo tiene esto?",
+          "audio_tag": "medico_002"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Hace unos tres años que empezó. Primero era solo un poquito, pero ahora con cualquier esfuerzo. Me limita mucho. He dejado de ir al gimnasio porque me avergüenza.",
+          "audio_tag": "paciente_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Es solo con esfuerzo o también tiene ganas urgentes de orinar?",
+          "audio_tag": "medico_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] No, no. Es solo con los esfuerzos. Si me quedo sentada en casa, no tengo problema. Es cuando me muevo.",
+          "audio_tag": "paciente_003"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Duele o hay ardor?",
+          "audio_tag": "medico_004"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shakes head] No, nada de eso. Solo la incontinencia.",
+          "audio_tag": "paciente_004"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Ha tenido infecciones de orina recientemente?",
+          "audio_tag": "medico_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] No, nada. Mi orina es normal.",
+          "audio_tag": "paciente_005"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Cuántos hijos ha tenido?",
+          "audio_tag": "medico_006"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[recalling] Tres hijos. Todos partos vaginales, hace ya muchos años, el último hace veinte años.",
+          "audio_tag": "paciente_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Está en menopausia?",
+          "audio_tag": "medico_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirms] Sí, desde hace cinco años. Pasó muy rápido.",
+          "audio_tag": "paciente_007"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Toma algún medicamento?",
+          "audio_tag": "medico_008"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[recalling] Sí, enalapril para la tensión. Y a veces ibuprofeno por molestias articulares.",
+          "audio_tag": "paciente_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Su trabajo es físico?",
+          "audio_tag": "medico_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirming] Sí, soy limpiadora. Todo el día levantando cosas, agachándome. Eso no ayuda, seguro.",
+          "audio_tag": "paciente_009"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Voy a explorarla. Por favor, acuéstese. Primero las constantes vitales.",
+          "audio_tag": "medico_010"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[compliant] Sí, doctora.",
+          "audio_tag": "paciente_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] Tensión ciento treinta sobre setenta y ocho. Frecuencia cardíaca setenta y dos. Peso setenta kilos, talla ciento sesenta y dos. IMC veintiséis coma siete.",
+          "audio_tag": "medico_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relaxed] Vale.",
+          "audio_tag": "paciente_011"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Palpación abdominal normal. Exploración pélvica: hiato genital aumentado, hay descenso del cuello vesical cuando Valsalva. La mucosa vaginal está atrófica.",
+          "audio_tag": "medico_012"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿Eso qué significa?",
+          "audio_tag": "paciente_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] Significa que hay debilidad en los músculos del suelo pélvico. Esos músculos sostienen la vejiga, y cuando están débiles, con esfuerzo la vejiga baja y se escapa orina. Es lo que se llama incontinencia de esfuerzo.",
+          "audio_tag": "medico_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Eso tiene cura?",
+          "audio_tag": "paciente_013"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[calmly] Sí, tiene tratamiento. Pero primero voy a hacer un estudio llamado urodinámico para confirmar exactamente cuál es el problema y la magnitud. Es importante antes de plantear tratamiento.",
+          "audio_tag": "medico_014"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Eso es una operación?",
+          "audio_tag": "paciente_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, no es una operación. Es un estudio donde llenamos la vejiga poco a poco con suero salino y medimos presiones. Es incómodo pero no duele. Dura unos veinte o treinta minutos.",
+          "audio_tag": "medico_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] De acuerdo. ¿Y después qué?",
+          "audio_tag": "paciente_015"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Después, lo más probable es que le proponga un programa de rehabilitación del suelo pélvico. Es decir, ejercicios para reforzar esos músculos debilitados.",
+          "audio_tag": "medico_016"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Como qué tipo de ejercicios?",
+          "audio_tag": "paciente_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Los ejercicios de Kegel. Consisten en contraer los músculos del suelo pélvico como si intentase interrumpir la micción. Aprender a hacerlos correctamente es crucial. Por eso la derivaré con una fisioterapeuta especializada.",
+          "audio_tag": "medico_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Cuánto tiempo necesito?",
+          "audio_tag": "paciente_017"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Normalmente entre tres a seis meses de entrenamiento regular. Se necesita disciplina y consistencia, pero los resultados son muy buenos. Muchas mujeres logran resolver completamente la incontinencia.",
+          "audio_tag": "medico_018"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Eso suena prometedor, doctora. Muchas gracias.",
+          "audio_tag": "paciente_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] De nada. Primero hacemos el estudio urodinámico, después la fisioterapia. Si no responde bien, tenemos otras opciones quirúrgicas, pero empecemos por lo conservador. Estoy segura de que mejorará.",
+          "audio_tag": "medico_019"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/urologia/URO-008.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

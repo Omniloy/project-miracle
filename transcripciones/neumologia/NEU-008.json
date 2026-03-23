@@ -1,0 +1,376 @@
+{
+  "id": "NEU-008",
+  "especialidad": "Neumología",
+  "resumen": "Paciente mujer joven de 23 años que acude a urgencias con dolor torácico súbito y disnea aguda. Es su primer episodio de neumotórax espontáneo primario. En la radiografía de tórax se confirma colapso pulmonar del 35% sin evidencia de enfermedad pulmonar subyacente. Se clasifica como neumotórax primario pequeño-moderado. Se maneja de forma conservadora con oxígeno de alto flujo y analgesia, con seguimiento radiológico. Se educa sobre signos de alarma y factores de riesgo.",
+  "diagnostico_principal": {
+    "nombre": "Neumotórax espontáneo primario",
+    "cie10": "J93.1",
+    "snomed_ct": "31939003",
+    "snomed_termino": "Pneumothorax (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Dolor torácico agudo",
+      "cie10": "R07.9",
+      "snomed_ct": "29650001",
+      "snomed_termino": "Chest pain (finding)"
+    },
+    {
+      "nombre": "Ansiedad aguda",
+      "cie10": "R41.1",
+      "snomed_ct": "48694002",
+      "snomed_termino": "Anxiety (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor torácico súbito",
+      "cie10": "R07.9",
+      "snomed_ct": "29650001",
+      "snomed_termino": "Chest pain (finding)"
+    },
+    {
+      "nombre": "Disnea aguda",
+      "cie10": "R06.02",
+      "snomed_ct": "267036007",
+      "snomed_termino": "Dyspnea (finding)"
+    },
+    {
+      "nombre": "Ansiedad",
+      "cie10": "R41.1",
+      "snomed_ct": "48694002",
+      "snomed_termino": "Anxiety (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física con auscultación pulmonar",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of chest (procedure)"
+    },
+    {
+      "nombre": "Radiografía de tórax anteroposterior y lateral",
+      "snomed_ct": "399208008",
+      "snomed_termino": "Plain chest X-ray (procedure)"
+    },
+    {
+      "nombre": "Tomografía computarizada de tórax",
+      "snomed_ct": "243553007",
+      "snomed_termino": "Computed tomography of thorax (procedure)"
+    },
+    {
+      "nombre": "Oxigenoterapia de alto flujo",
+      "snomed_ct": "3552003",
+      "snomed_termino": "Oxygen therapy (procedure)"
+    },
+    {
+      "nombre": "Monitorización oximetría y frecuencia cardíaca",
+      "snomed_ct": "27553307",
+      "snomed_termino": "Pulse oximetry (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Oxígeno",
+      "dosis": "10 L/min",
+      "posologia": "Alto flujo por máscara facial para acelerar reabsorción del neumotórax",
+      "atc": "N02BH32",
+      "snomed_ct": "74668003",
+      "snomed_termino": "Oxygen (substance)",
+      "indicacion": "Mantener saturación >95%"
+    },
+    {
+      "nombre": "Paracetamol",
+      "dosis": "1000 mg",
+      "posologia": "Un comprimido o un sobre cada 6-8 horas según dolor",
+      "atc": "N02BE01",
+      "snomed_ct": "55452001",
+      "snomed_termino": "Paracetamol (substance)",
+      "indicacion": "Analgesia para dolor torácico"
+    },
+    {
+      "nombre": "Ibuprofeno",
+      "dosis": "400 mg",
+      "posologia": "Un comprimido cada 8 horas según necesidad de analgesia",
+      "atc": "M01AB05",
+      "snomed_ct": "387207008",
+      "snomed_termino": "Ibuprofen (substance)",
+      "indicacion": "Antiinflamatorio y analgésico"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 118,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 72,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 98,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 20,
+      "unidad": "rpm"
+    },
+    "saturacion_oxigeno": {
+      "valor": 91,
+      "unidad": "%"
+    },
+    "temperatura": {
+      "valor": 36.8,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente joven sin antecedentes de enfermedad pulmonar.",
+    "Presentación clínica clásica: dolor torácico súbito sin causa aparente, seguido de disnea.",
+    "Niega trauma reciente, actividades extenuantes o valsalva.",
+    "No fumadora activa, aunque convive con fumadores.",
+    "Radiografía de tórax: colapso pulmonar del 35% en apex pulmonar derecho, sin neumomediastino ni derrame pleural.",
+    "Sin evidencia de enfermedad pulmonar subyacente (no hay ampulas o quistes visibles).",
+    "Clasificado como neumotórax espontáneo primario pequeño-moderado.",
+    "Manejo conservador: reposo, oxígeno de alto flujo, analgesia.",
+    "Se educa sobre signos de alarma: dolor intenso no controlado, disnea progresiva, síncope.",
+    "Se realiza radiografía de seguimiento al alta (48 horas) para valorar reabsorción.",
+    "Riesgo de recurrencia ~25% en primer año; se educa sobre signos de recurrencia.",
+    "Se recomienda evitar actividades de riesgo (vuelos, buceo, cambios de presión) en las siguientes semanas."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Claudia Gil Morales",
+    "edad": 23,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena Molina García",
+    "especialidad": "Neumología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[urgently] Buenos días, Claudia. Veo que llegas con dolor de pecho y dificultad para respirar. ¿Cuándo empezó todo?",
+          "audio_tag": "NEU-008_001_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[painfully] Hace poco, doctora. Una hora más o menos. Estaba en el sofá viendo la televisión, muy tranquila, cuando de repente sentí un dolor súbito aquí en el pecho, muy intenso, como un pinchazo.",
+          "audio_tag": "NEU-008_002_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y ese dolor vino acompañado de falta de aire?",
+          "audio_tag": "NEU-008_003_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathlessly] Sí, sí. Poco después de sentir el dolor noté que me costaba respirar, como que me faltaba el aire. Fue muy asustador, doctora. Nunca había sentido esto.",
+          "audio_tag": "NEU-008_004_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, vamos a tranquilizarte. ¿Antes de esto hiciste algo especial? ¿Ejercicio, accidente, golpe?",
+          "audio_tag": "NEU-008_005_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada. Estaba muy tranquila en casa. Ayer hice un poco de ejercicio en el gimnasio, pero nada del otro mundo. Y no me he golpeado ni nada.",
+          "audio_tag": "NEU-008_006_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Has tenido este dolor antes? ¿Te ha pasado algo parecido?",
+          "audio_tag": "NEU-008_007_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[adamantly] No, nunca. Es la primera vez. Por eso me asusté tanto.",
+          "audio_tag": "NEU-008_008_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Tienes enfermedades? ¿Algo importante en tu historia médica?",
+          "audio_tag": "NEU-008_009_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] No, nada. Siempre he estado bien. Soy joven, estoy sana.",
+          "audio_tag": "NEU-008_010_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Antecedentes familiares de problemas pulmonares o del corazón?",
+          "audio_tag": "NEU-008_011_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] No que yo sepa. Mis padres están bien, ni abuelos tampoco tenían nada importante.",
+          "audio_tag": "NEU-008_012_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Fumas?",
+          "audio_tag": "NEU-008_013_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, no fumo. Aunque mi madre y mi padre fuman, así que estoy expuesta al humo pasivo.",
+          "audio_tag": "NEU-008_014_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien. Vamos a explorarte ahora. Siéntate en la camilla y trata de respirar tranquilo. Primero tomo las constantes vitales.",
+          "audio_tag": "NEU-008_015_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] Está bien, doctora. Intento respirar lentamente.",
+          "audio_tag": "NEU-008_016_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Saturación de oxígeno noventa y uno por ciento, un poco baja. Tensión ciento dieciocho sobre setenta y dos, normal. Frecuencia cardíaca noventa y ocho, un poco elevada pero comprensible por la ansiedad. Frecuencia respiratoria veinte. Temperatura normal.",
+          "audio_tag": "NEU-008_017_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿La saturación está baja?",
+          "audio_tag": "NEU-008_018_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Un poco baja, pero nada grave. Voy a auscultar tu tórax. Respira hondo por la boca, lentamente.",
+          "audio_tag": "NEU-008_019_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathing deeply] Sí, vale... ya respiro.",
+          "audio_tag": "NEU-008_020_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Interesante. En el lado derecho, en el ápex, hay una disminución clara del murmullo vesicular. Es decir, no oigo tanto aire entrando como en el lado izquierdo. Eso es muy sugestivo de algo.",
+          "audio_tag": "NEU-008_021_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿De qué?",
+          "audio_tag": "NEU-008_022_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] De un neumotórax. Es cuando se rompe una pequeña bolsa de aire en los pulmones y el aire se escapa al espacio entre el pulmón y la pared del tórax, comprimiendo el pulmón.",
+          "audio_tag": "NEU-008_023_medico"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[after X-ray] Claudia, la radiografía confirma lo que sospechaba. Tienes un neumotórax, un colapso pulmonar del lado derecho de aproximadamente treinta y cinco por ciento. Pero la buena noticia es que no es grave.",
+          "audio_tag": "NEU-008_024_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Colapso pulmonar? ¿Eso necesita operación?",
+          "audio_tag": "NEU-008_025_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, en tu caso no. Como es una cantidad pequeña-moderada de aire, lo que vamos a hacer es dejar que el cuerpo lo reabsorba solo, con ayuda de oxígeno de alto flujo y reposo.",
+          "audio_tag": "NEU-008_026_medico"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Voy a ponerte oxígeno por máscara facial a alto flujo. Eso accelera la reabsorción del aire del neumotórax. Además te daré analgésicos para el dolor, porque sé que duele bastante.",
+          "audio_tag": "NEU-008_027_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuánto tiempo tengo que estar así?",
+          "audio_tag": "NEU-008_028_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Probablemente hoy y esta noche para observación. Si todo va bien mañana, puedes irte a casa con instrucciones. Necesitaremos hacerte una radiografía de seguimiento a los dos o tres días para asegurar que el pulmón se está reexpandiendo.",
+          "audio_tag": "NEU-008_029_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Vale, ¿y en casa qué hago?",
+          "audio_tag": "NEU-008_030_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Reposo total. Nada de ejercicio, nada de levantar peso. Solo actividades muy ligeras dentro de casa. Es importante que no hagas Valsalva, es decir, no cierres la boca e intentes expulsar aire, porque eso puede empeorar el neumotórax.",
+          "audio_tag": "NEU-008_031_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido. ¿Hay riesgo de que vuelva a pasar?",
+          "audio_tag": "NEU-008_032_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Sí, existe un riesgo de aproximadamente veinticinco por ciento en el primer año. Por eso quiero que entiendas los síntomas: si vuelves a sentir ese dolor súbito o disnea, debes venir inmediatamente a urgencias.",
+          "audio_tag": "NEU-008_033_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Doctora, gracias. Me siento mucho mejor ahora que sé qué tengo y que no es grave.",
+          "audio_tag": "NEU-008_034_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] De nada, Claudia. Vas a recuperarte sin problemas. Ahora descansa, deja que el oxígeno haga su trabajo. Volveremos a revisarte dentro de un rato.",
+          "audio_tag": "NEU-008_035_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Gracias, doctora. Nos vemos en un rato.",
+          "audio_tag": "NEU-008_036_paciente"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neumologia/NEU-008.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

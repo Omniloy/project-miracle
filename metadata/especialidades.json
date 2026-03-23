@@ -1,0 +1,952 @@
+{
+  "Cardiología": {
+    "nombre": "Cardiología",
+    "casos": [
+      {
+        "id": "CAR-001",
+        "diagnostico": "Fibrilación auricular paroxística",
+        "cie10": "I48.0",
+        "snomed_ct": "282825002",
+        "es_rara": false,
+        "paciente": "Antonio García Ramos",
+        "medico": "Dra. Elena Martín Sánchez"
+      },
+      {
+        "id": "CAR-002",
+        "diagnostico": "Infarto agudo de miocardio de pared anterior",
+        "cie10": "I21.0",
+        "snomed_ct": "54329005",
+        "es_rara": false,
+        "paciente": "José Luis Fernández Ortega",
+        "medico": "Dr. Alejandro Ruiz Castillo"
+      },
+      {
+        "id": "CAR-003",
+        "diagnostico": "Insuficiencia cardíaca congestiva",
+        "cie10": "I50.0",
+        "snomed_ct": "42343007",
+        "es_rara": false,
+        "paciente": "Rosa María López Vega",
+        "medico": "Dra. Elena Martín Sánchez"
+      },
+      {
+        "id": "CAR-004",
+        "diagnostico": "Estenosis aórtica reumática con insuficiencia",
+        "cie10": "I06.2",
+        "snomed_ct": "60234000",
+        "es_rara": false,
+        "paciente": "Francisco Moreno Blanco",
+        "medico": "Dr. Alejandro Ruiz Castillo"
+      },
+      {
+        "id": "CAR-005",
+        "diagnostico": "Angina de pecho inestable",
+        "cie10": "I20.0",
+        "snomed_ct": "4557003",
+        "es_rara": false,
+        "paciente": "Dolores Sánchez Herrera",
+        "medico": "Dra. Elena Martín Sánchez"
+      },
+      {
+        "id": "CAR-006",
+        "diagnostico": "Miocardiopatía dilatada",
+        "cie10": "I42.0",
+        "snomed_ct": "195021004",
+        "es_rara": false,
+        "paciente": "Miguel Ángel Torres Peña",
+        "medico": "Dr. Alejandro Ruiz Castillo"
+      },
+      {
+        "id": "CAR-007",
+        "diagnostico": "Hipertensión arterial secundaria a enfermedad renal",
+        "cie10": "I15.1",
+        "snomed_ct": "194783001",
+        "es_rara": false,
+        "paciente": "Amparo Vidal Campos",
+        "medico": "Dra. Elena Martín Sánchez"
+      },
+      {
+        "id": "CAR-008",
+        "diagnostico": "Pericarditis aguda no especificada",
+        "cie10": "I30.9",
+        "snomed_ct": "3238004",
+        "es_rara": false,
+        "paciente": "Andrés Prieto Gil",
+        "medico": "Dr. Alejandro Ruiz Castillo"
+      },
+      {
+        "id": "CAR-009",
+        "diagnostico": "Síndrome de Brugada",
+        "cie10": "I49.8",
+        "snomed_ct": "418818005",
+        "es_rara": true,
+        "paciente": "Pablo Herrero Díaz",
+        "medico": "Dra. Elena Martín Sánchez"
+      },
+      {
+        "id": "CAR-010",
+        "diagnostico": "Amiloidosis cardíaca",
+        "cie10": "E85.4",
+        "snomed_ct": "68820003",
+        "es_rara": true,
+        "paciente": "María Teresa Calvo Serrano",
+        "medico": "Dr. Alejandro Ruiz Castillo"
+      }
+    ]
+  },
+  "Dermatología": {
+    "nombre": "Dermatología",
+    "casos": [
+      {
+        "id": "DER-001",
+        "diagnostico": "Psoriasis vulgar",
+        "cie10": "L40.0",
+        "snomed_ct": "9014002",
+        "es_rara": false,
+        "paciente": "Raquel Morales Vega",
+        "medico": "Dra. María Gómez Santos"
+      },
+      {
+        "id": "DER-002",
+        "diagnostico": "Dermatitis atópica",
+        "cie10": "L20.9",
+        "snomed_ct": "24079001",
+        "es_rara": false,
+        "paciente": "Alejandro Ruiz Pascual",
+        "medico": "Dr. Fernando López Martín"
+      },
+      {
+        "id": "DER-003",
+        "diagnostico": "Acné vulgar",
+        "cie10": "L70.0",
+        "snomed_ct": "88616000",
+        "es_rara": false,
+        "paciente": "Marina Calvo Ruiz",
+        "medico": "Dra. Carolina Jiménez Torres"
+      },
+      {
+        "id": "DER-004",
+        "diagnostico": "Melanoma maligno de la piel del tronco",
+        "cie10": "C43.5",
+        "snomed_ct": "372244006",
+        "es_rara": false,
+        "paciente": "Pedro Domínguez Fuentes",
+        "medico": "Dr. Antonio Martínez Vega"
+      },
+      {
+        "id": "DER-005",
+        "diagnostico": "Herpes zóster sin complicaciones",
+        "cie10": "B02.9",
+        "snomed_ct": "4740000",
+        "es_rara": false,
+        "paciente": "Josefina Blanco Herrero",
+        "medico": "Dra. Beatriz Gómez Romero"
+      },
+      {
+        "id": "DER-006",
+        "diagnostico": "Urticaria no especificada",
+        "cie10": "L50.9",
+        "snomed_ct": "126485001",
+        "es_rara": false,
+        "paciente": "Daniel Serrano Molina",
+        "medico": "Dr. Javier Rodríguez Pérez"
+      },
+      {
+        "id": "DER-007",
+        "diagnostico": "Rosácea",
+        "cie10": "L71.9",
+        "snomed_ct": "398909004",
+        "es_rara": false,
+        "paciente": "Ana María Iglesias Peña",
+        "medico": "Dra. Consuelo Ramírez López"
+      },
+      {
+        "id": "DER-008",
+        "diagnostico": "Dermatitis seborreica",
+        "cie10": "L21.9",
+        "snomed_ct": "50563003",
+        "es_rara": false,
+        "paciente": "Carlos Alberto Ramos Gil",
+        "medico": "Dr. Ricardo Fernández Iglesias"
+      },
+      {
+        "id": "DER-009",
+        "diagnostico": "Epidermólisis bullosa adquirida",
+        "cie10": "L12.3",
+        "snomed_ct": "402697001",
+        "es_rara": true,
+        "paciente": "Teresa Gómez Vidal",
+        "medico": "Dr. Luis Antonio Bermejo Corral"
+      },
+      {
+        "id": "DER-010",
+        "diagnostico": "Ictiosis vulgar",
+        "cie10": "Q80.0",
+        "snomed_ct": "254155006",
+        "es_rara": true,
+        "paciente": "Hugo Prieto Castro",
+        "medico": "Dra. Soledad Gómez Blanco"
+      }
+    ]
+  },
+  "Endocrinología": {
+    "nombre": "Endocrinología",
+    "casos": [
+      {
+        "id": "END-001",
+        "diagnostico": "Diabetes mellitus tipo 1 sin complicaciones",
+        "cie10": "E10.9",
+        "snomed_ct": "46635009",
+        "es_rara": false,
+        "paciente": "Marta Pascual Romero",
+        "medico": "Dra. Patricia López Martín"
+      },
+      {
+        "id": "END-002",
+        "diagnostico": "Hipertiroidismo por enfermedad de Graves",
+        "cie10": "E05.0",
+        "snomed_ct": "353295004",
+        "es_rara": false,
+        "paciente": "Cristina López Fuentes",
+        "medico": "Dr. Javier Martínez Rojas"
+      },
+      {
+        "id": "END-003",
+        "diagnostico": "Nódulo tiroideo solitario no tóxico",
+        "cie10": "E04.1",
+        "snomed_ct": "237495005",
+        "es_rara": false,
+        "paciente": "Andrés Calvo Ramos",
+        "medico": "Dra. Elena García Martínez"
+      },
+      {
+        "id": "END-004",
+        "diagnostico": "Obesidad mórbida",
+        "cie10": "E66.0",
+        "snomed_ct": "83911000119104",
+        "es_rara": false,
+        "paciente": "Rosa Herrero Blanco",
+        "medico": "Dr. Miguel Rodríguez Sáenz"
+      },
+      {
+        "id": "END-005",
+        "diagnostico": "Insuficiencia suprarrenal primaria (Addison)",
+        "cie10": "E27.1",
+        "snomed_ct": "363732003",
+        "es_rara": false,
+        "paciente": "Luis Alberto Prieto Vega",
+        "medico": "Dra. Patricia López Martín"
+      },
+      {
+        "id": "END-006",
+        "diagnostico": "Osteoporosis posmenopáusica con fractura patológica de cadera",
+        "cie10": "M80.0",
+        "snomed_ct": "102588006",
+        "es_rara": false,
+        "paciente": "Carmen Delgado Gil",
+        "medico": "Dr. Miguel Rodríguez Sáenz"
+      },
+      {
+        "id": "END-007",
+        "diagnostico": "Hiperparatiroidismo primario",
+        "cie10": "E21.0",
+        "snomed_ct": "36348003",
+        "es_rara": false,
+        "paciente": "Javier Serrano Torres",
+        "medico": "Dra. Elena García Martínez"
+      },
+      {
+        "id": "END-008",
+        "diagnostico": "Síndrome metabólico",
+        "cie10": "E88.81",
+        "snomed_ct": "237602007",
+        "es_rara": false,
+        "paciente": "Pilar Navarro Gómez",
+        "medico": "Dr. Miguel Rodríguez Sáenz"
+      },
+      {
+        "id": "END-009",
+        "diagnostico": "Síndrome de Cushing",
+        "cie10": "E24.9",
+        "snomed_ct": "47270006",
+        "es_rara": true,
+        "paciente": "Nuria Vega Herrero",
+        "medico": "Dra. Patricia López Martín"
+      },
+      {
+        "id": "END-010",
+        "diagnostico": "Feocromocitoma",
+        "cie10": "D35.0",
+        "snomed_ct": "302835009",
+        "es_rara": true,
+        "paciente": "Ignacio Ruiz Calvo",
+        "medico": "Dr. Miguel Rodríguez Sáenz"
+      }
+    ]
+  },
+  "Ginecología": {
+    "nombre": "Ginecología",
+    "casos": [
+      {
+        "id": "GIN-001",
+        "diagnostico": "Leiomioma uterino",
+        "cie10": "D25.9",
+        "snomed_ct": "95315005",
+        "es_rara": false,
+        "paciente": "Marta Serrano López",
+        "medico": "Dra. Isabel Fernández Muñoz"
+      },
+      {
+        "id": "GIN-002",
+        "diagnostico": "Endometriosis del útero",
+        "cie10": "N80.0",
+        "snomed_ct": "129103003",
+        "es_rara": false,
+        "paciente": "Silvia Peña Blanco",
+        "medico": "Dra. Cristina García López"
+      },
+      {
+        "id": "GIN-003",
+        "diagnostico": "Síndrome de ovario poliquístico",
+        "cie10": "E28.2",
+        "snomed_ct": "69878008",
+        "es_rara": false,
+        "paciente": "Laura Prieto Gómez",
+        "medico": "Dra. Isabel Fernández Muñoz"
+      },
+      {
+        "id": "GIN-004",
+        "diagnostico": "Vaginitis aguda",
+        "cie10": "N76.0",
+        "snomed_ct": "30800001",
+        "es_rara": false,
+        "paciente": "Andrea Navarro Ruiz",
+        "medico": "Dra. Cristina García López"
+      },
+      {
+        "id": "GIN-005",
+        "diagnostico": "Displasia cervical leve CIN 1",
+        "cie10": "N87.0",
+        "snomed_ct": "285836003",
+        "es_rara": false,
+        "paciente": "Clara Herrero Vidal",
+        "medico": "Dra. Isabel Fernández Muñoz"
+      },
+      {
+        "id": "GIN-006",
+        "diagnostico": "Menorragia con ciclo regular",
+        "cie10": "N92.0",
+        "snomed_ct": "386692008",
+        "es_rara": false,
+        "paciente": "Eva Gil Moreno",
+        "medico": "Dra. Cristina García López"
+      },
+      {
+        "id": "GIN-007",
+        "diagnostico": "Menopausia y estado climatérico",
+        "cie10": "N95.1",
+        "snomed_ct": "161712005",
+        "es_rara": false,
+        "paciente": "Pilar Delgado Torres",
+        "medico": "Dra. Isabel Fernández Muñoz"
+      },
+      {
+        "id": "GIN-008",
+        "diagnostico": "Quiste de ovario",
+        "cie10": "N83.2",
+        "snomed_ct": "79883001",
+        "es_rara": false,
+        "paciente": "Patricia Vega Sánchez",
+        "medico": "Dra. Cristina García López"
+      },
+      {
+        "id": "GIN-009",
+        "diagnostico": "Síndrome de Asherman",
+        "cie10": "N85.6",
+        "snomed_ct": "70209005",
+        "es_rara": true,
+        "paciente": "Alicia Ramos Herrero",
+        "medico": "Dra. Isabel Fernández Muñoz"
+      },
+      {
+        "id": "GIN-010",
+        "diagnostico": "Síndrome de Turner",
+        "cie10": "Q96.9",
+        "snomed_ct": "38804009",
+        "es_rara": true,
+        "paciente": "Nerea Calvo Ortega",
+        "medico": "Dra. Cristina García López"
+      }
+    ]
+  },
+  "Medicina de familia": {
+    "nombre": "Medicina de familia",
+    "casos": [
+      {
+        "id": "MF-001",
+        "diagnostico": "Hipertensión arterial esencial (primaria)",
+        "cie10": "I10",
+        "snomed_ct": "59621000",
+        "es_rara": false,
+        "paciente": "Manuel Fernández López",
+        "medico": "Dr. Carlos Navarro Ruiz"
+      },
+      {
+        "id": "MF-002",
+        "diagnostico": "Diabetes mellitus tipo 2 sin complicaciones",
+        "cie10": "E11.9",
+        "snomed_ct": "44054006",
+        "es_rara": false,
+        "paciente": "Carmen Delgado Ruiz",
+        "medico": "Dra. Ana Belén Torres Gil"
+      },
+      {
+        "id": "MF-003",
+        "diagnostico": "Infección aguda de vías respiratorias superiores",
+        "cie10": "J06.9",
+        "snomed_ct": "54150009",
+        "es_rara": false,
+        "paciente": "Javier Muñoz Soto",
+        "medico": "Dr. Carlos Navarro Ruiz"
+      },
+      {
+        "id": "MF-004",
+        "diagnostico": "Lumbalgia",
+        "cie10": "M54.5",
+        "snomed_ct": "279039007",
+        "es_rara": false,
+        "paciente": "Pilar Gómez Herrera",
+        "medico": "Dr. Luis Ramírez Peña"
+      },
+      {
+        "id": "MF-005",
+        "diagnostico": "Trastorno de ansiedad generalizada",
+        "cie10": "F41.1",
+        "snomed_ct": "21897009",
+        "es_rara": false,
+        "paciente": "Roberto Iglesias Campos",
+        "medico": "Dra. Marta Vega López"
+      },
+      {
+        "id": "MF-006",
+        "diagnostico": "Hipotiroidismo no especificado",
+        "cie10": "E03.9",
+        "snomed_ct": "40930008",
+        "es_rara": false,
+        "paciente": "Lucía Herrero Pascual",
+        "medico": "Dr. Carlos Navarro Ruiz"
+      },
+      {
+        "id": "MF-007",
+        "diagnostico": "Dislipemia mixta",
+        "cie10": "E78.2",
+        "snomed_ct": "398036000",
+        "es_rara": false,
+        "paciente": "Fernando Blanco Serrano",
+        "medico": "Dra. Ana Belén Torres Gil"
+      },
+      {
+        "id": "MF-008",
+        "diagnostico": "Infección urinaria, sitio no especificado",
+        "cie10": "N39.0",
+        "snomed_ct": "68566005",
+        "es_rara": false,
+        "paciente": "Elena Prieto Molina",
+        "medico": "Dr. Luis Ramírez Peña"
+      },
+      {
+        "id": "MF-009",
+        "diagnostico": "Enfermedad de Addison",
+        "cie10": "E27.1",
+        "snomed_ct": "363732003",
+        "es_rara": true,
+        "paciente": "Sergio Calvo Díaz",
+        "medico": "Dra. Marta Vega López"
+      },
+      {
+        "id": "MF-010",
+        "diagnostico": "Porfiria cutánea tarda",
+        "cie10": "E80.1",
+        "snomed_ct": "17613001",
+        "es_rara": true,
+        "paciente": "Isabel Ramos Fuentes",
+        "medico": "Dr. Carlos Navarro Ruiz"
+      }
+    ]
+  },
+  "Neumología": {
+    "nombre": "Neumología",
+    "casos": [
+      {
+        "id": "NEU-001",
+        "diagnostico": "EPOC con exacerbación aguda",
+        "cie10": "J44.1",
+        "snomed_ct": "195951007",
+        "es_rara": false,
+        "paciente": "Manuel Herrero Pascual",
+        "medico": "Dr. Javier Salazar Córdoba"
+      },
+      {
+        "id": "NEU-002",
+        "diagnostico": "Asma predominantemente alérgica",
+        "cie10": "J45.0",
+        "snomed_ct": "389145006",
+        "es_rara": false,
+        "paciente": "Sara Blanco Ruiz",
+        "medico": "Dra. Elena Molina García"
+      },
+      {
+        "id": "NEU-003",
+        "diagnostico": "Neumonía bacteriana no especificada",
+        "cie10": "J15.9",
+        "snomed_ct": "53084003",
+        "es_rara": false,
+        "paciente": "Gregorio López Serrano",
+        "medico": "Dr. Javier Salazar Córdoba"
+      },
+      {
+        "id": "NEU-004",
+        "diagnostico": "Derrame pleural no especificado",
+        "cie10": "J90",
+        "snomed_ct": "60046008",
+        "es_rara": false,
+        "paciente": "Esperanza Gómez Vega",
+        "medico": "Dra. Elena Molina García"
+      },
+      {
+        "id": "NEU-005",
+        "diagnostico": "Apnea obstructiva del sueño",
+        "cie10": "G47.33",
+        "snomed_ct": "78275009",
+        "es_rara": false,
+        "paciente": "Jesús Navarro Prieto",
+        "medico": "Dr. Javier Salazar Córdoba"
+      },
+      {
+        "id": "NEU-006",
+        "diagnostico": "Bronquiectasias no especificadas",
+        "cie10": "J47.9",
+        "snomed_ct": "12295008",
+        "es_rara": false,
+        "paciente": "Concha Ramos López",
+        "medico": "Dra. Elena Molina García"
+      },
+      {
+        "id": "NEU-007",
+        "diagnostico": "Tromboembolismo pulmonar no especificado",
+        "cie10": "I26.9",
+        "snomed_ct": "59282003",
+        "es_rara": false,
+        "paciente": "Ángel Torres Herrero",
+        "medico": "Dr. Javier Salazar Córdoba"
+      },
+      {
+        "id": "NEU-008",
+        "diagnostico": "Neumotórax espontáneo primario",
+        "cie10": "J93.1",
+        "snomed_ct": "31939003",
+        "es_rara": false,
+        "paciente": "Claudia Gil Morales",
+        "medico": "Dra. Elena Molina García"
+      },
+      {
+        "id": "NEU-009",
+        "diagnostico": "Fibrosis pulmonar idiopática",
+        "cie10": "J84.1",
+        "snomed_ct": "700250006",
+        "es_rara": true,
+        "paciente": "Santiago Peña Campos",
+        "medico": "Dr. Javier Salazar Córdoba"
+      },
+      {
+        "id": "NEU-010",
+        "diagnostico": "Linfangioleiomiomatosis",
+        "cie10": "J84.8",
+        "snomed_ct": "277844007",
+        "es_rara": true,
+        "paciente": "Virginia Calvo Ortega",
+        "medico": "Dra. Elena Molina García"
+      }
+    ]
+  },
+  "Neurología": {
+    "nombre": "Neurología",
+    "casos": [
+      {
+        "id": "NRL-001",
+        "diagnostico": "Migraña con aura",
+        "cie10": "G43.1",
+        "snomed_ct": "4473006",
+        "es_rara": false,
+        "paciente": "Patricia Moreno Vidal",
+        "medico": "Dra. María García Sánchez"
+      },
+      {
+        "id": "NRL-002",
+        "diagnostico": "Epilepsia con crisis tónico-clónicas generalizadas",
+        "cie10": "G40.3",
+        "snomed_ct": "230422008",
+        "es_rara": false,
+        "paciente": "Alberto Sánchez Prieto",
+        "medico": "Dr. Luis Fernández Hidalgo"
+      },
+      {
+        "id": "NRL-003",
+        "diagnostico": "Enfermedad de Parkinson primaria",
+        "cie10": "G20",
+        "snomed_ct": "49049000",
+        "es_rara": false,
+        "paciente": "Francisco Javier Ruiz Peña",
+        "medico": "Dr. Carlos López Aguirre"
+      },
+      {
+        "id": "NRL-004",
+        "diagnostico": "Ictus isquémico cerebral",
+        "cie10": "I63.9",
+        "snomed_ct": "422504002",
+        "es_rara": false,
+        "paciente": "Mercedes Gil Navarro",
+        "medico": "Dra. Isabel Rodríguez Díaz"
+      },
+      {
+        "id": "NRL-005",
+        "diagnostico": "Esclerosis múltiple remitente-recurrente",
+        "cie10": "G35",
+        "snomed_ct": "24700007",
+        "es_rara": false,
+        "paciente": "David Vega Delgado",
+        "medico": "Dr. Roberto Morales Jiménez"
+      },
+      {
+        "id": "NRL-006",
+        "diagnostico": "Enfermedad de Alzheimer inicio tardío",
+        "cie10": "G30.1",
+        "snomed_ct": "416975007",
+        "es_rara": false,
+        "paciente": "Dolores Calvo Herrero",
+        "medico": "Dra. Elena Sánchez Ruiz"
+      },
+      {
+        "id": "NRL-007",
+        "diagnostico": "Neuropatía del nervio ciático",
+        "cie10": "G57.0",
+        "snomed_ct": "128196005",
+        "es_rara": false,
+        "paciente": "Tomás Iglesias Romero",
+        "medico": "Dr. Javier López Martín"
+      },
+      {
+        "id": "NRL-008",
+        "diagnostico": "Cefalea tensional crónica",
+        "cie10": "G44.2",
+        "snomed_ct": "398057008",
+        "es_rara": false,
+        "paciente": "Sonia Blanco Ramos",
+        "medico": "Dra. Teresa González López"
+      },
+      {
+        "id": "NRL-009",
+        "diagnostico": "Ataxia de Friedreich",
+        "cie10": "G11.11",
+        "snomed_ct": "10394003",
+        "es_rara": true,
+        "paciente": "Lucía Romero Vidal",
+        "medico": "Dr. Javier Moreno Castillo"
+      },
+      {
+        "id": "NRL-010",
+        "diagnostico": "Esclerosis lateral amiotrófica",
+        "cie10": "G12.21",
+        "snomed_ct": "86044005",
+        "es_rara": true,
+        "paciente": "Rafael Morales Peña",
+        "medico": "Dr. Andrés Sánchez Alcázar"
+      }
+    ]
+  },
+  "Pediatría": {
+    "nombre": "Pediatría",
+    "casos": [
+      {
+        "id": "PED-001",
+        "diagnostico": "Otitis media aguda",
+        "cie10": "H66.9",
+        "snomed_ct": "65363002",
+        "es_rara": false,
+        "paciente": "Pablo García Ruiz",
+        "medico": "Dra. Isabel Martínez López"
+      },
+      {
+        "id": "PED-002",
+        "diagnostico": "Bronquiolitis aguda",
+        "cie10": "J21.0",
+        "snomed_ct": "4120002",
+        "es_rara": false,
+        "paciente": "Marta González Villar",
+        "medico": "Dr. David Sánchez Pérez"
+      },
+      {
+        "id": "PED-003",
+        "diagnostico": "Dermatitis atópica",
+        "cie10": "L20.9",
+        "snomed_ct": "24079001",
+        "es_rara": false,
+        "paciente": "Lucas Martín Sáenz",
+        "medico": "Dra. Isabel Martínez López"
+      },
+      {
+        "id": "PED-004",
+        "diagnostico": "Gastroenteritis aguda por rotavirus",
+        "cie10": "A08.0",
+        "snomed_ct": "186150001",
+        "es_rara": false,
+        "paciente": "Sara López Fernández",
+        "medico": "Dr. Javier Rubio Gutiérrez"
+      },
+      {
+        "id": "PED-005",
+        "diagnostico": "Asma no especificada",
+        "cie10": "J45.9",
+        "snomed_ct": "195967001",
+        "es_rara": false,
+        "paciente": "Diego Alarcón Mejía",
+        "medico": "Dr. Carlos Fuentes Rivas"
+      },
+      {
+        "id": "PED-006",
+        "diagnostico": "Faringoamigdalitis estreptocócica",
+        "cie10": "J02.0",
+        "snomed_ct": "43878008",
+        "es_rara": false,
+        "paciente": "Carla Navarro Jiménez",
+        "medico": "Dr. Javier Rubio Gutiérrez"
+      },
+      {
+        "id": "PED-007",
+        "diagnostico": "Trastorno por déficit de atención con hiperactividad, tipo combinado",
+        "cie10": "F90.2",
+        "snomed_ct": "406506008",
+        "es_rara": false,
+        "paciente": "Álvaro Díaz Pérez",
+        "medico": "Dra. Elena García Martínez"
+      },
+      {
+        "id": "PED-008",
+        "diagnostico": "Varicela sin complicaciones",
+        "cie10": "B01.9",
+        "snomed_ct": "38907003",
+        "es_rara": false,
+        "paciente": "Irene López Martínez",
+        "medico": "Dr. Javier Rubio Gutiérrez"
+      },
+      {
+        "id": "PED-009",
+        "diagnostico": "Fibrosis quística con manifestaciones pulmonares",
+        "cie10": "E84.0",
+        "snomed_ct": "190905008",
+        "es_rara": true,
+        "paciente": "Marcos González Torres",
+        "medico": "Dra. María Gómez Castellanos"
+      },
+      {
+        "id": "PED-010",
+        "diagnostico": "Enfermedad de Kawasaki",
+        "cie10": "M30.3",
+        "snomed_ct": "75053002",
+        "es_rara": true,
+        "paciente": "Valeria Martín Jiménez",
+        "medico": "Dr. Sergio Rodríguez Carrillo"
+      }
+    ]
+  },
+  "Traumatología": {
+    "nombre": "Traumatología",
+    "casos": [
+      {
+        "id": "TRA-001",
+        "diagnostico": "Fractura de la epífisis distal del radio",
+        "cie10": "S52.50",
+        "snomed_ct": "263225007",
+        "es_rara": false,
+        "paciente": "Enrique Muñoz Blanco",
+        "medico": "Dr. Javier Romero González"
+      },
+      {
+        "id": "TRA-002",
+        "diagnostico": "Gonartrosis primaria bilateral",
+        "cie10": "M17.0",
+        "snomed_ct": "239873007",
+        "es_rara": false,
+        "paciente": "María Dolores Vega Ramos",
+        "medico": "Dra. Carmen Álvarez Serrano"
+      },
+      {
+        "id": "TRA-003",
+        "diagnostico": "Rotura del ligamento cruzado anterior",
+        "cie10": "S83.50",
+        "snomed_ct": "275454005",
+        "es_rara": false,
+        "paciente": "Adrián Gómez Fuentes",
+        "medico": "Dr. Luis Rodríguez Martín"
+      },
+      {
+        "id": "TRA-004",
+        "diagnostico": "Hernia discal lumbar",
+        "cie10": "M51.1",
+        "snomed_ct": "76107001",
+        "es_rara": false,
+        "paciente": "Beatriz Herrera López",
+        "medico": "Dra. Patricia López Fernández"
+      },
+      {
+        "id": "TRA-005",
+        "diagnostico": "Síndrome del túnel carpiano",
+        "cie10": "G56.0",
+        "snomed_ct": "57406009",
+        "es_rara": false,
+        "paciente": "Ricardo Delgado Prieto",
+        "medico": "Dr. Francisco Navarro Ruiz"
+      },
+      {
+        "id": "TRA-006",
+        "diagnostico": "Tendinitis del manguito rotador",
+        "cie10": "M75.1",
+        "snomed_ct": "67801009",
+        "es_rara": false,
+        "paciente": "Carmen Rosa Gil Navarro",
+        "medico": "Dr. Andrés Martín Castillo"
+      },
+      {
+        "id": "TRA-007",
+        "diagnostico": "Esguince de tobillo",
+        "cie10": "S93.4",
+        "snomed_ct": "44465007",
+        "es_rara": false,
+        "paciente": "Iván Pascual Torres",
+        "medico": "Dr. Guillermo Fernández Prada"
+      },
+      {
+        "id": "TRA-008",
+        "diagnostico": "Fractura del cuello del fémur",
+        "cie10": "S72.00",
+        "snomed_ct": "5913000",
+        "es_rara": false,
+        "paciente": "Josefa Calvo Herrero",
+        "medico": "Dra. María Teresa Gómez Molina"
+      },
+      {
+        "id": "TRA-009",
+        "diagnostico": "Osteogénesis imperfecta tipo I",
+        "cie10": "Q78.0",
+        "snomed_ct": "78314001",
+        "es_rara": true,
+        "paciente": "Natalia Ruiz Campos",
+        "medico": "Dr. Rafael Sánchez Gutierrez"
+      },
+      {
+        "id": "TRA-010",
+        "diagnostico": "Displasia fibrosa poliostótica",
+        "cie10": "Q78.1",
+        "snomed_ct": "254113005",
+        "es_rara": true,
+        "paciente": "Óscar Ramos Delgado",
+        "medico": "Dr. Roberto Vidal Cuesta"
+      }
+    ]
+  },
+  "Urología": {
+    "nombre": "Urología",
+    "casos": [
+      {
+        "id": "URO-001",
+        "diagnostico": "Hiperplasia prostática benigna con obstrucción urinaria",
+        "cie10": "N40.1",
+        "snomed_ct": "266569009",
+        "es_rara": false,
+        "paciente": "Gonzalo Herrero Sánchez",
+        "medico": "Dr. Javier Pérez Guzmán"
+      },
+      {
+        "id": "URO-002",
+        "diagnostico": "Litiasis ureteral",
+        "cie10": "N20.1",
+        "snomed_ct": "95570007",
+        "es_rara": false,
+        "paciente": "Rubén Molina Torres",
+        "medico": "Dra. María Rodríguez Serrano"
+      },
+      {
+        "id": "URO-003",
+        "diagnostico": "Infección urinaria recurrente",
+        "cie10": "N39.0",
+        "snomed_ct": "197927001",
+        "es_rara": false,
+        "paciente": "Amparo Gómez Calvo",
+        "medico": "Dr. Javier Pérez Guzmán"
+      },
+      {
+        "id": "URO-004",
+        "diagnostico": "Vejiga hiperactiva",
+        "cie10": "N32.81",
+        "snomed_ct": "397732007",
+        "es_rara": false,
+        "paciente": "Teresa Prieto Navarro",
+        "medico": "Dra. María Rodríguez Serrano"
+      },
+      {
+        "id": "URO-005",
+        "diagnostico": "Cáncer de próstata localizado",
+        "cie10": "C61",
+        "snomed_ct": "399068003",
+        "es_rara": false,
+        "paciente": "Rafael Blanco Peña",
+        "medico": "Dr. Javier Pérez Guzmán"
+      },
+      {
+        "id": "URO-006",
+        "diagnostico": "Prostatitis aguda",
+        "cie10": "N41.0",
+        "snomed_ct": "9713002",
+        "es_rara": false,
+        "paciente": "Marcos Serrano Díaz",
+        "medico": "Dra. María Rodríguez Serrano"
+      },
+      {
+        "id": "URO-007",
+        "diagnostico": "Varicocele",
+        "cie10": "I86.1",
+        "snomed_ct": "50295007",
+        "es_rara": false,
+        "paciente": "Hugo Delgado Moreno",
+        "medico": "Dr. Javier Pérez Guzmán"
+      },
+      {
+        "id": "URO-008",
+        "diagnostico": "Incontinencia urinaria de esfuerzo",
+        "cie10": "N39.3",
+        "snomed_ct": "111848001",
+        "es_rara": false,
+        "paciente": "Marisol Vega Ruiz",
+        "medico": "Dra. María Rodríguez Serrano"
+      },
+      {
+        "id": "URO-009",
+        "diagnostico": "Cistitis intersticial",
+        "cie10": "N30.1",
+        "snomed_ct": "197834003",
+        "es_rara": true,
+        "paciente": "Elena Ramos Ortega",
+        "medico": "Dr. Javier Pérez Guzmán"
+      },
+      {
+        "id": "URO-010",
+        "diagnostico": "Tumor de Wilms",
+        "cie10": "C64.9",
+        "snomed_ct": "302849000",
+        "es_rara": true,
+        "paciente": "Nicolás Torres Fuentes",
+        "medico": "Dra. María Rodríguez Serrano"
+      }
+    ]
+  }
+}

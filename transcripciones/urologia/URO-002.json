@@ -1,0 +1,375 @@
+{
+  "id": "URO-002",
+  "especialidad": "Urología",
+  "resumen": "Paciente varón de 38 años que acude a urgencias con cólico nefrítico agudo. Refiere dolor lumbar súbito de inicio agudo, irradiado a genitales, con náuseas y vómitos. Se diagnostica litiasis ureteral. Se realiza ecografía abdominal y TAC helicoidal que confirma cálculo ureteral.",
+  "diagnostico_principal": {
+    "nombre": "Litiasis ureteral",
+    "cie10": "N20.1",
+    "snomed_ct": "95570007",
+    "snomed_termino": "Ureteral calculus (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Cólico nefrítico",
+      "cie10": "N23",
+      "snomed_ct": "301797006",
+      "snomed_termino": "Renal colic (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor abdominal súbito",
+      "cie10": "R10.2",
+      "snomed_ct": "21522001",
+      "snomed_termino": "Abdominal pain (finding)"
+    },
+    {
+      "nombre": "Dolor lumbar",
+      "cie10": "M54.5",
+      "snomed_ct": "280519002",
+      "snomed_termino": "Lower back pain (finding)"
+    },
+    {
+      "nombre": "Náuseas",
+      "cie10": "R11.0",
+      "snomed_ct": "422587007",
+      "snomed_termino": "Nausea (finding)"
+    },
+    {
+      "nombre": "Vómitos",
+      "cie10": "R11.10",
+      "snomed_ct": "249497008",
+      "snomed_termino": "Vomiting (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Ecografía abdominal urgente",
+      "snomed_ct": "10159009",
+      "snomed_termino": "Ultrasound of abdomen (procedure)"
+    },
+    {
+      "nombre": "Tomografía computarizada helicoidal abdominal",
+      "snomed_ct": "241756006",
+      "snomed_termino": "Computed tomography of abdomen (procedure)"
+    },
+    {
+      "nombre": "Análisis de orina con sedimento",
+      "snomed_ct": "27944006",
+      "snomed_termino": "Routine urinalysis (procedure)"
+    },
+    {
+      "nombre": "Hemograma y bioquímica sérica",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Metamizol",
+      "dosis": "575 mg",
+      "posologia": "1 ampolla intravenosa",
+      "atc": "N02BB02",
+      "snomed_ct": "372529000",
+      "snomed_termino": "Dipyrone (substance)",
+      "indicacion": "Analgesia del cólico nefrítico"
+    },
+    {
+      "nombre": "Diclofenaco",
+      "dosis": "75 mg",
+      "posologia": "1 ampolla intravenosa",
+      "atc": "M01AB05",
+      "snomed_ct": "372603006",
+      "snomed_termino": "Diclofenac (substance)",
+      "indicacion": "Antiinflamatorio y analgésico en cólico nefrítico"
+    },
+    {
+      "nombre": "Ondansetrón",
+      "dosis": "4 mg",
+      "posologia": "1 ampolla intravenosa",
+      "atc": "A04AA02",
+      "snomed_ct": "372576009",
+      "snomed_termino": "Ondansetron (substance)",
+      "indicacion": "Antiemético para control de vómitos"
+    }
+  ],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 148,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 92,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 104,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 22,
+      "unidad": "rpm"
+    },
+    "temperatura": {
+      "valor": 36.8,
+      "unidad": "°C"
+    },
+    "peso": {
+      "valor": 82,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 176,
+      "unidad": "cm"
+    }
+  },
+  "notas_adicionales": [
+    "Primer episodio de litiasis, antecedentes familiares de cálculos renales.",
+    "Hematuria microsc´opica confirmada en urianálisis.",
+    "TAC sin contraste confirma cálculo de 5 mm en tercio proximal del uréter izquierdo.",
+    "Se autoriza manejo conservador expectante con analgesia.",
+    "Se recomienda hidratación abundante y cita con urología en una semana."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Rubén Molina Torres",
+    "edad": 38,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María Rodríguez Serrano",
+    "especialidad": "Urología"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[urgently] Buenos, señor Molina. Soy la doctora Rodríguez. Veo que tiene dolor muy fuerte, ¿verdad? Cuénteme qué ha pasado.",
+          "audio_tag": "medico_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[in pain, grimacing] Doctora, no sé qué me pasa. Hace una hora estaba en el trabajo tranquilamente y de repente he sentido un dolor horrible aquí en la espalda, en el lado izquierdo. Es insoportable.",
+          "audio_tag": "paciente_001"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Es un dolor constante o va y viene?",
+          "audio_tag": "medico_002"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[writhing] Va y viene, es como ondas. Cada rato viene peor. Y tengo unas ganas horribles de vomitar.",
+          "audio_tag": "paciente_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Ha tenido algún traumatismo, algún golpe?",
+          "audio_tag": "medico_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada. Nada de nada. Fue así, de la nada. Esto es muy raro.",
+          "audio_tag": "paciente_003"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cómo está la orina? ¿Ha notado algo anormal?",
+          "audio_tag": "medico_004"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Pues... ahora que lo dice, tengo ganas de orinar constantemente, aunque salga poco. Y creo que he visto la orina un poco roja, sí.",
+          "audio_tag": "paciente_004"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Ha tenido problemas similares antes? ¿Cálculos renales, infecciones de orina?",
+          "audio_tag": "medico_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] No, doctora. Esto es la primera vez. Nunca había tenido nada parecido.",
+          "audio_tag": "paciente_005"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿En su familia hay antecedentes de cálculos renales o problemas urinarios?",
+          "audio_tag": "medico_006"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Sí, ahora que lo menciona, mi padre tuvo un problema de cálculos hace unos años. Mi madre también, creo.",
+          "audio_tag": "paciente_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Toma algún medicamento de forma regular?",
+          "audio_tag": "medico_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[quickly] No, no tomo nada. Soy sano normalmente.",
+          "audio_tag": "paciente_007"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Alergias a medicamentos?",
+          "audio_tag": "medico_008"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shakes head] No, que yo sepa no.",
+          "audio_tag": "paciente_008"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Voy a explorarle. Por favor, recuéstese en la camilla. Primero le tomaré las constantes vitales.",
+          "audio_tag": "medico_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[compliant but in pain] Sí, claro, aunque me duele.",
+          "audio_tag": "paciente_009"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] La tensión está ciento cuarenta y ocho sobre noventa y dos. Frecuencia cardíaca ciento cuatro. Temperatura treinta y seis coma ocho. Está algo taquicárdico y con tensión elevada, eso es normal por el dolor.",
+          "audio_tag": "medico_010"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[groaning] Sí, es que duele mucho.",
+          "audio_tag": "paciente_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Voy a palpar el abdomen. Relájese lo máximo que pueda. Siento cosquilleo en el flanco izquierdo con el puño percutor. Muy sugestivo de problema renal.",
+          "audio_tag": "medico_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[flinches] Ay, ay, ay. Sí, ahí es donde duele.",
+          "audio_tag": "paciente_011"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Señor Molina, por los síntomas que describe y la exploración, tenemos mucha sospecha de que tiene una piedra en el riñón o en el conducto que va del riñón a la vejiga. Es lo que se llama cólico nefrítico o litiasis ureteral.",
+          "audio_tag": "medico_012"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Una piedra? ¿Es grave?",
+          "audio_tag": "paciente_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es grave en el sentido de que no es un cáncer ni nada así. Pero produce un dolor muy intenso. Necesitamos confirmar el diagnóstico con una ecografía y una tomografía para ver exactamente dónde está la piedra.",
+          "audio_tag": "medico_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y qué se hace entonces?",
+          "audio_tag": "paciente_013"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Primero vamos a darle medicamentos para el dolor. Voy a ponerle una inyección con un analgésico potente y un antiinflamatorio, y algo para los vómitos.",
+          "audio_tag": "medico_014"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Me va a desaparecer el dolor?",
+          "audio_tag": "paciente_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Sí, la medicación debe aliviarle bastante. Mientras, haremos una ecografía y un TAC sin contraste para localizar la piedra con exactitud.",
+          "audio_tag": "medico_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Bien, eso espero.",
+          "audio_tag": "paciente_015"
+        },
+        {
+          "rol": "medico",
+          "texto": "[informatively] Si la piedra es pequeña, menor de cinco milímetros, normalmente se expulsa sola con la orina. Si es más grande, puede que necesitemos ayuda urológica. Pero primero esperar a que baje la inflamación.",
+          "audio_tag": "medico_016"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Cuánto tiempo tarda eso?",
+          "audio_tag": "paciente_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Puede ser cuestión de días o semanas. Lo importante ahora es controlar el dolor y evitar infecciones. Después, consultará con el urólogo.",
+          "audio_tag": "medico_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Vale, doctora.",
+          "audio_tag": "paciente_017"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vamos a ingresarle algunas horas para la medicación y los estudios de imagen. Después, si todo va bien, puede marcharse a casa. Tiene que beber mucha agua, al menos dos litros al día.",
+          "audio_tag": "medico_018"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Espero que se me pase pronto.",
+          "audio_tag": "paciente_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] No se preocupe, la mayoría de estos cálculos se resuelven bien. La cita con urología la haremos para esta semana.",
+          "audio_tag": "medico_019"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/urologia/URO-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "ATC A04AA01 → A04AA02 (Ondansetrón)"
+    ]
+  }
+}

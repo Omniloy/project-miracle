@@ -1,0 +1,344 @@
+{
+  "id": "MF-007",
+  "especialidad": "Medicina de familia",
+  "resumen": "Paciente varón de 52 años que acude al control de dislipemia mixta. Refiere tomar irregularmente atorvastatina. Se realiza evaluación del riesgo cardiovascular, se toman medidas antropométricas y se solicita perfil lipídico actualizado. Se refuerza la importancia de la adherencia farmacológica y se recomiendan cambios en el estilo de vida: dieta mediterránea, ejercicio regular y pérdida de peso.",
+  "diagnostico_principal": {
+    "nombre": "Dislipemia mixta",
+    "cie10": "E78.2",
+    "snomed_ct": "398036000",
+    "snomed_termino": "Mixed hyperlipidemia (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Sobrepeso",
+      "cie10": "E66.3",
+      "snomed_ct": "238131007",
+      "snomed_termino": "Overweight (finding)"
+    },
+    {
+      "nombre": "Hipertensión arterial esencial",
+      "cie10": "I10",
+      "snomed_ct": "59621000",
+      "snomed_termino": "Essential hypertension (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Xantomas",
+      "cie10": "E78.2",
+      "snomed_ct": "18625004",
+      "snomed_termino": "Xanthoma (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Medición de peso y talla",
+      "snomed_ct": "276336004",
+      "snomed_termino": "Anthropometric measurement (procedure)"
+    },
+    {
+      "nombre": "Cálculo de Índice de Masa Corporal",
+      "snomed_ct": "363812007",
+      "snomed_termino": "Computation of body mass index (procedure)"
+    },
+    {
+      "nombre": "Solicitud de perfil lipídico completo",
+      "snomed_ct": "27894006",
+      "snomed_termino": "Lipid panel test (procedure)"
+    },
+    {
+      "nombre": "Evaluación del riesgo cardiovascular",
+      "snomed_ct": "427090009",
+      "snomed_termino": "Cardiovascular risk assessment (procedure)"
+    },
+    {
+      "nombre": "Control de presión arterial",
+      "snomed_ct": "46973005",
+      "snomed_termino": "Blood pressure taking (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Atorvastatina",
+      "dosis": "40 mg",
+      "posologia": "Un comprimido por la noche",
+      "atc": "C10AA05",
+      "snomed_ct": "386019000",
+      "snomed_termino": "Atorvastatin (substance)",
+      "indicacion": "Tratamiento de dislipemia mixta e hipercolesterolemia"
+    }
+  ],
+  "constantes_vitales": {
+    "peso": {
+      "valor": 87,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 176,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 28.1,
+      "unidad": "kg/m²"
+    },
+    "tension_arterial_sistolica": {
+      "valor": 142,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 92,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 80,
+      "unidad": "lpm"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con dislipemia mixta diagnosticada hace 3 años.",
+    "Toma atorvastatina de forma irregular, reconoce olvidar la medicación.",
+    "Sedentario, trabajo de oficina, poco ejercicio físico.",
+    "Dieta poco equilibrada, frecuente consumo de comidas rápidas.",
+    "Hipertensión arterial no óptimamente controlada (TA 142/92).",
+    "Riesgo cardiovascular moderado-alto.",
+    "Niega tabaquismo pero consumo moderado de alcohol.",
+    "Se educa sobre la importancia de la adherencia farmacológica.",
+    "Se recomienda dieta mediterránea, ejercicio aeróbico 30-45 min/día, pérdida de peso.",
+    "Próxima cita en 3 meses tras resultados del perfil lipídico."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Fernando Blanco Serrano",
+    "edad": 52,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Ana Belén Torres Gil",
+    "especialidad": "Medicina de familia"
+  },
+  "voces": {
+    "medico_voice_id": "RgXx32WYOGrd7gFNifSf",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Fernando. ¿Cómo está? ¿Qué tal el colesterol?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sheepishly] Buenos días, doctora. Bueno, pues mire, supongo que no muy bien. He venido porque hace un año que no me controlo y me preocupa un poco."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Entiendo. ¿Cómo va con la medicación? ¿Toma la atorvastatina regularmente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[honestly] Pues, la verdad es que no. A veces la olvido. Algunos días la tomo, otros no. Reconozco que no soy muy disciplinado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Por qué la olvida? ¿Le causa molestias? ¿Problemas económicos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shrugging] No, no me causa molestias. Es simplemente que se me olvida, no tengo el hábito. Económicamente puedo pagarla sin problemas."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Ha tenido síntomas nuevos? ¿Cansancio muscular, dolor en las extremidades?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nada de eso. Me siento bien, sin síntomas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Ha hecho cambios en la dieta? ¿Cómo es su alimentación?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Pues, la verdad, poco. Como de todo. El trabajo no me deja mucho tiempo, muchas comidas fuera, en bares, bocadillos, fritos. Intenté hacer dieta hace un tiempo pero no me costó mantenerla."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Hace ejercicio?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reluctantly] Poco. De vez en cuando juego a futsal con unos amigos, pero no es regular. Y en el trabajo estoy sentado prácticamente todo el día."
+        },
+        {
+          "rol": "medico",
+          "texto": "[asking] ¿Fuma? ¿Alcohol?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[honestly] Tabaco no fumo, lo dejé hace cinco años. Alcohol sí, bebo algo, normalmente una cerveza en la comida y algo en la cena."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Antecedentes familiares de problemas cardíacos o colesterol alto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirmatively] Mi padre tuvo un infarto a los sesenta y dos años. Y mi abuelo también tenía problemas del corazón."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a pesarle y medirle. Quítese los zapatos y la chaqueta, por favor. Suba a la báscula. [pause] Ochenta y siete kilos, y mide un metro setenta y seis centímetros."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[resigned] Parece que he ganado peso."
+        },
+        {
+          "rol": "medico",
+          "texto": "[calculating] Eso nos da un índice de masa corporal de veintiocho coma uno. Sobrepeso. Idealmente debería pesar alrededor de setenta y ocho kilos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Habrá que perder casi diez kilos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Ahora le tomo la tensión. [pause] Ciento cuarenta y dos sobre noventa y dos. Está elevada."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Vuelve a estar alta."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Frecuencia cardíaca: ochenta latidos por minuto, un poco elevada. Ausculto el corazón [pause] sonido normal, regular. Los pulmones limpios. Pulsos periféricos normales en ambas extremidades."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Mm-hm."
+        },
+        {
+          "rol": "medico",
+          "texto": "[observing] Veo depósitos en los párpados que podrían ser xantomas leves, depósitos de grasa que sugieren hiperlipidemia importante."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Fernando, tiene dislipemia mixta no adecuadamente controlada. El sobrepeso, la tensión elevada, el sedentarismo y la falta de adherencia a la medicación son un cóctel peligroso, especialmente con sus antecedentes familiares de cardiopatía."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Estoy en riesgo de infarto?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Tiene riesgo cardiovascular moderado-alto. Por eso es importante que actuemos ahora. Afortunadamente, muchas cosas se pueden cambiar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Qué tengo que hacer?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confidently] Vamos a hacer dos cosas: ajustar la medicación y cambiar el estilo de vida. Son igual de importantes ambas."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Primero, la atorvastatina. Voy a aumentarle la dosis de cuarenta a sesenta miligramos. Es importante que sea regularidad: un comprimido cada noche."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Va a ser suficiente?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] Lo veremos. Le voy a solicitar un perfil lipídico completo para ver cómo está el colesterol total, LDL, HDL y triglicéridos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] De acuerdo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Ahora, lo importante: la alimentación. Quiero que siga una dieta mediterránea. Aumentar verdura, fruta, legumbres, pescado. Reducir carnes rojas, alimentos fritos, ultraprocesados. Nada de salsas grasas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Y chocolate? ¿Puedo comer chocolate?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[with a smile] Chocolate negro de más del setenta por ciento, sí, algo en moderación. Pero olvídese de los dulces."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Segundo, ejercicio. Caminar al menos treinta o cuarenta y cinco minutos al día, cinco días a la semana. O el futsal que juega es excelente si lo hace regularmente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Es mucho tiempo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, es lo que recomienda la medicina. Puede hacerlo en varias sesiones, no tiene que ser de una vez. Media hora después del trabajo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tercero, perder peso. Si pierde diez kilos, la tensión bajará, el colesterol mejorará, el corazón trabajará menos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[determined] Está bien, me comprometo a intentarlo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vamos a empezar desde ahora. Le cito en tres meses con los nuevos resultados de perfil lipídico. Mientras tanto, si tiene dudas sobre la dieta, pido cita con la enfermera para que le dé un plan más detallado. ¿De acuerdo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muy bien, doctora. Gracias."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Fernando, vale la pena el esfuerzo. Su salud y su familia lo agradecerán."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/medicina_familia/MF-007.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

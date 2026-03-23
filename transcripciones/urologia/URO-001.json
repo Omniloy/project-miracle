@@ -1,0 +1,359 @@
+{
+  "id": "URO-001",
+  "especialidad": "Urología",
+  "resumen": "Paciente varón de 65 años que acude a consulta de urología por síntomas de obstrucción urinaria. Refiere disminución del calibre del chorro miccional, polaquiuria nocturna y nocturia. Se diagnostica hiperplasia prostática benigna con obstrucción urinaria. Se inicia tratamiento farmacológico con tamsulosina y dutasterida.",
+  "diagnostico_principal": {
+    "nombre": "Hiperplasia prostática benigna con obstrucción urinaria",
+    "cie10": "N40.1",
+    "snomed_ct": "266569009",
+    "snomed_termino": "Benign prostatic hyperplasia with lower urinary tract obstruction (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Nocturia",
+      "cie10": "R35.1",
+      "snomed_ct": "304891006",
+      "snomed_termino": "Nocturia (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Disminución del calibre del chorro miccional",
+      "cie10": "R39.12",
+      "snomed_ct": "386239001",
+      "snomed_termino": "Weak stream of urine (finding)"
+    },
+    {
+      "nombre": "Polaquiuria",
+      "cie10": "R35.0",
+      "snomed_ct": "28152004",
+      "snomed_termino": "Polyuria (finding)"
+    },
+    {
+      "nombre": "Nocturia",
+      "cie10": "R35.1",
+      "snomed_ct": "304891006",
+      "snomed_termino": "Nocturia (finding)"
+    },
+    {
+      "nombre": "Sensación de vaciamiento incompleto",
+      "cie10": "R39.19",
+      "snomed_ct": "162096004",
+      "snomed_termino": "Sensation of incomplete bladder emptying (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física abdominal y rectal",
+      "snomed_ct": "398105002",
+      "snomed_termino": "Digital rectal examination (procedure)"
+    },
+    {
+      "nombre": "Análisis de orina",
+      "snomed_ct": "27944006",
+      "snomed_termino": "Routine urinalysis (procedure)"
+    },
+    {
+      "nombre": "Determinación de PSA sérico",
+      "snomed_ct": "33913000",
+      "snomed_termino": "Serum prostate specific antigen (finding)"
+    },
+    {
+      "nombre": "Ecografía abdominal y urológica",
+      "snomed_ct": "10159009",
+      "snomed_termino": "Ultrasound of abdomen (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Tamsulosina",
+      "dosis": "0,4 mg",
+      "posologia": "1 cápsula al día por la noche",
+      "atc": "G04CA02",
+      "snomed_ct": "346491000",
+      "snomed_termino": "Tamsulosin (substance)",
+      "indicacion": "Tratamiento de síntomas del tracto urinario inferior por hiperplasia prostática benigna"
+    },
+    {
+      "nombre": "Dutasterida",
+      "dosis": "0,5 mg",
+      "posologia": "1 cápsula al día",
+      "atc": "G04CB02",
+      "snomed_ct": "372651005",
+      "snomed_termino": "Dutasteride (substance)",
+      "indicacion": "Reducción del volumen prostático y síntomas obstructivos"
+    }
+  ],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 138,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 82,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 72,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 88,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 178,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 27.8,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Antecedentes de hipertensión arterial controlada con amlodipina.",
+    "Padre con antecedentes de hiperplasia prostática benigna.",
+    "Niega síntomas irritativos severos en la escala IPSS.",
+    "Se prescribe seguimiento a los tres meses con repetición de PSA y ecografía."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Gonzalo Herrero Sánchez",
+    "edad": 65,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Pérez Guzmán",
+    "especialidad": "Urología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, señor Herrero. Soy el doctor Pérez, urólogo. Pase, siéntese por favor. ¿Qué problema le trae hoy?",
+          "audio_tag": "medico_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Buenos días, doctor. Pues mire, hace unos meses que noto que me cuesta más orinar. El chorro es más flojo, ¿sabe? Y por las noches tengo que levantarme varias veces.",
+          "audio_tag": "paciente_001"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Entiendo. ¿Cuántas veces se levanta durante la noche aproximadamente?",
+          "audio_tag": "medico_002"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Tres, cuatro veces. Eso es lo que más me molesta, porque no puedo dormir bien. Y durante el día también voy más al servicio, quizás cada dos horas.",
+          "audio_tag": "paciente_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tiene sensación de vaciamiento completo después de orinar, o siente que algo queda?",
+          "audio_tag": "medico_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sheepishly] Pues sí, tengo esa sensación de que no me queda bien vacío. Incluso a veces vuelvo a intentar después de unos minutos.",
+          "audio_tag": "paciente_003"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Cuánto tiempo lleva con estos síntomas? ¿Empezaron de repente o poco a poco?",
+          "audio_tag": "medico_004"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Poco a poco, doctor. Creo que hace unos ocho meses o así. Al principio no le daba mucha importancia, pero cada vez va a más.",
+          "audio_tag": "paciente_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Ha tenido fiebre, dolor al orinar o infecciones de orina?",
+          "audio_tag": "medico_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shakes head] No, no. Eso no. Solo es la dificultad al orinar y las ganas constantes.",
+          "audio_tag": "paciente_005"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Alguna enfermedad crónica? ¿Toma medicamentos habitualmente?",
+          "audio_tag": "medico_006"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Tengo la tensión alta, pero la tengo controlada. Tomo amlodipina desde hace años. De alergias medicamentosas no tengo ninguna.",
+          "audio_tag": "paciente_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Y en su familia hay antecedentes de problemas de próstata?",
+          "audio_tag": "medico_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirmatively] Sí, mi padre tuvo algo de próstata también, aunque él no se quejaba mucho. Decía que era lo normal a su edad.",
+          "audio_tag": "paciente_007"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Muy bien. Voy a explorarle ahora. Por favor, acuéstese en la camilla boca arriba. Primero le tomaré la tensión.",
+          "audio_tag": "medico_008"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[compliant] Sí, claro.",
+          "audio_tag": "paciente_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] La tensión está ciento treinta y ocho sobre ochenta y dos. Frecuencia cardíaca setenta y dos. Bien. Ahora le haré una exploración abdominal. Relájese.",
+          "audio_tag": "medico_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relaxed] Adelante.",
+          "audio_tag": "paciente_009"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Palpación abdominal sin masas, blando, doloroso a la palpación suprapúbica leve. Ahora voy a hacer un tacto rectal para explorar la próstata. Colóquese en posición de Sims, por favor.",
+          "audio_tag": "medico_010"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[slightly uncomfortable] Vale, doctor.",
+          "audio_tag": "paciente_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Próstata aumentada de tamaño, aproximadamente unos treinta y cinco gramos, consistencia firme, bordes bien definidos, simétrica, sin nodularidades sospechosas. Muy característico de hiperplasia benigna.",
+          "audio_tag": "medico_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] ¿Es algo malo?",
+          "audio_tag": "paciente_011"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No, no se preocupe. Lo que tenemos aquí es una hiperplasia prostática benigna, es decir, que la próstata ha crecido un poco más de lo normal. Es muy frecuente en hombres de su edad. Lo importante es que no es un tumor maligno, es un crecimiento benigno.",
+          "audio_tag": "medico_012"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Ahh, menos mal. Con eso estaba preocupado.",
+          "audio_tag": "paciente_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Es normal. Pero sí que produce síntomas como los que usted describe: dificultad para orinar, chorro débil, nocturia. En su caso, vemos que hay obstrucción urinaria, así que hay que tratarla.",
+          "audio_tag": "medico_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Qué tipo de tratamiento, doctor?",
+          "audio_tag": "paciente_013"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Le voy a iniciar un tratamiento farmacológico con dos medicamentos. El primero es tamsulosina, que relaja los músculos de la próstata y ayuda a mejorar el flujo de orina. La segunda es dutasterida, que reduce el tamaño de la próstata a largo plazo.",
+          "audio_tag": "medico_014"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Y cómo me los tomo?",
+          "audio_tag": "paciente_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] La tamsulosina, una cápsula de cero coma cuatro miligramos cada noche. Y la dutasterida, también una cápsula de cero coma cinco miligramos una vez al día, sin horario fijo. Puede ser con o sin comida.",
+          "audio_tag": "medico_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[repeating] De noche la tamsulosina, y la dutasterida cualquier momento del día. Anotado.",
+          "audio_tag": "paciente_015"
+        },
+        {
+          "rol": "medico",
+          "texto": "[informatively] Exacto. Ahora le voy a solicitar algunas pruebas. Un análisis de orina, una determinación del PSA en sangre para descartar cáncer de próstata, y una ecografía abdominal para valorar el tamaño de la próstata y los riñones.",
+          "audio_tag": "medico_016"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] Muy bien, doctor. ¿Cuándo me hago eso?",
+          "audio_tag": "paciente_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Le daremos cita para la ecografía. El análisis de orina y el PSA se lo puede hacer en el laboratorio del hospital cuando prefiera. Le doy un volante.",
+          "audio_tag": "medico_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Vale.",
+          "audio_tag": "paciente_017"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Dentro de tres meses quiero que vuelva con los resultados de las pruebas. Esperemos que con el tratamiento los síntomas mejoren bastante. Si en algún momento tiene dificultad para orinar completamente o dolor, venga sin esperar.",
+          "audio_tag": "medico_018"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muy bien, doctor. Muchas gracias. Esto me quita un peso de encima.",
+          "audio_tag": "paciente_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, señor Herrero. Con esto va a estar mejor. Hasta dentro de tres meses.",
+          "audio_tag": "medico_019"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/urologia/URO-001.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

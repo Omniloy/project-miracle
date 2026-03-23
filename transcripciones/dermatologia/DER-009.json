@@ -1,0 +1,325 @@
+{
+  "id": "DER-009",
+  "especialidad": "Dermatología",
+  "resumen": "Paciente mujer de 39 años con epidermólisis bullosa adquirida (enfermedad rara autoinmunitaria). Presenta ampollas subepidérmicas recurrentes, cicatrices atróficas y leucoderma por historia de lesiones. Se inicia dapsona oral y prednisona sistémica. Se realiza referencia a centro especializado de enfermedades ampollares.",
+  "diagnostico_principal": {
+    "nombre": "Epidermólisis bullosa adquirida",
+    "cie10": "L12.3",
+    "snomed_ct": "402697001",
+    "snomed_termino": "Acquired bullous pemphigoid (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Cicatrices atróficas post-ampollares",
+      "cie10": "L91.0",
+      "snomed_ct": "416355000",
+      "snomed_termino": "Atrophic scar (finding)"
+    },
+    {
+      "nombre": "Leucoderma",
+      "cie10": "L80",
+      "snomed_ct": "57665002",
+      "snomed_termino": "Leukoderma (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Ampollas subepidérmicas recurrentes",
+      "cie10": "L12.3",
+      "snomed_ct": "271807003",
+      "snomed_termino": "Bullae (finding)"
+    },
+    {
+      "nombre": "Lesiones erosivas tras rotura ampollular",
+      "cie10": "L12.3",
+      "snomed_ct": "399009004",
+      "snomed_termino": "Erosion (finding)"
+    },
+    {
+      "nombre": "Cicatrices atróficas",
+      "cie10": "L91.0",
+      "snomed_ct": "416355000",
+      "snomed_termino": "Scar (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Biopsia de piel para inmunofluorescencia directa",
+      "snomed_ct": "386145003",
+      "snomed_termino": "Skin biopsy (procedure)"
+    },
+    {
+      "nombre": "Inmunofluorescencia directa (confirmación diagnóstica)",
+      "snomed_ct": "401183001",
+      "snomed_termino": "Immunofluorescence procedure (procedure)"
+    },
+    {
+      "nombre": "Serología para anticuerpos anti-colágeno VII",
+      "snomed_ct": "386147009",
+      "snomed_termino": "Antibody detection (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Dapsona",
+      "dosis": "100 mg",
+      "posologia": "Un comprimido al día después de comida",
+      "atc": "J04BA02",
+      "snomed_ct": "372629003",
+      "snomed_termino": "Dapsone (substance)",
+      "indicacion": "Inmunosupresor para epidermólisis bullosa adquirida"
+    },
+    {
+      "nombre": "Prednisona",
+      "dosis": "0.5 mg/kg",
+      "posologia": "Dosis ajustada según respuesta, inicio 30-40 mg diarios con reducción gradual",
+      "atc": "H02AB07",
+      "snomed_ct": "372475007",
+      "snomed_termino": "Prednisone (substance)",
+      "indicacion": "Corticoide sistémico para inmunosupresión en enfermedad ampollares autoinmune"
+    }
+  ],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 74,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 128,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 82,
+      "unidad": "mmHg"
+    },
+    "peso": {
+      "valor": 66,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 162,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 25.1,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Diagnóstico confirmado hace 18 meses mediante biopsia e inmunofluorescencia directa.",
+    "Enfermedad rara autoinmunitaria: anticuerpos contra colágeno VII (membrana basal).",
+    "Historia de múltiples ampollas, erosiones, infecciones secundarias.",
+    "Impacto importante en calidad de vida: limitaciones en actividades, riesgo de infecciones.",
+    "Antecedentes de fototerapia fallida, requiere ahora terapia sistémica más agresiva.",
+    "Seguimiento muy importante en centro especializado de enfermedades ampollares.",
+    "Riesgo potencial de complicaciones por dapsona: hemólisis, ópticas.",
+    "Control regular de laboratorio (hemoglobina, glucosa-6-fosfatasa deshidrogenasa)."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Teresa Gómez Vidal",
+    "edad": 39,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Luis Antonio Bermejo Corral",
+    "especialidad": "Dermatología - Enfermedades Ampollares"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Buenos días, Teresa. Viendo tu historial veo que tienes epidermólisis bullosa adquirida. ¿Cómo lo has estado llevando desde el último control hace seis meses?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Pues la verdad es que mal, doctor. Pensaba que estaba mejor controlado pero las ampollas han vuelto a aparecer. Me salen nuevas cada semana, aunque sea solo una o dos, pero las consecuencias son graves."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Dónde salen principalmente?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[gesturing] En manos, en los antebrazos principalmente. A veces en las piernas. Las manos me afectan mucho porque me cuesta hacer vida normal. Cuando se revientan, quedan heridas abiertas que tardo mucho en cicatrizar y que a veces se infectan."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Y qué ha cambiado desde hace seis meses? ¿Estrés, algo particular?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Sí, he tenido bastante estrés laboral, cambié de trabajo hace tres meses. Y además tuve una infección urinaria hace dos meses que me trataron con antibióticos."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. Recuerdo que el diagnóstico se confirmó hace año y medio con biopsia. ¿Cómo fue la evolución entonces?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflective] Sí, me hicieron la biopsia y esa prueba de inmunofluorescencia. Salió que tenía anticuerpos contra no sé bien qué proteína."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Contra el colágeno VII, en la membrana basal. Es lo que causa tu epidermólisis bullosa. ¿Qué tratamiento tuviste?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listing] Primero intentaron con corticoides tópicos fuertes, luego hicieron fototerapia UVA. Pero la fototerapia no funcionó bien, así que el dermatólogo anterior empezó con unos comprimidos que me hacían daño al estómago, así que los dejé."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Cuáles eran esos comprimidos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[uncertain] No me acuerdo bien del nombre. Uno era como... azatioprina, creo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Azatioprina. Sí, a veces causa problemas gastrointestinales. ¿Y luego qué?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[continuing] Luego solo me daban corticoides tópicos y me decían que evitase el traumatismo. Pero con la enfermedad que tengo, es difícil no traumatizar la piel."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien. Vamos a explorar. [pause] En las manos veo varias ampollas tensas, algunas intactas, otras ya rotas con erosiones. Aquí en el dorso de la mano derecha, veo una ampolla de aproximadamente dos centímetros, tensa, clara. En el dorso de la mano izquierda hay dos erosiones recientes con costras."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding sadly] Esas son de hace cuatro días."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] En los antebrazos, lo mismo. Ampollas intactas y erosiones en varios estadios de cicatrización. Veo también cicatrices atróficas profundas de lesiones anteriores, especialmente aquí. [pause] Y aquí hay zonas de leucoderma, pérdida de pigmentación post-inflamatorio."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[self-consciously] Eso es lo que más me molesta estéticamente. Las cicatrices y las manchas blancas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Lo entiendo perfectamente. Mira, sin trauma no hay ampollas. Así que el objetivo es suppresión inmunológica completa para prevenir nuevas ampollas. Sin ampollas, no hay erosiones, no hay nuevas cicatrices."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Teresa, tu epidermólisis bullosa adquirida está activa. Las ampollas están volviendo porque la supresión inmunológica anterior no era suficiente. Necesitamos intensificar el tratamiento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Significa eso que va a ser más grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No necesariamente más grave, pero sí que necesitamos actuar más agresivamente para controlar los anticuerpos que atacan tu piel. Vamos a usar una combinación de dapsona y corticoides sistémicos, que va a ser más efectiva."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Voy a prescribirte dapsona, 100 miligramos al día. Es un inmunosupresor muy efectivo para enfermedades ampollares. Y voy a iniciar prednisona sistémica, empezamos con 40 miligramos diarios y luego reducimos gradualmente según respuesta."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Corticoides sistémicos? ¿Cuánto tiempo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Los corticoides los usamos para dar un empujón inicial, pero el objetivo es reducirlos gradualmente a medida que la dapsona hace efecto. La dapsona es el tratamiento de mantenimiento a largo plazo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Y la dapsona tiene efectos secundarios?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] La dapsona puede causar hemólisis en algunas personas, así que vamos a controlarte los analíticos cada mes. También puede afectar los ojos, así que quiero que veas a un oftalmólogo antes de empezar. Y necesito que te hagas un test de glucosa-6-fosfatasa deshidrogenasa, porque si tienes deficiencia, la dapsona no te la puedo dar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[uncertain] ¿Cuándo tengo que hacerme eso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[practically] Mañana. Te doy una orden. En cuanto tengamos el resultado, si es negativo, empezamos la dapsona. Además, necesito que veas a oftalmología esta semana."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[questioning] ¿Y cuándo empeor a? Si empeora mientras espero?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[thoughtfully] Es probable que mejore en dos a tres semanas con la prednisona. Pero el tratamiento definitivo es la dapsona. [pause] También te voy a dar cuidados locales: compresas con agua de Burow diluida para las erosiones, antibiótico tópico, vendajes suaves que no adhesivos. Lo importante es evitar el traumatismo."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful but tired] Está claro que es complicado."
+        },
+        {
+          "rol": "medico",
+          "texto": "[empathetically] Lo sé que es difícil. La epidermólisis bullosa adquirida es una enfermedad difícil. Pero con el tratamiento que vamos a empezar, deberías estar mucho mejor. Vamos a necesitar seguimiento muy cercano. ¿Puedes venir cada dos semanas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, claro."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Muy bien. Además, me gustaría que en paralelo consultes con el equipo de enfermedades ampollares del hospital de referencia. Son especialistas en esto y pueden ofrecerte más opciones si es necesario. Te voy a dar el contacto."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] De acuerdo, doctora. Gracias por intentar mejorar esto."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, Teresa. Vamos a intentar controlar tu enfermedad. Los próximos meses son críticos, pero tengo esperanza de que con este régimen veremos mejora importante."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/dermatologia/DER-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "id": "GIN-003",
+  "especialidad": "Ginecología",
+  "resumen": "Paciente mujer de 26 años que acude con irregularidad menstrual, aumento de peso y distribución androgénica de vello. Se realiza ecografía ovárica que evidencia apariencia poliquística. Se diagnostica síndrome de ovario poliquístico y se inician cambios en el estilo de vida e intervención farmacológica.",
+  "diagnostico_principal": {
+    "nombre": "Síndrome de ovario poliquístico",
+    "cie10": "E28.2",
+    "snomed_ct": "69878008",
+    "snomed_termino": "Polycystic ovary syndrome (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Infertilidad primaria",
+      "cie10": "N97.0",
+      "snomed_ct": "365853003",
+      "snomed_termino": "Primary infertility (disorder)"
+    },
+    {
+      "nombre": "Hirsutismo",
+      "cie10": "L68.0",
+      "snomed_ct": "68823001",
+      "snomed_termino": "Hirsutism (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Ciclos menstruales irregulares",
+      "cie10": "N92.6",
+      "snomed_ct": "248686008",
+      "snomed_termino": "Irregular menstruation (finding)"
+    },
+    {
+      "nombre": "Aumento de peso",
+      "cie10": "R63.5",
+      "snomed_ct": "161832006",
+      "snomed_termino": "Weight increased (finding)"
+    },
+    {
+      "nombre": "Acné vulgar",
+      "cie10": "L70.0",
+      "snomed_ct": "47557004",
+      "snomed_termino": "Acne vulgaris (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Ecografía transvaginal",
+      "snomed_ct": "310733005",
+      "snomed_termino": "Transvaginal ultrasound scan (procedure)"
+    },
+    {
+      "nombre": "Análisis hormonal (FSH, LH, testosterona, SHBG)",
+      "snomed_ct": "12394003",
+      "snomed_termino": "Serum or plasma hormone measurement (procedure)"
+    },
+    {
+      "nombre": "Determinación de glucemia en ayunas",
+      "snomed_ct": "87612001",
+      "snomed_termino": "Measurement of glucose level (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Metformina",
+      "dosis": "850 mg",
+      "posologia": "Un comprimido al desayuno y otro con la cena",
+      "atc": "A10BA02",
+      "snomed_ct": "372621004",
+      "snomed_termino": "Metformin (substance)",
+      "indicacion": "Mejora de sensibilidad a la insulina y regularización de ciclos"
+    },
+    {
+      "nombre": "Inositol mio-inositol",
+      "dosis": "2 gramos",
+      "posologia": "Dos gramos al día repartido en dos dosis",
+      "atc": "A13AA00",
+      "snomed_ct": "49370006",
+      "snomed_termino": "Inositol (substance)",
+      "indicacion": "Mejora de fertilidad y sensibilidad insulínica"
+    }
+  ],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 124,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 78,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 70,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 72,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 162,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 27.4,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con debut de síntomas hace dos años tras cambio de anticonceptivo.",
+    "Refiere ganancia de peso de siete kilos en los últimos dos años.",
+    "Ciclos menstruales cada 40-60 días, a veces con regla muy abundante.",
+    "Presencia de acné facial persistente y vello corporal en distribución androgénica.",
+    "Busca embarazo desde hace seis meses sin conseguirlo.",
+    "Se recomienda pérdida de peso mediante dieta hipocalórica y ejercicio regular.",
+    "Se derivará a esterilidad si no hay mejoría tras seis meses de tratamiento."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Laura Prieto Gómez",
+    "edad": 26,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Isabel Fernández Muñoz",
+    "especialidad": "Ginecología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[amablemente] Buenos días, Laura. Veo que viene por irregularidad menstrual y dificultad para quedarse embarazada. Cuénteme desde cuándo nota estos cambios.",
+          "audio_tag": "audio_003_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] Hace como dos años, doctora. Antes me venía la regla cada veintiocho días, regular. Ahora es caótico, a veces cada cuarenta días, a veces sesenta. A veces muy abundante, otras casi nada.",
+          "audio_tag": "audio_003_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[atentamente] ¿Qué coincidió con esos cambios?",
+          "audio_tag": "audio_003_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflexionando] Cambié de anticonceptivo. Pasé del anillo al implante. Quizá fue por eso.",
+          "audio_tag": "audio_003_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[anotando] ¿Y ha notado otros cambios en su cuerpo?",
+          "audio_tag": "audio_003_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[avergonzada] Sí, he cogido peso, unos siete kilos. Y me sale mucho acné. Además, tengo vello donde no lo solía tener, aquí en la cara, el pecho. Bastante incómodo.",
+          "audio_tag": "audio_003_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] Esos síntomas son importantes. ¿Desde cuándo busca embarazo?",
+          "audio_tag": "audio_003_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[tristemente] Llevo unos seis meses. Mi pareja y yo decidimos que quería ser madre y lo estamos intentando, pero no hay forma.",
+          "audio_tag": "audio_003_008"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[sistemáticamente] ¿Antecedentes ginecológicos importantes? ¿Ha tenido embarazos previos?",
+          "audio_tag": "audio_003_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negativamente] No, es la primera vez que lo intentamos. Antes usaba anticonceptivos.",
+          "audio_tag": "audio_003_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiosamente] ¿Antecedentes médicos personales? ¿Enfermedades, alergias?",
+          "audio_tag": "audio_003_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[brevemente] No, estoy sana. Sin medicaciones previas salvo los anticonceptivos.",
+          "audio_tag": "audio_003_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[indagando] ¿En la familia hay diabetes, obesidad, problemas similares?",
+          "audio_tag": "audio_003_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensativamente] Mi madre es un poco diabética, toma metformina. Y mi abuela también tenía problemas de peso. Nadie habla de ciclos irregulares, pero bueno.",
+          "audio_tag": "audio_003_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] ¿Tiene cambios en el apetito? ¿Cansancio especial?",
+          "audio_tag": "audio_003_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensando] Sí, ahora que lo dice, tengo más hambre de la que solía tener. Y me canso más fácilmente que antes.",
+          "audio_tag": "audio_003_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[técnicamente] ¿Tabaco, alcohol, drogas?",
+          "audio_tag": "audio_003_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[claramente] No fumo. Alcohol muy ocasionalmente. Nada más.",
+          "audio_tag": "audio_003_018"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instruyendo] Muy bien, vamos a explorarla. Quítese por favor la ropa de cintura para abajo.",
+          "audio_tag": "audio_003_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[tranquilamente] Claro.",
+          "audio_tag": "audio_003_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[midiendo] Presión arterial ciento veinticuatro sobre setenta y ocho, frecuencia cardíaca setenta, peso setenta y dos kilos, talla ciento sesenta y dos. IMC veintisiete coma cuatro, sobrepeso importante.",
+          "audio_tag": "audio_003_021"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[apenada] Sí, he subido bastante de peso.",
+          "audio_tag": "audio_003_022"
+        },
+        {
+          "rol": "medico",
+          "texto": "[sin juzgar] Es parte de lo que estamos viendo. Observo acné en mejillas y mentón, y vello en distribución androgénica. Vamos a examinarla. [pausa] Abdomen blando, se palpa una distribución central del peso. Ahora ecografía transvaginal.",
+          "audio_tag": "audio_003_023"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[incómoda] Está bien.",
+          "audio_tag": "audio_003_024"
+        },
+        {
+          "rol": "medico",
+          "texto": "[observando] Aquí están los ovarios. [pausa larga] Ven, mira la pantalla. Ambos ovarios están aumentados de tamaño, con múltiples pequeños quistes en disposición periférica. Es una imagen característica de ovarios poliquísticos. El útero se ve normal.",
+          "audio_tag": "audio_003_025"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[asustada] ¿Eso es grave? ¿Cáncer?",
+          "audio_tag": "audio_003_026"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] No, no es cáncer. Es una alteración hormonal bastante frecuente. Junto con los síntomas que refiere, esto es consistente con síndrome de ovario poliquístico.",
+          "audio_tag": "audio_003_027"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[claramente] Laura, basándome en todo lo que hemos visto, el diagnóstico es síndrome de ovario poliquístico, o SOP. Es una alteración endocrina que afecta a la producción de insulina y hormonas sexuales.",
+          "audio_tag": "audio_003_028"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confundida] ¿Y eso explica todo? ¿El peso, el acné, los ciclos raros?",
+          "audio_tag": "audio_003_029"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] Exactamente. El SOP causa resistencia a la insulina, lo que lleva a aumento de peso central, irregularidad menstrual e hiperandrogenismo, que causa acné e hirsutismo.",
+          "audio_tag": "audio_003_030"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿Y cómo es que pasó de golpe al cambiar de anticonceptivo?",
+          "audio_tag": "audio_003_031"
+        },
+        {
+          "rol": "medico",
+          "texto": "[ponderadamente] Probablemente ya estaba ahí, el cambio del anticonceptivo desencadenó la manifestación. El implante tiene menos dosis de hormona, así que la enfermedad subyacente se hizo evidente.",
+          "audio_tag": "audio_003_032"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[ansiosa] ¿Podré quedar embarazada?",
+          "audio_tag": "audio_003_033"
+        },
+        {
+          "rol": "medico",
+          "texto": "[esperanzadora] Sí, muchas mujeres con SOP consiguen embarazarse. El tratamiento que voy a prescribir mejora significativamente las posibilidades de ovulación.",
+          "audio_tag": "audio_003_034"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[organizadamente] Voy a prescribir metformina, ochocientos cincuenta miligramos, uno al desayuno y otro con la cena. Esto mejora la sensibilidad a la insulina.",
+          "audio_tag": "audio_003_035"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[aceptando] ¿Hay algo más?",
+          "audio_tag": "audio_003_036"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuando] También inositol, dos gramos al día. Es un suplemento que potencia el efecto de la metformina. Y lo más importante: cambios en el estilo de vida.",
+          "audio_tag": "audio_003_037"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interesada] ¿Cambios en el estilo de vida?",
+          "audio_tag": "audio_003_038"
+        },
+        {
+          "rol": "medico",
+          "texto": "[claramente] Una dieta con control de carbohidratos, aumentar la fibra, reducir el azúcar. Y ejercicio regular, al menos treinta minutos cinco días a la semana. Perder un cinco a diez por ciento de peso mejora mucho la fertilidad en SOP.",
+          "audio_tag": "audio_003_039"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[conforme] Entiendo. ¿Cuándo nos vemos de nuevo?",
+          "audio_tag": "audio_003_040"
+        },
+        {
+          "rol": "medico",
+          "texto": "[planificando] Le cito en dos meses. Habremos hecho análisis hormonales completos para confirmar el diagnóstico. Si todo va como esperamos y baja de peso, podría haber mejora de los ciclos. En seis meses revisamos.",
+          "audio_tag": "audio_003_041"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[agradecida] Muchas gracias, doctora. Voy a esforzarme.",
+          "audio_tag": "audio_003_042"
+        },
+        {
+          "rol": "medico",
+          "texto": "[alentadora] Seguro que puede. El SOP es manejable y con motivación verá cambios. Nos vemos en dos meses.",
+          "audio_tag": "audio_003_043"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/ginecologia/GIN-003.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "ATC A13AA → A13AA00 (Inositol)"
+    ]
+  }
+}

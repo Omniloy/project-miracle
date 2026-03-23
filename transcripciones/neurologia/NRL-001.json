@@ -1,0 +1,323 @@
+{
+  "id": "NRL-001",
+  "especialidad": "Neurología",
+  "resumen": "Paciente mujer de 32 años que acude a consulta por crisis de migraña con aura de años de evolución. Describe pródromo visual con escotoma centelleante, seguido de cefalea unilateral pulsátil, náuseas y fotofobia. Crisis mensuales que le incapacitan laboralmente durante horas. Se solicita resonancia magnética cerebral para descartar otras patologías. Se pauta tratamiento con triptanes para los episodios agudos y propranolol como profilaxis.",
+  "diagnostico_principal": {
+    "nombre": "Migraña con aura",
+    "cie10": "G43.1",
+    "snomed_ct": "4473006",
+    "snomed_termino": "Migraine with aura (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Escotoma centelleante",
+      "cie10": "H53.1",
+      "snomed_ct": "24877007",
+      "snomed_termino": "Scotoma (finding)"
+    },
+    {
+      "nombre": "Cefalea pulsátil",
+      "cie10": "R51.0",
+      "snomed_ct": "25064002",
+      "snomed_termino": "Headache (finding)"
+    },
+    {
+      "nombre": "Fotofobia",
+      "cie10": "H53.1",
+      "snomed_ct": "409668001",
+      "snomed_termino": "Photophobia (finding)"
+    },
+    {
+      "nombre": "Náuseas",
+      "cie10": "R11.0",
+      "snomed_ct": "422587007",
+      "snomed_termino": "Nausea (finding)"
+    },
+    {
+      "nombre": "Vómitos",
+      "cie10": "R11.1",
+      "snomed_ct": "422400008",
+      "snomed_termino": "Vomiting (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "84728005",
+      "snomed_termino": "Neurologic examination (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética cerebral",
+      "snomed_ct": "241623006",
+      "snomed_termino": "Magnetic resonance imaging of brain (procedure)"
+    },
+    {
+      "nombre": "Oftalmoscopia",
+      "snomed_ct": "397750006",
+      "snomed_termino": "Ophthalmoscopic examination (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Sumatriptán",
+      "dosis": "50 mg",
+      "posologia": "1 comprimido al inicio de la migraña, puede repetirse una vez después de 2 horas si es necesario",
+      "atc": "N02CC08",
+      "snomed_ct": "373545009",
+      "snomed_termino": "Sumatriptan (substance)",
+      "indicacion": "Tratamiento agudo de crisis migrañosas"
+    },
+    {
+      "nombre": "Propranolol",
+      "dosis": "80 mg",
+      "posologia": "1 comprimido cada 12 horas",
+      "atc": "C07AA05",
+      "snomed_ct": "372512008",
+      "snomed_termino": "Propranolol (substance)",
+      "indicacion": "Profilaxis de migrañas"
+    }
+  ],
+  "notas_adicionales": [
+    "Migrañas mensuales que interfieren con la actividad laboral y calidad de vida.",
+    "Importante mantener registro de las crisis para identificar posibles factores desencadenantes.",
+    "Se considera aumentar dosis de propranolol si persisten crisis frecuentes.",
+    "Educación sobre higiene del sueño, evitar estrés y mantener hidratación.",
+    "Seguimiento cada 3 meses para evaluar respuesta al tratamiento preventivo."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Patricia Moreno Vidal",
+    "edad": 32,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María García Sánchez",
+    "especialidad": "Neurología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Patricia. Me alegra verte. Veo en tu informe que padeces migrañas. ¿Cuánto tiempo llevas con esto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Bueno, tengo migrañas desde hace unos diez años, pero en los últimos tres años se han puesto mucho peor. Ahora cada mes tengo al menos dos o tres crisis."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y cómo es la crisis típica? Cuéntame por favor."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] Pues empieza siempre de la misma forma. Primero veo como destellos de luz, como si me hubiera mirado al sol, ¿sabe? En la esquina del ojo izquierdo. Luego aparece un hueco negro en la visión, como si no viera esa parte del campo visual."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] Ese hueco negro, ¿crece o se queda igual?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[animated] Sí, crece. Va avanzando hasta que casi no veo bien durante unos veinte o treinta minutos. Es como un escudo o una cortina que se va moviendo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Y entonces qué pasa?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Entonces, cuando desaparece ese fenómeno visual, me empieza un dolor de cabeza muy fuerte. Es un dolor pulsante, como si tuviera un corazón dentro de la cabeza, siempre al lado izquierdo."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Y cuánto dura el dolor de cabeza?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Entre cuatro y seis horas de puro dolor. No puedo trabajar, no puedo ni mirar las pantallas. Tengo que meterme en una habitación oscura, sin ruidos."
+        },
+        {
+          "rol": "medico",
+          "texto": "[sympathetically] Entiendo, eso es muy incapacitante. ¿Se acompaña de otros síntomas, como náuseas o vómitos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, siempre tengo náuseas. A veces vomito. Y la luz me duele, los ruidos me molestan muchísimo. Con cualquier sonido fuerte empeora el dolor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tomas algo para el dolor?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[resignedly] Tomo paracetamol o ibuprofeno, pero no me hace mucho efecto. La crisis sigue su curso y tengo que esperar a que se pase."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Has notado algo que provoque las crisis? ¿Hay algún factor desencadenante?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Sí, muchos factores. El estrés en el trabajo, cambios en el ciclo menstrual, dormir mal, ciertos olores fuertes como perfumes. También noté que el chocolate me dispara una crisis si lo como dos días antes de tener la regla."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] ¿Y en la familia hay más migrañas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[affirmatively] Ah sí, mi madre también tiene migrañas, aunque ella dice que no ve esas luces raras. Mi hermana también, pero menos graves que las mías."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[encouraging] Bien, Patricia, voy a hacer una exploración neurológica completa. Primero te voy a revisar la vista. Mira mi nariz y dime si ves mis dedos en la periferia. [gesturing]"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concentrating] Sí, veo sus dedos en los dos lados."
+        },
+        {
+          "rol": "medico",
+          "texto": "[systematically] Ahora te pido que sigas mi dedo con la mirada sin mover la cabeza. [moving finger] ¿Ves bien todo el movimiento?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, perfectamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Excelente. Ahora voy a explorar tus reflejos. Relaja los brazos. [tapping with reflex hammer] Muy bien, los reflejos están normales. ¿Te duele la cabeza ahora?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, ahora mismo no, doctor. Hoy he tenido una crisis hace tres días, así que estoy mejor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Perfecto. La exploración neurológica es completamente normal. Eso es buena señal. ¿Tienes alguna pregunta hasta ahora?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Bueno, me preocupa un poco. ¿Qué causa la migraña? ¿Hay algo que pueda hacer para evitarlas?"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly, educatingly] Patricia, el patrón que describes es muy clásico de migraña con aura. El aura son esos síntomas visuales que aparecen antes del dolor. La migraña es una afección neurológica que implica cambios en los vasos sanguíneos cerebrales y una mayor sensibilidad a los estímulos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] ¿Y por qué me la ha dado?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Hay varios factores. Está la genética, como ves en tu familia, la hormonal en tu caso relacionada con el ciclo menstrual, y luego los factores desencadenantes como estrés, falta de sueño, ciertos alimentos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Puede ser grave? ¿Puedo tener un derrame o algo así?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es una pregunta muy común. La migraña con aura es una condición benigna, pero queremos estudiarla bien. Por eso te voy a pedir una resonancia magnética del cerebro, sobre todo para tranquilizarte y descartar otras causas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Bien, me alegra saber eso."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[organizedly] El plan es doble. Para cuando tengas una crisis, te prescribo sumatriptán. Es un medicamento muy efectivo para abortar la migraña una vez que ha empezado."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hopeful] ¿Y funciona bien?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confidently] Muy bien. La mayoría de pacientes notan mejoría en treinta a sesenta minutos. Tomas un comprimido de cincuenta miligramos al inicio de la crisis. Si después de dos horas no ha mejorado bien, puedes tomar otro."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] ¿Y para evitar que lleguen las crisis?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Para prevenir, te doy propranolol, que es un betabloqueante que reduce la frecuencia de las migrañas. Octenta miligramos al día, repartidos en dos tomas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] ¿Y tiene efectos secundarios?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] El propranolol es bien tolerado en general. Algunos pacientes notan un poco de cansancio o disminución de la frecuencia cardíaca, pero son tolerables. Si los efectos adversos son importantes, podemos cambiar a otro medicamento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[seriously] ¿Y además de los medicamentos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[advising] Muy importante es llevar un diario de las crisis. Anota cuándo empiezan, cuánto duran, qué desencadenantes identificas, qué medicamentos tomas y cómo responden. Esto me ayuda a ajustar el tratamiento. Además, hay que evitar los factores desencadenantes: duerme bien, mantén estable el horario, evita estrés, hidrátate, evita ciertos alimentos como chocolate o alcohol en exceso."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Entendido. ¿Y la resonancia?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Te la prescribo para dentro de dos semanas. Es importante descartar cualquier otra patología. Te llamaremos si sale algo anómalo. Mientras, empieza con los medicamentos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Esto me da mucha tranquilidad."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] De nada, Patricia. Te vemos en un mes para valorar cómo responde el tratamiento preventivo."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neurologia/NRL-001.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

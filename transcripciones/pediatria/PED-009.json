@@ -1,0 +1,319 @@
+{
+  "id": "PED-009",
+  "especialidad": "Pediatría",
+  "resumen": "Niño de 10 meses, Marcos, con fibrosis quística diagnosticada por screening neonatal. Presentado por su madre Laura con síntomas respiratorios: tos crónica, sibilancias. Peso bajo para edad (6.8 kg), talla 72 cm. Exploración: crepitantes bilaterales, abdomen distendido. Se inicia dornasa alfa, enzimas pancreáticos y vitaminas liposolubles. ENFERMEDAD RARA.",
+  "diagnostico_principal": {
+    "nombre": "Fibrosis quística con manifestaciones pulmonares",
+    "cie10": "E84.0",
+    "snomed_ct": "190905008",
+    "snomed_termino": "Cystic fibrosis with pulmonary manifestations (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Insuficiencia pancreática exocrina",
+      "cie10": "K86.8",
+      "snomed_ct": "46595003",
+      "snomed_termino": "Pancreatic insufficiency (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Tos crónica",
+      "cie10": "R05.9",
+      "snomed_ct": "49727002",
+      "snomed_termino": "Cough (finding)"
+    },
+    {
+      "nombre": "Sibilancias",
+      "cie10": "R06.02",
+      "snomed_ct": "12675008",
+      "snomed_termino": "Wheezing (finding)"
+    },
+    {
+      "nombre": "Retraso en el crecimiento",
+      "cie10": "R62.5",
+      "snomed_ct": "253184004",
+      "snomed_termino": "Growth failure (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Test del sudor (sweat chloride test)",
+      "snomed_ct": "33747006",
+      "snomed_termino": "Sweat test (procedure)"
+    },
+    {
+      "nombre": "Auscultación pulmonar",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of the chest (procedure)"
+    },
+    {
+      "nombre": "Oximetría de pulso",
+      "snomed_ct": "268504005",
+      "snomed_termino": "Pulse oximetry (procedure)"
+    },
+    {
+      "nombre": "Radiografía de tórax",
+      "snomed_ct": "399208008",
+      "snomed_termino": "Plain radiography of chest (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Dornasa alfa",
+      "dosis": "2.5 mg",
+      "posologia": "2.5 mg una vez al día vía nebulizador, diluida en 2.5 ml de solución salina",
+      "atc": "R05CB13",
+      "snomed_ct": "417329007",
+      "snomed_termino": "Dornase alfa (substance)",
+      "indicacion": "Terapia mucolítica para mejorar función pulmonar en fibrosis quística"
+    },
+    {
+      "nombre": "Enzimas pancreáticos (Pancreatina)",
+      "dosis": "500 U lipasa/kg/comida",
+      "posologia": "Ajustar según tolerancia gastrointestinal y absorbancia de grasas",
+      "atc": "A09AA02",
+      "snomed_ct": "407288006",
+      "snomed_termino": "Pancreatic enzyme (substance)",
+      "indicacion": "Suplemento enzimático para insuficiencia pancreática exocrina"
+    },
+    {
+      "nombre": "Vitaminas liposolubles (A, D, E, K)",
+      "dosis": "Según fórmula pediátrica adaptada a FQ",
+      "posologia": "Administración diaria, ajustada según niveles séricos",
+      "atc": "A11AA03",
+      "snomed_ct": "412264004",
+      "snomed_termino": "Fat-soluble vitamin (product)",
+      "indicacion": "Compensar malabsorción de grasas y vitaminas liposolubles"
+    }
+  ],
+  "constantes_vitales": {
+    "temperatura": {
+      "valor": 37.2,
+      "unidad": "°C"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 132,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 52,
+      "unidad": "resp/min"
+    },
+    "saturacion_oxigeno": {
+      "valor": 96,
+      "unidad": "%"
+    },
+    "peso": {
+      "valor": 6.8,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 72,
+      "unidad": "cm"
+    }
+  },
+  "notas_adicionales": [
+    "ENFERMEDAD RARA: Fibrosis quística diagnosticada por screening neonatal (test positivo del tripsinógeno inmunorreactivo).",
+    "Test del sudor confirmatorio: cloro del sudor 78 mEq/L (confirmatorio > 60 mEq/L).",
+    "Genotipado: mutación F508del en homocigoto (DF508/DF508).",
+    "Edad al diagnóstico: neonatal (4 semanas de vida).",
+    "Peso bajo para edad: P5 (esperado P50).",
+    "Radiografía de tórax: cambios tempranos compatibles con bronquiectasia incipiente.",
+    "Test de elastasa pancreática en heces: < 200 U/g (insuficiencia pancreática severa).",
+    "Seguimiento interdisciplinario: Neumología pediátrica, Gastroenterología, Nutrición, Endocrinología.",
+    "Fisioterapia respiratoria: 2 sesiones diarias de drenaje postural y vibración.",
+    "Revisión cada 3 meses durante el primer año, luego cada 2 meses en consulta de FQ especializada."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Marcos González Torres",
+    "edad": 10,
+    "edad_unidad": "meses",
+    "sexo": "masculino",
+    "guardian": "Laura Torres (madre)"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María Gómez Castellanos",
+    "especialidad": "Pediatría - Especialista en Fibrosis Quística"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Laura. Veo en el expediente que Marcos fue diagnosticado de fibrosis quística en el screening neonatal. ¿Cómo ha sido la evolución hasta ahora?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Doctora, ha sido todo muy rápido. A los pocos días de nacido salió positivo el test, y luego confirmaron que tiene fibrosis quística. Desde entonces tiene muchos síntomas. Tos constantemente, sobre todo por la noche."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿La tos es productiva? ¿Expulsa mucosidad?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, mucosidad espesa. Además de la tos, tiene dificultad para respirar cuando se mueve o come. Y sus deposiciones son muy grasientas, flotantes, varias veces al día."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Eso es muy típico de la enfermedad. ¿Cómo está ganando peso? ¿Se alimenta bien?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Ese es otro problema. Aunque come bastante, no está ganando peso bien. Pesa mucho menos que otros bebés de su edad."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] De acuerdo. Cuénteme del embarazo y parto. ¿Algún problem?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] Embarazo normal. Parto vaginal a término, peso al nacer tres kilos. Apgar bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiring] ¿Antecedentes familiares de fibrosis quística u otra enfermedad genética?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada conocido. Nosotros somos primos segundos, pero sin enfermedades en las familias."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] El screening detectó fibrosis quística. ¿Se hizo el test del sudor confirmatorio?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, nos enviaron a un centro especializado. El test del sudor salió positivo, muy alto. Y luego una prueba genética confirmó mutaciones."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Ha habido infecciones respiratorias? ¿Hospitalizaciones?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Hace dos meses tuvo una infección respiratoria que requirió hospital. Se la trataron con antibióticos intravenosos."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Voy a explorar a Marcos. Laura, acuéstalo en la camilla sin ropa para verlo bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Peso seis coma ocho kilos, talla setenta y dos centímetros. Está por debajo del percentil cinco para la edad. Se nota cierta distensión abdominal, signo de malabsorción."
+        },
+        {
+          "rol": "medico",
+          "texto": "[taking vitals] Temperatura treinta y siete coma dos grados. Frecuencia cardíaca ciento treinta y dos latidos por minuto. Frecuencia respiratoria cincuenta y dos respiraciones por minuto, elevada. Saturación de oxígeno noventa y seis por ciento."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining lungs] A la auscultación pulmonar, oigo crepitantes finos bilaterales en ambas bases. Hay algunas sibilancias ocasionales. Pecho con hiperinsuflación."
+        },
+        {
+          "rol": "medico",
+          "texto": "[palpating abdomen] Abdomen: distensión, blando. Hígado palpable dos centímetros bajo el reborde costal. Puede haber esteatosis hepática por malabsorción crónica."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining skin] Piel: turgencia un poco disminuida, signo de desnutrición relativa. Heces: diaper muestra depósitos grasientos característicos."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Laura, Marcos tiene fibrosis quística confirmada genéticamente. La enfermedad afecta páncreas y pulmones principalmente. El páncreas no produce enzimas suficientes para digerir grasas, y los pulmones están acumulando mucosidad."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Cuál es el pronóstico? ¿Va a sobrevivir?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Con tratamiento moderno, los niños con fibrosis quística viven décadas. La mediana de supervivencia ha aumentado mucho. Pero requiere tratamiento intensivo y seguimiento multidisciplinario riguroso."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Necesitamos un plan de tratamiento agresivo. Primero, dornasa alfa para los pulmones. Dos coma cinco miligramos una vez al día vía nebulizador, disuelto en suero fisiológico."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] ¿Qué es la dornasa?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] Es una enzima que descompone el ADN de las bacterias muertas en la mucosidad, haciéndola menos viscosa para que pueda expulsarse mejor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Segundo, enzimas pancreáticos. Debo calcular la dosis exacta por peso y necesidades, pero básicamente va en cada comida. Ayuda a digerir las grasas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Tercero, vitaminas liposolubles: A, D, E, K. Son fat-soluble, se pierden por la malabsorción de grasas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Cuarto, fisioterapia respiratoria: dos sesiones diarias de drenaje postural y vibración del pecho para movilizar las secreciones."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[overwhelmed] Es mucho, doctora. ¿Cómo hago todo esto?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Lo sé que abruma. Voy a derivarte a la clínica especializada de fibrosis quística. Ahí tenemos enfermeras y especialistas que te entrenarán. Además, hay asociaciones de pacientes que ofrecen apoyo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vuelves cada tres meses durante el primer año. Mientras, cualquier síntoma respiratorio nuevo, fiebre o cambio en las deposiciones, me avisas. El control es fundamental en esta enfermedad."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Eso nos ayuda a entender la situación."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/pediatria/PED-009.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "ATC A11AA → A11AA03 (Vitaminas liposolubles)"
+    ]
+  }
+}

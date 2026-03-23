@@ -1,0 +1,314 @@
+{
+  "id": "CAR-008",
+  "especialidad": "Cardiología",
+  "resumen": "Paciente varón de 32 años que acude urgencias con dolor torácico pleurítico de 24 horas que mejora al inclinarse hacia adelante. Se detecta roce pericárdico en auscultación. El electrocardiograma muestra cambios difusos del segmento ST. Se diagnostica pericarditis aguda. Se inicia tratamiento con antiinflamatorios y colchicina.",
+  "diagnostico_principal": {
+    "nombre": "Pericarditis aguda no especificada",
+    "cie10": "I30.9",
+    "snomed_ct": "3238004",
+    "snomed_termino": "Pericarditis (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Dolor torácico pleurítico",
+      "cie10": "R07.9",
+      "snomed_ct": "29650008",
+      "snomed_termino": "Chest pain (finding)"
+    },
+    {
+      "nombre": "Fiebre",
+      "cie10": "R50.9",
+      "snomed_ct": "386661006",
+      "snomed_termino": "Fever (finding)"
+    },
+    {
+      "nombre": "Disnea leve",
+      "cie10": "R06.0",
+      "snomed_ct": "267036007",
+      "snomed_termino": "Dyspnea (finding)"
+    },
+    {
+      "nombre": "Malestar general",
+      "cie10": "R53.1",
+      "snomed_ct": "272128006",
+      "snomed_termino": "Malaise and fatigue (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Electrocardiograma de doce derivaciones",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Radiografía de tórax",
+      "snomed_ct": "399208008",
+      "snomed_termino": "Plain chest X-ray (procedure)"
+    },
+    {
+      "nombre": "Ecocardiograma transtorácico",
+      "snomed_ct": "430701000",
+      "snomed_termino": "Transthoracic echocardiography (procedure)"
+    },
+    {
+      "nombre": "Analítica sanguínea con PCR y troponina",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética cardíaca",
+      "snomed_ct": "428627003",
+      "snomed_termino": "Cardiac magnetic resonance imaging (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Ibuprofeno",
+      "dosis": "600 mg",
+      "posologia": "1 comprimido cada seis horas durante dos semanas",
+      "atc": "M01AE01",
+      "snomed_ct": "387207008",
+      "snomed_termino": "Ibuprofen (substance)",
+      "indicacion": "Antiinflamatorio para pericarditis"
+    },
+    {
+      "nombre": "Colchicina",
+      "dosis": "0.5 mg",
+      "posologia": "1-2 comprimidos al día durante tres meses",
+      "atc": "A16AX01",
+      "snomed_ct": "373529005",
+      "snomed_termino": "Colchicine (substance)",
+      "indicacion": "Prevención de recurrencia de pericarditis"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 128,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 94,
+      "unidad": "lpm"
+    },
+    "temperatura": {
+      "valor": 38.2,
+      "unidad": "°C"
+    },
+    "saturacion_oxigeno": {
+      "valor": 97,
+      "unidad": "%"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente joven sin antecedentes médicos previos de interés.",
+    "Inicio agudo de síntomas con dolor torácico que comenzó durante la actividad física.",
+    "El dolor es pleurítico, empeora con la respiración profunda y con decúbito supino.",
+    "El dolor mejora claramente al inclinarse hacia adelante.",
+    "Se ausculta roce pericárdico en foco aórtico.",
+    "El electrocardiograma muestra cambios evolutivos: elevación difusa del segmento ST y cambios del intervalo PR.",
+    "La troponina inicial es negativa pero se mantiene vigilancia.",
+    "Se descarta infarto de miocardio.",
+    "Probable etiología viral aunque no se ha identificado virus específico.",
+    "Se remite a cardiólogo para seguimiento a las dos semanas."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Andrés Prieto Gil",
+    "edad": 32,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Alejandro Ruiz Castillo",
+    "especialidad": "Cardiología"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Buenos días, Andrés. Soy el Doctor Alejandro Ruiz, cardiólogo. Veo que ha venido con dolor en el pecho. ¿Cuándo empezó?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[painfully] Ayer por la mañana, doctor. Estaba haciendo ejercicio en el gimnasio y de repente sentí un dolor muy fuerte aquí, en el pecho."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cómo es el dolor? ¿Es constante o va y viene?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] Es un dolor agudo, que empeora cuando respiro profundamente o cuando me acuesto de espaldas. Es extraño porque cuando me inclino hacia adelante se me pasa casi completamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Ha tenido fiebre?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, tengo treinta y ocho coma dos grados. Ayer subí un poco más. Y me siento mal en general, cansado."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Andrés, ¿tiene algún antecedente médico? ¿Enfermedades del corazón?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, doctor. Siempre he estado muy sano. Nunca tuve problemas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Ha estado enfermo recientemente? ¿Catarros, infecciones?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Ahora que lo dice, hace una semana tuve un resfriado con tos. Nada grave, se me pasó en dos o tres días."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso es relevante. ¿Toma alguna medicación?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No, nada. Soy joven y estoy bien."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] ¿Fuma, consume drogas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No fumo. Alguna cervecita en fiestas, nada más."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿En su familia hay problemas del corazón?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No que yo sepa. Todos están bien."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarle. Quítese la camiseta por favor y acuéstese en la camilla. Voy a auscultar bien el corazón."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] Claro, doctor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[focusing intently] Aquí escucho un roce pericárdico, es muy característico. Es como un sonido de fricción. Voy a tomarle la tensión: ciento veintiocho sobre setenta y seis, eso está bien. Frecuencia cardíaca noventa y cuatro, un poco acelerada. Saturación noventa y siete por ciento, perfecto. La temperatura que le medí en recepción es treinta y ocho coma dos grados."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Qué significa ese roce que oye?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Ese roce es un signo de inflamación del pericardio, que es la membrana que rodea el corazón. Vamos a hacer un electrocardiograma para confirmarlo."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[authoritatively] Andrés, el electrocardiograma confirma mi sospecha. Tiene cambios difusos del segmento ST y cambios del intervalo PR. Todo eso es compatible con pericarditis."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Qué es eso? ¿Es grave?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] La pericarditis es la inflamación del pericardio. Generalmente es de origen viral, como era probable dada la infección que tuvo hace una semana. No es un infarto."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] ¿No es el corazón entonces?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] El corazón en sí está bien, es la membrana que lo rodea la que está inflamada. Por eso tiene el dolor pleurítico que mejora al inclinarse hacia adelante."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Voy a iniciar tratamiento antiinflamatorio. Ibuprofeno seiscientos miligramos cada seis horas durante dos semanas. Y colchicina, medio miligramo una o dos veces al día durante tres meses para evitar que recurra."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Cuándo podré volver al gimnasio?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Nada de ejercicio hasta que se sienta mejor, mínimo dos semanas. Luego podrá volver de manera gradual. El reposo relativo es importante."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Esto puede volver a pasar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] La pericarditis viral puede recurrir en algunos pacientes, por eso le doy la colchicina como prevención. Si vuelven los síntomas, viene inmediatamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Bien, ¿qué síntomas debo vigilar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Si tiene dolor torácico severo, dificultad importante para respirar, o si se siente muy mal, venga a urgencias. Pero con el tratamiento debería mejorar en unos pocos días."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctor. Me tranquiliza saber que no es nada del corazón."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] No es nada grave. Vamos a hacer un ecocardiograma en dos semanas para confirmar que no hay derrame pericárdico significativo. Mucho ánimo."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/cardiologia/CAR-008.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

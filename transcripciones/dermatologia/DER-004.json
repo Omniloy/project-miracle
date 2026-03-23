@@ -1,0 +1,276 @@
+{
+  "id": "DER-004",
+  "especialidad": "Dermatología",
+  "resumen": "Paciente varón de 56 años con lesión pigmentada de 8 meses de evolución en tronco posterior compatible con melanoma maligno. Se realiza dermatoscopia y biopsia excisional. Diagnóstico confirmado de melanoma. Se comenta sobre la importancia de vigilancia, fotoprotección y seguimiento oncológico.",
+  "diagnostico_principal": {
+    "nombre": "Melanoma maligno de la piel del tronco",
+    "cie10": "C43.5",
+    "snomed_ct": "372244006",
+    "snomed_termino": "Malignant melanoma of skin (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Queratosis seborreica",
+      "cie10": "L82.1",
+      "snomed_ct": "400010007",
+      "snomed_termino": "Seborrheic keratosis (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Lesión pigmentada de aumento de tamaño",
+      "cie10": "L81.9",
+      "snomed_ct": "400010007",
+      "snomed_termino": "Pigmented lesion (finding)"
+    },
+    {
+      "nombre": "Cambio de color y asimetría",
+      "cie10": "L81.9",
+      "snomed_ct": "278883006",
+      "snomed_termino": "Irregular pigmentation (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Dermatoscopia",
+      "snomed_ct": "398295003",
+      "snomed_termino": "Dermatoscopy (procedure)"
+    },
+    {
+      "nombre": "Biopsia excisional de piel",
+      "snomed_ct": "386145003",
+      "snomed_termino": "Excision of skin lesion (procedure)"
+    },
+    {
+      "nombre": "Estudio histopatológico",
+      "snomed_ct": "29554004",
+      "snomed_termino": "Pathology procedure (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 78,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 138,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 86,
+      "unidad": "mmHg"
+    },
+    "peso": {
+      "valor": 84,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 178,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 26.5,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con fototipo II, antecedentes de quemaduras solares en infancia y adolescencia.",
+    "No refiere familiares con cáncer de piel.",
+    "Trabaja en exteriores frecuentemente sin protección solar adecuada.",
+    "Lesión descubierta casualmente durante vacaciones de verano.",
+    "Paciente ansioso por el diagnóstico oncológico.",
+    "Referencia a oncología dermatológica solicitada para ampliación de márgenes y vigilancia sistémica."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Pedro Domínguez Fuentes",
+    "edad": 56,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Antonio Martínez Vega",
+    "especialidad": "Dermatología Oncológica"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously] Buenos días, Pedro. Veo que traes fotos de una lesión cutánea que te preocupa. Cuéntame cómo es y cuándo la detectaste."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Pues mira, hace ocho meses que tengo este lunar en la espalda, aquí en el hombro. Al principio era pequeño, pero he visto que ha ido creciendo. Además, tengo una parte marrón oscura y otra como más rojiza, como si tuviera varios colores."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Es algo que cambió de repente o ha sido gradual?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Gradual. En estos ocho meses ha crecido, ahora debe tener de ancho casi un centímetro. Y la verdad es que cuando me veo de espaldas en el espejo, de perfil, me parece que sobresale como un poco, como si tuviera relieve."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Has notado picor, sangrado, costras o algo que supure?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Ahora que lo dice, sí. A veces pica un poquito. Y hace unas semanas que me di un golpe al ponerme la camiseta y empezó a sangrar, luego tardó en cicatrizar, una semana o así."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Importante. Cuéntame un poco sobre tu exposición solar. ¿Pasaste mucho tiempo al sol de joven?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflective] Sí, bastante. De pequeño pasábamos veranos enteros en la playa, sin protección solar. Me acuerdo de tener quemaduras fuertes de sol varias veces. Y ahora trabajo en construcción, mucho tiempo al aire libre."
+        },
+        {
+          "rol": "medico",
+          "texto": "[concerned] ¿Usas protección solar en el trabajo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sheepishly] La verdad es que no mucho. A veces me pongo gafas de sol pero poco más. Pensaba que a esta edad el sol no hacía tanto daño."
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Eso es importante que cambiemos. ¿Hay alguien en tu familia con cáncer de piel, melanoma?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No, que yo sepa no."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Tienes otros lunares? ¿Muchos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Tengo varios, pequeños, distribuidos por todo el cuerpo. Pero este del hombro es diferente a los demás, más grande y con ese cambio de color."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Bien, vamos a examinar esa lesión. Quítate la camiseta por favor. [pause] Veo la lesión aquí en el hombro. Mide aproximadamente nueve milímetros, asimétrica, con bordes irregulares. Tiene un color heterogéneo: zona central marrón oscura casi negra, periférico más rojizo. Hay algo de relieve, parece nodular."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Qué significa eso, doctor?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Espera, vamos a hacerle una dermatoscopia para verla mejor con ampliación. [pause using procedural language] Usamos este aparatito que es como una lupa con luz. Así vemos los patrones de la lesión a nivel celular. [pause] Veo aquí un patrón multicompartimentalizado, líneas de reticulación oscura, algunas áreas con patrón de glándulas sebáceas. Hay algo que me preocupa, lo que se llama atipias pigmentarias, zonas donde la distribución del color es muy caótica."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] Eso no suena bien..."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously, carefully] Pedro, tengo que ser honesto contigo. Esta lesión me genera dudas significativas. Aunque solo con dermatoscopia no puedo estar cien por cien seguro, los signos que veo aquí son preocupantes para melanoma. Necesitamos hacer una biopsia para confirmar el diagnóstico. Es la única forma de saberlo con certeza."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shocked] ¿Melanoma? ¿Cáncer de piel? Dios mío, doctor..."
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Espera, no saltemos a conclusiones. Primero necesitamos confirmar. Vamos a hacer una biopsia excisional: quitamos la lesión completa y la enviamos a analizar en el microscopio. Es una pequeña intervención, con anestesia local. No duele."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[fearfully] ¿Y si es melanoma? ¿Cuál es el pronóstico?"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[carefully] Primero confirmemos, y luego te hablo de todo. Vamos a hacer la biopsia hoy. Te pongo anestesia local en la zona, cojo la lesión completa con márgenes de seguridad, y la mando al laboratorio. En diez días tenemos el resultado histológico, que nos dice exactamente qué es."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] ¿Cómo que márgenes de seguridad?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] Significa que quitamos la lesión pero también un poco de piel sana alrededor, por si acaso. Es para evitar que si es melanoma, queden células malignas. [pause] Después de los resultados, te explicaré todo detalladamente y, si es necesario, hablaremos de ampliación de márgenes y seguimiento."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Seguimiento de qué?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[thoughtfully] Si fuera melanoma, necesitarías chequeos periódicos, resonancias, análisis de sangre. Pero eso es cuando sepamos qué es. Ahora vamos paso a paso. [pause] Lo que sí quiero que hagas de ahora en adelante es que cambies tus hábitos de exposición solar. Protector solar diario, SPF mínimo 50+, ropa protectora cuando trabajes. Es fundamental."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Vale, lo haré. ¿Duele mucho la biopsia?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No duele. Te inyecto anestesia local, sentirás el pinchazo pero nada más. Luego el procedimiento no duele. La zona puede sangrar un poco, ponemos presión y se controla. Te vendamos, y dentro de dos horas puedes irte a casa normal."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[taking it in] ¿Y no puedo trabajar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[practically] Mejor que descanses hoy. Mañana puedes hacer vida normal pero evita sudar mucho los próximos dos días. La herida tiene puntos de sutura, que te los quitamos en diez días, justo cuando tengamos el resultado. ¿De acuerdo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful but anxious] Vale, doctor. Muchas gracias, y espero que sea una falsa alarma."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vamos a descubrirlo. Ahora mismo no asumas nada, el resultado dirá. Te cito para los sutures y resultados en diez días. Si tienes cualquier duda antes, me llamas."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/dermatologia/DER-004.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

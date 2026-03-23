@@ -1,0 +1,388 @@
+{
+  "id": "NEU-010",
+  "especialidad": "Neumología",
+  "resumen": "Paciente mujer en edad fértil de 36 años con diagnóstico confirmado de linfangioleiomiomatosis (LAM), enfermedad rara pulmonar que afecta exclusivamente a mujeres. Acude para evaluación de síntomas: disnea de esfuerzo progresiva, tos seca, y antecedente de neumotórax espontáneo recurrente hace 6 meses. En la tomografía se confirman quistes pulmonares múltiples características de LAM. Se realiza valoración funcional y se inicia seguimiento cercano con posible tratamiento médico.",
+  "diagnostico_principal": {
+    "nombre": "Linfangioleiomiomatosis",
+    "cie10": "J84.8",
+    "snomed_ct": "277844007",
+    "snomed_termino": "Lymphangioleiomyomatosis (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Neumotórax espontáneo recurrente",
+      "cie10": "J93.0",
+      "snomed_ct": "31939003",
+      "snomed_termino": "Pneumothorax (disorder)"
+    },
+    {
+      "nombre": "Insuficiencia respiratoria crónica leve",
+      "cie10": "J96.9",
+      "snomed_ct": "46560003",
+      "snomed_termino": "Chronic respiratory failure (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Disnea de esfuerzo progresiva",
+      "cie10": "R06.02",
+      "snomed_ct": "37980006",
+      "snomed_termino": "Dyspnea on exertion (finding)"
+    },
+    {
+      "nombre": "Tos seca crónica",
+      "cie10": "R05.9",
+      "snomed_ct": "16331000",
+      "snomed_termino": "Dry cough (finding)"
+    },
+    {
+      "nombre": "Neumotórax espontáneo",
+      "cie10": "R06.02",
+      "snomed_ct": "4386001",
+      "snomed_termino": "Apnea (finding)"
+    },
+    {
+      "nombre": "Dolor torácico ocasional",
+      "cie10": "R07.9",
+      "snomed_ct": "29650001",
+      "snomed_termino": "Chest pain (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración física con auscultación pulmonar",
+      "snomed_ct": "37931006",
+      "snomed_termino": "Auscultation of chest (procedure)"
+    },
+    {
+      "nombre": "Tomografía computarizada de alta resolución (TCAR) de tórax",
+      "snomed_ct": "416203003",
+      "snomed_termino": "High-resolution CT of chest (procedure)"
+    },
+    {
+      "nombre": "Prueba de función pulmonar (espirometría y DLCO)",
+      "snomed_ct": "23426006",
+      "snomed_termino": "Spirometry (procedure)"
+    },
+    {
+      "nombre": "Saturación de oxígeno transcutánea",
+      "snomed_ct": "27553307",
+      "snomed_termino": "Pulse oximetry (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética abdominal (evaluación angiomiolipomas renales)",
+      "snomed_ct": "241696004",
+      "snomed_termino": "Magnetic resonance imaging of abdomen (procedure)"
+    },
+    {
+      "nombre": "Prueba de caminata de seis minutos",
+      "snomed_ct": "711101003",
+      "snomed_termino": "Six-minute walk test (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Sirolimús",
+      "dosis": "2 mg",
+      "posologia": "Una vez diaria, ajustado según niveles plasmáticos",
+      "atc": "L01XX",
+      "snomed_ct": "395897001",
+      "snomed_termino": "Sirolimus (substance)",
+      "indicacion": "Inmunosupresor para ralentizar progresión de LAM"
+    },
+    {
+      "nombre": "Oxígeno suplementario",
+      "dosis": "1-2 L/min",
+      "posologia": "Según necesidad, especialmente durante esfuerzo y reposo nocturno",
+      "atc": "N02BH32",
+      "snomed_ct": "74668003",
+      "snomed_termino": "Oxygen (substance)",
+      "indicacion": "Mantener saturación de oxígeno >88%"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 124,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 80,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 18,
+      "unidad": "rpm"
+    },
+    "saturacion_oxigeno_reposo": {
+      "valor": 94,
+      "unidad": "%"
+    },
+    "saturacion_oxigeno_ejercicio": {
+      "valor": 88,
+      "unidad": "%"
+    },
+    "temperatura": {
+      "valor": 36.8,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Linfangioleiomiomatosis es enfermedad rara pulmonar que afecta EXCLUSIVAMENTE a mujeres en edad fértil.",
+    "Diagnóstico confirmado hace 2 años mediante biopsia transbronquial e inmunohistoquímica (HMB45+, α-SMA+).",
+    "Causas del neumotórax recurrente: ruptura de quistes pulmonares característicos de LAM.",
+    "Neumotórax anterior hace 6 meses tratado conservadoramente.",
+    "TCAR: patrón característico con quistes pulmonares de distribución difusa, espacios claros entre los quistes sin fibrosis parenquimal.",
+    "FEV1: 78% del teórico, en leve descenso. DLCO: 65% del teórico.",
+    "Prueba de caminata de 6 minutos: distancia 420 metros con desaturación a 88%.",
+    "RM abdominal: sin angiomiolipomas renales detectables (LAM extrapulmonar).",
+    "En tratamiento con sirolimús desde hace 18 meses, con buena tolerancia.",
+    "Se recomienda vigilancia regular, evitar embarazos sin asesoramiento médico, usar anticonceptivos.",
+    "Antecedentes: sin familiares conocidos con LAM (forma esporádica).",
+    "Vocacional: profesora de educación física, con limitaciones actuales en actividades de alta intensidad.",
+    "Seguimiento cada 3 meses con PFT; cada 12 meses TCAR para monitorizar quistes pulmonares y detectar posibles nuevos neumotórax."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Virginia Calvo Ortega",
+    "edad": 36,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena Molina García",
+    "especialidad": "Neumología"
+  },
+  "voces": {
+    "medico_voice_id": "erKgR0s8Y67t4iiHuA9R",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Virginia. Es tu revisión trimestral de la linfangioleiomiomatosis. ¿Cómo te has sentido estos últimos tres meses?",
+          "audio_tag": "NEU-010_001_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Buenos días, doctora. Pues más o menos igual. Sigo con la tos y la dificultad para respirar cuando hago ejercicio. Afortunadamente no he tenido otro neumotórax como el de hace seis meses.",
+          "audio_tag": "NEU-010_002_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Eso es muy importante. Ese neumotórax debe haber sido muy asustador. ¿Cómo llevas psicológicamente la enfermedad?",
+          "audio_tag": "NEU-010_003_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[seriously] La verdad es que al principio fue duro. Una enfermedad rara que solo tienen mujeres, sin cura, y con ese neumotórax tan de repente... Pero he aprendido a vivir con ella. Mi médico me ha ayudado mucho.",
+          "audio_tag": "NEU-010_004_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Y la medicación? ¿Cómo toleras el sirolimús?",
+          "audio_tag": "NEU-010_005_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[matter-of-factly] Bien, doctora. Me lo tomo todos los días sin problemas. Luego me hago los análisis para verificar que los niveles son los correctos. No he tenido efectos secundarios importantes.",
+          "audio_tag": "NEU-010_006_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Excelente. ¿Y laboralmente? ¿Cómo va el trabajo?",
+          "audio_tag": "NEU-010_007_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[with concern] Pues eso es lo difícil. Soy profesora de educación física, ¿sabes? Pero ahora no puedo hacer todo lo que haría normalmente. Las clases de ejercicio intenso me dejan sin aliento. He tenido que ajustar mis actividades, hacer más teoría que práctica, delegar algunos ejercicios en otros colegas.",
+          "audio_tag": "NEU-010_008_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[supportively] Eso es lo importante: ir adaptándose progresivamente. ¿Has pensado en algún cambio laboral?",
+          "audio_tag": "NEU-010_009_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensively] No de momento. Mi jefe ha sido muy comprensivo, me deja hacer actividades más ligeras. Aunque estoy considerando a largo plazo otras opciones dentro de la educación.",
+          "audio_tag": "NEU-010_010_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Vida personal? ¿Pareja? ¿Planes de maternidad?",
+          "audio_tag": "NEU-010_011_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Tengo pareja, llevamos dos años juntos. Pero la maternidad es un tema complicado. Mi médico anterior me dijo que el embarazo puede empeorar la LAM. ¿Sigue siendo así?",
+          "audio_tag": "NEU-010_012_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarte. Quítate la blusa y siéntate en la camilla. Primero tomo las constantes vitales.",
+          "audio_tag": "NEU-010_013_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[complying] De acuerdo, adelante.",
+          "audio_tag": "NEU-010_014_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tensión ciento veinticuatro sobre setenta y seis, normal. Frecuencia cardíaca ochenta. Frecuencia respiratoria dieciocho. Saturación de oxígeno en reposo noventa y cuatro por ciento, aceptable. Temperatura normal.",
+          "audio_tag": "NEU-010_015_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curious] ¿La saturación está bien?",
+          "audio_tag": "NEU-010_016_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] En reposo está bien, pero veremos cómo es durante el esfuerzo. Ahora voy a auscultar tu tórax. Respira hondo.",
+          "audio_tag": "NEU-010_017_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[breathing deeply] Mmm... [pause] Sí.",
+          "audio_tag": "NEU-010_018_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[focused] Murmullo vesicular conservado bilateralmente, sin estertores. Corazón rítmico sin soplos. Pulsos normales. La exploración está bien.",
+          "audio_tag": "NEU-010_019_medico"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Hoy hacemos la espirometría y la prueba de caminata de seis minutos para monitorizar tu función pulmonar. También revisaremos la tomografía que te hicimos hace tres meses.",
+          "audio_tag": "NEU-010_020_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y la resonancia del abdomen? ¿Para los riñones?",
+          "audio_tag": "NEU-010_021_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Buena pregunta. Sí, hace poco hicimos la resonancia abdominal para descartar angiomiolipomas renales. Recordarás que la LAM puede afectar también los riñones en algunos casos. Afortunadamente en ti no se vieron angiomiolipomas.",
+          "audio_tag": "NEU-010_022_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Eso es una buena noticia.",
+          "audio_tag": "NEU-010_023_paciente"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Virginia, tu situación es estable. No hay progresión significativa de la enfermedad desde el inicio del sirolimús hace año y medio. Lo importante es que no has tenido otro neumotórax, que es lo que más nos preocupa en la LAM.",
+          "audio_tag": "NEU-010_024_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[happily] Eso es lo que más me importa, doctora. Ese neumotórax me asustó mucho.",
+          "audio_tag": "NEU-010_025_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[assuringly] Es comprensible. La ruptura de los quistes pulmonares causa esos neumotórax espontáneos. Con el sirolimús estamos ralentizando el crecimiento de los quistes, lo que reduce el riesgo de nuevos neumotórax.",
+          "audio_tag": "NEU-010_026_medico"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Vamos a mantener el sirolimús en la dosis actual. Sigue haciendo la vida que puedas, evitando esfuerzos intensos. Y respecto a lo que preguntabas sobre maternidad.",
+          "audio_tag": "NEU-010_027_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] Sí, me preocupa ese tema, doctora.",
+          "audio_tag": "NEU-010_028_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Es un tema delicado. Es verdad que el embarazo puede acelerar la progresión de la LAM. Los estrógenos pueden estimular el crecimiento de las células de LAM. Por eso necesitaríamos una evaluación muy cuidadosa si tienes planes de embarazo.",
+          "audio_tag": "NEU-010_029_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Significa que no puedo quedarme embarazada?",
+          "audio_tag": "NEU-010_030_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] No significa que no puedas. Significa que si quieres intentar quedarme embarazada, primero tenemos que evaluarte bien, ver cómo está tu función pulmonar, probablemente parar el sirolimús antes, y después hacer un seguimiento muy estrecho durante el embarazo. Y después del parto también habría consideraciones.",
+          "audio_tag": "NEU-010_031_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Es complicado. Necesito hablar con mi pareja sobre esto.",
+          "audio_tag": "NEU-010_032_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Claro. Cuando hayas hablado y tengas preguntas más específicas, venimos aquí y planificamos bien qué hacer. Eso es un proyecto importante y queremos que sea seguro para ti.",
+          "audio_tag": "NEU-010_033_medico"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Continuamos con el sirolimús. Te cito para dentro de tres meses. Mientras tanto, si tienes dolor torácico agudo, dificultad respiratoria importante, o cualquier síntoma que te preocupe, ve a urgencias inmediatamente.",
+          "audio_tag": "NEU-010_034_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Gracias, doctora. Me ayudas mucho a vivir con esto.",
+          "audio_tag": "NEU-010_035_paciente"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada, Virginia. Vamos a seguir cuidándote. Eres una chica fuerte, y aunque la LAM es rara y complicada, estamos haciendo un buen trabajo manejándola. Nos vemos en tres meses.",
+          "audio_tag": "NEU-010_036_medico"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[smiling] Vale, doctora. Muchas gracias. Hasta luego.",
+          "audio_tag": "NEU-010_037_paciente"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neumologia/NEU-010.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

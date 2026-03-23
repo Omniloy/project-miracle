@@ -1,0 +1,330 @@
+{
+  "id": "MF-005",
+  "especialidad": "Medicina de familia",
+  "resumen": "Paciente varón de 41 años que consulta por síntomas de ansiedad generalizada de evolución de varios meses, con preocupación excesiva, insomnio y síntomas somáticos. No antecedentes de trastorno psiquiátrico previo. Se diagnostica trastorno de ansiedad generalizada y se inicia tratamiento con sertralina junto con medidas cognitivo-conductuales. Se valora necesidad de derivación a psicología si requiere soporte adicional.",
+  "diagnostico_principal": {
+    "nombre": "Trastorno de ansiedad generalizada",
+    "cie10": "F41.1",
+    "snomed_ct": "21897009",
+    "snomed_termino": "Generalized anxiety disorder (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Insomnio",
+      "cie10": "G47.00",
+      "snomed_ct": "193462001",
+      "snomed_termino": "Insomnia (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Ansiedad",
+      "cie10": "R41.1",
+      "snomed_ct": "48694002",
+      "snomed_termino": "Anxiety (finding)"
+    },
+    {
+      "nombre": "Preocupación excesiva",
+      "cie10": "R45.1",
+      "snomed_ct": "112065001",
+      "snomed_termino": "Worry (finding)"
+    },
+    {
+      "nombre": "Insomnio",
+      "cie10": "G47.00",
+      "snomed_ct": "193462001",
+      "snomed_termino": "Insomnia (disorder)"
+    },
+    {
+      "nombre": "Palpitaciones",
+      "cie10": "R00.2",
+      "snomed_ct": "80313002",
+      "snomed_termino": "Palpitations (finding)"
+    },
+    {
+      "nombre": "Sudoración excesiva",
+      "cie10": "R61.1",
+      "snomed_ct": "271822003",
+      "snomed_termino": "Night sweats (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Evaluación psicológica formal",
+      "snomed_ct": "169226002",
+      "snomed_termino": "Psychiatric consultation (procedure)"
+    },
+    {
+      "nombre": "Control de frecuencia cardíaca",
+      "snomed_ct": "29303009",
+      "snomed_termino": "Electrocardiographic procedure (procedure)"
+    },
+    {
+      "nombre": "Evaluación de presión arterial",
+      "snomed_ct": "46973005",
+      "snomed_termino": "Blood pressure taking (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Sertralina",
+      "dosis": "50 mg",
+      "posologia": "Un comprimido por la mañana, aumentando progresivamente hasta 100 mg si es tolerado",
+      "atc": "N06AB06",
+      "snomed_ct": "372588009",
+      "snomed_termino": "Sertraline (substance)",
+      "indicacion": "Tratamiento del trastorno de ansiedad generalizada"
+    },
+    {
+      "nombre": "Alprazolam",
+      "dosis": "0.5 mg",
+      "posologia": "Media a un comprimido al día en dosis fraccionadas, solo si es necesario para crisis de pánico",
+      "atc": "N05BA12",
+      "snomed_ct": "387106000",
+      "snomed_termino": "Alprazolam (substance)",
+      "indicacion": "Tratamiento de rescate en crisis de ansiedad aguda"
+    }
+  ],
+  "constantes_vitales": {},
+  "notas_adicionales": [
+    "Paciente refiere síntomas de ansiedad de varios meses de evolución.",
+    "Preocupación excesiva sobre aspectos cotidianos de su vida: trabajo, familia, salud.",
+    "Insomnio de mantenimiento, despierta a las 3-4 de la madrugada con sensación de pánico.",
+    "Refiere palpitaciones ocasionales que le asustan.",
+    "Niega consumo de alcohol o drogas. Fuma ocasionalmente cuando está muy nervioso.",
+    "Situación laboral estable pero con estrés moderado.",
+    "Se valora remisión a psicología para terapia cognitivo-conductual si hay falta de respuesta.",
+    "Se educa al paciente sobre técnicas de relajación, respiración diafragmática y cambios en estilo de vida."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Roberto Iglesias Campos",
+    "edad": 41,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Marta Vega López",
+    "especialidad": "Medicina de familia"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Roberto. ¿Cómo está? ¿Qué le trae por la consulta hoy?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] Buenos días, doctora. Pues mire, llevo varios meses que no me siento bien. Tengo una ansiedad terrible, me preocupo por todo, no duermo bien. Y a veces siento el corazón que me va muy deprisa."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Entiendo. ¿Cuándo comenzó todo esto?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Bueno, gradualmente. Creo que hace unos cinco o seis meses empecé a notar que tenía la cabeza llena de preocupaciones. Cosas del trabajo principalmente, pero también me preocupo por mi salud, por mi familia."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Estos pensamientos le impiden concentrarse en el trabajo o en las actividades diarias?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Sí, doctor. Algunos días me cuesta concentrarme, estoy pendiente de cualquier sensación rara de mi cuerpo, tengo miedo de estar enfermo."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, vamos a repasar un poco. ¿Ha tenido problemas similares antes, ansiedad, depresión?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nunca. Antes era una persona tranquila, no entiendo qué me pasa ahora."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Hay antecedentes en la familia de problemas de ansiedad, depresión, o enfermedades mentales?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Mi madre toma medicinas para los nervios, sí. Mi padre tenía problemas de ansiedad también."
+        },
+        {
+          "rol": "medico",
+          "texto": "[asking] ¿Toma usted alguna medicación normalmente? ¿Alguna alergia?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No tomo nada, ni alergia tengo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Cómo es su sueño? ¿Cuándo duerme mal qué es lo que le pasa?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Duermo poco, me despierto a las tres o las cuatro de la madrugada con sensación de pánico, como si algo malo fuera a pasar. Es horrible. Intento volver a dormir pero es imposible."
+        },
+        {
+          "rol": "medico",
+          "texto": "[exploring] ¿Ha tenido cambios importantes en su vida recientemente? ¿Trabajo, familia, económicos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing heavily] El trabajo está bastante estresante últimamente, hay cambios en la empresa, inseguridad sobre si voy a conservar el puesto. Y mi hijo tuvo un accidente hace unos meses, nada grave, pero fue un susto importante."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a hacer un pequeño examen. Siéntese, por favor. ¿Consume tabaco o alcohol?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[honestly] Tabaco a veces, cuando estoy nervioso. Alcohol casi no bebo, solo algo en las comidas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Drogas? ¿Cualquier tipo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nada. Nunca he consumido drogas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Vamos a tomarse el pulso y la tensión. [pause] La frecuencia cardíaca es de ochenta y cuatro, un poco elevada. Tensión arterial ciento treinta y dos sobre ochenta y cinco, también algo elevada, probablemente por la ansiedad. Ausculto el corazón [pause] sonido normal, rítmico, sin soplos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿El corazón está bien? ¿No hay algo malo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Completamente normal. Lo que está pasando es que la ansiedad hace que el corazón lata más deprisa y la tensión se eleve. Es un ciclo: la ansiedad causa síntomas corporales que le asustan más y refuerzan la ansiedad."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Ah, entonces la ansiedad es psicológica, ¿no? ¿No es algo físico?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] La ansiedad es una emoción que tiene manifestaciones físicas reales. No es imaginación suya. Pero la raíz es psicológica y podemos tratarla."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Roberto, basándome en lo que me ha contado, el cuadro es compatible con un trastorno de ansiedad generalizada. Son varios meses de preocupación excesiva, insomnio, síntomas físicos como palpitaciones y sudoración, sin una causa médica subyacente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Es grave? ¿Se puede tratar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Es una condición muy tratable. No es grave en el sentido de que no va a causarle daño permanente, pero sí afecta su calidad de vida. Es muy importante tratarlo ahora."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] ¿Qué hay que hacer entonces?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[confidently] Vamos a usar dos estrategias: medicación y cambios en el estilo de vida."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[methodically] Le voy a prescribir sertralina, que es un antidepresivo de la familia de los inhibidores selectivos de la recaptación de serotonina. Vamos a comenzar con cincuenta miligramos por la mañana y la aumentaremos progresivamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Va a funcionar rápido?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explaining] No, estos medicamentos tardan entre dos y cuatro semanas en hacer efecto. Así que no espere mejoría inmediata. Puede que al principio note algunos efectos secundarios leves como somnolencia o insomnio, pero suelen pasar."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Y si me genera dependencia o necesito aumentar la dosis?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] La sertralina no crea dependencia. Algunos pacientes necesitan aumentos dosis, otros no. Iremos viendo cómo responde usted."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] También le voy a dar alprazolam, que es para situaciones agudas de pánico. Un comprimido medio si siente que está perdiendo el control. Pero esto es de rescate, no para usar diariamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] De acuerdo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] Además, le voy a recomendar que intente técnicas de relajación: respiración diafragmática profunda cuando sienta ansiedad, caminar regularmente, evitar la cafeína y el alcohol. Son muy importantes."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interested] ¿Cómo se hace la respiración diafragmática?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[demonstrating] Inspire profundamente por la nariz contando hasta cuatro, aguante dos segundos y exhale lentamente por la boca contando hasta seis. Esto relaja el sistema nervioso. Practique varias veces al día, especialmente por la noche."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[practicing slightly] Entiendo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Y si en cuatro semanas ve que no mejora, le puedo derivar a un psicólogo para terapia cognitivo-conductual, que es muy eficaz. Pero déle una oportunidad a la medicación primero. ¿De acuerdo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Sí, doctora. Muchas gracias. Espero mejorar."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Va a mejorar, Roberto. Cuidadito con lo que piensa, controle la mente. Hasta dentro de un mes."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/medicina_familia/MF-005.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

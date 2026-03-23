@@ -1,0 +1,386 @@
+{
+  "id": "GIN-002",
+  "especialidad": "Ginecología",
+  "resumen": "Paciente mujer de 33 años que acude a consulta por dolor pélvico crónico e infertilidad secundaria. Tras valoración clínica y ecografía se diagnostica endometriosis del útero. Se inician medidas de tratamiento hormonal y se programa seguimiento.",
+  "diagnostico_principal": {
+    "nombre": "Endometriosis del útero",
+    "cie10": "N80.0",
+    "snomed_ct": "129103003",
+    "snomed_termino": "Endometriosis of uterus (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Infertilidad secundaria",
+      "cie10": "N97.1",
+      "snomed_ct": "18114009",
+      "snomed_termino": "Secondary infertility (disorder)"
+    },
+    {
+      "nombre": "Dismenorrea primaria",
+      "cie10": "N94.4",
+      "snomed_ct": "266599000",
+      "snomed_termino": "Dysmenorrhea (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor pélvico crónico",
+      "cie10": "N94.9",
+      "snomed_ct": "30513003",
+      "snomed_termino": "Pelvic pain, female (finding)"
+    },
+    {
+      "nombre": "Dispareunia",
+      "cie10": "N94.1",
+      "snomed_ct": "228366004",
+      "snomed_termino": "Dyspareunia - female (disorder)"
+    },
+    {
+      "nombre": "Dificultad para la defecación",
+      "cie10": "K59.1",
+      "snomed_ct": "14760008",
+      "snomed_termino": "Constipation (disorder)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Ecografía transvaginal",
+      "snomed_ct": "310733005",
+      "snomed_termino": "Transvaginal ultrasound scan (procedure)"
+    },
+    {
+      "nombre": "Exploración ginecológica",
+      "snomed_ct": "5880005",
+      "snomed_termino": "Clinical examination - gynecological (procedure)"
+    },
+    {
+      "nombre": "Análisis de marcadores tumorales CA 125",
+      "snomed_ct": "104013003",
+      "snomed_termino": "CA 125 measurement (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Anticonceptivo combinado de levonorgestrel y etinilestradiol",
+      "dosis": "150/30 mcg",
+      "posologia": "Un comprimido diario en régimen de 21/7",
+      "atc": "G03AA07",
+      "snomed_ct": "405180002",
+      "snomed_termino": "Combined oral contraceptive (product)",
+      "indicacion": "Manejo hormonal de la endometriosis"
+    },
+    {
+      "nombre": "Naproxeno",
+      "dosis": "500 mg",
+      "posologia": "Un comprimido cada 12 horas durante la menstruación",
+      "atc": "M01AE02",
+      "snomed_ct": "372665008",
+      "snomed_termino": "Naproxen (substance)",
+      "indicacion": "Control del dolor pélvico y dismenorrea"
+    }
+  ],
+  "constantes_vitales": {
+    "presion_arterial_sistolica": {
+      "valor": 122,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 76,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 68,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 62,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 160,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 24.2,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente con antecedentes de menarquia a los 13 años con ciclos regulares.",
+    "Busca embarazo desde hace 18 meses sin conseguirlo.",
+    "El dolor es especialmente intenso durante la menstruación y las relaciones sexuales.",
+    "Refiere antecedentes familiares de endometriosis en madre.",
+    "Se ha realizado análisis de CA 125 que se encuentra discretamente elevado (42 UI/ml).",
+    "Se remite a esterilidad para estudio y tratamiento de infertilidad."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Silvia Peña Blanco",
+    "edad": 33,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Cristina García López",
+    "especialidad": "Ginecología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] Buenos días, Silvia. Veo que viene derivada por dificultad para quedarse embarazada. ¿Cuánto tiempo llevan intentándolo?",
+          "audio_tag": "audio_002_001"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrada] Más de un año ya, doctora. Llevamos dieciocho meses. Y lo peor es que tenía un hijo antes sin problemas, fue natural. Ahora no hay forma.",
+          "audio_tag": "audio_002_002"
+        },
+        {
+          "rol": "medico",
+          "texto": "[atentamente] Eso se llama infertilidad secundaria. ¿Ha tenido cambios importantes entre el primer hijo y ahora?",
+          "audio_tag": "audio_002_003"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflexionando] Pues sí, el dolor. No sé si lo conectan, pero desde hace unos tres años tengo mucho dolor aquí en la pelvis, sobre todo cuando me viene la regla. Es insoportable.",
+          "audio_tag": "audio_002_004"
+        },
+        {
+          "rol": "medico",
+          "texto": "[interesadamente] ¿Solo durante la menstruación o también otros días?",
+          "audio_tag": "audio_002_005"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sinceramente] Todo el tiempo, pero mucho mucho durante la regla. Y además, desde hace poco, las relaciones con mi marido me duelen. Eso es nuevo también.",
+          "audio_tag": "audio_002_006"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[escribiendo] Cuando tuvo al primer hijo, ¿fue por parto vaginal?",
+          "audio_tag": "audio_002_007"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[claramente] Sí, fue hace nueve años. Un parto normal, sin complicaciones. Luego estuve cinco años con píldora anticonceptiva y después de dejarla conseguí el embarazo rápido.",
+          "audio_tag": "audio_002_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[técnicamente] ¿Ha tenido algún legrado u otras intervenciones ginecológicas?",
+          "audio_tag": "audio_002_009"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negativamente] No, nada. Solo revisiones normales.",
+          "audio_tag": "audio_002_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[indagando] ¿Antecedentes en la familia? ¿Su madre, hermanas con problemas parecidos?",
+          "audio_tag": "audio_002_011"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pensativamente] Sí, ahora que lo menciona, mi madre me comentó que ella también tuvo problemas de fertilidad. Y dolor también.",
+          "audio_tag": "audio_002_012"
+        },
+        {
+          "rol": "medico",
+          "texto": "[profesionalmente] ¿Enfermedades médicas? ¿Cirugías previas?",
+          "audio_tag": "audio_002_013"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[brevemente] No, estoy bien de salud. Ninguna cirugía importante.",
+          "audio_tag": "audio_002_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[sistemáticamente] ¿Medicaciones actuales? ¿Alergias?",
+          "audio_tag": "audio_002_015"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[claramente] Nada. Solo tomo ibuprofeno cuando el dolor es muy fuerte. Alergias no tengo.",
+          "audio_tag": "audio_002_016"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instruyendo] Bien, vamos a explorarla. Quítese por favor la ropa de cintura para abajo. Acuéstese en la camilla.",
+          "audio_tag": "audio_002_017"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[tranquilamente] Claro.",
+          "audio_tag": "audio_002_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[midiendo] Tensión ciento veintidós sobre setenta y seis, frecuencia cardíaca sesenta y ocho, peso sesenta y dos kilos. Talla ciento sesenta centímetros. IMC veinticuatro coma dos. Excelente.",
+          "audio_tag": "audio_002_019"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[tranquilamente] Bien, gracias.",
+          "audio_tag": "audio_002_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[palpando] Ahora la exploración abdominal. Relájese. [pausa] El abdomen se palpa blando, hay sensibilidad en fondo de saco posterior. Ahora voy a hacer la exploración especular. [pausa] Voy a introducir el ecógrafo transvaginal para ver bien la pelvis.",
+          "audio_tag": "audio_002_021"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[incómoda] Está bien, doctora.",
+          "audio_tag": "audio_002_022"
+        },
+        {
+          "rol": "medico",
+          "texto": "[observando] Aquí vemos el útero. Tiene una forma normal pero se aprecian adenomiosis difusa. Y aquí, en la zona retrocervical, hay adherencias y se ve una lesión endometriótica de unos dos centímetros. Los ovarios están algo agrandados, con apariencia microquística, muy sugestivo de endometriosis.",
+          "audio_tag": "audio_002_023"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿Eso es grave? ¿Afecta a que no me quede embarazada?",
+          "audio_tag": "audio_002_024"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] La endometriosis es una enfermedad crónica pero manejable. Afecta a la fertilidad en algunos casos, especialmente con los grados más severos, pero hay tratamiento.",
+          "audio_tag": "audio_002_025"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[claramente] Silvia, lo que hemos encontrado es endometriosis del útero. Es decir, tejido endometrial fuera de su lugar habitual, en la pared del útero y en otros puntos de la pelvis.",
+          "audio_tag": "audio_002_026"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sorprendida] ¿Y cómo es que eso sucede? ¿Es mi culpa?",
+          "audio_tag": "audio_002_027"
+        },
+        {
+          "rol": "medico",
+          "texto": "[tranquilizadora] No, no es culpa suya. Es una enfermedad multifactorial. Influyen factores genéticos, inmunológicos y hormonales. Dado que su madre tuvo problemas similares, probablemente hay predisposición genética.",
+          "audio_tag": "audio_002_028"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[preocupada] ¿Y el embarazo? ¿Puedo conseguirlo?",
+          "audio_tag": "audio_002_029"
+        },
+        {
+          "rol": "medico",
+          "texto": "[esperanzadora] Sí, podemos trabajar en ello. Las opciones son varias. Primero, controlamos el dolor con medicación. Segundo, podemos intentar un manejo hormonal que puede mejorar la fertilidad. Si esto no funciona, podríamos plantear reproducción asistida.",
+          "audio_tag": "audio_002_030"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[interesada] ¿Qué tipo de medicación?",
+          "audio_tag": "audio_002_031"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] Vamos a empezar con un anticonceptivo hormonal combinado, que también controla la endometriosis. Y naproxeno para el dolor. Luego, en unos meses, valoraremos si intentamos buscar embarazo o si necesitamos otras opciones.",
+          "audio_tag": "audio_002_032"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[dudosa] ¿Pero si tomo anticonceptivos no me quedo embarazada?",
+          "audio_tag": "audio_002_033"
+        },
+        {
+          "rol": "medico",
+          "texto": "[aclarando] Claro, durante el tratamiento hormonal no buscaremos embarazo. El objetivo es primero controlar la enfermedad, mejorar la fertilidad, y luego suspenderemos la medicación para intentar conseguir el embarazo.",
+          "audio_tag": "audio_002_034"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[organizadamente] Voy a prescribirle un anticonceptivo oral combinado, levonorgestrel ciento cincuenta con etinilestradiol treinta microgramos. Un comprimido diario, veintiuno días con regla artificial los siete siguientes.",
+          "audio_tag": "audio_002_035"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[aceptando] Está bien. ¿Hay algo más?",
+          "audio_tag": "audio_002_036"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuando] También naproxeno quinientos miligramos, uno cada doce horas durante los días que menstrúe. Y voy a pedirle unos análisis, incluido el marcador CA 125.",
+          "audio_tag": "audio_002_037"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[curiosa] ¿CA 125? ¿Eso para qué?",
+          "audio_tag": "audio_002_038"
+        },
+        {
+          "rol": "medico",
+          "texto": "[explicando] Es un marcador que puede estar elevado en la endometriosis. No es diagnóstico, pero nos ayuda a monitorizar.",
+          "audio_tag": "audio_002_039"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[conforme] Claro. ¿Cuándo vuelvo?",
+          "audio_tag": "audio_002_040"
+        },
+        {
+          "rol": "medico",
+          "texto": "[planificando] La cito en dos meses para ver cómo tolera la medicación y cómo mejora el dolor. Si todo va bien, después de tres o cuatro meses podemos pensar en buscar embarazo o en derivarla a esterilidad.",
+          "audio_tag": "audio_002_041"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[agradecida] Muchas gracias, doctora. Espero que esto mejore las cosas.",
+          "audio_tag": "audio_002_042"
+        },
+        {
+          "rol": "medico",
+          "texto": "[alentadora] Seguro que sí. La endometriosis es manejable y hay muchas opciones. Nos vemos en dos meses.",
+          "audio_tag": "audio_002_043"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/ginecologia/GIN-002.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

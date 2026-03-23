@@ -1,0 +1,345 @@
+{
+  "id": "END-006",
+  "especialidad": "Endocrinología",
+  "resumen": "Paciente mujer de 67 años con osteoporosis posmenopáusica y antecedente de fractura de cadera hace tres meses. Acude a revisión durante tratamiento con bifosfonato. Se evalúan síntomas residuales de dolor, movilidad y tolerancia a la medicación. Se mantiene tratamiento con alendronato y suplementos de calcio-vitamina D. Se refuerza ejercicio y medidas preventivas de caídas.",
+  "diagnostico_principal": {
+    "nombre": "Osteoporosis posmenopáusica con fractura patológica de cadera",
+    "cie10": "M80.0",
+    "snomed_ct": "102588006",
+    "snomed_termino": "Osteoporosis with pathological fracture (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Dolor de cadera",
+      "cie10": "M25.55",
+      "snomed_ct": "14301001",
+      "snomed_termino": "Hip pain (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor dorsolumbar",
+      "cie10": "M54.5",
+      "snomed_ct": "57676002",
+      "snomed_termino": "Thoracolumbar pain (finding)"
+    },
+    {
+      "nombre": "Pérdida de altura",
+      "cie10": "M89.89",
+      "snomed_ct": "79581003",
+      "snomed_termino": "Height loss (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Densitometría ósea (DEXA) de columna y cadera",
+      "snomed_ct": "401241002",
+      "snomed_termino": "Bone mineral density measurement (procedure)"
+    },
+    {
+      "nombre": "Determinación de vitamina D sérica",
+      "snomed_ct": "14627008",
+      "snomed_termino": "Vitamin D measurement (procedure)"
+    },
+    {
+      "nombre": "Determinación de calcio sérico",
+      "snomed_ct": "104204002",
+      "snomed_termino": "Serum calcium level (procedure)"
+    },
+    {
+      "nombre": "Determinación de fosfatasa alcalina",
+      "snomed_ct": "104210002",
+      "snomed_termino": "Alkaline phosphatase measurement (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Alendronato",
+      "dosis": "70 mg",
+      "posologia": "1 comprimido una vez a la semana, por la mañana en ayunas",
+      "atc": "M05BA04",
+      "snomed_ct": "387318004",
+      "snomed_termino": "Alendronic acid (substance)",
+      "indicacion": "Tratamiento de osteoporosis posmenopáusica"
+    },
+    {
+      "nombre": "Calcio + Vitamina D3",
+      "dosis": "1000 mg + 800 UI",
+      "posologia": "1 comprimido efervescente al día",
+      "atc": "A12AX01",
+      "snomed_ct": "387149008",
+      "snomed_termino": "Calcium compound (substance)",
+      "indicacion": "Suplementación de calcio y vitamina D"
+    }
+  ],
+  "constantes_vitales": {
+    "tension_arterial_sistolica": {
+      "valor": 132,
+      "unidad": "mmHg"
+    },
+    "tension_arterial_diastolica": {
+      "valor": 80,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 70,
+      "unidad": "lpm"
+    },
+    "peso": {
+      "valor": 68,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 160,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 26.6,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente posmenopáusica desde hace 15 años.",
+    "Fractura de cadera (cuello femoral) hace 3 meses tratada quirúrgicamente con éxito.",
+    "DEXA previa: T-score -3.5 a nivel de cadera (osteoporosis severa).",
+    "DEXA actual: T-score -2.8 a nivel de cadera (mejoría con tratamiento).",
+    "Vitamina D sérica: 28 ng/mL (insuficiencia leve, óptimo > 30).",
+    "Calcio sérico: 8.9 mg/dL (normal).",
+    "Fosfatasa alcalina: 62 UI/L (normal).",
+    "Rehabilitación tras fractura: marcha con bastón, sin apoyo completo aún.",
+    "Pain score actual: 3/10 en cadera (mejoría desde 7/10 al inicio).",
+    "Se recomienda actividad física moderada (caminar, ejercicios sin carga)."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Carmen Delgado Gil",
+    "edad": 67,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Miguel Rodríguez Sáenz",
+    "especialidad": "Endocrinología"
+  },
+  "voces": {
+    "medico_voice_id": "tXgbXPnsMpKXkuTgvE3h",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Carmen. ¿Cómo vas después de la fractura? ¿Cómo va la rehabilitación?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[moderately pleased] Hola, doctor. Poco a poco. La verdad es que ha sido duro, pero estoy mejorando. Ya camino con el bastón sin tener que apoyar todo el peso en la pierna de la fractura.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Excelente. ¿Y el dolor? ¿Cuánto te duele ahora la cadera?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Mucho menos que al principio. Entonces era un dolor insoportable, de nueve de diez. Ahora está en unos tres, muy llevable.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Muy bien, ese es el progreso que esperaba. ¿Y con la medicación? ¿La toleras bien? ¿El alendronato?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[carefully] Sí, bien. Me lo tomo cada jueves por la mañana en ayunas, como me dijiste. A veces tengo un poco de molestia en el estómago, pero nada grave.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Cuéntame, ¿cuándo empezó el problema de huesos? ¿Siempre tuviste los huesos débiles?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Pues la verdad es que a partir de los cincuenta y dos años, cuando tuve la menopausia, empecé a notar que me dolía la espalda. Los médicos me decían que era por la edad, que era normal.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Eso es típico. La disminución de estrógenos afecta los huesos. ¿Tenías antecedentes familiares de osteoporosis?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[yes] Sí, mi madre tenía osteoporosis también, aunque ella no se rompió la cadera. Se rompió la muñeca en una caída a los setenta y cinco años.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Cuándo fue diagnosticada tu osteoporosis? ¿Hace mucho?",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sadly] Hace unos ocho años, después de una caída en casa me hicieron una densitometría y salió que tenía los huesos muy débiles. Pero no tomaba medicación, solo me decían que comiera productos lácteos y vitaminas.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[seriously] Y luego vino la fractura hace tres meses.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding sadly] Sí, me caí bajando las escaleras, un paso en falso, y psss, me rompí la cadera. Fue muy asustador.",
+          "audio_tag": "speaker_B"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bueno, ahora que estamos con tratamiento, vamos a estar más vigilantes. Déjame que te examine. Primero la tensión arterial. [pause] Ciento treinta y dos sobre ochenta. Bien. Frecuencia cardíaca setenta. Peso sesenta y ocho kilos, talla ciento sesenta. El índice de masa corporal veintiséis coma seis, un poco de sobrepeso pero aceptable.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Bien.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Ahora te voy a examinar la cadera. Acuéstate aquí en la camilla. [performs examination] La movilidad de cadera está mejor que en la última revisión. El rango de movimiento en flexión, casi noventa grados. Aducción y rotación aceptables. El dolor con la movilidad es mínimo. La cicatriz quirúrgica está bien cicatrizada. No hay deformidad. [pause]",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pleased] Me alegra. La fisioterapeuta dice que voy bien.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Ausculto el corazón: rítmico, sin soplos. Pulmones claros. Abdomen blando. Columna vertebral sin deformidades importantes, aunque notas algo de cifosis dorsal leve, que es común con la edad.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[satisfactorily] Carmen, estoy contento con tu recuperación. Los resultados de la densitometría ósea de hoy muestran que el T-score de cadera ha mejorado de menos tres coma cinco a menos dos coma ocho. Eso significa que estamos ganando densidad ósea con el alendronato.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pleased] ¿Eso significa que el hueso está más fuerte?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[affirmatively] Exacto. No es que esté completamente normal aún, pero estamos en buen camino. La vitamina D está en veintiocho, un poco baja, así que vamos a aumentar la suplementación de vitamina D. El calcio está bien en ocho coma nueve.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[satisfied] Bien. ¿Cuánto tiempo más tengo que estar así?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Los bifosfonatos como el alendronato se recomiendan por lo menos cinco años. Tú llevas apenas tres meses. Pero vamos a valorar año a año cómo va tu densidad ósea.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[decisively] Vamos a mantener tu tratamiento: alendronato setenta miligramos una vez a la semana, y vamos a aumentar la vitamina D. En lugar del comprimido de mil unidades que tomas, te voy a prescribir una dosis de dos mil unidades diarias de vitamina D.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] De acuerdo. ¿Algo más?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Lo más importante es que hagas ejercicio regular. Camina treinta minutos al día cuando puedas, sin sobrecargar la cadera. También ejercicios de fortalecimiento muscular, que ayudan a sostener los huesos. Evita las caídas: zapatos con buen agarre, iluminación en casa, sin cables sueltos en el suelo.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Entendido. Mi hija está atenta a eso también.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Muy bien, importante el apoyo familiar. [pause] También es fundamental la nutrición: toma productos lácteos todos los días, queso, yogur, leche. Si no toleras la lactosa, hay alternativas. Y proteína suficiente, de al menos uno coma dos gramos por kilogramo de peso corporal. Tú pegas alrededor de ochenta y dos gramos de proteína al día.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperative] Entiendo. ¿Eso de la proteína es importante?",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[affirming] Mucho. Los huesos necesitan proteína para fortalecerse. Pescado, pollo, huevos, legumbres. Y por supuesto, nada de fumar ni alcohol excesivo, que afectan los huesos.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[assured] No, de eso nada. Yo no fumo ni bebo.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Te citaré para dentro de tres meses para hacer una radiografía de la cadera y ver cómo está la consolidación ósea. Y luego otra densitometría en un año. Si todo sigue así, vamos muy bien. Cualquier pregunta, me llamas.",
+          "audio_tag": "speaker_A"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctor. Es una tranquilidad estar en buenas manos.",
+          "audio_tag": "speaker_B"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Adelante, Carmen. Sigue con los ejercicios y los cuidados. Nos vemos en tres meses.",
+          "audio_tag": "speaker_A"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/endocrinologia/END-006.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "ATC A12AX → A12AX01 (Calcio + Vitamina D3)"
+    ]
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "id": "URO-010",
+  "especialidad": "Urología",
+  "resumen": "Paciente varón de 5 años con Tumor de Wilms (enfermedad rara pediátrica). Padre refiere hallazgo incidental de masa abdominal palpable. Se realiza ecografía y TAC que confirma tumoración renal. Derivado a oncología pediátrica para manejo quimioterapéutico.",
+  "diagnostico_principal": {
+    "nombre": "Tumor de Wilms",
+    "cie10": "C64.9",
+    "snomed_ct": "302849000",
+    "snomed_termino": "Nephroblastoma (disorder)",
+    "es_rara": true
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Masa renal",
+      "cie10": "R19.00",
+      "snomed_ct": "300257003",
+      "snomed_termino": "Abdominal mass (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Masa abdominal palpable",
+      "cie10": "R19.00",
+      "snomed_ct": "300257003",
+      "snomed_termino": "Abdominal mass (finding)"
+    },
+    {
+      "nombre": "Dolor abdominal ocasional",
+      "cie10": "R10.2",
+      "snomed_ct": "21522001",
+      "snomed_termino": "Abdominal pain (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Ecografía abdominal",
+      "snomed_ct": "10159009",
+      "snomed_termino": "Ultrasound of abdomen (procedure)"
+    },
+    {
+      "nombre": "Tomografía computarizada de abdomen y pelvis",
+      "snomed_ct": "241756006",
+      "snomed_termino": "Computed tomography of abdomen (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética de abdomen",
+      "snomed_ct": "118022007",
+      "snomed_termino": "Magnetic resonance imaging of abdomen (procedure)"
+    },
+    {
+      "nombre": "Análisis de laboratorio incluido LDH y marcadores tumorales",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    }
+  ],
+  "medicamentos": [],
+  "constantes_vitales": {
+    "peso": {
+      "valor": 18,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 110,
+      "unidad": "cm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 98,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 62,
+      "unidad": "mmHg"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 92,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 24,
+      "unidad": "rpm"
+    },
+    "temperatura": {
+      "valor": 37.0,
+      "unidad": "°C"
+    }
+  },
+  "notas_adicionales": [
+    "Masa renal derecha de 6,5 x 5,2 cm en ecografía inicial.",
+    "TAC confirma tumoración sólida heterogénea intrarrenal sin invasión de vena renal.",
+    "Estadio clínico según NWTS: estadio I (tumor confinado al riñón).",
+    "LDH y marcadores tumorales en rango normal.",
+    "Derivación a oncología pediátrica para decisión terapéutica: neoadyuvancia vs. cirugía inmediata.",
+    "Pronóstico favorable: tumor de bajo riesgo según características histológicas."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Nicolás Torres Fuentes",
+    "edad": 5,
+    "sexo": "masculino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. María Rodríguez Serrano",
+    "especialidad": "Urología"
+  },
+  "acompañante": {
+    "nombre_ficticio": "Antonio Torres García",
+    "relacion": "padre"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "padre_voice_id": "tGjegxe7yxhGMzd3SOmH",
+    "paciente_voice_id": "CdAqYBLnsNjmTqYgD5Ha"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[kindly] Buenos días, Nicolás. Hola, don Antonio. Yo soy la doctora Rodríguez. Veo que traes a tu hijo porque notaste algo en la tripa, ¿verdad?",
+          "audio_tag": "medico_001"
+        },
+        {
+          "rol": "padre",
+          "texto": "[worried] Buenos días, doctora. Sí, hace una semana que le noté una bolita en el lado derecho de la barriguita. Al principio pensé que era nada, pero cada día la veo más grande. Me asustó y traje a Nicolás para que le viese.",
+          "audio_tag": "padre_001"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Cuándo notaste esto, Nicolás? ¿Duele?",
+          "audio_tag": "medico_002"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[quietly] No me duele. Papá dice que tengo una bolita.",
+          "audio_tag": "paciente_002"
+        },
+        {
+          "rol": "padre",
+          "texto": "[continuing] A veces dice que le duele la barriguita, pero nada grave. Está activo, juega, come bien.",
+          "audio_tag": "padre_003"
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Ha tenido fiebre, síntomas de infección, sangre en la orina?",
+          "audio_tag": "medico_003"
+        },
+        {
+          "rol": "padre",
+          "texto": "[firmly] No, nada de eso. Solo la masa que le palpo. Eso es lo que me preocupa.",
+          "audio_tag": "padre_004"
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Nicolás ha tenido alguna enfermedad importante? ¿Algún problema de salud?",
+          "audio_tag": "medico_004"
+        },
+        {
+          "rol": "padre",
+          "texto": "[shakes head] No, es un niño sano. Varicela hace dos años, como todos. Nada más importante. Tiene una salud excelente.",
+          "audio_tag": "padre_005"
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿En la familia hay antecedentes de tumores o cánceres?",
+          "audio_tag": "medico_005"
+        },
+        {
+          "rol": "padre",
+          "texto": "[thinking] Que yo sepa no. Mi padre tuvo un cáncer de próstata, pero eso fue de mayor. En los niños de la familia no hay nada que sepamos.",
+          "audio_tag": "padre_006"
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Toma Nicolás algún medicamento habitualmente?",
+          "audio_tag": "medico_007"
+        },
+        {
+          "rol": "padre",
+          "texto": "[quickly] No, nada. Es un niño sano, sin medicamentos.",
+          "audio_tag": "padre_008"
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Antecedentes prenatales normales? ¿Nicolás nació bien?",
+          "audio_tag": "medico_009"
+        },
+        {
+          "rol": "padre",
+          "texto": "[affirmatively] Sí, completamente normal. Embarazo sin problemas, parto natural, fue todo bien.",
+          "audio_tag": "padre_010"
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Muy bien. Ahora vamos a examinar a Nicolás. Nicolás, voy a tocar tu tripa para ver si encuentro esa bolita que tu papá nota. ¿De acuerdo?",
+          "audio_tag": "medico_010"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Sí, doctora.",
+          "audio_tag": "paciente_010"
+        },
+        {
+          "rol": "medico",
+          "texto": "[measuring] Primero le tomo las constantes. Peso dieciocho kilos, talla ciento diez centímetros. Tensión noventa y ocho sobre sesenta y dos. Frecuencia cardíaca noventa y dos. Bien.",
+          "audio_tag": "medico_011"
+        },
+        {
+          "rol": "padre",
+          "texto": "[quietly] Está bien, doctor.",
+          "audio_tag": "padre_011"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully examining] Palpación abdominal: efectivamente noto una masa firme en el lado derecho, en la región del riñón. Mide aproximadamente unos cinco o seis centímetros. No es dolorosa a la palpación. Resto del examen abdominal sin hallazgos.",
+          "audio_tag": "medico_012"
+        },
+        {
+          "rol": "padre",
+          "texto": "[anxiously] ¿Eso es malo, doctora? ¿Qué puede ser?",
+          "audio_tag": "padre_012"
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously but calmly] Don Antonio, la masa que palpamos corresponde con lo que se ve en las imágenes que pidieron. Hemos hecho una ecografía y un TAC, y se ve una tumoración en el riñón derecho de Nicolás.",
+          "audio_tag": "medico_013"
+        },
+        {
+          "rol": "padre",
+          "texto": "[shocked] ¿Tumor? ¿Quiere decir cáncer?",
+          "audio_tag": "padre_013"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Sí, es una neoplasia. Se llama Tumor de Wilms, que es el tumor renal más frecuente en niños. La buena noticia es que diagnosticamos relativamente pronto.",
+          "audio_tag": "medico_014"
+        },
+        {
+          "rol": "padre",
+          "texto": "[distressed] Dios mío. No me lo esperaba. ¿Tiene cura?",
+          "audio_tag": "padre_014"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí tiene tratamiento. El pronóstico para el Tumor de Wilms ha mejorado mucho en los últimos años. La mayoría de niños responden muy bien a la quimioterapia.",
+          "audio_tag": "medico_015"
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] El siguiente paso es que vea a un oncólogo pediátrico. Ellos decidirán si conviene dar quimioterapia primero o hacer la operación inmediatamente. En este caso probablemente vaya por quimioterapia neoadyuvante primero para encoger el tumor.",
+          "audio_tag": "medico_016"
+        },
+        {
+          "rol": "padre",
+          "texto": "[worried] ¿Quimioterapia en un niño tan pequeño? ¿No es peligroso?",
+          "audio_tag": "padre_016"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Entiendo su preocupación. Los esquemas de quimioterapia pediátrica están muy estudiados y el Tumor de Wilms responde muy bien. Sí hay efectos secundarios, pero los oncólogos están preparados para manejarlos.",
+          "audio_tag": "medico_017"
+        },
+        {
+          "rol": "padre",
+          "texto": "[hesitantly] ¿Cuál es el pronóstico entonces?",
+          "audio_tag": "padre_017"
+        },
+        {
+          "rol": "medico",
+          "texto": "[optimistically] Este tumor que encontramos está confinado al riñón, es lo que llamamos estadio uno. Con tratamiento, la supervivencia a cinco años es superior al noventa por ciento en estos casos. Es muy esperanzador.",
+          "audio_tag": "medico_018"
+        },
+        {
+          "rol": "padre",
+          "texto": "[slightly relieved] Gracias, doctora. Eso me tranquiliza un poco. ¿Cuándo vemos al oncólogo?",
+          "audio_tag": "padre_018"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Le voy a dar la derivación ahora mismo. Deberían verle esta semana. Nicolás va a estar en buenas manos. Los equipos de oncología pediátrica son excelentes. Cualquier pregunta, no duden en llamar.",
+          "audio_tag": "medico_019"
+        },
+        {
+          "rol": "padre",
+          "texto": "[grateful] Muchas gracias, doctora. Esperamos que todo salga bien.",
+          "audio_tag": "padre_020"
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Vamos a luchar juntos contra esto. Nicolás es fuerte, y estos tumores responden bien al tratamiento. Adelante.",
+          "audio_tag": "medico_021"
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/urologia/URO-010.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

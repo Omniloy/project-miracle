@@ -1,0 +1,334 @@
+{
+  "id": "MF-004",
+  "especialidad": "Medicina de familia",
+  "resumen": "Paciente mujer de 48 años que presenta lumbalgia mecánica de inicio agudo tras esfuerzo. Refiere dolor intenso en región lumbar baja con limitación funcional. Exploración compatible con dolor miofascial lumbar sin déficit neurológico. Se prescribe analgesia, relajante muscular y se solicita radiografía de columna lumbar. Se educa en higiene postural y se prevé mejoría en dos semanas.",
+  "diagnostico_principal": {
+    "nombre": "Lumbalgia",
+    "cie10": "M54.5",
+    "snomed_ct": "279039007",
+    "snomed_termino": "Lumbar pain (finding)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Contractura muscular de espalda",
+      "cie10": "M62.8",
+      "snomed_ct": "56219004",
+      "snomed_termino": "Muscle spasm (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Dolor en región lumbar",
+      "cie10": "M54.5",
+      "snomed_ct": "279039007",
+      "snomed_termino": "Lumbar pain (finding)"
+    },
+    {
+      "nombre": "Limitación de la movilidad",
+      "cie10": "R26.2",
+      "snomed_ct": "8524003",
+      "snomed_termino": "Limitation of movement (finding)"
+    },
+    {
+      "nombre": "Rigidez de espalda",
+      "cie10": "M62.8",
+      "snomed_ct": "271587009",
+      "snomed_termino": "Stiffness of joint (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica de miembros inferiores",
+      "snomed_ct": "110349004",
+      "snomed_termino": "Neurological examination (procedure)"
+    },
+    {
+      "nombre": "Palpación lumbar y evaluación de movilidad",
+      "snomed_ct": "33944003",
+      "snomed_termino": "Spinal palpation (procedure)"
+    },
+    {
+      "nombre": "Solicitud de radiografía de columna lumbar",
+      "snomed_ct": "169069009",
+      "snomed_termino": "Lumbar spine X-ray (procedure)"
+    },
+    {
+      "nombre": "Prueba de Lasègue",
+      "snomed_ct": "419260001",
+      "snomed_termino": "Straight leg raise test (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Ibuprofeno",
+      "dosis": "600 mg",
+      "posologia": "Un comprimido cada ocho horas con las comidas durante 7-10 días",
+      "atc": "M01AE01",
+      "snomed_ct": "387207008",
+      "snomed_termino": "Ibuprofen (substance)",
+      "indicacion": "Analgesia e inflamación de lumbalgia"
+    },
+    {
+      "nombre": "Diazepam",
+      "dosis": "5 mg",
+      "posologia": "Medio comprimido por la noche si es necesario",
+      "atc": "N05BA01",
+      "snomed_ct": "387106007",
+      "snomed_termino": "Diazepam (substance)",
+      "indicacion": "Relajación muscular y contractura lumbar"
+    }
+  ],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 76,
+      "unidad": "lpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 128,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 85,
+      "unidad": "mmHg"
+    }
+  },
+  "notas_adicionales": [
+    "Paciente refiere que el dolor comenzó hace tres días tras levantar peso.",
+    "Niega antecedentes de lumbalgia crónica o cirugía previa.",
+    "No hay síntomas de alerta como incontinencia, anestesia perianal o paraplejía.",
+    "Prueba de Lasègue negativa bilateralmente, reflejo aquíleo presente y normal.",
+    "Reflejo rotuliano presente bilateralmente.",
+    "Distribución del dolor mecánica, de tipo miofascial, sin irradiación a miembros inferiores.",
+    "Se educa al paciente sobre higiene postural, evitar flexión anterior del tronco y no cargar peso.",
+    "Se recomienda actividad física moderada, no reposo prolongado."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Pilar Gómez Herrera",
+    "edad": 48,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Luis Ramírez Peña",
+    "especialidad": "Medicina de familia"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Pilar. ¿Qué le trae hoy a la consulta?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[wincing] Buenos días, doctor. Pues mire, hace tres días estaba en casa y levanté una caja del suelo, nada particularmente pesada, pero me hice un gesto extraño y ¡zas!, un dolor de espalda tremendísimo. No me puedo ni mover."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Entiendo. ¿Dónde exactamente le duele?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[pointing, grimacing] Aquí, en la parte baja de la espalda, a la altura de las caderas pero más atrás. Es un dolor muy intenso, punzante."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿El dolor baja hacia las piernas o se queda localizado en la espalda?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, solo está en la espalda. Aunque se irradia hacia los lados, como hacia las caderas."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien, vamos a repasar un poco. ¿Tiene antecedentes de lumbalgias previas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nunca me había pasado nada parecido. Algún que otro dolor de espalda como todo el mundo, pero nada grave."
+        },
+        {
+          "rol": "medico",
+          "texto": "[directly] ¿Tiene alguna enfermedad reumática, artritis, o algo parecido?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] No, nada de eso. Mi salud es buena normalmente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[curiously] ¿Toma alguna medicación? ¿Alguna alergia medicamentosa?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Solo tomo anticonceptivos. Alergia ninguna que sepa."
+        },
+        {
+          "rol": "medico",
+          "texto": "[asking] ¿Ha tenido caídas recientes, accidentes, traumatismos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[negating] No, nada de eso. Solo fue levantar una caja."
+        },
+        {
+          "rol": "medico",
+          "texto": "[exploring] ¿Cómo es su trabajo? ¿Pasa mucho tiempo de pie, sentada?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[sighing] Paso la mayor parte del día en una oficina sentada. Salgo poco, la verdad. Llego a casa cansada, no me apetece hacer ejercicio."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Vamos a explorarla. Acuéstese en la camilla boca abajo, por favor. Con cuidado, que lo sé que duele."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[struggling] Ay, sí, espere que me coloque lentamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Perfecto. Ahora voy a palpar la región lumbar. [pause] Sí, noto contractura importante en los músculos paravertebrales, especialmente a la izquierda. Y hay mucho espasmo muscular. Voy a hacer la prueba de Lasègue."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nervously] ¿Eso va a doler?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Un poco, pero es importante hacer la prueba. Voy a levantar la pierna recta, lentamente. [pause] Dígame si aparece dolor en la espalda o en la pierna. [pause]"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[groaning softly] Sí, noto tirantez en la pierna pero el dolor está en la espalda."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Bien. Ahora la otra pierna. [pause] ¿Y ahora? [pause] Perfecto. Las dos están negativas, lo que es una buena noticia. Voy a comprobar los reflejos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[waiting] Mmm."
+        },
+        {
+          "rol": "medico",
+          "texto": "[tapping, checking] Reflejo rotuliano presente, normal. Aquíleo presente y normal. La sensibilidad en los pies es normal. Puede intentar incorporarse lentamente."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[slowly getting up] Ay, cuidado. Pues doliendo está todo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Lo importante es que no hay signos de comprensión nerviosa. Es un dolor mecánico puro, de tipo miofascial."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Pilar, lo que tiene es una lumbalgia aguda de origen mecánico, probablemente por distensión muscular en la región lumbar baja tras el esfuerzo de levantar. La contractura muscular importante que palpo y la ausencia de signos de compresión nerviosa así lo confirman."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[worried] ¿Es grave? ¿Tendré que operarme?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] No es grave. No necesita operación. Es una contractura muscular que con el tratamiento adecuado debería mejorar en una o dos semanas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Ay, qué alivio. ¿Y cuándo podré volver al trabajo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[calmly] Eso dependerá del ritmo de mejoría. Probablemente necesitará entre cinco y diez días de reposo relativo, luego irá reincorporándose gradualmente."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Le voy a prescribir medicación. Primero, ibuprofeno seiscientos miligramos, un comprimido cada ocho horas con las comidas durante una semana. Esto la ayudará con el dolor y la inflamación."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] Seiscientos cada ocho horas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Y le voy a dar diazepam, cinco miligramos, medio comprimido por la noche si lo necesita para dormir o para relajar la musculatura. Esto es para tomar solo cuando sea necesario, no todo el día."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Vale, entendido."
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Le voy a solicitar una radiografía de columna lumbar, de frente y perfil, solo para descartar cualquier anomalía ósea, aunque tengo claro que es un problema muscular."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[cooperatively] ¿Dónde me hago eso?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[helpfully] En radiología, le darán cita. Ahora, muy importante: higiene postural. Cuando esté sentada, use un apoyo para la espalda. Cuando se levante, flexione las rodillas, no la espalda. Evite cargar peso durante dos semanas. Y aunque duela, intente caminar un poco, moverse, pero con suavidad."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[seriously] Entiendo, doctor."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Le cito para dentro de dos semanas. Si antes empieza a notar hormigueos en las piernas, debilidad, o si la fiebre aparece, llámeme. ¿De acuerdo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Está bien, doctor. Muchas gracias."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Animo, que le va a pasar. Cuidadito con la espalda a partir de ahora."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/medicina_familia/MF-004.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": [
+      "M62.838 → M62.8 (contractura - M62.838 es CIE-10-CM)"
+    ]
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "id": "PED-008",
+  "especialidad": "Pediatría",
+  "resumen": "Niña de 5 años, Irene, presentada por su padre David con varicela sin complicaciones. Inició hace 4 días con erupción vesicular maculopapular típica en progresión centípeta. Fiebre hasta 37.8°C. Lesiones en cara, tronco y extremidades en diferentes estadios. Tratamiento sintomático con paracetamol y loción de calamina.",
+  "diagnostico_principal": {
+    "nombre": "Varicela sin complicaciones",
+    "cie10": "B01.9",
+    "snomed_ct": "38907003",
+    "snomed_termino": "Varicella (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [],
+  "sintomas": [
+    {
+      "nombre": "Exantema vesicular",
+      "cie10": "R21",
+      "snomed_ct": "445518008",
+      "snomed_termino": "Vesicular rash (finding)"
+    },
+    {
+      "nombre": "Fiebre",
+      "cie10": "R50.9",
+      "snomed_ct": "386661006",
+      "snomed_termino": "Fever (finding)"
+    },
+    {
+      "nombre": "Prurito",
+      "cie10": "L29.9",
+      "snomed_ct": "418290006",
+      "snomed_termino": "Itching (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Inspección de lesiones cutáneas",
+      "snomed_ct": "38880002",
+      "snomed_termino": "Examination of skin (procedure)"
+    },
+    {
+      "nombre": "Medición de temperatura",
+      "snomed_ct": "56342008",
+      "snomed_termino": "Temperature taking (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Paracetamol",
+      "dosis": "120 mg",
+      "posologia": "120-240 mg (1-2 ml de suspensión 120 mg/5ml) cada 4-6 horas, máximo 5 dosis en 24 horas",
+      "atc": "N02BE01",
+      "snomed_ct": "387517004",
+      "snomed_termino": "Paracetamol (substance)",
+      "indicacion": "Analgesia y control de fiebre"
+    },
+    {
+      "nombre": "Loción de calamina",
+      "dosis": "N/A",
+      "posologia": "Aplicar localmente sobre lesiones pruriginosas según sea necesario",
+      "atc": "D04",
+      "snomed_ct": "89597002",
+      "snomed_termino": "Calamine lotion (product)",
+      "indicacion": "Alivio del prurito en varicela"
+    }
+  ],
+  "constantes_vitales": {
+    "temperatura": {
+      "valor": 37.8,
+      "unidad": "°C"
+    },
+    "frecuencia_cardiaca": {
+      "valor": 108,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 28,
+      "unidad": "resp/min"
+    },
+    "peso": {
+      "valor": 17.5,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 110,
+      "unidad": "cm"
+    }
+  },
+  "notas_adicionales": [
+    "Lesiones varicelas típicas en diferentes estadios: máculas, pápulas, vesículas, costras.",
+    "Distribución centípeta: más lesiones en cara, tronco que en extremidades.",
+    "Varicela confirmada clínicamente sin necesidad de pruebas complementarias.",
+    "Antecedentes vacunales: calendario normal, no había recibido vacuna antivaricela (no es obligatoria en calendario de este país).",
+    "Se proporciona educación sobre higiene, evitar rascarse, signos de alarma (sobreinfección bacteriana).",
+    "Aislamiento recomendado hasta que todas las lesiones estén costras (típicamente 5-7 días).",
+    "Revisión clínica en caso de complicaciones: impétigo, encefalitis, neumonía varicelosa."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Irene López Martínez",
+    "edad": 5,
+    "edad_unidad": "años",
+    "sexo": "femenino",
+    "guardian": "David López (padre)"
+  },
+  "medico": {
+    "nombre_ficticio": "Dr. Javier Rubio Gutiérrez",
+    "especialidad": "Pediatría"
+  },
+  "voces": {
+    "medico_voice_id": "wnKyx1zkUEUnfURKiuaP",
+    "paciente_voice_id": "tGjegxe7yxhGMzd3SOmH"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, David. ¿Qué tal está Irene? ¿Qué la trae?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Doctora, Irene tiene una erupción por todo el cuerpo desde hace cuatro días. Empezó con pocas manchitas rojas y ahora tiene ampollas por todas partes. Tiene fiebre y no para de rascarse."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Cómo fue el inicio? ¿Hubo síntomas antes de la erupción?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[describing] Hace como una semana comenzó con decaimiento, un poco de fiebre. Pensé que era un catarro. Pero luego empezaron estos granitos rojos que se convierten en ampollas."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] ¿Ha tenido contacto con alguien con varicela? ¿O con sarampión, rubéola?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Ah sí, el primo de su clase tuvo esto hace dos semanas. Supongo que fue allí."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Bien. ¿Es la primera vez que tiene varicela?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, es la primera vez. Cuando era bebé no la tuvo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiring] ¿Ha tenido alguna enfermedad grave? ¿Inmunodepresión, cáncer, medicamentos que bajen las defensas?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[shaking head] No, nada. Es una niña sana, sin enfermedades crónicas. Vacunas al día según el calendario."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Alguna alergia a medicamentos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[calmly] No, nada conocido."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] ¿Hermanos? ¿Han tenido varicela o están en riesgo?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thoughtfully] Tiene un hermano menor de dos años que está bien ahorita, pero probablemente la cogará en los próximos días."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Perfecto. Voy a examinarla ahora. Irene, voy a mirar tu piel. ¿Está bien?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining] Observo exantema típico de varicela: lesiones maculopapulares eritematosas, vesículas con halo rojo, algunas costras. Distribución centípeta predominante en cara y tronco. Lesiones en diferentes estadios evolutivos, muy típico de varicela."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Peso diecisiete coma cinco kilos, talla ciento diez centímetros. Temperatura treinta y siete coma ocho grados centígrados, fiebre leve. Frecuencia cardíaca ciento ocho latidos por minuto."
+        },
+        {
+          "rol": "medico",
+          "texto": "[examining oral] Mucosa oral rosada, sin aftas. Orofaringe normal. Ganglios linfáticos cervicales palpables pero normales. Auscultación pulmonar: pulmones limpios, sin crepitantes."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professional assessment] No hay signos de sobreinfección bacteriana de las lesiones. No hay signos de meningitis, encefalitis ni complicaciones pulmonares en este momento."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] David, el diagnóstico es muy claro: varicela sin complicaciones. Es una infección viral autolimitada, muy común en la infancia."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Es grave? ¿Puede haber complicaciones?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] La mayoría de los casos en niños sanos como Irene son benignos. Las complicaciones graves son raras a esta edad: infecciones bacterianas de piel, neumonía varicelosa, encefalitis. Pero con cuidados adecuados, se previenen."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] El tratamiento es principalmente sintomático. Paracetamol para la fiebre y el malestar. Dosis ciento veinte a doscientos cuarenta miligramos cada cuatro a seis horas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[listening] ¿Y antibióticos? ¿Antivirales?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] No, en niños sanos sin complicaciones no están indicados. Los antivirales se reservan para inmunodeprimidos o enfermedad grave. Antibióticos solo si hay sobreinfección bacteriana clara."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Usa esta loción de calamina en las lesiones para aliviar el prurito. Evita que se rasque porque puede dejar cicatrices. Baños cortos en agua templada sin jabones irritantes."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Mantén el aislamiento hasta que todas las lesiones sean costras, típicamente cinco a siete días. Evita contacto con embarazadas, recién nacidos y personas inmunodeprimidas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] Mi hijo pequeño, ¿se va a contagiar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[realistically] Muy probablemente sí, es extremadamente contagioso. Si es menor de un año o inmunodeprimido, ten especial cuidado. En hermanos sanos suele ser similar o menos grave que en Irene."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Vuelve si notas signos de alarma: fiebre muy alta sostenida, lesiones muy infectadas, dificultad para respirar, cefalea intensa, vómitos. De lo contrario, en una semana veremos cómo está."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Eso nos tranquiliza bastante."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/pediatria/PED-008.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

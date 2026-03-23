@@ -1,0 +1,313 @@
+{
+  "id": "DER-007",
+  "especialidad": "Dermatología",
+  "resumen": "Paciente mujer de 42 años con rosácea moderada con pápulas inflamatorias eritematosas, telangiectasias y rubor facial persistente. Se inicia tratamiento con metronidazol tópico y doxiciclina oral. Se enfatiza la importancia de fotoprotección y evitar desencadenantes como el calor y el alcohol.",
+  "diagnostico_principal": {
+    "nombre": "Rosácea",
+    "cie10": "L71.9",
+    "snomed_ct": "398909004",
+    "snomed_termino": "Rosacea (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Flushing (sofocos)",
+      "cie10": "R23.1",
+      "snomed_ct": "75543009",
+      "snomed_termino": "Flushing (finding)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Eritema facial persistente",
+      "cie10": "L71.9",
+      "snomed_ct": "247441003",
+      "snomed_termino": "Erythematous patch (finding)"
+    },
+    {
+      "nombre": "Pápulas inflamatorias en cara",
+      "cie10": "L71.9",
+      "snomed_ct": "405756002",
+      "snomed_termino": "Inflammatory papule (finding)"
+    },
+    {
+      "nombre": "Telangiectasias",
+      "cie10": "L78.1",
+      "snomed_ct": "71378003",
+      "snomed_termino": "Telangiectasis (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración dermatológica facial",
+      "snomed_ct": "15433301000119102",
+      "snomed_termino": "Dermatologic examination (procedure)"
+    },
+    {
+      "nombre": "Evaluación de subtipos de rosácea",
+      "snomed_ct": "385489003",
+      "snomed_termino": "Assessment of severity (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Metronidazol tópico",
+      "dosis": "0.75%",
+      "posologia": "Aplicar en cara dos veces al día, mañana y noche",
+      "atc": "D06BX01",
+      "snomed_ct": "327457005",
+      "snomed_termino": "Metronidazole (substance)",
+      "indicacion": "Antiparasitario tópico para rosácea, control de Demodex"
+    },
+    {
+      "nombre": "Doxiciclina oral",
+      "dosis": "50 mg",
+      "posologia": "Un comprimido cada 24 horas durante 2-3 meses",
+      "atc": "J01AA02",
+      "snomed_ct": "372806008",
+      "snomed_termino": "Doxycycline (substance)",
+      "indicacion": "Antibiótico con propiedades antiinflamatorias a dosis bajas para rosácea"
+    }
+  ],
+  "constantes_vitales": {
+    "frecuencia_cardiaca": {
+      "valor": 76,
+      "unidad": "lpm"
+    },
+    "frecuencia_respiratoria": {
+      "valor": 16,
+      "unidad": "rpm"
+    },
+    "presion_arterial_sistolica": {
+      "valor": 132,
+      "unidad": "mmHg"
+    },
+    "presion_arterial_diastolica": {
+      "valor": 84,
+      "unidad": "mmHg"
+    },
+    "peso": {
+      "valor": 72,
+      "unidad": "kg"
+    },
+    "talla": {
+      "valor": 168,
+      "unidad": "cm"
+    },
+    "imc": {
+      "valor": 25.5,
+      "unidad": "kg/m²"
+    }
+  },
+  "notas_adicionales": [
+    "Rosácea de tipo II (rosácea vascular con pápulas).",
+    "Antecedentes familiares de rosácea (madre).",
+    "Desencadenantes identificados: calor, alimentos picantes, alcohol, estrés.",
+    "Impacto social importante por aspectos estéticos.",
+    "Fototipo II, sensible al sol.",
+    "Se recomienda evitar cosméticos irritantes y usar protección solar diaria.",
+    "Considerar luz pulsada intensa si no hay respuesta al tratamiento médico."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Ana María Iglesias Peña",
+    "edad": 42,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Consuelo Ramírez López",
+    "especialidad": "Dermatología"
+  },
+  "voces": {
+    "medico_voice_id": "CdAqYBLnsNjmTqYgD5Ha",
+    "paciente_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Ana María. Veo que tienes la cara bastante roja. ¿Qué te trae por aquí?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[frustrated] Pues mira, doctora, hace como un año que tengo la cara siempre así, colorada. Empezó siendo sofocos ocasionales pero ahora es permanente. Además tengo estos bultitos rojos que pican y arden, especialmente cuando como algo picante o caliente, o cuando tomo vino."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] ¿Y tienes algún patrón? ¿Cuándo empeora?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking] Sí, es que notables claramente. Cuando me estreso mucho, cuando salgo al sol, cuando como algo muy caliente o condimentado. Y las bebidas alcohólicas, es inmediato. También he visto que en el gimnasio, cuando me calienta el ejercicio, se me pone la cara como un tomate."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Has probado algo para mejorar? ¿Algún producto o medicina?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] He cambiado a limpiadoras suaves para piel sensible, he probado algunas cremas 'naturales', pero nada me ha funcionado. Mi madre tiene algo parecido y dice que es rosácea, pero a mí nunca me lo han diagnosticado."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[professionally] Tu madre tiene rosácea, ¿verdad? Dime un poco más sobre tu historia. ¿Tienes antecedentes de alergias?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, la verdad es que siempre he tenido la piel sensible. Me irrita fácilmente con perfumes, con ciertos cosméticos. Pero no tengo asma ni rinitis."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Medicaciones que tomes? ¿Alergias a medicamentos?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[simply] Nada actualmente. Me quité la píldora hace dos años porque me daba muchas migrañas. Ninguna alergia a medicamentos que sepa."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Y la piel siempre te ha sido así de sensible, desde joven, o ha empeorado con la edad?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[reflective] Siempre he tenido piel sensible, pero esto de la rosácea empezó hace como un año. Justo cuando empecé la perimenopausia, así que no sé si es coincidencia."
+        },
+        {
+          "rol": "medico",
+          "texto": "[nodding] Puede estar relacionado. Los cambios hormonales empeoran mucho la rosácea. ¿Otros síntomas de perimenopausia?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[acknowledging] Sí, tengo sofocos, cambios de humor, sequedad vaginal. Pero el dermatólogo anterior no me lo preguntó."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[instructively] Perfecto. Venga, vamos a ver tu piel de cerca. [pause] Sí, veo una rosácea clara. Hay un eritema facial difuso, especialmente pronunciado en mejillas, nariz y barbilla. Las pápulas rojas, pequeñas, están diseminadas por toda la cara, algunas con un puntito central amarillento, sugestivas de pústulas muy pequeñas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[self-consciously] Eso es lo que más me molesta estéticamente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Comprendo. Además, mira aquí en las mejillas y la nariz, tienes una red de pequeños vasos dilatados, telangiectasias, muy característica de la rosácea. Aquí en la frente menos, que es típico. [pause] ¿Hay ardor?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Sí, a veces. Especialmente cuando empeora."
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Bien. Los párpados y conjuntivas están normales, no hay afectación ocular. Las mucosas orales normales. Esto es rosácea vascular con pápulas, clasificada como tipo II."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[earnestly] Ana María, tienes rosácea. Es una enfermedad inflamatoria crónica de la cara. No es curable pero es muy controlable con tratamiento. Es más frecuente en mujeres, sobre todo en perimenopausia, así que el timing tiene sentido."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[anxiously] ¿Es hereditaria? ¿Mis hijas la van a tener?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Sí tiene componente genético, pero no todos los portadores la desarrollan. Además, el riesgo de tus hijas es moderado. Lo importante es que ahora podemos controlar bien tu rosácea."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[confidently] Voy a prescribirte dos cosas. Primero, metronidazol tópico al 0,75%. Es un gel muy efectivo para la rosácea, controla el eritema y la inflamación. Lo aplicas en toda la cara, mañana y noche, después de limpiar con agua tibia."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[attentively] ¿Y si pica o irrita?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[carefully] Al principio puede picar un poco, pero es normal y pasa. Si irrita mucho, me avisas. Además, voy a darte doxiciclina oral a dosis bajas, 50 miligramos una vez al día. No es por antibiótico sino por sus propiedades antiinflamatorias. Vas a tomarla durante dos o tres meses."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Antibióticos de verdad?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[clearly] Sí, doxiciclina, pero a dosis mucho más bajas de lo que usaríamos para una infección. La doxiciclina controla muy bien la respuesta inflamatoria de la rosácea. Puede causarte fotosensibilidad, así que tienes que usar SPF 50+ todos los días, incluso en invierno."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[questioning] ¿Incluso en invierno?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[emphatically] Sí, importante. La radiación UV es un desencadenante mayor de la rosácea. Y hablando de desencadenantes, tienes que intentar evitar lo que ya has identificado: alimentos muy picantes, bebidas alcohólicas, alimentos muy calientes. El estrés es otro factor, así que meditación, yoga, lo que prefieras para manejar estrés."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[nodding] Eso va a ser difícil porque me gusta mucho el vino."
+        },
+        {
+          "rol": "medico",
+          "texto": "[practically] Trata de minimizar. Una copa ocasional quizá toleres mejor que varias. Pero esto tendrás que aprender qué toleras tú específicamente. Además, usa solo limpiadoras suaves para piel sensible, sin fragancias. Nada abrasivo ni productos irritantes."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concerned] ¿Y si no mejora?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[methodically] Si después de dos meses con esto no ves mejoría importante, podemos considerar luz pulsada intensa, que funciona muy bien para la rosácea y reduce las telangiectasias. Pero primero vamos a ver cómo respondes al tratamiento médico."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[grateful] Muchas gracias, doctora. Espero que esto me ayude porque estoy cansada de tener que maquillarme constantemente."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Va a mejorar, Ana María. Te cito en dos meses para ver cómo va la respuesta. Si algo empeora o tienes dudas, me llamas."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[relieved] Gracias de nuevo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] De nada. Ánimo con los cambios de estilo de vida. Es una enfermedad manejable."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/dermatologia/DER-007.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}

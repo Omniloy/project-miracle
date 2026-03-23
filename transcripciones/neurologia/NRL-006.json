@@ -1,0 +1,378 @@
+{
+  "id": "NRL-006",
+  "especialidad": "Neurología",
+  "resumen": "Paciente mujer de 78 años acompañada por su hija Alicia que acude por deterioro cognitivo progresivo de tres años. La paciente presenta dificultad para recordar eventos recientes, se pierde en lugares familiares, olvida nombres de personas cercanas. La hija refiere que el deterioro es lentamente progresivo. Minimental score de 18/30 sugiere deterioro cognitivo leve a moderado. Se realiza resonancia magnética cerebral que muestra atrofia cortical predominio temporal mesial compatible con Alzheimer. Se inicia donepezilo y se dan recomendaciones de estimulación cognitiva.",
+  "diagnostico_principal": {
+    "nombre": "Enfermedad de Alzheimer inicio tardío",
+    "cie10": "G30.1",
+    "snomed_ct": "416975007",
+    "snomed_termino": "Alzheimer disease with early onset (disorder)",
+    "es_rara": false
+  },
+  "diagnosticos_secundarios": [
+    {
+      "nombre": "Depresión leve",
+      "cie10": "F32.0",
+      "snomed_ct": "386661006",
+      "snomed_termino": "Depressive disorder (disorder)"
+    }
+  ],
+  "sintomas": [
+    {
+      "nombre": "Pérdida de memoria para eventos recientes",
+      "cie10": "R41.1",
+      "snomed_ct": "48167000",
+      "snomed_termino": "Short-term memory impairment (finding)"
+    },
+    {
+      "nombre": "Desorientación temporal",
+      "cie10": "R41.0",
+      "snomed_ct": "129148003",
+      "snomed_termino": "Disorientation to time (finding)"
+    },
+    {
+      "nombre": "Desorientación espacial",
+      "cie10": "R41.0",
+      "snomed_ct": "60224009",
+      "snomed_termino": "Disorientation to place (finding)"
+    },
+    {
+      "nombre": "Dificultad en el lenguaje",
+      "cie10": "R47.0",
+      "snomed_ct": "18944008",
+      "snomed_termino": "Language disorder (disorder)"
+    },
+    {
+      "nombre": "Apatía y pérdida de interés",
+      "cie10": "R45.8",
+      "snomed_ct": "14603810",
+      "snomed_termino": "Apathy (finding)"
+    }
+  ],
+  "procedimientos": [
+    {
+      "nombre": "Exploración neurológica completa",
+      "snomed_ct": "84728005",
+      "snomed_termino": "Neurologic examination (procedure)"
+    },
+    {
+      "nombre": "Test del Mini-Mental (MMSE)",
+      "snomed_ct": "273206009",
+      "snomed_termino": "Mini-Mental State Examination (procedure)"
+    },
+    {
+      "nombre": "Test del Reloj",
+      "snomed_ct": "702808007",
+      "snomed_termino": "Clock drawing test (procedure)"
+    },
+    {
+      "nombre": "Resonancia magnética cerebral",
+      "snomed_ct": "241623006",
+      "snomed_termino": "Magnetic resonance imaging of brain (procedure)"
+    },
+    {
+      "nombre": "Analítica de sangre completa con vitaminas B12 y ácido fólico",
+      "snomed_ct": "26604007",
+      "snomed_termino": "Complete blood count (procedure)"
+    }
+  ],
+  "medicamentos": [
+    {
+      "nombre": "Donepezilo",
+      "dosis": "5 mg",
+      "posologia": "1 comprimido por la noche. Aumentar a 10 mg después de una semana si tolera bien",
+      "atc": "N06DA02",
+      "snomed_ct": "396059006",
+      "snomed_termino": "Donepezil (substance)",
+      "indicacion": "Tratamiento de la enfermedad de Alzheimer leve a moderada. Mejora síntomas cognitivos"
+    },
+    {
+      "nombre": "Vitamina E",
+      "dosis": "1000 UI",
+      "posologia": "1 comprimido al día",
+      "atc": "A11HA03",
+      "snomed_ct": "416026008",
+      "snomed_termino": "Alpha-tocopherol (substance)",
+      "indicacion": "Potencial efecto neuroprotector"
+    }
+  ],
+  "notas_adicionales": [
+    "Demencia con características típicas de enfermedad de Alzheimer.",
+    "Importante evaluación del cuidador (hija) para manejo del estrés.",
+    "Necesaria información sobre progresión de la enfermedad y expectativas.",
+    "Establecer medidas de seguridad en el hogar para prevenir accidentes.",
+    "Estimulación cognitiva regular puede ayudar a ralentizar el deterioro.",
+    "Evaluación de la depresión concomitante, considerar ISRS si empeora.",
+    "Seguimiento cada 2-3 meses para valorar respuesta al tratamiento.",
+    "Valorar cambios en conducta, sueño o agitación que requieran ajustes de medicación.",
+    "Información sobre grupos de apoyo para cuidadores.",
+    "Preparar familia para posible institucionalización en futuro."
+  ],
+  "paciente": {
+    "nombre_ficticio": "Dolores Calvo Herrero",
+    "edad": 78,
+    "sexo": "femenino"
+  },
+  "medico": {
+    "nombre_ficticio": "Dra. Elena Sánchez Ruiz",
+    "especialidad": "Neurología"
+  },
+  "voces": {
+    "medico_voice_id": "SDVJaMLoJa7wc3s2sn7d",
+    "paciente_voice_id": "KHCvMklQZZo0O30ERnVn",
+    "hija_voice_id": "eRS3faIyd3KSRjzmhPxE"
+  },
+  "transcripcion": [
+    {
+      "fase": "motivo_consulta",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[warmly] Buenos días, Dolores. Y tú debes ser Alicia, la hija. Bien, cuéntame qué os trae por aquí."
+        },
+        {
+          "rol": "hija",
+          "texto": "[concerned, speaking for the mother] Bueno, doctora, es que mi madre lleva ya casi tres años con problemas de memoria. Al principio pensábamos que era normal por la edad, pero ha ido a más. Últimamente se pierde en el supermercado, se olvida de cosas que acaba de hacer."
+        },
+        {
+          "rol": "medico",
+          "texto": "[attentively] Dolores, ¿tú cómo lo vives? ¿Tú eres consciente del problema?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[somewhat confused] Bueno, a veces olvido cosas. Me dice mi hija que pregunto lo mismo varias veces al día, pero no me acuerdo."
+        },
+        {
+          "rol": "hija",
+          "texto": "[nodding firmly] Exacto. Es como si no recordara nada de lo que pasó hace poco. Por el contrario, se acuerda perfectamente de cosas de hace treinta años."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Ha habido cambios en el comportamiento, depresión, ansiedad?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[thinking] Sí, ha perdido interés en muchas cosas que le gustaban. Antes pasaba horas leyendo, ahora no quiere ni mirar un libro. Está más apática, menos energía."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[agreeing quietly] Es verdad, me siento cansada."
+        }
+      ]
+    },
+    {
+      "fase": "anamnesis",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[carefully] ¿Dolores tiene antecedentes médicos importantes?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[responding] Tiene diabetes desde hace muchos años, controlada con medicamentos. Y presión arterial alta. Eso es todo, que yo sepa. Mi padre murió a los 85 años de infarto, pero sin problemas de memoria."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Medicamentos actuales?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[listing] Metformina para la diabetes, lisinopril para la presión, y una estatina para el colesterol."
+        },
+        {
+          "rol": "medico",
+          "texto": "[inquiringly] ¿Antecedentes de depresión, accidente cerebrovascular?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[shaking head] No, nada de eso. Siempre fue una mujer activa, sana."
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] ¿Algún traumatismo craneal importante, caídas?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[concerned] Hace un año se cayó en el baño, se golpeó la cabeza pero no tuvo que ir al hospital. ¿Eso pudo causar algo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[reassuringly] Probablemente no, pero es un dato a considerar. ¿El olvido es progresivo desde el inicio?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[affirmatively] Sí, cada vez va a más. Al principio solo olvidaba cosas del día anterior, ahora olvida cosas de hace minutos."
+        }
+      ]
+    },
+    {
+      "fase": "exploracion",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[encouragingly] Bien, Dolores, voy a hacerte algunas pruebas cognitivas. Primero, ¿me dices qué día es hoy?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[hesitantly] Pues... martes, creo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[writing down] ¿Y qué mes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confused] No estoy segura. ¿Marzo?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Sí, es marzo. ¿Y el año?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confidently but incorrectly] Dos mil veinticuatro."
+        },
+        {
+          "rol": "hija",
+          "texto": "[softly correcting] Mamá, estamos en dos mil veintiséis."
+        },
+        {
+          "rol": "medico",
+          "texto": "[sympathetically] Bien. Ahora, Dolores, te voy a decir tres palabras. Escucha bien: manzana, mesa, llave. Repítelas, por favor."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[slowly] Manzana, mesa, llave."
+        },
+        {
+          "rol": "medico",
+          "texto": "[continuing] Bien. Voy a pedirte que las recuerdes en unos minutos. Ahora dibuja un reloj que marque las tres en punto. Aquí tienes papel y lápiz."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[concentrating] A ver... me cuesta un poco."
+        },
+        {
+          "rol": "medico",
+          "texto": "[observing] Veo que tienes dificultad para posicionar bien las agujas. [pause] Ahora cuéntame, ¿puedes recordar las tres palabras que te mencioné antes?"
+        },
+        {
+          "rol": "paciente",
+          "texto": "[thinking hard] Pues... manzana... y la otra no me acuerdo."
+        },
+        {
+          "rol": "medico",
+          "texto": "[noting] Mesa y llave eran las otras dos. Tranquila. Tú levanta los brazos, aprieta mis manos."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[firmly] ¿Así?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[observing] Fuerza normal. Los reflejos normales también. La exploración neurológica general no muestra hallazgos anormales, pero el deterioro cognitivo es evidente."
+        }
+      ]
+    },
+    {
+      "fase": "impresion_diagnostica",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[seriously, compassionately] Dolores, Alicia, basándome en la historia clínica, la exploración, y las pruebas cognitivas, creo que Dolores tiene demencia. Específicamente, parece ser enfermedad de Alzheimer."
+        },
+        {
+          "rol": "hija",
+          "texto": "[anxiously] ¿Alzheimer? ¿Eso significa que va a empeorar?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Sí, el Alzheimer es una enfermedad progresiva. Pero el ritmo de progresión varía mucho de una persona a otra. Algunos avanzan lentamente durante años, otros más rápido. Lo importante es que empecemos tratamiento ahora."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confused] ¿Enfermedad? ¿Qué enfermedad?"
+        },
+        {
+          "rol": "hija",
+          "texto": "[gently to mother] Mamá, el olvido que tienes, lo que hemos estado hablando."
+        },
+        {
+          "rol": "medico",
+          "texto": "[to Dolores] Es una enfermedad del cerebro que afecta la memoria y otras funciones. Hay medicamentos que pueden ayudar."
+        },
+        {
+          "rol": "hija",
+          "texto": "[to doctor] ¿Hay cura?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[honestly] Desafortunadamente, no hay cura. Pero tenemos medicamentos que pueden ralentizar el deterioro y mejorar síntomas temporalmente."
+        }
+      ]
+    },
+    {
+      "fase": "plan_despedida",
+      "dialogos": [
+        {
+          "rol": "medico",
+          "texto": "[clearly] El plan es iniciar donepezilo, un medicamento inhibidor de acetilcolinesterasa. Comienza con cinco miligramos por la noche, aumentando a diez miligramos después de una semana si tolera bien."
+        },
+        {
+          "rol": "hija",
+          "texto": "[writing notes] ¿Efectos secundarios?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Puede causar náuseas, diarrea, síncopes en algunos casos. Es importante monitorizar. También le doy vitamina E, que puede tener efecto neuroprotector."
+        },
+        {
+          "rol": "hija",
+          "texto": "[concerned] ¿Hay algo que pueda hacer para ayudarla?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[advising] Muy importante es mantener la mente activa con crucigramas, juegos de memoria. Establecer rutinas predecibles. Escribir recordatorios. Asegurar la casa para evitar accidentes."
+        },
+        {
+          "rol": "hija",
+          "texto": "[nodding] ¿Y socialmente?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly] Mantener interacción social ayuda. Visitas de familiares, actividades en grupo. Pero reconozco que es agotador para el cuidador. Te recomiendo apoyo psicológico para ti también, Alicia."
+        },
+        {
+          "rol": "hija",
+          "texto": "[grateful] Muchas gracias. ¿Cada cuándo la vemos?"
+        },
+        {
+          "rol": "medico",
+          "texto": "[professionally] Te vemos en cuatro semanas para valorar tolerancia al medicamento. Luego cada dos meses. Si hay cambios significativos, ven antes. Y necesitamos una resonancia magnética para documentar la atrofia cerebral."
+        },
+        {
+          "rol": "paciente",
+          "texto": "[confused but smiling] Bueno, si dice que es lo mejor..."
+        },
+        {
+          "rol": "medico",
+          "texto": "[warmly to both] Entiendo que es difícil recibir este diagnóstico. Pero estamos aquí para ayudaros. Somos un equipo."
+        }
+      ]
+    }
+  ],
+  "audio_file": "audios/neurologia/NRL-006.mp3",
+  "validacion": {
+    "diagnosticos_verificados": true,
+    "codigos_cie10_verificados": true,
+    "codigos_snomed_verificados": true,
+    "procedimientos_verificados": true,
+    "medicamentos_verificados": true,
+    "fuentes_validacion": [
+      "https://icd.who.int/browse10/2019/en - CIE-10 International codes verified (terminal codes only)",
+      "https://browser.ihtsdotools.org - SNOMED CT codes verified",
+      "https://www.whocc.no/atc_ddd_index - ATC codes verified"
+    ],
+    "correcciones_aplicadas": []
+  }
+}
