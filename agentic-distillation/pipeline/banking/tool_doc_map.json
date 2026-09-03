@@ -1,0 +1,163 @@
+{
+ "activate_debit_card_8291": [
+  "doc_bank_accounts_bank_accounts_(general)_024"
+ ],
+ "activate_debit_card_8292": [
+  "doc_bank_accounts_bank_accounts_(general)_024"
+ ],
+ "activate_debit_card_8293": [
+  "doc_bank_accounts_bank_accounts_(general)_024"
+ ],
+ "apply_checking_account_credit_5829": [
+  "doc_bank_accounts_bank_accounts_(general)_017"
+ ],
+ "apply_credit_card_account_flag_6147": [
+  "doc_credit_cards_credit_card_account_logistics_003"
+ ],
+ "apply_savings_account_credit_6831": [
+  "doc_bank_accounts_bank_accounts_(general)_044",
+  "doc_bank_accounts_bank_accounts_(general)_043"
+ ],
+ "apply_statement_credit_8472": [
+  "doc_credit_cards_credit_cards_(general)_017"
+ ],
+ "approve_credit_limit_increase_5847": [
+  "doc_credit_cards_credit_card_account_logistics_007"
+ ],
+ "change_debit_card_pin_6285": [
+  "doc_bank_accounts_bank_accounts_(general)_027"
+ ],
+ "clear_debit_card_fraud_alert_4892": [
+  "doc_bank_accounts_bank_accounts_(general)_039"
+ ],
+ "close_bank_account_7392": [
+  "doc_bank_accounts_bank_accounts_(general)_006",
+  "doc_bank_accounts_bank_accounts_(general)_007",
+  "doc_bank_accounts_bank_accounts_(general)_005",
+  "doc_bank_accounts_bank_accounts_(general)_008"
+ ],
+ "close_credit_card_account_7834": [
+  "doc_credit_cards_credit_card_account_logistics_002"
+ ],
+ "close_debit_card_4721": [
+  "doc_bank_accounts_bank_accounts_(general)_025"
+ ],
+ "deny_credit_limit_increase_5848": [
+  "doc_credit_cards_credit_card_account_logistics_007"
+ ],
+ "emergency_credit_bureau_incident_transfer_1114": [
+  "doc_credit_cards_credit_cards_(general)_012"
+ ],
+ "example_agent_tool_0000": [],
+ "file_credit_card_transaction_dispute_4829": [
+  "doc_credit_cards_credit_cards_(general)_014"
+ ],
+ "file_debit_card_transaction_dispute_6281": [
+  "doc_bank_accounts_bank_accounts_(general)_031"
+ ],
+ "freeze_debit_card_3892": [
+  "doc_bank_accounts_bank_accounts_(general)_031",
+  "doc_bank_accounts_bank_accounts_(general)_026"
+ ],
+ "get_all_user_accounts_by_user_id_3847": [
+  "doc_bank_accounts_bank_accounts_(general)_044",
+  "doc_bank_accounts_bank_accounts_(general)_009",
+  "doc_bank_accounts_bank_accounts_(general)_043"
+ ],
+ "get_atm_deposit_images_8473": [
+  "doc_bank_accounts_bank_accounts_(general)_033"
+ ],
+ "get_bank_account_transactions_9173": [
+  "doc_bank_accounts_bank_accounts_(general)_044",
+  "doc_bank_accounts_bank_accounts_(general)_031",
+  "doc_bank_accounts_bank_accounts_(general)_043",
+  "doc_bank_accounts_bank_accounts_(general)_018"
+ ],
+ "get_closure_reason_history_8293": [
+  "doc_credit_cards_credit_card_account_logistics_003"
+ ],
+ "get_credit_limit_increase_history_4829": [
+  "doc_credit_cards_credit_card_account_logistics_007"
+ ],
+ "get_debit_cards_by_account_id_7823": [
+  "doc_bank_accounts_bank_accounts_(general)_028"
+ ],
+ "get_debit_dispute_status_7483": [
+  "doc_bank_accounts_bank_accounts_(general)_035"
+ ],
+ "get_payment_history_6183": [
+  "doc_credit_cards_credit_card_account_logistics_006"
+ ],
+ "get_pending_replacement_orders_5765": [
+  "doc_credit_cards_credit_card_replacements_005"
+ ],
+ "get_user_dispute_history_7291": [
+  "doc_credit_cards_credit_cards_(general)_016"
+ ],
+ "initial_transfer_to_human_agent_0218": [
+  "doc_credit_cards_credit_cards_(general)_011",
+  "doc_credit_cards_credit_cards_(general)_010"
+ ],
+ "initial_transfer_to_human_agent_1822": [
+  "doc_credit_cards_credit_cards_(general)_011"
+ ],
+ "log_credit_card_closure_reason_4521": [
+  "doc_credit_cards_credit_card_account_logistics_003"
+ ],
+ "open_bank_account_4821": [
+  "doc_bank_accounts_bank_accounts_(general)_003",
+  "doc_bank_accounts_bank_accounts_(general)_001",
+  "doc_bank_accounts_bank_accounts_(general)_004",
+  "doc_bank_accounts_bank_accounts_(general)_002"
+ ],
+ "order_debit_card_5739": [
+  "doc_bank_accounts_bank_accounts_(general)_029",
+  "doc_bank_accounts_bank_accounts_(general)_023"
+ ],
+ "order_replacement_credit_card_7291": [
+  "doc_credit_cards_credit_card_replacements_001",
+  "doc_credit_cards_credit_cards_(general)_014"
+ ],
+ "pay_credit_card_from_checking_9182": [
+  "doc_credit_cards_credit_card_account_logistics_009"
+ ],
+ "request_temporary_debit_card_limit_increase_8374": [
+  "doc_bank_accounts_bank_accounts_(general)_040"
+ ],
+ "reset_debit_card_pin_6284": [
+  "doc_bank_accounts_bank_accounts_(general)_027"
+ ],
+ "set_debit_card_recurring_block_7382": [
+  "doc_bank_accounts_bank_accounts_(general)_034"
+ ],
+ "submit_credit_limit_increase_request_7392": [
+  "doc_credit_cards_credit_card_account_logistics_007"
+ ],
+ "submit_interest_discrepancy_report_7294": [
+  "doc_bank_accounts_bank_accounts_(general)_044",
+  "doc_bank_accounts_bank_accounts_(general)_043"
+ ],
+ "transfer_funds_between_bank_accounts_7291": [
+  "doc_bank_accounts_bank_accounts_(general)_010",
+  "doc_bank_accounts_bank_accounts_(general)_004",
+  "doc_bank_accounts_bank_accounts_(general)_002"
+ ],
+ "unfreeze_debit_card_3893": [
+  "doc_bank_accounts_bank_accounts_(general)_026"
+ ],
+ "update_transaction_rewards_3847": [
+  "doc_credit_cards_credit_cards_(general)_004"
+ ],
+ "deposit_check_3847": [
+  "doc_bank_accounts_bank_accounts_(general)_011"
+ ],
+ "get_card_last_4_digits": [
+  "doc_credit_cards_credit_cards_(general)_013"
+ ],
+ "get_referral_link": [
+  "doc_credit_cards_credit_cards_(general)_009"
+ ],
+ "submit_cash_back_dispute_0589": [
+  "doc_credit_cards_credit_cards_(general)_003"
+ ]
+}

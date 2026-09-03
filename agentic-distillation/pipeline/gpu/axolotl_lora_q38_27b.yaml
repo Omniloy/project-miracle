@@ -1,0 +1,93 @@
+# bf16 LoRA SFT of Qwen3.8-27B on verified agentic trajectories (per-turn samples), 1x 96 GB GPU.
+# Based on axolotl examples/qwen3.8/27b-qlora.yaml; changed to bf16 LoRA (Unsloth warns QLoRA degrades this arch),
+# larger rank, DeltaNet projections included (smoke test decides), our chat_template dataset, 16K sequences.
+base_model: /workspace/Qwen3.8-27B
+
+plugins:
+  - axolotl.integrations.cut_cross_entropy.CutCrossEntropyPlugin
+strict: false
+
+chat_template: tokenizer_default
+chat_template_kwargs:
+  enable_thinking: false   # teacher trajectories carry no reasoning traces; train the non-thinking path,
+                           # evaluate both modes (AA: Banking 47.4 medium vs 48.0 xhigh -> not compute-limited)
+
+datasets:
+  - path: /workspace/data/train_turns.jsonl
+    type: chat_template
+    field_messages: messages
+    field_tools: tools
+    roles_to_train: ["assistant"]     # every assistant turn in a window is a verified-good target
+    train_on_eos: turn
+    message_property_mappings:
+      role: role
+      content: content
+      tool_calls: tool_calls
+      tool_call_id: tool_call_id
+test_datasets:
+  - path: /workspace/data/dev_turns.jsonl
+    type: chat_template
+    split: train
+    field_messages: messages
+    field_tools: tools
+    roles_to_train: ["assistant"]
+    train_on_eos: turn
+    message_property_mappings:
+      role: role
+      content: content
+      tool_calls: tool_calls
+      tool_call_id: tool_call_id
+    roles:
+      user: ["user"]
+      assistant: ["assistant"]
+      system: ["system"]
+      tool: ["tool"]
+      assistant_ctx: ["assistant_ctx"]
+
+output_dir: /workspace/outputs/q38_27b_lora_v0
+dataset_prepared_path: /workspace/last_run_prepared
+
+sequence_len: 16384
+sample_packing: false          # per-turn samples are already long; packing long samples fragments badly
+pad_to_sequence_len: false
+
+adapter: lora
+load_in_4bit: false
+lora_r: 64
+lora_alpha: 128
+lora_dropout: 0.05
+lora_target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+  # Gated-DeltaNet projections (Qwen3.5/3.8 naming per the axolotl example) - keep only if the smoke test trains them
+  - linear_attn.in_proj_qkv
+  - linear_attn.in_proj_z
+  - linear_attn.out_proj
+
+gradient_accumulation_steps: 8
+micro_batch_size: 1
+num_epochs: 2
+optimizer: adamw_torch_fused
+lr_scheduler: cosine
+learning_rate: 0.0001
+warmup_ratio: 0.03
+weight_decay: 0.0
+
+bf16: auto
+tf32: true
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+attn_implementation: flash_attention_2
+
+logging_steps: 1
+evals_per_epoch: 2
+saves_per_epoch: 1
+save_total_limit: 2
+resume_from_checkpoint:
+special_tokens:

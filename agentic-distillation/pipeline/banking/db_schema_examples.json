@@ -1,0 +1,393 @@
+{
+ "users": {
+  "n_rows": 39,
+  "id_examples": [
+   "123",
+   "125",
+   "6680a37184",
+   "af0581dcbf",
+   "86e92f639e"
+  ],
+  "row_examples": {
+   "b5e8f2a1c9": {
+    "name": "Roberto Delgado",
+    "user_id": "b5e8f2a1c9",
+    "address": "4521 Saguaro Drive, Mesa, AZ 85201",
+    "email": "roberto.delgado@delgadolandscaping.com",
+    "phone_number": "480-555-0634",
+    "date_of_birth": "03/18/1986"
+   },
+   "jm60a8b9c2": {
+    "name": "Jordan Mitchell",
+    "user_id": "jm60a8b9c2",
+    "address": "4521 Mountain View Drive, Denver, CO 80202",
+    "email": "jordan.mitchell@outlook.com",
+    "phone_number": "303-555-0847",
+    "date_of_birth": "08/22/1989"
+   }
+  }
+ },
+ "accounts": {
+  "n_rows": 33,
+  "id_examples": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05"
+  ],
+  "row_examples": {
+   "03": {
+    "account_id": "03",
+    "user_id": "125",
+    "class": "checking",
+    "level": "Green Account",
+    "date_opened": "09/02/2023",
+    "status": "OPEN",
+    "current_holdings": "3400"
+   },
+   "61b2c3d4e5f6a789": {
+    "account_id": "61b2c3d4e5f6a789",
+    "user_id": "jc61f7a8d2",
+    "class": "checking",
+    "level": "Light Blue Account",
+    "date_opened": "11/02/2025",
+    "status": "OPEN",
+    "current_holdings": "600.00"
+   }
+  }
+ },
+ "debit_cards": {
+  "n_rows": 8,
+  "id_examples": [
+   "dbc_lj82d4f1a9_bluest",
+   "dbc_538bfb9cba",
+   "dbc_kj93a7b2e1_blue",
+   "dbc_kj93a7b2e1_green",
+   "dbc_kj93a7b2e1_lightgreen"
+  ],
+  "row_examples": {
+   "dbc_9b1c5d7e3a": {
+    "card_id": "dbc_9b1c5d7e3a",
+    "account_id": "06",
+    "user_id": "c7d8e9f0a1",
+    "cardholder_name": "MARGOT BELLAMY",
+    "last_4_digits": "5291",
+    "cvv": "837",
+    "status": "PENDING",
+    "issue_date": "01/05/2026",
+    "expiration_date": "01/31/2030",
+    "issue_reason": "expired"
+   },
+   "dbc_kj93a7b2e1_green": {
+    "card_id": "dbc_kj93a7b2e1_green",
+    "account_id": "chk_kj93a7b2e1_2",
+    "user_id": "kj93a7b2e1",
+    "cardholder_name": "KIM JUNHO",
+    "last_4_digits": "9152",
+    "cvv": "384",
+    "status": "ACTIVE",
+    "issue_date": "03/25/2025",
+    "expiration_date": "03/31/2029",
+    "issue_reason": "lost"
+   }
+  }
+ },
+ "referrals": {
+  "n_rows": 19,
+  "id_examples": [
+   "a1b2c3d4e5f67890",
+   "b2c3d4e5f6789012",
+   "c3d4e5f678901234",
+   "d4e5f67890123456",
+   "e1f2a3b4c5d67890"
+  ],
+  "row_examples": {
+   "d6789012345678a1": {
+    "referral_id": "d6789012345678a1",
+    "referrer_id": "86e92f639e",
+    "referred_account_type": "Silver Rewards Card",
+    "referral_status": "COMPLETE",
+    "date": "10/26/2025"
+   },
+   "7890abcdef012345": {
+    "referral_id": "7890abcdef012345",
+    "referrer_id": "86e92f639e",
+    "referred_account_type": "Platinum Rewards Card",
+    "referral_status": "ERROR",
+    "date": "10/05/2025"
+   }
+  }
+ },
+ "credit_card_applications": {
+  "n_rows": 1,
+  "id_examples": [
+   "f1a2b3c4d5e6f789"
+  ],
+  "row_examples": {
+   "f1a2b3c4d5e6f789": {
+    "application_id": "f1a2b3c4d5e6f789",
+    "card_type": "Gold Rewards Card",
+    "customer_name": "Wei Chen",
+    "annual_income": 125000.0,
+    "rho_bank_subscription": true,
+    "status": "APPROVED",
+    "date": "11/15/2025"
+   }
+  }
+ },
+ "verification_history": {
+  "n_rows": 3,
+  "id_examples": [
+   "6680a37184_20251110",
+   "af0581dcbf_20251112",
+   "76ad9cc60e_20251113"
+  ],
+  "row_examples": {
+   "76ad9cc60e_20251113": {
+    "name": "Wei Chen",
+    "user_id": "76ad9cc60e",
+    "address": "88 Harbor View Court, Boston, MA 02110",
+    "email": "wei.chen.boston@gmail.com",
+    "phone_number": "617-555-0834",
+    "date_of_birth": "04/17/1979",
+    "time_verified": "2025-11-13 16:48:00 EST"
+   },
+   "6680a37184_20251110": {
+    "name": "Kenji Tanaka",
+    "user_id": "6680a37184",
+    "address": "1847 Cherry Blossom Lane, Seattle, WA 98101",
+    "email": "kenji.tanaka@outlook.com",
+    "phone_number": "206-555-0293",
+    "date_of_birth": "07/22/1985",
+    "time_verified": "2025-11-10 14:22:00 EST"
+   }
+  }
+ },
+ "credit_card_transaction_history": {
+  "n_rows": 338,
+  "id_examples": [
+   "txn_8d1aa1219382",
+   "txn_4006d8e869e8",
+   "txn_a1b2c3d4e501",
+   "txn_f51f050119bd",
+   "txn_7f9af876999b"
+  ],
+  "row_examples": {
+   "txn_e9d195fe8e_001": {
+    "transaction_id": "txn_e9d195fe8e_001",
+    "user_id": "e9d195fe8e",
+    "credit_card_account_id": "cc_e9d195fe8e_silver",
+    "credit_card_type": "Silver Rewards Card",
+    "merchant_name": "TechDirect Online",
+    "transaction_amount": "$1,247.99",
+    "transaction_date": "10/10/2025",
+    "category": "Shopping",
+    "status": "COMPLETED",
+    "rewards_earned": "1247 points"
+   },
+   "txn_1f3f8ca103f5": {
+    "transaction_id": "txn_1f3f8ca103f5",
+    "user_id": "224959b99e",
+    "credit_card_type": "Platinum Rewards Card",
+    "merchant_name": "Lloyd Center",
+    "transaction_amount": "$742.19",
+    "transaction_date": "02/05/2025",
+    "category": "Shopping",
+    "status": "COMPLETED",
+    "rewards_earned": "7421 points"
+   }
+  }
+ },
+ "cash_back_disputes": {
+  "n_rows": 0,
+  "id_examples": [],
+  "row_examples": {}
+ },
+ "bank_account_transaction_history": {
+  "n_rows": 266,
+  "id_examples": [
+   "btxn_bd30d42f67a2",
+   "btxn_f2be68150770",
+   "btxn_fb4593a15b05",
+   "btxn_6174b483e0a6",
+   "btxn_0deab708e1ec"
+  ],
+  "row_examples": {
+   "btxn_ar_ev_16": {
+    "transaction_id": "btxn_ar_ev_16",
+    "account_id": "chk_ar72c5d8e3_4",
+    "date": "11/16/2025",
+    "description": "ATM WITHDRAWAL - RHO-BANK #9012 DENVER CO",
+    "amount": -300.0,
+    "type": "atm_withdrawal",
+    "status": "posted"
+   },
+   "btxn_ar_lb_08f_err": {
+    "transaction_id": "btxn_ar_lb_08f_err",
+    "account_id": "chk_ar72c5d8e3_2",
+    "date": "11/08/2025",
+    "description": "FOREIGN ATM FEE",
+    "amount": -4.0,
+    "type": "atm_fee",
+    "status": "posted"
+   }
+  }
+ },
+ "credit_card_accounts": {
+  "n_rows": 38,
+  "id_examples": [
+   "cc_lj82d4f1a9_silver",
+   "cc_76ad9cc60e_gold",
+   "cc_6680a37184_silver",
+   "cc_890389b165_crypto",
+   "cc_890389b165_bplat"
+  ],
+  "row_examples": {
+   "cc_890389b165_eco": {
+    "account_id": "cc_890389b165_eco",
+    "user_id": "890389b165",
+    "card_type": "EcoCard",
+    "date_of_account_open": "07/01/2024",
+    "current_balance": "$927.36",
+    "reward_points": "1994 points"
+   },
+   "cc_f9bf8de0be_diamond": {
+    "account_id": "cc_f9bf8de0be_diamond",
+    "user_id": "f9bf8de0be",
+    "card_type": "Diamond Elite Card",
+    "date_of_account_open": "03/15/2024",
+    "current_balance": "$8,724.36",
+    "reward_points": "43620 points"
+   }
+  }
+ },
+ "transaction_disputes": {
+  "n_rows": 1,
+  "id_examples": [
+   "dsp_7a3e91b4c2d8"
+  ],
+  "row_examples": {
+   "dsp_7a3e91b4c2d8": {
+    "dispute_id": "dsp_7a3e91b4c2d8",
+    "transaction_id": "txn_913d14a20dc5",
+    "user_id": "6680a37184",
+    "card_action": "keep_active",
+    "card_last_4_digits": "4821",
+    "full_name": "Kenji Tanaka",
+    "phone": "206-555-0293",
+    "email": "kenji.tanaka@outlook.com",
+    "address": "1847 Cherry Blossom Lane, Seattle, WA 98101",
+    "contacted_merchant": true,
+    "purchase_date": "11/05/2025",
+    "issue_noticed_date": "11/08/2025",
+    "dispute_reason": "duplicate_charge",
+    "resolution_requested": "full_refund",
+    "partial_refund_amount": null,
+    "eligible_for_provisional_credit": true,
+    "provisional_credit_given": true,
+    "submitted_at": "11/10/2025",
+    "status": "UNDER_REVIEW"
+   }
+  }
+ },
+ "credit_card_orders": {
+  "n_rows": 2,
+  "id_examples": [
+   "ccord_e3f4a5b6c7_eco_001",
+   "ccord_h1i2j3k4l5_eco_001"
+  ],
+  "row_examples": {
+   "ccord_h1i2j3k4l5_eco_001": {
+    "order_id": "ccord_h1i2j3k4l5_eco_001",
+    "credit_card_account_id": "cc_h1i2j3k4l5_eco",
+    "user_id": "h1i2j3k4l5",
+    "shipping_address": "3892 Sunset Ridge Dr, Phoenix, AZ 85004",
+    "reason": "lost",
+    "expedited_shipping": false,
+    "order_date": "11/08/2025",
+    "expected_delivery": "11/18/2025",
+    "status": "SHIPPED"
+   },
+   "ccord_e3f4a5b6c7_eco_001": {
+    "order_id": "ccord_e3f4a5b6c7_eco_001",
+    "credit_card_account_id": "cc_e3f4a5b6c7_eco",
+    "user_id": "e3f4a5b6c7",
+    "shipping_address": "1847 Aegean Drive, Tampa, FL 33606",
+    "reason": "damaged",
+    "expedited_shipping": false,
+    "order_date": "11/10/2025",
+    "expected_delivery": "11/20/2025",
+    "status": "SHIPPED"
+   }
+  }
+ },
+ "debit_card_orders": {
+  "n_rows": 0,
+  "id_examples": [],
+  "row_examples": {}
+ },
+ "credit_card_closure_reasons": {
+  "n_rows": 2,
+  "id_examples": [
+   "clsr_e3f4a5b6c7_green_001",
+   "clsr_h1i2j3k4l5_green_001"
+  ],
+  "row_examples": {
+   "clsr_e3f4a5b6c7_green_001": {
+    "record_id": "clsr_e3f4a5b6c7_green_001",
+    "credit_card_account_id": "cc_e3f4a5b6c7_green",
+    "user_id": "e3f4a5b6c7",
+    "closure_reason": "simplifying_finances",
+    "logged_at": "09/15/2025",
+    "status": "LOGGED"
+   },
+   "clsr_h1i2j3k4l5_green_001": {
+    "record_id": "clsr_h1i2j3k4l5_green_001",
+    "credit_card_account_id": "cc_h1i2j3k4l5_green",
+    "user_id": "h1i2j3k4l5",
+    "closure_reason": "not_using_card",
+    "logged_at": "08/20/2025",
+    "status": "LOGGED"
+   }
+  }
+ },
+ "credit_card_account_flags": {
+  "n_rows": 0,
+  "id_examples": [],
+  "row_examples": {}
+ },
+ "credit_limit_increase_requests": {
+  "n_rows": 0,
+  "id_examples": [],
+  "row_examples": {}
+ },
+ "payment_history": {
+  "n_rows": 18,
+  "id_examples": [
+   "pay_584f9c5d00_gold_202510",
+   "pay_584f9c5d00_gold_202509",
+   "pay_584f9c5d00_gold_202508",
+   "pay_584f9c5d00_gold_202507",
+   "pay_584f9c5d00_gold_202506"
+  ],
+  "row_examples": {
+   "ph_e9d195fe8e_silver_004": {
+    "payment_id": "ph_e9d195fe8e_silver_004",
+    "credit_card_account_id": "cc_e9d195fe8e_silver",
+    "user_id": "e9d195fe8e",
+    "payment_date": "2025-09-15",
+    "amount": "$520.00",
+    "status": "ON_TIME"
+   },
+   "pay_584f9c5d00_gold_202507": {
+    "payment_id": "pay_584f9c5d00_gold_202507",
+    "credit_card_account_id": "cc_584f9c5d00_gold",
+    "user_id": "584f9c5d00",
+    "payment_date": "07/15/2025",
+    "amount": "$380.00",
+    "status": "ON_TIME"
+   }
+  }
+ }
+}
