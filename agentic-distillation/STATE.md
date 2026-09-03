@@ -38,6 +38,13 @@ Produce the best open-weights model at its size on the Artificial Analysis **Age
 - Qwen3.8-Max/GLM with thinking on exhaust `max_tokens` on long JSON outputs → `reasoning.effort=low`, `max_tokens 16000`.
 - OpenRouter rate-limits `qwen/qwen3.8-flash` heavily at concurrency 8.
 
+## GPU run findings (v0, 2026-09-03 ~20:20 UTC onward)
+- RTX PRO 6000 Blackwell (sm_120): `flash-linear-attention` 0.4.1 imports and trains; **`flash_attn` and `causal_conv1d` were not installed** in `axolotlai/axolotl-cloud:main-latest` → attention fell back to SDPA and DeltaNet conv to the slow path → **~85 trained tok/s, ~20 min per optimizer step** (17 steps ≈ 6 h ≈ $8 for v0). Peak memory 82 GB at ~13K-token samples, so 16K windows fit on 96 GB with the DeltaNet LoRA targets included (PEFT matched `linear_attn.in_proj_qkv/in_proj_z/out_proj`).
+- v0 training signal: loss 0.47 → 0.44 over the first 3 steps; eval ppl 1.63 before training.
+- The standalone smoke script crashed on tokenizer input (chat template rejected the tool-call rows outside Axolotl's normalizer) — fixed; Axolotl's own preprocessing handles the rows.
+- **SFT v1 assembled**: 97 verified trajectories over 46 tasks (GLM-5.3 39, Max 3, student 55) → 84 train / 13 dev (6 held-out tasks) → **161 windows (~3.7M tokens)**; on HF at `data_v1/`. For v1 training: install `causal-conv1d` + `flash-attn` at job start (time-capped) or use an H100 if wheels are unavailable for sm_120.
+- Solvability gate on batch 2: student solved 21/35 tasks (38/70 episodes relaxed); GLM-5.3 running on the 14 unsolved.
+
 ## Spend (2026-09-03 19:30 UTC)
 OpenRouter ≈ **$85** of the ~$300 distillation budget (baseline $20, teacher/student rollouts ~$55, generation ~$4, probes ~$1). Vast ≈ **$0.5** of $111 (instance #1 destroyed; instance #2 running the smoke+LoRA job at $1.34/hr).
 

@@ -33,8 +33,24 @@ EOF
 ls -la $W/bundle $W/data
 
 echo "=== kernels ==="
-python -c "import fla; print('fla', fla.__version__)" 2>/dev/null || pip install -q flash-linear-attention causal-conv1d 2>&1 | tail -1
-python -c "import fla, torch, transformers, peft; print('fla ok | torch', torch.__version__, '| transformers', transformers.__version__, '| peft', peft.__version__)"
+python -c "import fla; print('fla', fla.__version__)" 2>/dev/null || pip install -q flash-linear-attention 2>&1 | tail -1
+# causal-conv1d (DeltaNet conv) and flash-attn (full-attention layers) were missing on the v0 box -> ~85 tok/s.
+# Try prebuilt wheels with a time cap; training falls back to slower kernels if they are unavailable for this GPU.
+python -c "import causal_conv1d" 2>/dev/null || timeout 900 pip install -q causal-conv1d --no-build-isolation 2>&1 | tail -1
+python -c "import flash_attn" 2>/dev/null || timeout 1500 pip install -q flash-attn --no-build-isolation 2>&1 | tail -1
+python - <<'EOF'
+import importlib, torch, transformers, peft
+print('torch', torch.__version__, '| transformers', transformers.__version__, '| peft', peft.__version__)
+for m in ('fla','causal_conv1d','flash_attn'):
+    try: print(m, 'OK', getattr(importlib.import_module(m),'__version__',''))
+    except Exception as e: print(m, 'MISSING', type(e).__name__)
+EOF
+# env-driven training config: DATA_DIR (default data), RUN_NAME (default q38_27b_lora_v0), EPOCHS
+CFG=$W/bundle/axolotl_lora_q38_27b.yaml
+sed -i "s#/workspace/data/train_turns.jsonl#/workspace/${DATA_DIR:-data}/train_turns.jsonl#; s#/workspace/data/dev_turns.jsonl#/workspace/${DATA_DIR:-data}/dev_turns.jsonl#; s#q38_27b_lora_v0#${RUN_NAME:-q38_27b_lora_v0}#g" $CFG
+[ -n "${EPOCHS:-}" ] && sed -i "s#^num_epochs: .*#num_epochs: ${EPOCHS}#" $CFG
+python -c "import flash_attn" 2>/dev/null || sed -i "s#attn_implementation: flash_attention_2#attn_implementation: sdpa#" $CFG
+grep -E 'train_turns|output_dir|num_epochs|attn_implementation' $CFG
 pip list 2>/dev/null | grep -iE '^(axolotl|flash-attn|flash_attn|flash-linear-attention|causal-conv1d|bitsandbytes|vllm) '
 echo "STEP kernels done" > $W/status/step.txt; up $W/status status
 
@@ -64,6 +80,6 @@ if [ "${STAGE:-all}" != "smoke" ]; then
   echo "STEP preprocess done" > $W/status/step.txt; up $W/status status
   axolotl train $W/bundle/axolotl_lora_q38_27b.yaml 2>&1 | tee $W/status/train.log | grep -E "loss|eval|Error|error|Traceback|saving|Saving|it/s|s/it" | tail -400
   echo "STEP train done rc=$?" > $W/status/step.txt
-  ls -la $W/outputs/q38_27b_lora_v0 | head; up $W/outputs/q38_27b_lora_v0 adapter_v0
+  OUT=$W/outputs/${RUN_NAME:-q38_27b_lora_v0}; ls -la $OUT | head; up $OUT adapter_${RUN_NAME#q38_27b_lora_}
 fi
 echo "JOB_COMPLETE $(date -u)" >> $W/status/step.txt; up $W/status status

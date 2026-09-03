@@ -75,6 +75,9 @@ def main():
             except Exception as e:
                 res.setdefault("template_errors", []).append(str(e)[:120])
         res["template_ok_rows"] = len(texts)
+        if not texts:  # template rejected every row (e.g. tool_calls shape); fall back to raw concatenation
+            print("chat template failed on all rows:", res.get("template_errors", [])[:2])
+            texts = ["\n".join(f"{m['role']}: {m.get('content') or json.dumps(m.get('tool_calls') or '')}" for m in r["messages"]) for r in rows]
     else:
         texts = ["The quick brown fox jumps over the lazy dog. " * 400] * 8
     enc = tok(texts, return_tensors="pt", truncation=True, max_length=a.seq, padding="max_length")
