@@ -94,8 +94,37 @@ def main():
                 n_rows += 1
                 if row_id in base_ids:
                     problems.append(f"row id collides with base db: {row_id}")
+        # consistency checks learned from the batch-2 failure analysis
+        writes = [(a.name, json.dumps(a.arguments or {}, sort_keys=True)) for a in actions if a.name in ("call_discoverable_agent_tool", "log_verification")]
+        if len(writes) != len(set(writes)):
+            problems.append("duplicate identical gold calls (creates extra rows no agent will reproduce)")
+        names = [((a.arguments or {}).get("agent_tool_name") or "") for a in actions if a.name == "call_discoverable_agent_tool"]
+        if any(n.startswith("approve_") for n in names) and any(n.startswith("deny_") for n in names):
+            problems.append("gold both approves and denies (contradictory path)")
+        # every entity referenced by gold write args must exist in injected rows or the base db
+        inj_ids = set(base_ids)
+        for table, v in inj.items():
+            for row_id, row in ((v or {}).get("data") or {}).items():
+                inj_ids.add(row_id)
+                if isinstance(row, dict):
+                    for k in ("user_id", "account_id", "card_id", "credit_card_account_id", "transaction_id"):
+                        if row.get(k):
+                            inj_ids.add(str(row[k]))
+        cust_ids = {str(r.get("user_id")) for r in ((inj.get("users") or {}).get("data") or {}).values() if isinstance(r, dict)}
+        for act in actions:
+            args = act.arguments or {}
+            inner = args.get("arguments")
+            try:
+                inner = json.loads(inner) if isinstance(inner, str) else (inner or {})
+            except Exception:
+                inner = {}
+            for k, v in list(inner.items()) + [(k2, v2) for k2, v2 in args.items() if k2 != "arguments"]:
+                if k in ("user_id", "account_id", "card_id", "credit_card_account_id", "checking_account_id", "source_account_id", "destination_account_id", "transaction_id") and v and str(v) not in inj_ids:
+                    problems.append(f"gold references unknown entity {k}={v}")
+            if act.name == "log_verification" and cust_ids and str(args.get("user_id")) not in cust_ids:
+                problems.append(f"log_verification user_id {args.get('user_id')} is not the injected customer {sorted(cust_ids)}")
         if problems:
-            report.append({"id": rid, "valid": False, "problems": problems})
+            report.append({"id": rid, "valid": False, "problems": sorted(set(problems))})
             continue
         # dynamic replay
         try:

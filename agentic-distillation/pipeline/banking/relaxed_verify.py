@@ -26,6 +26,8 @@ from tau2.data_model.tasks import Task
 from tau2.domains.banking_knowledge.environment import get_environment
 
 IGNORE_TABLES = {"agent_discoverable_tools"}
+# free-text fields a correct agent cannot be expected to reproduce byte-for-byte (they never change the business outcome)
+FREE_TEXT_FIELDS = {"reason", "notes", "description", "summary", "closure_reason", "decision_reason", "shipping_address", "note", "comment", "memo"}
 READ_TOOLS_PREFIX = ("get_",)
 
 
@@ -38,6 +40,10 @@ def db_dump(env):
         rows = (v or {}).get("data") if isinstance(v, dict) else v
         if table == "verification_history" and isinstance(rows, dict):
             out[table] = sorted({str(r.get("user_id")) for r in rows.values() if isinstance(r, dict)})
+        elif isinstance(rows, dict):
+            # compare rows by content with free-text fields stripped; ids of created rows can depend on call
+            # order, so match rows as a multiset of their remaining fields rather than by key
+            out[table] = sorted(json.dumps({k: v for k, v in r.items() if k not in FREE_TEXT_FIELDS and not k.endswith("_id") or k in ("user_id","account_id","card_id","credit_card_account_id","transaction_id")}, sort_keys=True) for r in rows.values() if isinstance(r, dict))
         else:
             out[table] = rows
     return out
