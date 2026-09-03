@@ -175,13 +175,24 @@ def call_openrouter(model, prompt, api_key, max_tokens=16000, temperature=0.8, r
 
 
 def parse_json(txt):
-    txt = txt.strip()
+    """Return the first JSON object in txt (teachers sometimes append prose or a second object); None on failure."""
+    txt = (txt or "").strip()
     txt = re.sub(r"^```(?:json)?\s*|\s*```$", "", txt)
     try:
         return json.loads(txt)
     except Exception:
-        m = re.search(r"\{.*\}", txt, re.S)
-        return json.loads(m.group(0)) if m else None
+        pass
+    dec = json.JSONDecoder()
+    start = txt.find("{")
+    while start != -1:
+        try:
+            obj, _ = dec.raw_decode(txt, start)
+            if isinstance(obj, dict):
+                return obj
+        except Exception:
+            pass
+        start = txt.find("{", start + 1)
+    return None
 
 
 def normalize(t):
@@ -322,13 +333,17 @@ def main():
                 usage_tot[k] += usage.get(k, 0) or 0
             if usage.get("finish_reason") not in (None, "stop"):
                 print(f"task {i}: finish_reason={usage.get('finish_reason')}", file=sys.stderr)
-            t = parse_json(txt)
             raw.append({"idx": i, "target_tools": tl, "difficulty": diff, "raw": txt[:20000]})
-            if not t:
-                print(f"task {i}: unparseable JSON", file=sys.stderr)
+            try:
+                t = parse_json(txt)
+                if not t:
+                    print(f"task {i}: unparseable JSON (finish={usage.get('finish_reason')})", file=sys.stderr)
+                    continue
+                t["id"] = f"synth_{i:04d}"
+                t, probs = normalize(t)
+            except Exception as e:  # never let one bad output kill the batch
+                print(f"task {i}: normalize/parse error {type(e).__name__}: {str(e)[:120]}", file=sys.stderr)
                 continue
-            t["id"] = f"synth_{i:04d}"
-            t, probs = normalize(t)
             t["id"] = f"synth_{i:04d}"
             t["_gen"] = {"model": a.model, "target_tools": tl, "difficulty": diff, "seed": a.seed, "normalize_notes": probs}
             out_tasks.append(t)
