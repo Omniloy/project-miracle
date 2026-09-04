@@ -136,7 +136,7 @@ The benchmark grades the task by replaying your GOLD ACTIONS on a fresh copy of 
 3. description.notes: the designer's hidden rationale — which policy clauses apply, the correct decision, and the traps.
 4. evaluation_criteria.actions: the minimal ordered list of DB-changing gold actions with requestor "assistant" or "user". For each discoverable agent tool used: first {{"name":"unlock_discoverable_agent_tool","arguments":{{"agent_tool_name":"<name>"}}}} then {{"name":"call_discoverable_agent_tool", ...}} using the argument shape shown above. Include log_verification if policy requires identity verification. Read-only lookups need not be gold actions. Arguments must reference the ids you created. reward_basis must be ["DB"].
 5. required_documents: list the doc ids (from the DOC headers above) the agent must consult.
-6. user_tools: list any user tools involved (else []). annotations: null. id: "synth_{task_idx:04d}".
+6. user_tools: the USER simulator's tool list, exactly as in the real tasks: use "call_discoverable_user_tool" whenever the gold contains give_discoverable_user_tool/call_discoverable_user_tool (NEVER the discoverable tool's own name), plus any of apply_for_credit_card / submit_referral / submit_transaction / request_human_agent_transfer the scenario needs; else []. Never invent last-4 digits: the user obtains them from the get_card_last_4_digits user tool, whose output is deterministic per account. annotations: null. id: "synth_{task_idx:04d}".
 7. Be realistic and self-consistent: amounts, dates (late 2025), eligibility windows and limits must match the policy text so that exactly ONE correct outcome exists.
 9. Gold actions must be ONE consistent path: never call the same tool twice with the same arguments; never both approve and deny; every account/card/user id used in an argument must exist in the rows you injected (a credit-limit task needs a credit_card_accounts row; a dispute needs the transaction row); log_verification.user_id must be the injected customer; read-only lookups appear at most once each. A task that is solvable only by luck is worthless — the correct action must follow unambiguously from the policy text plus the injected rows.
 8. Grading is an exact final-database comparison, so: (a) the environment clock is frozen — get_current_time returns "{FROZEN_TIME}" and every log_verification must use exactly that time_verified; (b) calls to the read-only lookup tools get_all_user_accounts_by_user_id_3847, get_debit_cards_by_account_id_7823, get_bank_account_transactions_9173, get_user_dispute_history_7291, get_payment_history_6183, get_pending_replacement_orders_5765 ARE logged in the database, so include in gold actions exactly the lookups the policy requires the agent to perform (typically: unlock + call get_all_user_accounts_by_user_id_3847 first, then the specific lookup the case needs), and design the scenario so no other lookup is necessary; (c) for optional free-text arguments (e.g. "reason") use the tool's documented default value verbatim, or omit them; prefer tools whose arguments are ids, enums, booleans and amounts.
@@ -276,6 +276,12 @@ def normalize(t):
     t["initial_state"] = st
     t.setdefault("annotations", None)
     t.setdefault("user_tools", [])
+    # real tasks give the user simulator the META tool, never the discoverable tool's own name (fix_user_tools.py finding)
+    acts = ((t.get("evaluation_criteria") or {}).get("actions") or [])
+    ut = [x for x in t["user_tools"] if x in ("apply_for_credit_card", "submit_referral", "submit_transaction", "request_human_agent_transfer", "call_discoverable_user_tool")]
+    if any(a.get("name") in ("give_discoverable_user_tool", "call_discoverable_user_tool") for a in acts) and "call_discoverable_user_tool" not in ut:
+        ut.append("call_discoverable_user_tool")
+    t["user_tools"] = ut
     if not ec.get("actions"):
         problems.append("no gold actions")
     if not t.get("required_documents"):
