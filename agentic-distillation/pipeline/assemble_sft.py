@@ -38,13 +38,21 @@ def main():
     ap.add_argument("--holdout-frac", type=float, default=0.15)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--holdout-file", help="split.json from a previous run; reuse its dev_tasks so new tasks only ever join train")
+    ap.add_argument("--tasks-dir", help="task JSON dir; with it, trajectories that transfer_to_human_agents are kept only when the task's gold also transfers (v0 lesson: 11% of trajectories transferred and the student learned to give up more often)")
     a = ap.parse_args()
     rng = random.Random(a.seed)
 
-    rows = []
+    gold_transfers = {}
+    if a.tasks_dir:
+        for tf in Path(a.tasks_dir).glob("task_*.json"):
+            t = json.load(open(tf)); acts = (t.get("evaluation_criteria") or {}).get("actions") or []
+            gold_transfers[t["id"]] = any(x.get("name") == "transfer_to_human_agents" for x in acts)
+    rows, dropped_transfer = [], 0
     for f in a.inputs:
         for line in open(f):
             r = json.loads(line)
+            if a.tasks_dir and r.get("success") and any("transfer_to_human" in json.dumps(m.get("tool_calls") or []) for m in r["messages"] if m["role"] == "assistant") and not gold_transfers.get(r["task_id"], False):
+                dropped_transfer += 1; continue
             if r.get("success") and r.get("reward") == 1.0 and r["n_assistant_turns"] >= 2:
                 r["_src"] = Path(f).stem
                 rows.append(r)
@@ -89,7 +97,7 @@ def main():
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     json.dump({"holdout_tasks": sorted(t[1] for t in holdout), "train_tasks": sorted(t[1] for t in tasks if t not in holdout)}, open(out / "split.json", "w"), indent=1)
     tok_est = sum(len(json.dumps(r)) for r in train) // 4
-    print(f"eligible rows {len(rows)} over {len(tasks)} tasks | train {len(train)} rows ({len(tasks)-n_hold} tasks, ~{tok_est/1e6:.1f}M tokens est) | dev {len(dev)} rows ({n_hold} held-out tasks) | by source {dict(stats)}", file=sys.stderr)
+    print(f"dropped {dropped_transfer} transfer-without-gold-transfer trajectories | eligible rows {len(rows)} over {len(tasks)} tasks | train {len(train)} rows ({len(tasks)-n_hold} tasks, ~{tok_est/1e6:.1f}M tokens est) | dev {len(dev)} rows ({n_hold} held-out tasks) | by source {dict(stats)}", file=sys.stderr)
 
 
 if __name__ == "__main__":
