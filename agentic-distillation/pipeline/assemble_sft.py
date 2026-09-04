@@ -37,6 +37,7 @@ def main():
     ap.add_argument("--per-task", type=int, default=3)
     ap.add_argument("--holdout-frac", type=float, default=0.15)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--holdout-file", help="split.json from a previous run; reuse its dev_tasks so new tasks only ever join train")
     a = ap.parse_args()
     rng = random.Random(a.seed)
 
@@ -55,6 +56,10 @@ def main():
     rng.shuffle(tasks)
     n_hold = max(1, int(len(tasks) * a.holdout_frac)) if a.holdout_frac > 0 else 0
     holdout = set(tasks[:n_hold])
+    if a.holdout_file:
+        prev = json.load(open(a.holdout_file))
+        prev_ids = set(prev.get("holdout_tasks") or prev.get("dev_tasks") or [])
+        holdout = {k for k in by_task if k[1] in prev_ids}
 
     train, dev, stats = [], [], defaultdict(int)
     for key, rs in by_task.items():
