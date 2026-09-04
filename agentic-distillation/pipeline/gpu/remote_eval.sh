@@ -13,7 +13,7 @@ api=HfApi(token=os.environ["HF_TOKEN"]); repo=os.environ["WORK_REPO"]; src,dst=s
 PY
 }
 trap 'echo "=== remote_eval exit $(date -u) ==="; up $W/status status_eval' EXIT
-pip install -q huggingface_hub hf_transfer 2>&1 | tail -1; echo "ALIVE $(date -u) $(hostname) $(nvidia-smi --query-gpu=name --format=csv,noheader)" > $W/status/step_eval.txt; up $W/status status_eval
+python -m pip install -q huggingface_hub hf_transfer 2>&1 | tail -1; echo "ALIVE $(date -u) $(hostname) $(nvidia-smi --query-gpu=name --format=csv,noheader)" > $W/status/step_eval.txt; up $W/status status_eval
 heartbeat() { while true; do sleep 300; nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader > $W/status/gpu.txt; date -u >> $W/status/gpu.txt; [ -f $W/status/vllm.log ] && tail -c 4000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_eval; done; }
 heartbeat & HB=$!; trap 'kill $HB 2>/dev/null; echo "=== remote_eval exit $(date -u) ==="; up $W/status status_eval' EXIT
 python - <<'PY'
@@ -22,13 +22,15 @@ from huggingface_hub import snapshot_download
 snapshot_download(os.environ["WORK_REPO"], repo_type="dataset", local_dir="/workspace", token=os.environ["HF_TOKEN"], allow_patterns=["bundle/*","data/*","adapter_v*/**"])
 snapshot_download("Qwen/Qwen3.8-27B", local_dir="/workspace/Qwen3.8-27B", token=os.environ["HF_TOKEN"])
 PY
-echo "=== vLLM in its own venv ==="; pip install -q uv 2>&1 | tail -1; uv venv /workspace/vvenv -q --python 3.12 2>&1 | tail -1 || python -m venv /workspace/vvenv
+echo "=== vLLM in its own venv ==="; python -m pip install -q uv 2>&1 | tail -1; uv venv /workspace/vvenv -q --python 3.12 2>&1 | tail -1 || python -m venv /workspace/vvenv
 uv pip install -q --python /workspace/vvenv/bin/python vllm==0.28.0 2>&1 | tail -2; VPY=/workspace/vvenv/bin/python; $VPY -c "import vllm,torch; print('vllm', vllm.__version__, 'torch', torch.__version__)"
 echo "STEP vllm installed $(date -u)" >> $W/status/step_eval.txt; up $W/status status_eval
 LORA=""; [ "${ADAPTER:-none}" != "none" ] && LORA="--enable-lora --lora-modules student=$W/${ADAPTER} --max-lora-rank 64"
-nohup $VPY -m vllm.entrypoints.openai.api_server --model $W/Qwen3.8-27B --served-model-name base --port 8000 --max-model-len 65536 --gpu-memory-utilization 0.90 \
+nohup $VPY -m vllm.entrypoints.openai.api_server --model $W/Qwen3.8-27B --served-model-name base --port 8000 --max-model-len 65536 --max-num-seqs 32 --gpu-memory-utilization 0.90 \
   --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-prefix-caching $LORA > $W/status/vllm.log 2>&1 &
-for i in $(seq 1 120); do curl -sf localhost:8000/v1/models >/dev/null && break; sleep 10; done; curl -s localhost:8000/v1/models | head -c 300; echo; echo "STEP vllm up $(date -u)" >> $W/status/step_eval.txt; tail -c 3000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_eval
+VPID=$!; UP=0; for i in $(seq 1 150); do curl -sf localhost:8000/v1/models >/dev/null && { UP=1; break; }; kill -0 $VPID 2>/dev/null || break; sleep 10; done
+if [ "$UP" != 1 ]; then echo "STEP vllm FAILED $(date -u)" >> $W/status/step_eval.txt; grep -E "Error|error" $W/status/vllm.log | tail -20; up $W/status status_eval; exit 1; fi
+curl -s localhost:8000/v1/models | head -c 400; echo; echo "STEP vllm up $(date -u)" >> $W/status/step_eval.txt; tail -c 3000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_eval
 MODEL=base; [ "${ADAPTER:-none}" != "none" ] && MODEL=student
 echo "=== tau2-bench ==="; cd $W; [ -d tau2-bench ] || git clone -q --depth 1 https://github.com/sierra-research/tau2-bench.git; cd tau2-bench; pip install -q uv 2>/dev/null; uv sync -q --extra knowledge 2>&1 | tail -1
 export HOSTED_VLLM_API_BASE=http://localhost:8000/v1 HOSTED_VLLM_API_KEY=dummy
