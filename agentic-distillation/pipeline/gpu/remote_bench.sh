@@ -20,6 +20,7 @@ set -uo pipefail; export HF_HUB_ENABLE_HF_TRANSFER=1
 W=/workspace; mkdir -p $W/status $W/bundle; cd $W; LOG=$W/status/remote_bench.log; exec > >(tee -a $LOG) 2>&1
 T0=$(date +%s); STATUS=status_bench; STEP=$W/status/step_bench.txt; RES=$W/status/bench_results.jsonl; VLOG=$W/status/vllm.log
 ADAPTER=${ADAPTER:-adapter_v0}; CONFIGS=${CONFIGS:-"A B C D E F C3"}; CLIENT_SECS=${CLIENT_SECS:-100}; CONCS=${CONCS:-"8 16"}
+CONFIGS=${CONFIGS//_/ }; CONFIGS=${CONFIGS//,/ }; CONCS=${CONCS//_/ }; CONCS=${CONCS//,/ }   # env values arrive without spaces (vast -e K=V)
 N_REQ=${N_REQ:-12}; MTP_K=${MTP_K:-2}; STARTUP_TIMEOUT=${STARTUP_TIMEOUT:-1200}; BENCH_DEADLINE_MIN=${BENCH_DEADLINE_MIN:-85}
 echo "=== remote_bench start $(date -u) host=$(hostname) ADAPTER=$ADAPTER CONFIGS=$CONFIGS CLIENT_SECS=$CLIENT_SECS CONCS=$CONCS MTP_K=$MTP_K ==="
 nvidia-smi --query-gpu=name,memory.total,driver_version,power.limit --format=csv,noheader
@@ -171,7 +172,7 @@ run_clients() {  # $1 config name, $2 served model name for the client, $3 extra
     local meta="{\"startup_s\":${STARTUP_S:-null},\"gpu\":\"$(nvidia-smi --query-gpu=name --format=csv,noheader | head -1)\"}"
     # worst case inside the client: greedy A/B (~2 min) + warmup (<= 2 x 300 s) + timed cap + 45 s drain -> hard-capped here
     timeout $(( CLIENT_SECS + 900 )) $VPY $CLIENT --base-url http://localhost:8000/v1 --model $model --data $DATA --n-requests $N_REQ \
-      --concurrency $c --seconds $CLIENT_SECS --grace 45 --timeout 300 --config $name --meta "$meta" --out $RES $extra 2>&1 | tail -4
+      --concurrency $c --seconds $CLIENT_SECS --grace 45 --timeout 300 --config $name --meta "$meta" --out $RES --dump $W/status/samples_${name}_c$c.jsonl ${THINKING_ARG:-} $extra 2>&1 | tail -4
     local rc=${PIPESTATUS[0]}; [ $rc -ne 0 ] && { echo "client rc=$rc"; rec "{\"config\":\"$name\",\"concurrency\":$c,\"status\":\"client_failed\",\"rc\":$rc}"; }
     extra=""  # greedy compare only once
     grep "SpecDecoding metrics" $VLOG | tail -1 | cut -c1-300
@@ -215,6 +216,8 @@ for cfg in $CONFIGS; do
     D)  need_merged D && bench_config D_merged_fp8 $W/merged base "" $FP8 ;;
     E)  need_merged E && bench_config E_merged_fp8_mtp${MTP_K} $W/merged base "" $FP8 $MTP ;;
     F)  need_merged F && bench_config F_merged_ngram $W/merged base "" $NGRAM ;;
+    AN) THINKING_ARG="--thinking off" bench_config AN_bf16_lora_nothink $W/Qwen3.8-27B student "" --enable-lora --lora-modules student=$W/$ADAPTER --max-lora-rank 64 ;;
+    AMN) THINKING_ARG="--thinking off" bench_config AMN_bf16_lora_mtp${MTP_K}_nothink $W/Qwen3.8-27B student "" --enable-lora --lora-modules student=$W/$ADAPTER --max-lora-rank 64 $MTP; RAN_AM=1 ;;
     AM) bench_config AM_bf16_lora_mtp${MTP_K} $W/Qwen3.8-27B student "" --enable-lora --lora-modules student=$W/$ADAPTER --max-lora-rank 64 $MTP; RAN_AM=1 ;;
     *)  echo "unknown config $cfg" ;;
   esac

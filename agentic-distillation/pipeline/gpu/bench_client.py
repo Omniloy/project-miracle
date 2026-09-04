@@ -157,6 +157,8 @@ def stream_one(args, req, max_tokens=None):
     body = {"model": args.model, "messages": req["messages"], "tools": req["tools"] or None, "temperature": args.temperature,
             "top_p": args.top_p, "top_k": args.top_k, "max_tokens": max_tokens or args.max_tokens, "stream": True,
             "stream_options": {"include_usage": True}}
+    if getattr(args, "thinking", "default") == "off":
+        body["chat_template_kwargs"] = {"enable_thinking": False}
     if not body["tools"]:
         del body["tools"]
     t0 = time.time()
@@ -205,7 +207,13 @@ def stream_one(args, req, max_tokens=None):
     t1 = time.time()
     if finish is None and usage is None:
         raise RuntimeError("stream ended without finish_reason/usage")
-    return {"latency": t1 - t0, "ttft": ttft, "content": "".join(content), "reasoning_chars": sum(map(len, reasoning)),
+    rtxt = "".join(reasoning)
+    if getattr(args, "dump", None):
+        with open(args.dump, "a") as f:
+            f.write(json.dumps({"config": args.config, "finish": finish, "completion_tokens": (usage or {}).get("completion_tokens"),
+                                "reasoning_head": rtxt[:400], "reasoning_tail": rtxt[-200:], "content_head": "".join(content)[:400],
+                                "tool_calls": [tool_calls[k] for k in sorted(tool_calls)][:2]}, ensure_ascii=False) + "\n")
+    return {"latency": t1 - t0, "ttft": ttft, "content": "".join(content), "reasoning_chars": len(rtxt),
             "tool_calls": [tool_calls[k] for k in sorted(tool_calls)], "finish_reason": finish,
             "completion_tokens": (usage or {}).get("completion_tokens"), "prompt_tokens": (usage or {}).get("prompt_tokens"),
             "t_end": t1}
@@ -275,6 +283,8 @@ def main():
     ap.add_argument("--top-k", type=int, default=20)
     ap.add_argument("--timeout", type=float, default=300, help="per-request read timeout (s); 1200 tokens at >=5 tok/s fits")
     ap.add_argument("--config", default="unnamed")
+    ap.add_argument("--thinking", default="default", choices=["default", "off"], help="off -> chat_template_kwargs.enable_thinking=false")
+    ap.add_argument("--dump", default=None, help="append one JSON line per completed request (heads of reasoning/content, tool calls)")
     ap.add_argument("--meta", default="{}", help="JSON merged into the output line")
     ap.add_argument("--out", default=None, help="append the JSON result line to this file")
     ap.add_argument("--greedy-compare", default=None, help="other served model name: run 3 greedy prompts on both and report whether outputs differ")
