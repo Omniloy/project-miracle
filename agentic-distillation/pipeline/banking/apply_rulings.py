@@ -9,11 +9,15 @@ S = Path(__file__).resolve().parents[2]
 TASKS = S / "harness/data_synth/tau2/domains/banking_knowledge/tasks"; RUL = S / "runs/rulings"
 for tid in sys.argv[1:]:
     r = json.load(open(RUL / f"{tid}.json"))
-    if r["verdict"] != "GOLD_WRONG" or not r.get("repaired_actions"):
+    if r["verdict"] == "AMBIGUOUS":
         print("skip", tid, r["verdict"]); continue
+    if not (r.get("repaired_actions") or r.get("inject_rows") or r.get("user_instruction_patch") or r.get("user_tools_patch")):
+        print("nothing to apply", tid, r["verdict"]); continue
     p = TASKS / f"task_{tid}.json"; t = json.load(open(p))
-    acts = []
-    for a in r["repaired_actions"]:
+    acts = t["evaluation_criteria"]["actions"]
+    if r.get("user_tools_patch"): t["user_tools"] = r["user_tools_patch"]
+    if r.get("repaired_actions"): acts = []
+    for a in (r.get("repaired_actions") or []):
         a = {k: v for k, v in a.items() if k != "action_id"}; a.setdefault("requestor", "assistant")
         args = a.get("arguments") or {}
         if a["name"] == "call_discoverable_agent_tool" and not isinstance(args.get("arguments"), str):

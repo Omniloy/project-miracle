@@ -81,7 +81,7 @@ def main():
             if act.name in ("give_discoverable_user_tool", "call_discoverable_user_tool") and uname and uname not in known_user:
                 problems.append(f"unknown user tool {uname}")
         for ut in t.get("user_tools") or []:
-            if ut not in known_user and ut not in ("apply_for_credit_card", "submit_referral", "submit_transaction", "request_human_agent_transfer"):
+            if ut not in known_user and ut not in ("apply_for_credit_card", "submit_referral", "submit_transaction", "request_human_agent_transfer", "call_discoverable_user_tool"):
                 problems.append(f"unknown user_tools entry {ut}")
         init = task.initial_state.initialization_data if task.initial_state else None
         inj = (init.agent_data if init else None) or {}

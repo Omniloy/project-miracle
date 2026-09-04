@@ -22,11 +22,13 @@ from huggingface_hub import snapshot_download
 snapshot_download(os.environ["WORK_REPO"], repo_type="dataset", local_dir="/workspace", token=os.environ["HF_TOKEN"], allow_patterns=["bundle/*","data/*","adapter_v*/**"])
 snapshot_download("Qwen/Qwen3.8-27B", local_dir="/workspace/Qwen3.8-27B", token=os.environ["HF_TOKEN"])
 PY
-echo "=== vLLM (pip if missing) ==="; python -c "import vllm; print('vllm', vllm.__version__)" 2>/dev/null || pip install -q vllm 2>&1 | tail -1
+echo "=== vLLM in its own venv ==="; pip install -q uv 2>&1 | tail -1; uv venv /workspace/vvenv -q --python 3.12 2>&1 | tail -1 || python -m venv /workspace/vvenv
+uv pip install -q --python /workspace/vvenv/bin/python vllm==0.28.0 2>&1 | tail -2; VPY=/workspace/vvenv/bin/python; $VPY -c "import vllm,torch; print('vllm', vllm.__version__, 'torch', torch.__version__)"
+echo "STEP vllm installed $(date -u)" >> $W/status/step_eval.txt; up $W/status status_eval
 LORA=""; [ "${ADAPTER:-none}" != "none" ] && LORA="--enable-lora --lora-modules student=$W/${ADAPTER} --max-lora-rank 64"
-nohup python -m vllm.entrypoints.openai.api_server --model $W/Qwen3.8-27B --served-model-name base --port 8000 --max-model-len 65536 --gpu-memory-utilization 0.90 \
+nohup $VPY -m vllm.entrypoints.openai.api_server --model $W/Qwen3.8-27B --served-model-name base --port 8000 --max-model-len 65536 --gpu-memory-utilization 0.90 \
   --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-prefix-caching $LORA > $W/status/vllm.log 2>&1 &
-for i in $(seq 1 90); do curl -sf localhost:8000/v1/models >/dev/null && break; sleep 10; done; curl -s localhost:8000/v1/models | head -c 300; echo
+for i in $(seq 1 120); do curl -sf localhost:8000/v1/models >/dev/null && break; sleep 10; done; curl -s localhost:8000/v1/models | head -c 300; echo; echo "STEP vllm up $(date -u)" >> $W/status/step_eval.txt; tail -c 3000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_eval
 MODEL=base; [ "${ADAPTER:-none}" != "none" ] && MODEL=student
 echo "=== tau2-bench ==="; cd $W; [ -d tau2-bench ] || git clone -q --depth 1 https://github.com/sierra-research/tau2-bench.git; cd tau2-bench; pip install -q uv 2>/dev/null; uv sync -q --extra knowledge 2>&1 | tail -1
 export HOSTED_VLLM_API_BASE=http://localhost:8000/v1 HOSTED_VLLM_API_KEY=dummy
