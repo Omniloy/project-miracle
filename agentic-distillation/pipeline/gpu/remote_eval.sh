@@ -17,9 +17,9 @@
 #   -e SERVE_MODE=merged -e QUANT=fp8 -e SPEC=mtp -e CONC=16
 set -uo pipefail; export HF_HUB_ENABLE_HF_TRANSFER=1
 W=/workspace; mkdir -p $W/status $W/eval; cd $W; LOG=$W/status/remote_eval.log; exec > >(tee -a $LOG) 2>&1
-SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
+MAXLEN=${MAXLEN:-262144}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
 if [ -z "$SERVE_MODE" ]; then CONC=${CONC:-8}; else CONC=${CONC:-16}; fi
-echo "=== remote_eval start $(date -u) ADAPTER=${ADAPTER:-none} EVAL_SET=${EVAL_SET:-both} TRIALS=${TRIALS:-1} SERVE_MODE=${SERVE_MODE:-<unset:lora>} QUANT=$QUANT SPEC=$SPEC MTP_K=$MTP_K CONC=$CONC MAX_NUM_SEQS=$MAX_NUM_SEQS THINKING=$THINKING ==="
+echo "=== remote_eval start $(date -u) MAXLEN=$MAXLEN ADAPTER=${ADAPTER:-none} EVAL_SET=${EVAL_SET:-both} TRIALS=${TRIALS:-1} SERVE_MODE=${SERVE_MODE:-<unset:lora>} QUANT=$QUANT SPEC=$SPEC MTP_K=$MTP_K CONC=$CONC MAX_NUM_SEQS=$MAX_NUM_SEQS THINKING=$THINKING ==="
 case "${SERVE_MODE:-lora}" in lora|merged) ;; *) echo "bad SERVE_MODE=$SERVE_MODE"; exit 2;; esac
 case "$QUANT" in none|fp8) ;; *) echo "bad QUANT=$QUANT"; exit 2;; esac
 case "$SPEC" in none|mtp|ngram) ;; *) echo "bad SPEC=$SPEC"; exit 2;; esac
@@ -118,7 +118,7 @@ case "$SPEC" in
 esac
 [ -n "${CUDAGRAPH:-}" ] && EXTRA="$EXTRA --compilation-config {\"cudagraph_mode\":\"$CUDAGRAPH\"}"
 echo "vllm serve $SERVE_PATH --served-model-name $SERVED --max-num-seqs $MAX_NUM_SEQS $LORA $EXTRA"
-nohup $VPY -m vllm.entrypoints.openai.api_server --model $SERVE_PATH --served-model-name $SERVED --port 8000 --max-model-len 65536 --max-num-seqs $MAX_NUM_SEQS --gpu-memory-utilization 0.90 \
+nohup $VPY -m vllm.entrypoints.openai.api_server --model $SERVE_PATH --served-model-name $SERVED --port 8000 --max-model-len $MAXLEN --max-num-seqs $MAX_NUM_SEQS --gpu-memory-utilization 0.90 \
   --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-prefix-caching $LORA $EXTRA > $W/status/vllm.log 2>&1 &
 VPID=$!; UP=0; for i in $(seq 1 150); do curl -sf localhost:8000/v1/models >/dev/null && { UP=1; break; }; kill -0 $VPID 2>/dev/null || break; sleep 10; done
 if [ "$UP" != 1 ]; then echo "STEP vllm FAILED $(date -u)" >> $W/status/step_eval.txt; grep -E "Error|error" $W/status/vllm.log | tail -20; up $W/status status_eval; exit 1; fi
@@ -148,9 +148,17 @@ if [ "${EVAL_SET:-both}" != "test" ]; then
   cp -r $W/data_synth/simulations/dev_${MODEL} $W/eval/ 2>/dev/null
 fi
 if [ "${EVAL_SET:-both}" != "dev" ]; then
-  echo "=== TEST eval (97 real tasks, AA config, gpt-5.4-mini medium) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
-    --agent-llm hosted_vllm/$MODEL --agent-llm-args "$AGENT_ARGS" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $CONC --save-to test_${MODEL} 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
-  cp -r data/simulations/test_${MODEL} $W/eval/ 2>/dev/null
+  # RUNS = comma-separated model:thinking pairs evaluated sequentially on the same server, e.g. "base:default,student:default,student:off"
+  # (default: the single MODEL with $THINKING). Each run uploads its own results so partial progress survives.
+  RUNS=${RUNS:-$MODEL:$THINKING}; RUNS=${RUNS//,/ }; RUNS=${RUNS//_/ }
+  for run in $RUNS; do
+    RM=${run%%:*}; RT=${run##*:}; [ "$RM" = "$run" ] && RT=$THINKING
+    if [ "$RT" = off ]; then RA='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20,"chat_template_kwargs":{"enable_thinking":false}}}'; else RA='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'; fi
+    TAG=test_${RM}_think${RT}
+    echo "=== TEST eval $TAG (97 real tasks, AA config, gpt-5.4-mini medium) $(date -u) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
+      --agent-llm hosted_vllm/$RM --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $CONC --save-to $TAG 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
+    cp -r data/simulations/$TAG $W/eval/ 2>/dev/null; echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_eval
+  done
 fi
 echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
 up $W/eval eval_${MODEL}; echo "EVAL_COMPLETE $(date -u)" | tee -a $W/status/step_eval.txt; up $W/status status_eval
