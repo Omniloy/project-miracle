@@ -52,6 +52,11 @@ Produce the best open-weights model at its size on the Artificial Analysis **Age
 - Data generation paused here to reserve budget for evaluation (dev + 97-task test for base and adapter; 5-trial final ≈ $95).
 - OpenRouter spend at this point: ~$126 (of ~$300) (rollouts dominate; each teacher episode ≈ $0.4–0.7, student ≈ $0.15, user-sim Flash ≈ $0.02).
 
+## v0 training result (2026-09-04 01:10 UTC)
+- Completed 17/17 steps in ~5 h on the RTX PRO 6000 (~$7). Train loss 0.47 → **0.25**; eval loss (dev windows) 0.486 → **0.333**. `adapter_v0/` (LoRA r=64, attention+MLP+DeltaNet targets) on HF. Training instance destroyed.
+- Eval job launched (Vast 49809253, `vllm/vllm-openai:v0.28.0`, $1.20/hr): base+adapter served via vLLM LoRA; synthetic dev set (Flash user-sim, 2 trials) then the **97 real tasks under the AA config, 1 trial** → compare with the 45.4 baseline using `pipeline/analyze_eval.py` (task-bootstrap CI). Base reference on the 10 held-out dev tasks: 12/20 = 60% (relaxed).
+- Decision rule: if the adapter is ≥ baseline on test (within CI) and up on dev → train v1 on `data_v1` (216 windows); if it regresses on test → data/format bug, do not scale.
+
 ## Spend (2026-09-03 19:30 UTC)
 OpenRouter ≈ **$85** of the ~$300 distillation budget (baseline $20, teacher/student rollouts ~$55, generation ~$4, probes ~$1). Vast ≈ **$0.5** of $111 (instance #1 destroyed; instance #2 running the smoke+LoRA job at $1.34/hr).
 
