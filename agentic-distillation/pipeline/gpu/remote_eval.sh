@@ -19,7 +19,7 @@ heartbeat & HB=$!; trap 'kill $HB 2>/dev/null; echo "=== remote_eval exit $(date
 python - <<'PY'
 import os
 from huggingface_hub import snapshot_download
-snapshot_download(os.environ["WORK_REPO"], repo_type="dataset", local_dir="/workspace", token=os.environ["HF_TOKEN"], allow_patterns=["bundle/*","data/*","adapter_v*/**"])
+snapshot_download(os.environ["WORK_REPO"], repo_type="dataset", local_dir="/workspace", token=os.environ["HF_TOKEN"], allow_patterns=["bundle/*","data/*","data_v*/*","adapter_v*/**"])
 snapshot_download("Qwen/Qwen3.8-27B", local_dir="/workspace/Qwen3.8-27B", token=os.environ["HF_TOKEN"])
 PY
 echo "=== vLLM in its own venv ==="; python -m pip install -q uv 2>&1 | tail -1; uv venv /workspace/vvenv -q --python 3.12 2>&1 | tail -1 || python -m venv /workspace/vvenv
@@ -39,11 +39,12 @@ mkdir -p $W/data_synth/tau2/domains/banking_knowledge/tasks; for f in data/tau2/
 for f in data/tau2/*; do b=$(basename $f); [ "$b" = domains ] || ln -sfn $PWD/$f $W/data_synth/tau2/$b; done; for d in airline retail telecom mock; do ln -sfn $PWD/data/tau2/domains/$d $W/data_synth/tau2/domains/$d; done
 python - <<'PY'
 import json,glob,shutil,os
-train=set(json.load(open('/workspace/data/split.json'))['train_tasks'])
+# dev = the PINNED held-out tasks of the training split (10 tasks), not every task outside v0's train set (88 tasks, ~4 h)
+sp=json.load(open('/workspace/'+os.environ.get('DATA_DIR','data')+'/split.json')); hold=set(sp.get('holdout_tasks') or [])
 n=0
 for f in glob.glob('/workspace/bundle/data_synth_tasks/task_*.json'):
     tid=json.load(open(f))['id']
-    if tid not in train: shutil.copy(f,'/workspace/data_synth/tau2/domains/banking_knowledge/tasks/'); n+=1
+    if tid in hold: shutil.copy(f,'/workspace/data_synth/tau2/domains/banking_knowledge/tasks/'); n+=1
 print('dev synthetic tasks:', n)
 PY
 AGENT_ARGS='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'
