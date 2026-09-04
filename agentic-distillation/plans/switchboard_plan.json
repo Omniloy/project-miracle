@@ -1,0 +1,726 @@
+{
+ "phonellm_summary": "PhoneLLM Alpha 1 (pipecat-ai/phonellm-alpha-1, HF 2026-08-24, blog 2026-08-27) is a full-parameter bf16 SFT (NVIDIA NeMo) of Nemotron 3 Nano 30B-A3B (hybrid Mamba-2 + attention + MoE, 3.5B active), English-only, trained and served thinking-OFF at temperature 0, exposed as a plain OpenAI-compatible vLLM endpoint (qwen3_coder XML tool parser, nano_v3 reasoning-parser plugin, --default-chat-template-kwargs enable_thinking=false). Training data is proprietary ('real-world telephone and customer support' scenarios, synthetic + curated production traces; the only quantitative hint is a 1,000-row NVFP4 calibration set spanning 273 conversations / 692 strata). Evaluated on PhoneBench Alpha 1 (15 models, human-calibrated LLM-judge panel, seven axes: telephone speaking style, tool-call accuracy, say/do consistency, factual grounding, coherence, authentication & escalation discipline, caller outcome; harness NOT public): Gemini 3.6 Flash 78.6, GPT-5.6 Terra 72.4, PhoneLLM 72.3, untuned Qwen3.8-27B 70.0, Claude Sonnet 5 68.9, Nemotron base 28.6. Serving: modeled $0.0025/agent-minute on Modal B200s at 44 concurrent LLM processes (88 agents by an unexplained sweep construction), sub-600 ms P95 TTFAT; the official NVFP4 checkpoint was made AFTER training by ModelOpt 0.46.0rc1 selective PTQ (lm_head, sensitive attention/Mamba projections and conv1d unquantized) with in-domain calibration, costing -0.04 PhoneBench points (bf16 KV) or -0.54 (FP8 KV). Key facts for us: (1) our base already scores 70.0 vs PhoneLLM's 72.3, so headroom is a few points on style/say-do/escalation, not a gross jump; (2) Pipecat's own voice-readiness board shows Qwen3.8-27B NVFP4 (unsloth checkpoint, SGLang, no MTP) at 97.8% / 101 ms P50 on one RTX 5090 - independent validation of our base; (3) Pipecat did NOT fine-tune a quantized model; they trained bf16 then PTQ'd; (4) their reference prompt FORBIDS narrating tool use, contradicting our 'acknowledge before tool' idea, so narration must be prompt-conditional; (5) vLLM prefix caching is a no-op for nemotron_h hybrids on GPU (issue #54504) - a concrete serving weakness we can beat if Qwen3.8's GDN path caches correctly.",
+ "replicate_vs_improve": [
+  "REPLICATE (behavioural, not recipe-level - PhoneLLM's data/judges/harness are proprietary): thinking-off, temperature-0 SFT of an open hybrid base for English phone customer-service tool use; strict train/serve alignment baked into the vLLM launch (--default-chat-template-kwargs '{\"enable_thinking\":false}' --override-generation-config '{\"temperature\":0}'); say/do discipline as the headline trained behaviour.",
+  "REPLICATE: bf16 training first, THEN ModelOpt selective NVFP4 PTQ calibrated on ~1,000 in-domain, eval-disjoint rows stratified over the taxonomy, with lm_head / GDN conv1d / in_proj_a,b / MTP head excluded; publish bf16-vs-NVFP4 delta per eval axis, and bf16-KV vs FP8-KV.",
+  "REPLICATE: a PhoneBench-shaped held-out eval (seven axes, reference-response comparison, human-calibrated judge panel) plus TTFAT and modeled $/agent-minute using Pipecat's convention (GPU $/hr / utilisation / concurrent agents under P95 target).",
+  "REPLICATE: Pipecat integration slot - vLLM OpenAI-compatible server + OpenAILLMService(base_url=...) reusing pipecat-examples/phonellm (swap model id) and its pipecat-eval naturalness.yaml/reservations.yaml as a smoke suite.",
+  "IMPROVE: bilingual EN + ES phone traces (PhoneLLM is English-only; Qwen3.8 base is Apache-2.0 and multilingual) - a real product differentiator with a measurable eval split.",
+  "IMPROVE: prompt-conditional narration style - the model obeys either 'acknowledge + set expectation before slow/async tools' or Pipecat's 'never narrate, call then report', selected by the system prompt; PhoneLLM's example prompt only supports the latter.",
+  "IMPROVE: explicit long-conversation robustness (20-30+ turns, 3+ tool calls, slot changes mid-call) with a dedicated eval split, addressing the 'falls off a cliff at turn 4-5' criticism of thinking-off models.",
+  "IMPROVE: ASR-noise-aware behaviour (digit/name read-back, targeted repair, no write-tool with an unconfirmed misheard value) trained with synthetic ASR corruption of user turns - SpeechGym shows perceptual slot mishearing dominates real voice failures.",
+  "IMPROVE: calibrated escalation - train both 'transfer when warranted' and 'refuse unnecessary transfer' (our first adapter over-transferred; PhoneBench penalises poor escalation discipline).",
+  "IMPROVE: a published, reproducible eval harness (fork kwindla/aiewf-eval, add PhoneBench axes + taxonomy probes + Spanish + long-call splits) since PhoneBench's harness is withheld.",
+  "IMPROVE: serving - verify and exploit working prefix caching for Qwen3.8's GDN layers (--mamba-cache-mode align) plus MTP k=2 on a single RTX PRO 6000, reporting P95 TTFAT concurrency instead of tok/s; PhoneLLM/nemotron_h re-prefills every turn on GPU.",
+  "DO NOT TRY TO BEAT: cost per agent-minute. A dense 27B has ~8x the active compute of Nemotron Nano; our single-GPU $/min will be several times PhoneLLM's $0.0025. Lead with quality-per-active-parameter, bilinguality and latency, not cost."
+ ],
+ "nvfp4_decision": "DECISION: do NOT fine-tune a pre-quantized community NVFP4 checkpoint as the primary path. Reasons: (1) no official Qwen or NVIDIA NVFP4 of Qwen3.8-27B exists (only Qwen/Qwen3.8-27B and Qwen/Qwen3.8-27B-FP8 are official; NVFP4s are unsloth/RedHatAI/RadixArk/Inferact/HivenetQuant/QUASAR etc.); (2) PhoneLLM itself trained bf16 then PTQ'd; (3) full-model QAT/QAD of a 27B is infeasible on one 96 GB GPU (NVIDIA's 8B QAT example needs 2x80 GB; QUASAR 27B QAT used 8xH100); (4) merging a small LoRA delta into a 4-bit grid (E2M1 magnitudes 0/0.5/1/1.5/2/3/4/6 per 16-block, i.e. 25-50% relative steps) survives only statistically - our measured ~0.3% delta already fell below FP8. PRIMARY PATH (P1): high-rank LoRA (r=128, alpha=256, all linear incl. GDN in_proj_qkv/z/out_proj and MLP, LR 1e-4, 2 epochs, loss on assistant tokens only) on bf16 Qwen/Qwen3.8-27B -> merge to bf16 -> ModelOpt (>=0.46.0, released 2026-08-18) hf_ptq selective NVFP4: MLP gate/up/down W4A4 group 16 (must be W4A4, not the nvidia qwen3_5 w4a16 recipe, which is Marlin-dequantized and 8-12% SLOWER than FP8 on RTX PRO 6000 per nvidia/Qwen3.6-27B-NVFP4 discussion #8); attention q/k/v/o and GDN in_proj_qkv/z/out_proj FP8; conv1d, in_proj_a/b, norms, embeddings, lm_head and all mtp.* in BF16; KV cache bf16 (PhoneLLM: FP8 KV cost 0.54 pts vs 0.04 for weights); calibration = 1,024 of our own eval-disjoint phone traces, seq 4,096, stratified across taxonomy x vertical x language. GATE: NVFP4 merged model must be within 0.5 pts of the bf16 merged model on our composite eval, within 1.0 on tau2/tau3 banking pass^1, and MTP acceptance >= 0.75 at k=2; also require KL(bf16-merged || NVFP4-merged) on 500 held-out assistant turns <= 1.5x KL(bf16-base || NVFP4-base). FALLBACK (P2) if the fine-tune does not survive PTQ: ModelOpt QLoRA-on-frozen-NVFP4 (examples/llm_qat: quantize.py --recipe nvfp4 --compress True on the base, train.py with configs/train/qlora_nvfp4.yaml adapted to r=32-64, export.py, serve 'vllm serve base_model --enable-lora --lora-modules phone=adapter'); this trains the adapter against the real quantized activations so it compensates quantization error, at the cost of LoRA kernel overhead at serve time (~40% single-stream decode loss observed on Qwen3.6-27B NVFP4 + LoRA) and the known vLLM issue #50059 (rank-32 all-layer LoRA over 4-bit base giving weak/non-deterministic output on SM120 - run an A/B determinism test first). FALLBACK (P3): stay on the proven bf16 base + unmerged LoRA + MTP k=2 (215-323 tok/s aggregate at 8-16 streams) and ship NVFP4 later. The NVFP4 speed prize is modest (+10-30% decode vs FP8, ~2x vs bf16, ~30 GB freed for KV/concurrency) so P3 is a legitimate release, not a failure. Everything about ModelOpt/llm-compressor handling Qwen3.8's GDN module class for compress/export is UNVERIFIED and is gated by a 1-day smoke test (week 1) before any data is generated at scale.",
+ "pattern_taxonomy": [
+  {
+   "group": "opening/verification",
+   "pattern": "Greeting + purpose capture",
+   "trigger": "First assistant turn of the call",
+   "example": "Thanks for calling Northwind Bank, this is the virtual assistant. How can I help you today?",
+   "check": "<= 2 sentences; exactly one open question; no tool call before caller states intent"
+  },
+  {
+   "group": "opening/verification",
+   "pattern": "Verify identity before any account data",
+   "trigger": "Caller asks for account-specific info before verification succeeded",
+   "example": "Before I pull that up, can I get the phone number on the account and the last four of your card?",
+   "check": "No account-data tool call and no PII spoken before verify_identity returns success; verification tool called with read-back values"
+  },
+  {
+   "group": "opening/verification",
+   "pattern": "Batch-ask all missing slots in one sentence",
+   "trigger": ">= 2 required slots still missing for the intended tool",
+   "example": "Sure, I can book that. What name should it be under, and what day and time work for you?",
+   "check": "All missing slots requested in one turn; none of the already-stated slots re-asked (aiewf-eval penalty)"
+  },
+  {
+   "group": "opening/verification",
+   "pattern": "Spelling and digit read-back",
+   "trigger": "Caller provides a name, email, ID, phone or amount that will be used as a tool argument",
+   "example": "Let me make sure I have that: S-M-Y-T-H, Smyth, and the number ending four-four-one-two. Is that right?",
+   "check": "Read-back precedes any write tool using the value; digits chunked in groups of 2-4; the value in tool args equals the confirmed value"
+  },
+  {
+   "group": "opening/verification",
+   "pattern": "Failed verification -> limited path",
+   "trigger": "verify tool returns mismatch or lockout",
+   "example": "Those details don't match what I have on file. Do you have your account number handy, or I can help with general questions only.",
+   "check": "No account data disclosed; offers one alternative verification or escalation; no retry loop > 2"
+  },
+  {
+   "group": "before-tool",
+   "pattern": "Acknowledge + set expectation (narrate mode)",
+   "trigger": "System prompt allows narration AND the tool is tagged slow/async (> ~1 s)",
+   "example": "Got it, let me look up your recent transactions, that'll take just a second.",
+   "check": "Spoken text and tool_call in the SAME assistant message; text never claims completion; <= 1 sentence"
+  },
+  {
+   "group": "before-tool",
+   "pattern": "Silent tool call (no-narrate mode)",
+   "trigger": "System prompt forbids narration (Pipecat style: 'no let me check, no one moment')",
+   "example": "[tool_call only, empty content]",
+   "check": "Assistant content is empty; no filler phrases; result reported in the next turn"
+  },
+  {
+   "group": "before-tool",
+   "pattern": "Confirm parameters before write tools",
+   "trigger": "Any create/update/delete/transfer/payment tool is about to be called",
+   "example": "So that's two hundred fifty dollars from checking to savings, today. Shall I go ahead?",
+   "check": "Write tool is called only in a later turn after explicit yes; args equal the confirmed values"
+  },
+  {
+   "group": "before-tool",
+   "pattern": "Don't offer what you have no tool for",
+   "trigger": "Caller asks for a capability with no matching tool",
+   "example": "I can't check table availability from here, but I can put the booking request in and the restaurant will confirm by text.",
+   "check": "No 'let me check' for a nonexistent tool; states the limit plus one alternative"
+  },
+  {
+   "group": "before-tool",
+   "pattern": "Act without asking when all slots are known",
+   "trigger": "Every required slot is present and no confirmation is required by policy",
+   "example": "[calls lookup_order immediately with the stated order number]",
+   "check": "No unnecessary confirmation question (aiewf-eval: 'asks for unnecessary confirmation instead of making the expected call' = fail)"
+  },
+  {
+   "group": "during-wait",
+   "pattern": "Progress filler on long async tools",
+   "trigger": "An intermediate 'still processing' tool_response arrives",
+   "example": "Still searching, the system's a bit slow today, thanks for bearing with me.",
+   "check": "No fabricated result; <= 1 sentence; no repeated identical filler"
+  },
+  {
+   "group": "during-wait",
+   "pattern": "Caller speaks during the wait",
+   "trigger": "A user message arrives before the pending tool result",
+   "example": "Yes, I'll include the savings account too, one moment while that finishes.",
+   "check": "Acknowledges new info; pending action is not dropped; if args change, re-issues the tool with updated args"
+  },
+  {
+   "group": "result narration",
+   "pattern": "Conversational summary of structured results",
+   "trigger": "Tool returns a list of <= 5 items",
+   "example": "I found three charges on the twelfth: a coffee shop for four eighty, a grocery store for sixty-two dollars, and a gas station for forty.",
+   "check": "No JSON, field names or bullet syntax; item count and values equal the tool payload"
+  },
+  {
+   "group": "result narration",
+   "pattern": "Spoken formatting of dates, money, IDs",
+   "trigger": "Any date/time/amount/identifier in the reply",
+   "example": "Your next payment is due Friday the 12th, for one hundred nineteen dollars.",
+   "check": "No ISO dates; no year unless ambiguous; amounts in natural spoken form; IDs chunked; regex + judge"
+  },
+  {
+   "group": "result narration",
+   "pattern": "Grounded answer only",
+   "trigger": "Factual question answered from tool output or system-prompt KB",
+   "example": "According to your plan, international roaming is fifteen dollars a day and it's currently switched off.",
+   "check": "Every factual claim traceable to a tool_response or KB span (judge axis: factual grounding)"
+  },
+  {
+   "group": "result narration",
+   "pattern": "Confirmation-number read-back after a write",
+   "trigger": "Write tool returns a reference/confirmation id",
+   "example": "You're all set. Your confirmation number is seven-four-two, nine-one-eight. Want me to repeat that?",
+   "check": "Id equals tool result exactly; offered to repeat; action verb in past tense only after tool success"
+  },
+  {
+   "group": "disambiguation",
+   "pattern": "Multiple matches -> one distinguishing question",
+   "trigger": "Search returns 2-5 records",
+   "example": "I see two accounts under that name, one ending four-four-one-two and one ending zero-nine-eight-seven. Which one?",
+   "check": "Exactly one discriminating question; no full PII read out; no write tool until resolved"
+  },
+  {
+   "group": "disambiguation",
+   "pattern": "Ambiguous intent -> offer choices",
+   "trigger": "Request maps to >= 2 tools or flows",
+   "example": "Do you want to change the delivery address for this order, or for your account going forward?",
+   "check": "<= 3 options offered; no tool call yet"
+  },
+  {
+   "group": "disambiguation",
+   "pattern": "Relative date/time resolution",
+   "trigger": "Caller says 'next Friday', 'this evening', 'end of the month'",
+   "example": "Friday the 12th at six in the evening, correct?",
+   "check": "Restates the resolved spoken date before the tool call; tool arg is the correct absolute date"
+  },
+  {
+   "group": "empty/too-many/partial results",
+   "pattern": "Not found but similar candidates exist",
+   "trigger": "Exact search returns 0, fuzzy search returns >= 1",
+   "example": "I don't see a Jon Smith, but I do have a John Smyth with a similar phone number. Could that be it?",
+   "check": "Candidates come only from the tool payload; asks for confirmation; no assumption"
+  },
+  {
+   "group": "empty/too-many/partial results",
+   "pattern": "Not found, no alternatives -> widen the search",
+   "trigger": "Search returns 0 and no fuzzy candidates",
+   "example": "Nothing under that email. Want me to try your phone number instead, or a different spelling?",
+   "check": "Proposes concrete alternative parameters; second search uses them; never fabricates a match"
+  },
+  {
+   "group": "empty/too-many/partial results",
+   "pattern": "Too many results -> narrow",
+   "trigger": "Result count > 5 or truncated flag set",
+   "example": "That brings up more than forty matches. Can you give me the date or the amount to narrow it down?",
+   "check": "Does not read > 5 items; asks one narrowing question; re-queries with the new filter"
+  },
+  {
+   "group": "empty/too-many/partial results",
+   "pattern": "Partial / paginated results",
+   "trigger": "has_more or next_page present in tool result",
+   "example": "Here are the first five. Would you like me to go through the rest?",
+   "check": "States 'first N'; offers more; does not claim completeness"
+  },
+  {
+   "group": "empty/too-many/partial results",
+   "pattern": "Out-of-scope question (KB miss)",
+   "trigger": "Question not covered by KB or any tool",
+   "example": "I don't have that information here. I can transfer you to the mortgage team or arrange a callback, whichever you prefer.",
+   "check": "Says it doesn't know; offers a path; no invented policy"
+  },
+  {
+   "group": "errors & denials",
+   "pattern": "Tool error/timeout -> apologise, retry once, then fall back",
+   "trigger": "tool_response contains an error or timeout",
+   "example": "Sorry, the system didn't respond. Let me try that once more.",
+   "check": "<= 1 retry with identical args; then callback/transfer offer; never claims success"
+  },
+  {
+   "group": "errors & denials",
+   "pattern": "Policy denial with reason and alternative",
+   "trigger": "Request violates a rule in the system prompt policy",
+   "example": "I'm not able to waive that fee because it's outside the thirty-day window, but I can set up a payment plan.",
+   "check": "Reason traceable to policy text; offers an allowed alternative; no unauthorized tool call"
+  },
+  {
+   "group": "errors & denials",
+   "pattern": "Validation error -> re-ask only the bad field",
+   "trigger": "Tool returns a field-level validation error",
+   "example": "That postcode doesn't look right, could you read it to me again?",
+   "check": "Re-asks exactly the failing field; other args preserved"
+  },
+  {
+   "group": "errors & denials",
+   "pattern": "Business-rule failure relayed plainly",
+   "trigger": "Tool returns insufficient funds / not eligible / sold out",
+   "example": "That transfer didn't go through, the balance is short by about twenty dollars. Would you like to move a smaller amount?",
+   "check": "No blame language; states the fact from the tool; offers options"
+  },
+  {
+   "group": "confirmations & irreversible actions",
+   "pattern": "Two-step confirm for irreversible or high-value actions",
+   "trigger": "cancel/close/delete/transfer above threshold",
+   "example": "Just to confirm, you want to close the savings account ending 0987 and move the balance to checking. Yes to proceed?",
+   "check": "Summary in one turn, tool call only after an explicit yes in a separate user turn"
+  },
+  {
+   "group": "confirmations & irreversible actions",
+   "pattern": "Correction mid-confirmation",
+   "trigger": "Caller changes a slot after hearing the summary",
+   "example": "No problem, three hundred instead of two fifty, from checking to savings today. Go ahead?",
+   "check": "Only the changed slot updated; re-summarised; no stale value reaches the tool"
+  },
+  {
+   "group": "confirmations & irreversible actions",
+   "pattern": "Caller declines -> graceful stop",
+   "trigger": "Caller says no / don't do it",
+   "example": "Okay, I won't make that change. Is there anything else I can help with?",
+   "check": "No write tool called; conversation continues"
+  },
+  {
+   "group": "hold/transfer",
+   "pattern": "Warm transfer with reason and expectation",
+   "trigger": "Policy requires a human or caller insists after >= 1 resolution attempt",
+   "example": "I'll bring in a fraud specialist now. I'll pass along everything you've told me so you won't need to repeat it.",
+   "check": "transfer tool called with a summary argument; only after a resolution attempt or a policy trigger"
+  },
+  {
+   "group": "hold/transfer",
+   "pattern": "Refuse unnecessary transfer (handle in scope)",
+   "trigger": "Caller asks for a human but the task is fully in scope",
+   "example": "I can take care of that for you right now if you like, it'll only take a moment.",
+   "check": "No transfer tool on first request; transfer only if caller insists a second time (mirror of our adapter's over-transfer failure)"
+  },
+  {
+   "group": "hold/transfer",
+   "pattern": "Callback / ticket when unresolvable",
+   "trigger": "No tool or human path available now",
+   "example": "I'll have someone call you back. Is the number ending four-four-one-two the best one?",
+   "check": "Callback number read back; create_ticket tool called; ticket id read back"
+  },
+  {
+   "group": "hold/transfer",
+   "pattern": "Hold etiquette",
+   "trigger": "System supports hold and an operation needs > ~10 s",
+   "example": "May I put you on a brief hold while I check with billing? ... Thanks for holding, here's what I found.",
+   "check": "Asks permission before hold; on return thanks and reports; hold tool call present"
+  },
+  {
+   "group": "repair & interruptions",
+   "pattern": "Mishearing / ASR repair",
+   "trigger": "User turn contains a garbled or low-confidence value, or a value contradicts an earlier one",
+   "example": "Sorry, was that fifteen or fifty?",
+   "check": "Targeted repair question; no tool call using the uncertain value"
+  },
+  {
+   "group": "repair & interruptions",
+   "pattern": "Barge-in continuation",
+   "trigger": "Previous assistant turn is truncated in history (interrupted)",
+   "example": "Sure, go ahead. ... So the second card as well, got it.",
+   "check": "Does not repeat the full interrupted sentence; addresses the new input"
+  },
+  {
+   "group": "repair & interruptions",
+   "pattern": "Caller corrects the agent",
+   "trigger": "'No, I said...'",
+   "example": "My mistake, the 14th, not the 4th. Let me fix that.",
+   "check": "Brief apology; corrected value used; re-call tool if the previous call used the wrong value"
+  },
+  {
+   "group": "repair & interruptions",
+   "pattern": "Frustration de-escalation",
+   "trigger": "Angry or frustrated caller sentiment",
+   "example": "I understand, that's frustrating. Let's get it sorted right now.",
+   "check": "Exactly one empathy sentence followed by an action or question; no apology loops"
+  },
+  {
+   "group": "repair & interruptions",
+   "pattern": "Off-topic / small-talk redirect",
+   "trigger": "Caller chats or asks something unrelated",
+   "example": "Ha, it has been a long week. Now, about that payment...",
+   "check": "<= 1 sentence of small talk then back to task; no tool call for the off-topic content"
+  },
+  {
+   "group": "repair & interruptions",
+   "pattern": "Long-call memory",
+   "trigger": "Turn >= 15 requires a slot stated >= 10 turns earlier",
+   "example": "I'll send the receipt to the same email, j.smyth at example dot com.",
+   "check": "No re-ask of the earlier slot; value in tool args matches the earlier statement"
+  },
+  {
+   "group": "closing",
+   "pattern": "Recap of actions actually performed",
+   "trigger": "Caller signals they are done",
+   "example": "Today I moved two fifty into savings and updated your address. Anything else?",
+   "check": "Every recapped action corresponds to a successful tool call; nothing extra"
+  },
+  {
+   "group": "closing",
+   "pattern": "Goodbye + end_call in the same turn",
+   "trigger": "Caller confirms nothing else",
+   "example": "Thanks for calling Northwind, have a good one. [end_call]",
+   "check": "end_call tool and spoken goodbye in the same assistant message; not called before caller confirms"
+  },
+  {
+   "group": "closing",
+   "pattern": "Never an empty spoken reply",
+   "trigger": "Any assistant turn without a tool call",
+   "example": "(any turn)",
+   "check": ">= 1 spoken sentence in every non-tool turn; regex filter"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Say/do violation",
+   "trigger": "Text asserts an action ('I've booked that') with no matching tool call in the turn or earlier",
+   "example": "REJECT: 'Done, your transfer is complete.' with no transfer tool call",
+   "check": "Programmatic: action verbs in past tense require a matching successful tool result in history"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Do/say violation",
+   "trigger": "Text implies waiting for confirmation but a write tool is called in the same turn",
+   "example": "REJECT: 'Shall I go ahead?' + transfer tool_call",
+   "check": "Programmatic: question + write tool in same message = reject"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Raw data leakage",
+   "trigger": "Reply contains JSON, field names, ISO dates, UUIDs or markdown",
+   "example": "REJECT: 'status: SUCCESS, date 2026-09-12'",
+   "check": "Regex on braces, ISO dates, snake_case keys, markdown bullets"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Over-transfer",
+   "trigger": "Transfer tool called for an in-scope task without a prior attempt or policy trigger",
+   "example": "REJECT: 'Let me transfer you' on a simple balance inquiry",
+   "check": "Transfer rate on in-scope scenarios must be ~0; judge axis escalation discipline"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Re-asking known information",
+   "trigger": "Question about a slot already provided by the caller",
+   "example": "REJECT: 'What's your name?' after the caller gave it",
+   "check": "Slot-tracking script over the transcript"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Fabricated result after error or empty search",
+   "trigger": "Tool returned error/empty but the reply reports a specific record",
+   "example": "REJECT: 'I found your order' after a not_found response",
+   "check": "Judge + programmatic entity match against tool payloads"
+  },
+  {
+   "group": "anti-patterns",
+   "pattern": "Wall of text",
+   "trigger": "Spoken turn > ~60 words without a list-reading reason",
+   "example": "REJECT: three-paragraph policy explanation",
+   "check": "Word count; judge axis telephone speaking style"
+  }
+ ],
+ "models": {
+  "primary_generator": "qwen/qwen3.8-max via OpenRouter ($2.00 in / $6.00 out per M tokens, 1M context, tools supported). Used thinking-ON for the assistant side of turn-by-turn simulation against a real mock tool environment; the reasoning block is stripped so the student learns to produce the same output thinking-OFF (teacher thinks, student doesn't). Same model family as the student, so tool-call conventions and register transfer cleanly.",
+  "bulk_generator": "qwen/qwen3.8-max as well for the bulk tier (cheapest teacher whose reasoning can be controlled per request); z-ai/glm-5.3 ($1.15 / $3.50) only as a diversity teacher for ~20% of conversations because its reasoning is always on (billed output includes reasoning). Cheap alternative for the simplest strata (openings, closings, formatting patterns): z-ai/glm-5.3-flash ($0.15 / $0.50, price from search results, UNVERIFIED on the model page).",
+  "judge": "Panel of two families different from the generator: anthropic/claude-sonnet-5 ($2 / $10; $1 / $5 batch) as primary judge for the seven PhoneBench-style axes and as the quality filter on generated data; openai/gpt-5.4 ($2.50 / $15) as second judge on the held-out eval only. Claude Fable 5.1 ($10 / $50) reserved for the 200-turn human-calibration disagreement review. Programmatic checks (say/do, do/say, regex, slot tracking) run before any LLM judge.",
+  "user_simulator": "z-ai/glm-5.3-flash (cheap, persona-following, ASR noise injected afterwards by a deterministic script: digit swaps, homophones, dropped words, truncation) with qwen/qwen3.8-max thinking-off as fallback if flash persona adherence is < 90% in the pilot. For Spanish personas the same models with Spanish persona cards.",
+  "license_note": "Student base Qwen/Qwen3.8-27B is Apache-2.0 (model card), so a redistributed fine-tune is unencumbered. Teacher outputs: OpenRouter routes to each provider's terms; Qwen3.8-Max and GLM-5.3 usage terms for training-data generation were NOT checked here (UNVERIFIED) - a human must confirm before release of the dataset. PhoneLLM weights (BSD-2 + NVIDIA Nemotron Open Model License) may be run as a side-by-side baseline; using its outputs as training data was not verified as permitted.",
+  "rationale": "Generator and judge come from different model families to avoid self-preference bias; Qwen3.8-Max as teacher keeps the tool-call dialect identical to the student's template and is the cheapest controllable-reasoning frontier teacher on OpenRouter; Sonnet 5 is the judge family Pipecat itself used for aiewf-eval (Claude), making our numbers more comparable; GPT-5.4 gives the panel a second vote. All prices are OpenRouter list prices fetched 2026-09-04."
+ },
+ "data_plan": [
+  {
+   "stage": "S0 - Environments and taxonomy spec",
+   "what": "Build 8 mock verticals as deterministic tool servers with seeded databases (banking, telecom, retail/orders, airline, restaurant reservations, healthcare scheduling, utilities billing, insurance claims), each with 6-12 tools incl. verify_identity, search_*, create/update/cancel_*, transfer_to_human, create_callback, end_call, and async-tagged slow tools. Scenario generator seeds the DB to trigger each taxonomy pattern (e.g. 47 'John Smith' rows; no 'Jon Smith' but a 'John Smyth'; tool timeout on the second call). Two system-prompt styles (narrate / no-narrate), EN + ES. Write the 50-pattern taxonomy as machine-readable strata with per-pattern programmatic checks.",
+   "size": "8 verticals x 50 patterns x 2 styles x 2 languages = 1,600 strata (target coverage >= 90% of strata with >= 5 conversations each by S2)",
+   "cost_estimate": "Engineering time only; ~$0 API",
+   "gate": "Every pattern has at least one seeded scenario template and one automated check; dry-run 20 conversations with Qwen3.8-Max end to end without env errors"
+  },
+  {
+   "stage": "S1 - Pilot",
+   "what": "200 conversations turn-by-turn (avg 12 assistant turns, 4 tool calls), teacher thinking-ON, user sim + ASR noise on 30% of user turns, then programmatic filters + Sonnet 5 judge. Manually read 50. Measure pass rate of programmatic filters and judge mean per axis; tune prompts.",
+   "size": "200 conversations (~2,400 assistant turns)",
+   "cost_estimate": "~$0.15/conv (36k in + 8.4k out teacher tokens at $2/$6 = $0.12; user sim $0.006; judge $0.022) -> ~$30, plus ~$10 for re-runs",
+   "gate": "Programmatic accept rate >= 70%; judge mean >= 4.2/5 on say/do and speaking style; zero say/do violations in accepted set; human agreement with judge >= 85% on 50 turns. If below, fix prompts/env before S2"
+  },
+  {
+   "stage": "S2 - Core dataset",
+   "what": "Stratified generation over all 1,600 strata with quotas: 60% English / 40% Spanish, 50/50 narrate/no-narrate, 25% of conversations >= 20 turns with >= 3 tool calls and a mid-call slot change, 15% with tool errors/timeouts, 20% with ASR-corrupted user turns, 10% escalation-warranted vs 10% escalation-requested-but-in-scope. Accept only conversations that pass all programmatic filters and Sonnet 5 judge >= 4/5 on every axis; keep a small set of judge-rejected turns as DPO negatives for a possible later stage.",
+   "size": "Generate ~5,000 conversations, expect ~3,500 accepted (~42k assistant turns, ~25M training tokens)",
+   "cost_estimate": "5,000 x $0.15 = ~$750 (lean tier). Full tier: 12,000 generated / ~8,500 accepted = ~$1,800",
+   "gate": "Accepted set covers >= 90% of strata with >= 5 conversations; Spanish share >= 35%; no stratum > 3% of data; dedup (MinHash on assistant turns) < 5% near-duplicates; hold out 300 conversations (disjoint scenario/tool/prompt families) as PhonePatterns-Eval BEFORE training"
+  },
+  {
+   "stage": "S3 - Calibration and eval sets",
+   "what": "Carve out (a) 1,024 conversations-turn windows (seq 4,096) as the NVFP4 calibration set, disjoint from eval, stratified across strata/languages; (b) 300-conversation held-out eval with reference responses written by Qwen3.8-Max + Claude Sonnet 5 and reconciled; (c) 200 human-labelled turns (team labels on the seven axes) for judge calibration.",
+   "size": "1,024 calibration rows; 300 eval conversations (~3,600 turns); 200 human-labelled turns",
+   "cost_estimate": "Reference generation + double-judge on 3,600 turns: ~$150; human labelling: ~10 team-hours",
+   "gate": "Judge-human Spearman >= 0.7 per axis on the 200 labelled turns; otherwise revise rubrics before any model comparison"
+  },
+  {
+   "stage": "S4 - Regression/mix data",
+   "what": "Add 15% replay of our verified tau2-bench banking trajectories (re-rendered thinking-off) and 5% general Qwen chat/tool data to prevent forgetting; ensure all samples are rendered with the exact Qwen3.8 chat template with enable_thinking=false (empty think block) and tool results as tool-role messages.",
+   "size": "~700 tau2 conversations + ~250 general samples",
+   "cost_estimate": "~$0 (existing data)",
+   "gate": "Rendered token-for-token diff between training render and vLLM's runtime render of the same conversation is zero on 50 samples"
+  }
+ ],
+ "training_plan": [
+  "Base: Qwen/Qwen3.8-27B bf16 (Apache-2.0), text-only; strip/ignore the vision tower if present in the checkpoint; keep the native MTP head untouched during SFT.",
+  "Method (P1): LoRA r=128, alpha=256, dropout 0.05, target ALL linear layers - attention q/k/v/o, GDN in_proj_qkv, in_proj_z, in_proj_a, in_proj_b, out_proj, MLP gate/up/down; NOT embeddings/lm_head/conv1d/norms. Rationale: a larger, all-layer delta is more likely to survive NVFP4 PTQ than our r=64 adapter; still fits one 96 GB GPU (bf16 weights ~54 GB + adapter + 8k-token activations with gradient checkpointing).",
+  "Hyperparameters: LR 1e-4 cosine, warmup 3%, 2 epochs over ~30M tokens, effective batch 32 sequences (micro-batch 1 x grad-accum 32), max seq 8,192 (long calls up to 16k in a second bucket), bf16, Liger/flash kernels, loss on assistant tokens only (both spoken content and tool_call JSON), user/tool/system masked; no packing across conversations.",
+  "Template alignment: render every sample with tokenizer.apply_chat_template(..., enable_thinking=False) so the assistant turn begins with the same empty think block vLLM will produce at inference (exact string for Qwen3.8 UNVERIFIED - diff against a vLLM render on 50 samples before training). Tool results as role=tool messages; tools passed in the tools argument, not hand-written into the system prompt.",
+  "Unattended Vast job: single script that pulls data from HF, trains, merges LoRA into bf16 (peft merge_and_unload), pushes merged bf16 + adapter to a private HF repo, then runs the tau3 banking dev eval (1 trial) and the PhonePatterns-Eval on the merged bf16 via vLLM 0.28.0 and pushes results JSON; checkpoint to HF every 500 steps so a preempted box loses < 1 h.",
+  "Gate after bf16 SFT: tau3-banking pass^1 >= base thinking-off (no regression), PhonePatterns-Eval composite >= base + 3 points with say/do >= 4.7/5 and escalation discipline >= base, Spanish split within 2 points of English. If fails: inspect judge rationales per stratum, regenerate weak strata, retrain (budget 3 iterations).",
+  "Quantization (P1): ModelOpt >= 0.46.0 hf_ptq on the merged bf16: MLP W4A4 NVFP4 g16 (quant_algo NVFP4, not W4A16_NVFP4); FP8 for attention q/k/v/o and GDN in_proj_qkv/z/out_proj; exclude lm_head, all *.conv1d, in_proj_a, in_proj_b, norms, embeddings, mtp.* (regex 'mtp*'); kv_cache_quant_algo none (bf16 KV) with an FP8-KV variant measured separately; calibration on the 1,024 in-domain rows. Alternative toolchain if ModelOpt's Qwen3.8 GDN handling fails: llm-compressor with the unsloth/RedHatAI compressed-tensors recipe (MLP layers 0-55 W4A4, attn/GDN FP8, ignore re:^mtp.*), noting RedHatAI's warning that this format only works in vLLM, not SGLang.",
+  "Quantization gate: NVFP4-merged within 0.5 pts composite of bf16-merged, within 1.0 pt on tau3 pass^1, MTP k=2 acceptance >= 0.75, KL(bf16||NVFP4) on 500 held-out turns <= 1.5x the base model's own KL under the same recipe; also check no degradation on the Spanish split (quantization can hit lower-resource tokens harder).",
+  "Fallback (P2) if the fine-tune does not survive PTQ: ModelOpt QLoRA - quantize.py --recipe nvfp4 (custom exclusions as above) --compress True on the base; train.py with qlora_nvfp4.yaml adapted (r=32-64, LR 2e-4, 1-2 epochs, seq 8k, DDP single GPU since FSDP2 export is unsupported); export.py; serve with --enable-lora. Pre-test: determinism/quality A/B at temperature 0 (vLLM issue #50059) before committing.",
+  "Fallback (P3): ship bf16 base + unmerged r=128 LoRA + MTP k=2 (already proven serving path) if neither P1 nor P2 passes gates within the timeline; NVFP4 becomes a follow-up.",
+  "Optional stage (only if S2 leaves >= 3,000 judge-rejected turns): one epoch of DPO/ORPO on (accepted, rejected) pairs for say/do and over-transfer, LR 5e-6, beta 0.1, after SFT and before merge; skip if SFT already hits say/do >= 4.8/5.",
+  "MTP head: measure acceptance with the adapter/merged weights; if < 0.75, consider a short MTP-head-only fine-tune on our data (tooling for Qwen3.8 MTP training is UNVERIFIED) or drop to k=1."
+ ],
+ "serving_plan": [
+  "Engine: vLLM 0.28.0 (or newer) on one RTX PRO 6000 Blackwell 96 GB (sm_120); do not use older third-party benchmarks (0.19-0.24) as expectations - 0.28.0 shipped FlashInfer XQA on SM12x, B12X dense linear backends, fused post-conv MTP decode for Qwen3.5 GDN and GDN gates aligned with speculative tokens.",
+  "Reference launch (P1 NVFP4 merged model): vllm serve <org>/qwen3.8-27b-phone-nvfp4 --quantization modelopt (or compressed-tensors auto-detect) --mamba-cache-mode align --enable-prefix-caching --kv-cache-dtype auto --max-model-len 32768 --max-num-seqs 64 --speculative-config '{\"method\":\"mtp\",\"num_speculative_tokens\":2}' --enable-auto-tool-choice --tool-call-parser <hermes or qwen3_coder - verify against Qwen3.8's chat template; the Qwen3.5 recipe says qwen3_coder, our earlier notes say native JSON/hermes: UNVERIFIED> --reasoning-parser qwen3 --default-chat-template-kwargs '{\"enable_thinking\":false}' --override-generation-config '{\"temperature\":0}' --gpu-memory-utilization 0.92. Check the startup log for the NVFP4 linear backend; if it says Marlin/W4A16 fallback, force --linear-backend cutlass or flashinfer_cutlass; if the checkpoint is W4A16 you have the wrong recipe.",
+  "Prefix-cache verification (day 1 of serving work): send a 1.7k-token transcript twice, confirm vllm:prefix_cache_hits_total increases and turn-2 TTFT drops; repeat with 5, 10, 20-turn transcripts. If GDN prefix caching is a no-op (as for nemotron_h in issue #54504), file it and fall back to shorter max-model-len plus aggressive session pinning; this single check decides whether turn-N TTFT is flat or linear in call length.",
+  "KPI change: replace aggregate tok/s with P95 TTFAT (time to first answer or tool-call token, reasoning excluded, first turn of each call excluded) under N concurrent multi-turn sessions replayed from our synthetic traffic (short user turns ~30 tokens, long cached prefix 1.5-6k, ~60-120 token completions). Run a 'not-to-exceed' sweep N = 4, 8, 16, 24, 32, 48 and report the max N with P95 TTFAT < 600 ms; compute $/agent-minute = (Vast $/hr / 0.70 utilisation / 60) / N.",
+  "Ablations on the same replay: MTP k=0/1/2/3 (MTP-1 recommended for latency by the Qwen3.5 recipe, k=2 is our current; measure acceptance and P95 TTFAT, not just tok/s), bf16 KV vs FP8 KV, NVFP4 vs FP8 (Qwen/Qwen3.8-27B-FP8 + merged delta is NOT viable per our earlier finding; compare against bf16+LoRA P3 instead), chunked-prefill max-num-batched-tokens 2048 vs 8192.",
+  "Cross-check with SGLang for one day: Pipecat's 101 ms P50 for Qwen3.8-27B NVFP4 came from a pinned SGLang build without speculative decoding on a 5090; if SGLang beats vLLM 0.28 on P95 TTFAT at N=16 by > 20%, reconsider, noting compressed-tensors NVFP4 checkpoints (unsloth/RedHatAI recipe) do not run in SGLang.",
+  "Pipecat integration: reuse pipecat-examples/phonellm/server/bot.py with OpenAILLMService(base_url=<our vLLM>, model=<our id>, temperature=0, extra_body chat_template_kwargs enable_thinking=false); keep end_call as an async tool with cancel_on_interruption=False; run its naturalness.yaml/reservations.yaml pipecat-eval scenarios as a smoke test on every candidate.",
+  "Side-by-side baseline: run pipecat-ai/phonellm-alpha-1-nvfp4 (19.4 GB; validated only on vLLM 0.27.1/B200 - may need a separate venv) and the bf16 PhoneLLM on the same box against PhonePatterns-Eval and the latency sweep, so our comparison does not rely on Pipecat's unpublished harness.",
+  "Fallback serving (P2): vllm serve <nvfp4 base> --enable-lora --lora-modules phone=<adapter> --max-lora-rank 64 with the same flags; expect a decode-throughput penalty from LoRA kernels on top of FP4 GEMM; measure whether the net gain over P3 is more than memory. Fallback (P3): current bf16 base + unmerged LoRA + MTP k=2 launch, re-measured with the new KPI."
+ ],
+ "eval_plan": [
+  {
+   "name": "tau3/tau2-bench banking (existing)",
+   "what": "sierra-research/tau2-bench banking domain (and telecom as a transfer check), agent = our vLLM endpoint via LiteLLM openai/ prefix, thinking OFF, temperature 0; 1 trial on dev, 5 trials final; report pass^1 and pass^4 and transfer-to-human rate. Regression guard for tool correctness and the over-transfer failure.",
+   "baseline": "Qwen/Qwen3.8-27B thinking-off (bf16) on the same harness; secondary: our first r=64 adapter; nvidia/Qwen3.6-27B-NVFP4 published tau2 Telecom 95.4 vs FP8 95.2 as the expected quantization delta scale"
+  },
+  {
+   "name": "aiewf-eval (public Pipecat predecessor benchmark)",
+   "what": "github.com/kwindla/aiewf-eval aiwf_medium_context: 30x30 scripted turns, tool_use_correct / instruction_following / kb_grounding judged by Claude against golden responses, TTFAT with 700 ms guideline. Run on our bf16-merged, NVFP4-merged and P2/P3 variants.",
+   "baseline": "Pipecat's published rows: qwen3.8-27b thinking-off FP8 (Baseten) 98.2% / 649 ms P50; qwen3.8-27b NVFP4 (unsloth, SGLang, RTX 5090) 97.8% / 101 ms P50; nemotron-3-nano-30b 90.6%. Gate: our fine-tune must not drop below 97% (no regression on generic voice-agent skills)"
+  },
+  {
+   "name": "PhonePatterns-Eval (ours, PhoneBench-shaped)",
+   "what": "300 held-out conversations (scenario/tool/prompt families disjoint from training; 40% Spanish; 25% >= 20 turns; both narration styles), each turn compared to a reconciled reference by a two-judge panel (Claude Sonnet 5 + GPT-5.4) on the seven PhoneBench axes, 1-5 scale, calibrated on 200 human-labelled turns (Spearman >= 0.7 per axis required). Programmatic pre-checks: say/do, do/say, re-ask, raw-data leakage, transfer rate. Reported per axis, per language, per turn-depth bucket, per taxonomy group.",
+   "baseline": "Qwen3.8-27B base thinking-off (target: +3 composite, say/do >= 4.7/5), Qwen3.8-27B base thinking-on (to quantify what thinking-off costs), pipecat-ai/phonellm-alpha-1 (bf16 and NVFP4) run on our box, Claude Sonnet 5 via API as a frontier reference. Note absolute numbers are not comparable to PhoneBench's 72.3 - only relative ordering vs PhoneLLM on our set is claimable"
+  },
+  {
+   "name": "Quantization delta and MTP acceptance",
+   "what": "bf16-merged vs NVFP4-merged (bf16 KV and FP8 KV) on PhonePatterns-Eval and tau3 pass^1; KL divergence on 500 held-out assistant turns; MTP acceptance rate at k=1,2,3 from vLLM metrics on the replay traffic.",
+   "baseline": "PhoneLLM's published deltas (-0.04 bf16 KV, -0.54 FP8 KV); community Qwen3.8-27B deltas (BFCL -0.96, MTP metric -0.97, GPQA -0.5 QAT); base-model KL under the identical recipe. Gate: <= 0.5 composite, acceptance >= 0.75"
+  },
+  {
+   "name": "Latency / concurrency sweep",
+   "what": "Multi-turn replay of synthetic phone traffic against vLLM on the RTX PRO 6000; P50/P95 TTFAT (first turn excluded), prefix-cache hit counter, max concurrency N at P95 < 600 ms; modeled $/agent-minute with stated Vast rate and 70% utilisation; ablate MTP k, KV dtype, precision, SGLang vs vLLM.",
+   "baseline": "Our current bf16 + LoRA + MTP k=2 (215-323 tok/s at 8-16 streams, re-measured as TTFAT); PhoneLLM's modeled $0.0025/min at 44 concurrent processes on B200 (not directly comparable hardware); Pipecat's 101/318/592 ms P50/P95/max for Qwen3.8-27B NVFP4 on a 5090"
+  },
+  {
+   "name": "Pipecat smoke suite",
+   "what": "pipecat-examples/phonellm pipecat-eval scenarios (naturalness.yaml, reservations.yaml) run end-to-end through OpenAILLMService against our endpoint, both narration styles via system prompt; plus 20 live scripted phone-style probes for barge-in and end_call-in-same-turn behaviour.",
+   "baseline": "PhoneLLM on the same example bot; pass/fail per scenario"
+  }
+ ],
+ "differentiators": [
+  "Bilingual (English + Spanish) phone agent from an Apache-2.0 base; PhoneLLM is English-only under a Nemotron license.",
+  "Prompt-conditional narration: same model obeys 'acknowledge before slow tools' or 'never narrate' depending on the system prompt; PhoneLLM's reference prompt supports only the latter.",
+  "Explicit taxonomy of 50 phone-conversation patterns (too many results, not found + similar, widen search, read-back, hold/transfer etiquette, barge-in repair) with per-pattern programmatic checks - an open, stratified spec versus PhoneLLM's undisclosed 692 strata.",
+  "ASR-noise robustness trained in: synthetic mishearing in user turns with targeted repair and no-write-on-uncertain-value behaviour.",
+  "Long-call robustness split (>= 20 turns, >= 3 tool calls, mid-call slot changes) trained and reported separately, addressing the turn-4/5 collapse criticism of thinking-off models.",
+  "Calibrated escalation: trained to both transfer when warranted and refuse unnecessary transfers, with transfer rate reported per scenario class.",
+  "Reproducible eval harness (aiewf-eval fork + PhoneBench axes + taxonomy probes + Spanish + long-call splits) and a side-by-side PhoneLLM run on identical hardware - PhoneBench's harness is unpublished.",
+  "Serving on one RTX PRO 6000 with MTP k=2 and verified GDN prefix caching, reported as P95 TTFAT concurrency and modeled $/agent-minute using Pipecat's own convention; PhoneLLM/nemotron_h currently re-prefills every turn on GPU.",
+  "Published bf16-vs-NVFP4 delta per eval axis and per language, plus a documented selective-quantization recipe that keeps the MTP head serviceable."
+ ],
+ "risks": [
+  {
+   "risk": "Fine-tune delta does not survive NVFP4 PTQ (our LoRA delta was already below FP8 precision), so the quantized model regresses to base behaviour.",
+   "mitigation": "Larger delta (r=128 all-layer, 2 epochs, LR 1e-4); merge to bf16 before PTQ; in-domain calibration; hard KL/eval gates; P2 QLoRA-on-frozen-NVFP4 fallback where the adapter is trained against quantized activations; P3 bf16+LoRA release path kept alive."
+  },
+  {
+   "risk": "ModelOpt / llm-compressor cannot quantize or export Qwen3.8's GDN module class cleanly (changelog shows 0.46.0 fixed GatedDeltaNet exclusions on Megatron-Core only; HF path UNVERIFIED).",
+   "mitigation": "Week-1 smoke test: PTQ the BASE model with our recipe, load in vLLM 0.28.0, confirm linear backend is native FP4 and MTP loads; if it fails, use the unsloth/RedHatAI compressed-tensors recipe or defer NVFP4 (P3)."
+  },
+  {
+   "risk": "Headroom is small: untuned Qwen3.8-27B already scores 70.0 on PhoneBench vs PhoneLLM 72.3; our gains may be within judge noise.",
+   "mitigation": "Report per-axis and per-split (Spanish, long-call, narration style) where the base is weakest; use 300-conversation eval with two judges and human calibration; treat style/say-do/escalation, bilinguality and latency as the claims, not gross accuracy."
+  },
+  {
+   "risk": "Train/serve template mismatch again (thinking flag, empty think block, tool-call format/parser, tool-role rendering).",
+   "mitigation": "Zero-diff test between training render and vLLM runtime render on 50 samples; bake enable_thinking=false and temperature 0 into the vLLM launch; verify the correct --tool-call-parser against the Qwen3.8 template before generating data."
+  },
+  {
+   "risk": "Synthetic data teaches teacher artefacts (Qwen3.8-Max verbosity, invented tool results) or judge-pleasing verbosity.",
+   "mitigation": "Real mock environments own the tool results (teacher never invents them); programmatic say/do and raw-data filters before judging; word-count caps; 50-conversation manual read per stage; judge family different from generator."
+  },
+  {
+   "risk": "Over-transfer or under-transfer regressions (our first adapter over-transferred).",
+   "mitigation": "Balanced 10%/10% escalation-warranted vs in-scope-but-requested strata; transfer-rate metric on in-scope scenarios must stay ~0; tau3 banking transfer rate tracked every run."
+  },
+  {
+   "risk": "vLLM prefix caching is a no-op for hybrid GDN layers (as for nemotron_h), making turn-N TTFT grow with call length and blowing the P95 budget.",
+   "mitigation": "Day-1 counter check; if broken, cap context, consider SGLang, and file/track the vLLM issue; report honestly."
+  },
+  {
+   "risk": "MTP acceptance drops after fine-tuning (head trained on base activations), erasing the decode gain.",
+   "mitigation": "Measure acceptance on replay traffic; try k=1; optionally fine-tune the MTP head on our data (tooling UNVERIFIED)."
+  },
+  {
+   "risk": "Unattended Vast jobs fail (preemption, OOM at seq 16k, HF push errors) and burn budget.",
+   "mitigation": "Checkpoint to HF every 500 steps; smoke job on 100 samples first; 50% GPU budget buffer; separate long-sequence bucket with micro-batch 1."
+  },
+  {
+   "risk": "Budget overrun on teacher tokens (turn-by-turn generation re-sends context every turn).",
+   "mitigation": "Lean tier (5,000 generated) first; use OpenRouter provider prompt caching where available; move simplest strata to glm-5.3-flash; keep generation logs to resume rather than regenerate."
+  },
+  {
+   "risk": "Licensing of teacher outputs (Qwen3.8-Max, GLM-5.3 terms) or of PhoneLLM outputs for any use in training data.",
+   "mitigation": "Human review of provider terms before dataset release; do not use PhoneLLM outputs as training data unless cleared; student base is Apache-2.0."
+  },
+  {
+   "risk": "PhoneLLM NVFP4 checkpoint validated only on vLLM 0.27.1/B200; may not run on our 0.28.0/sm_120 box for the side-by-side.",
+   "mitigation": "Run PhoneLLM bf16 (63 GB, fits) as the primary baseline; try NVFP4 in a separate venv; mark as best-effort."
+  }
+ ],
+ "budget": [
+  {
+   "item": "GPU rental assumption (Vast.ai RTX PRO 6000 96 GB)",
+   "estimate": "$1.19/GPU-hr on-demand 'from' price (getdeploying.com, 2026-09-04); Vast's own pages advertise from $0.67/hr (WS) and $0.93/hr (Server) - plan at $1.20/hr, upside if cheaper"
+  },
+  {
+   "item": "GPU: week-1 smoke tests (PTQ of base, vLLM load, prefix-cache check, template diff)",
+   "estimate": "~12 h = ~$15"
+  },
+  {
+   "item": "GPU: pilot SFT + 3 iteration runs (6-8 h each incl. merge + dev eval)",
+   "estimate": "~24 h = ~$30"
+  },
+  {
+   "item": "GPU: final SFT on ~30M tokens x 2 epochs (27B LoRA, grad ckpt, ~1,500 tok/s assumed) + merge + push",
+   "estimate": "~25-30 h = ~$36"
+  },
+  {
+   "item": "GPU: NVFP4 PTQ (bf16 KV and FP8 KV variants) + QLoRA fallback run if needed",
+   "estimate": "~6 h PTQ (~$8) + optional ~15 h QLoRA (~$18)"
+  },
+  {
+   "item": "GPU: evals (tau3 5 trials x 3 variants, aiewf-eval, PhonePatterns-Eval inference, PhoneLLM baselines) + latency sweeps",
+   "estimate": "~30 h = ~$36"
+  },
+  {
+   "item": "GPU: 50% buffer for failed/preempted unattended jobs",
+   "estimate": "~$70"
+  },
+  {
+   "item": "GPU subtotal",
+   "estimate": "~$195-215"
+  },
+  {
+   "item": "API: pilot 200 conversations (Qwen3.8-Max $2/$6, glm-5.3-flash user sim, Sonnet 5 filter; ~$0.15/conv)",
+   "estimate": "~$40 incl. re-runs"
+  },
+  {
+   "item": "API: core dataset lean tier - 5,000 generated conversations (~3,500 accepted)",
+   "estimate": "~$750 (full tier 12,000 generated: ~$1,800)"
+  },
+  {
+   "item": "API: reference responses + two-judge scoring of 300-conversation eval (~3,600 turns) x ~6 model variants over the project",
+   "estimate": "~$150 initial + ~$60 per additional variant = ~$450"
+  },
+  {
+   "item": "API: tau3 user simulator + judge calls (5 trials x banking x 3-4 variants)",
+   "estimate": "~$100 (depends on user-sim model chosen)"
+  },
+  {
+   "item": "API subtotal (lean)",
+   "estimate": "~$1,350 (full tier ~$2,400)"
+  },
+  {
+   "item": "Storage: HF private repos (bf16 merged 54 GB, NVFP4 ~20 GB, adapters, datasets)",
+   "estimate": "$0 on free tier if under quota; else ~$10/month"
+  },
+  {
+   "item": "Human time: taxonomy/env engineering, 200-turn labelling, manual reads",
+   "estimate": "~4-5 person-weeks over 8 weeks (not costed)"
+  },
+  {
+   "item": "TOTAL cash (lean)",
+   "estimate": "~$1,550-1,650; full tier ~$2,600-2,700. Per-conversation cost assumptions: 12 assistant turns, 3k input tokens/turn without caching (36k), 700 output tokens/turn incl. reasoning (8.4k) at $2/$6 = $0.12; user sim 36k in at $0.15/M = $0.006; judge 8k in + 600 out at $2/$10 = $0.022"
+  }
+ ],
+ "timeline": [
+  {
+   "week": "Week 1 (Sep 7-11)",
+   "milestones": "Freeze 50-pattern taxonomy and strata spec; build 3 of 8 mock verticals (banking, telecom, restaurant) with seeded scenario generator; template zero-diff test (training render vs vLLM); GPU smoke job: PTQ base Qwen3.8-27B with our selective W4A4 recipe, load in vLLM 0.28.0, confirm native FP4 backend + MTP + prefix-cache counter; decide P1 vs P2 feasibility."
+  },
+  {
+   "week": "Week 2 (Sep 14-18)",
+   "milestones": "Remaining 5 verticals + Spanish persona cards + ASR noiser; pilot 200 conversations; programmatic filters + Sonnet 5 judge; manual read of 50; tune prompts. Gate S1."
+  },
+  {
+   "week": "Week 3 (Sep 21-25)",
+   "milestones": "S2 generation (5,000 lean) with resume logging; carve eval (300), calibration (1,024), human-label 200 turns; judge calibration (Spearman >= 0.7). Gate S2/S3. Baseline runs: base thinking-off/on and PhoneLLM bf16 on PhonePatterns-Eval, tau3 dev, aiewf-eval."
+  },
+  {
+   "week": "Week 4 (Sep 28-Oct 2)",
+   "milestones": "Pilot SFT on 1,000 conversations (unattended, 6 h), merge, dev evals; fix data/hparams; first full SFT launch (r=128, 2 epochs)."
+  },
+  {
+   "week": "Week 5 (Oct 5-9)",
+   "milestones": "Full SFT results; tau3 5-trial eval; PhonePatterns-Eval; iterate once if gates fail (regenerate weak strata). Gate: bf16 model beats base by >= 3 composite with say/do >= 4.7."
+  },
+  {
+   "week": "Week 6 (Oct 12-16)",
+   "milestones": "NVFP4 PTQ of merged model (bf16 KV and FP8 KV); quantization gates (0.5 pt, KL, MTP acceptance >= 0.75); if fail, launch P2 QLoRA-on-NVFP4 run; P3 packaged in parallel."
+  },
+  {
+   "week": "Week 7 (Oct 19-23)",
+   "milestones": "Serving sweep: P95 TTFAT concurrency for P1/P2/P3, MTP k ablation, KV dtype, SGLang cross-check, PhoneLLM latency side-by-side; Pipecat example bot integration + pipecat-eval smoke suite."
+  },
+  {
+   "week": "Week 8 (Oct 26-30)",
+   "milestones": "Final 5-trial tau3, final PhonePatterns-Eval on shipped variant, write-up with per-axis/per-language tables, modeled $/agent-minute, quantization deltas; publish eval harness fork, recipe, and (license-cleared) dataset/model to HF; decision memo on Alpha 2 (DPO, MTP-head tuning, more languages)."
+  }
+ ],
+ "refuted_or_unverified": [
+  "REFUTED: 'RedHatAI has only the 2.4T MoE in NVFP4' - RedHatAI/Qwen3.8-27B-NVFP4 exists (compressed-tensors, same recipe as unsloth; 'ONLY works in vLLM and NOT SGLang').",
+  "REFUTED: 'every PTQ recipe keeps the MTP head in BF16 and GDN projections in FP8/BF16' - gittensor removed the MTP head entirely; kristianpaul, gittensor, sakamakismile and QUASAR quantize GDN in_proj/out_proj to W4A4; dudeman2512 is W4A16 with no mtp ignore entries. vLLM's mtp.fc rescue applies only to modelopt_fp4 checkpoints, not compressed-tensors.",
+  "REFUTED (partially): 'an NVFP4 version of Qwen3.8-27B exists to build on' - no official Qwen or NVIDIA NVFP4; all are community checkpoints; nothing supports fine-tuning a pre-quantized checkpoint directly.",
+  "REFUTED (characterisation): PhoneLLM '44 inference processes / 88 agent processes per B200' - blog says 44 processes and an unexplained sweep construction giving 88 agents; do not cite 88 as measured LLM concurrency.",
+  "CORRECTED: Pipecat's Qwen3.8-27B NVFP4 voice-readiness row (97.8%, 101 ms P50) used the unsloth checkpoint on a pinned SGLang build with no speculative decoding on an RTX 5090 - not vLLM, not MTP; the FP8 row's P95 (801 ms) exceeds the 700 ms guideline; the '0.4-point NVFP4 cost' is 4 turns of 900 across different stacks, not a controlled ablation.",
+  "UNVERIFIED: PhoneBench judge models, human-calibration method, scenario/turn counts, reference-response authoring, and the precision/thinking mode of the Qwen 3.8 27B row (70.0%); $/min figures are modeled, not billed.",
+  "UNVERIFIED: whether PhoneLLM Alpha 1 used any RL/DPO stage (card says SFT only); training data size, real/synthetic mix, generator models, hyperparameters.",
+  "UNVERIFIED: whether PhoneLLM was trained to speak alongside tool calls or stay silent (example prompt forbids narration; benchmark does not penalise either).",
+  "UNVERIFIED: PhoneLLM multilingual behaviour (Kelvin Lee's report of Kwindla's expectation could not be retrieved verbatim).",
+  "UNVERIFIED: whether vLLM 0.28.0 GPU prefix caching actually hits for Qwen3.8-27B's Gated-DeltaNet layers with --mamba-cache-mode align (recipes page: 'Prefix caching for Mamba cache align mode is currently experimental'); needs the day-1 counter test.",
+  "UNVERIFIED: correct vLLM --tool-call-parser for Qwen3.8-27B (Qwen3.5 recipe recommends qwen3_coder; earlier project notes describe native JSON <tool_call> / hermes) and the exact empty-think-block string Qwen3.8's template renders with enable_thinking=false.",
+  "UNVERIFIED: ModelOpt hf_ptq / mtq.compress / QLoRA export support for the Qwen3.8 (Qwen3.5-class) HF GDN module class; changelog only confirms a GatedDeltaNet exclusion fix on Megatron-Core (0.46.0) and Qwen3.5-VL PTQ/QAD; issue #932 is closed but its content could not be loaded.",
+  "UNVERIFIED: vLLM LoRA x speculative-decoding compatibility cell (docs table shows a cross linked to an unrelated encoder/decoder RFC); our own working bf16+LoRA+MTP k=2 is stronger evidence.",
+  "UNVERIFIED: TensorRT-LLM serving of dense Qwen3.8-27B NVFP4 W4A4 + LoRA + MTP on RTX PRO 6000 (no report found; fetched release dates were mis-parsed).",
+  "UNVERIFIED: the claim that a 0.3%-magnitude LoRA delta cannot be represented in NVFP4 is inference from the E2M1 format, not a published measurement; the KL/eval gates in this plan are the actual test.",
+  "UNVERIFIED: HivenetQuant's 'mtp 62.32 -> 61.36' row is an eval metric of unknown definition, not vLLM acceptance rate; acyildirimer's MMLU used a 50% sample with BF16 run in llama.cpp.",
+  "UNVERIFIED: z-ai/glm-5.3-flash price ($0.15/$0.50) comes from a search snippet, not the model page; whether its reasoning can be disabled is unknown (glm-5.3 full cannot disable reasoning).",
+  "UNVERIFIED: Vast.ai actual on-demand rate for RTX PRO 6000 at job time ($0.67-1.19/hr 'from' prices seen; the Vast page itself did not render prices).",
+  "UNVERIFIED: Qwen3.8-Max and GLM-5.3 provider terms regarding use of outputs as training data; PhoneLLM output-use edge cases under the NVIDIA Nemotron Open Model License.",
+  "UNVERIFIED: tooling to fine-tune Qwen3.8's native MTP head on custom data; PhoneLLM NVFP4 checkpoint running on vLLM 0.28.0 / sm_120 (validated only on 0.27.1 / B200).",
+  "UNVERIFIED: meaning of the '(512)' suffix on Pipecat's nemotron-3-nano row and the MindStudio typo propagation (fetched via search snippet only).",
+  "UNVERIFIED (assumption): SFT throughput of ~1,500 tok/s for 27B LoRA with gradient checkpointing on one RTX PRO 6000 and the ~$0.15/conversation generation cost model; both to be measured in the pilot."
+ ],
+ "sources": [
+  "https://huggingface.co/pipecat-ai/phonellm-alpha-1",
+  "https://huggingface.co/pipecat-ai/phonellm-alpha-1-nvfp4",
+  "https://huggingface.co/pipecat-ai/phonellm-alpha-1/raw/main/chat_template.jinja",
+  "https://www.daily.co/blog/announcing-pipecat-phonellm-alpha-1/",
+  "https://www.pipecat.ai/benchmarks/phonebench-alpha-1",
+  "https://www.pipecat.ai/benchmarks/voice-readiness",
+  "https://raw.githubusercontent.com/kwindla/aiewf-eval/main/README.md",
+  "https://www.daily.co/blog/benchmarking-llms-for-voice-agent-use-cases/",
+  "https://raw.githubusercontent.com/pipecat-ai/pipecat-examples/main/phonellm/server/bot.py",
+  "https://voiceaiandvoiceagents.com/",
+  "https://github.com/vllm-project/vllm/issues/54504",
+  "https://huggingface.co/pipecat-ai/phonellm-alpha-1/discussions/2",
+  "https://arxiv.org/html/2608.26432",
+  "https://www.linkedin.com/posts/kwkramer_introducing-phonellm-an-open-model-for-voice-activity-7498781486955835392-sb4k",
+  "https://kelvinlee.io/blog/phonellm-alpha-1-voice-agent-model",
+  "https://huggingface.co/Qwen/Qwen3.8-27B",
+  "https://huggingface.co/api/models?author=Qwen&search=Qwen3.8-27B",
+  "https://huggingface.co/api/models?author=RedHatAI&search=Qwen3.8",
+  "https://huggingface.co/RadixArk/Qwen3.8-27B-NVFP4",
+  "https://huggingface.co/acyildirimer/Qwen3.8-27B-NVFP4",
+  "https://huggingface.co/pottokao/Qwen3.8-27B-NVFP4-MTP-2x16GB",
+  "https://huggingface.co/sakamakismile/Qwen3.8-27B-MTP-NVFP4",
+  "https://huggingface.co/PassingByPixels/Qwen3.8-27B-NVFP4",
+  "https://huggingface.co/HivenetQuant/Qwen3.8-27B-NVFP4",
+  "https://huggingface.co/QUASAR-QAT/Qwen3.8-27B-QUASAR-NVFP4",
+  "https://arxiv.org/html/2608.13966",
+  "https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4",
+  "https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4/discussions/8",
+  "https://huggingface.co/dudeman2512/Qwen3.8-27B-NVFP4/resolve/main/config.json",
+  "https://raw.githubusercontent.com/vllm-project/vllm/v0.28.0/vllm/model_executor/models/qwen3_next_mtp.py",
+  "https://github.com/vllm-project/vllm/pull/21309",
+  "https://github.com/vllm-project/vllm/pull/48199",
+  "https://github.com/vllm-project/vllm/issues/47749",
+  "https://github.com/vllm-project/vllm/issues/50059",
+  "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+  "https://docs.vllm.ai/en/stable/features/quantization/modelopt/",
+  "https://recipes.vllm.ai/Qwen/Qwen3.8-27B",
+  "https://docs.vllm.ai/projects/recipes/en/stable/Qwen/Qwen3.5.html",
+  "https://raw.githubusercontent.com/vllm-project/vllm/main/docs/features/README.md",
+  "https://jarvislabs.ai/blog/nvfp4-rtxpro-6000",
+  "https://forums.developer.nvidia.com/t/qwen3-8-27b-on-dgx-spark-using-vllm-nvfp4-vs-fp8-performance/380258",
+  "https://loftllc.dev/en/docs/tech/llm-research/qwen3-6-27b-nvfp4-mtp-vllm-benchmark/",
+  "https://raw.githubusercontent.com/NVIDIA/Model-Optimizer/main/examples/llm_qat/README.md",
+  "https://raw.githubusercontent.com/NVIDIA/Model-Optimizer/main/examples/llm_qat/configs/train/qlora_nvfp4.yaml",
+  "https://nvidia.github.io/Model-Optimizer/reference/0_changelog.html",
+  "https://github.com/NVIDIA/Model-Optimizer/issues/932",
+  "https://developer.nvidia.com/blog/developing-nemotron-3-5-lightning-nvfp4-with-qad-using-nvidia-model-optimizer/",
+  "https://developer.nvidia.com/blog/introducing-nvfp4-for-efficient-and-accurate-low-precision-inference/",
+  "https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into",
+  "https://github.com/NVIDIA/TensorRT-LLM/releases/tag/v1.3.0rc25",
+  "https://discuss.vllm.ai/t/sm120-rtx-pro-6000-nvfp4-moe-performance-report-qwen3-5-397b/2536",
+  "https://github.com/sierra-research/tau2-bench",
+  "https://github.com/sierra-research/tau2-bench/blob/main/RELEASE_NOTES.md",
+  "https://openrouter.ai/qwen/qwen3.8-max",
+  "https://openrouter.ai/z-ai/glm-5.3",
+  "https://openrouter.ai/openai/gpt-5.4",
+  "https://openrouter.ai/anthropic",
+  "https://getdeploying.com/gpus/nvidia-rtx-pro-6000",
+  "https://vast.ai/pricing/gpu/RTX-PRO-6000-WS",
+  "https://vast.ai/pricing/gpu/RTX-PRO-6000-S"
+ ]
+}
