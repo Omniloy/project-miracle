@@ -18,6 +18,27 @@ a small-delta adapter. Decision: evals keep `SERVE_MODE=lora`, `QUANT=none`; the
 on the LoRA path) and **MTP k=2 on top of LoRA** (vLLM V1 supports LoRA + speculative decoding since PR #21068; the draft runs base weights, the
 target pass applies the LoRA), pending a follow-up bench with output samples that also resolves the unexplained degenerate-output result for config A.
 
+## 0b. Follow-up benchmark on adapter-preserving configs (2026-09-04 13:26–14:03 UTC, Vast 49861771, ~$0.8, `runs/bench2_results.jsonl`)
+
+Same client and prompts, output samples saved (`status_bench/samples_*.jsonl`). All LoRA-path configs produced normal turns this time
+(sanity 0.94–1.00, 36–42 % tool calls): the first run's all-degenerate result for config A was a one-off on that box, not a property of the config.
+
+| config (bf16 base + LoRA, unmerged) | conc | agg gen tok/s | per-stream tok/s | mean compl. tok | sanity | MTP acc. len |
+|---|---|---|---|---|---|---|
+| A  thinking on (current eval cfg)   | 8  | 142.6 | 21.4 | 292 | 0.94 | – |
+| A  thinking on                      | 16 | 238.9 | 19.2 | 331 | 0.95 | – |
+| AN thinking off                     | 8  | 150.5 | 19.5 | 125 | 1.00 | – |
+| AN thinking off                     | 16 | 253.9 | 16.2 | 128 | 1.00 | – |
+| **AM thinking on + MTP k=2**        | 8  | **214.7** | **31.3** | 336 | 0.94 | 2.30 |
+| **AM thinking on + MTP k=2**        | 16 | **322.7** | 23.0 | 335 | 0.95 | 2.33 |
+| AMN thinking off + MTP k=2          | 8  | 179.7 | 23.3 | 119 | 1.00 | 2.49 |
+| AMN thinking off + MTP k=2          | 16 | 233.1 | 15.0 | 119 | 1.00 | 2.52 |
+
+**Decision**: evals use `SERVE_MODE=lora QUANT=none SPEC=mtp CONC=16` — adapter fully preserved (no merge, no FP8), no crashes at either
+concurrency, 2.3x the current eval's aggregate throughput and 1.5x per stream at 8. Thinking-off turns are ~2.4x shorter (125 vs 300 tokens)
+at the same tool-call rate; the adapter was trained with thinking off, so `THINKING=off` is a legitimate second configuration to score, but
+the headline comparison stays in thinking mode to match the 45.4 baseline.
+
 ## 1. Measured table (vLLM 0.28.0, sm_120, 96 GB)
 
 | config | conc | status | agg gen tok/s | per-stream tok/s | warm TTFT s | mean compl. tok | sanity | tool-call rate | trunc | MTP acc. len (pos1/pos2) |
