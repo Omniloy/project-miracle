@@ -39,6 +39,10 @@ concurrency, 2.3x the current eval's aggregate throughput and 1.5x per stream at
 at the same tool-call rate; the adapter was trained with thinking off, so `THINKING=off` is a legitimate second configuration to score, but
 the headline comparison stays in thinking mode to match the 45.4 baseline.
 
+## 0c. Live-eval finding (2026-09-05 01:23 UTC): KV residency, not decode, bounds long multi-turn evals
+
+On the 97 real tasks with a 262k window, 16 streams filled the KV pool (97%), so cached prefixes were evicted between turns (the user simulator takes seconds per turn) and every turn re-prefilled 30-100k tokens: prefix hit 10-13%, ~4-7 agent calls/min. Relaunching with `--kv-cache-dtype fp8` (pool 440k -> 980k tokens), `--gpu-memory-utilization 0.95` and only 8 streams gave prefix hit 78%, pool ~40%, 195-290 gen tok/s and ~19 calls/min - ~3-4x faster with HALF the concurrency. Rule: size concurrency so that (live conversations x their context) stays well under the KV pool; fp8 KV is the cheapest lever and works on the hybrid model with MTP.
+
 ## 1. Measured table (vLLM 0.28.0, sm_120, 96 GB)
 
 | config | conc | status | agg gen tok/s | per-stream tok/s | warm TTFT s | mean compl. tok | sanity | tool-call rate | trunc | MTP acc. len (pos1/pos2) |
