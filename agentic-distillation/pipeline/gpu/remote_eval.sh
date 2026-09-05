@@ -17,9 +17,9 @@
 #   -e SERVE_MODE=merged -e QUANT=fp8 -e SPEC=mtp -e CONC=16
 set -uo pipefail; export HF_HUB_ENABLE_HF_TRANSFER=1
 W=/workspace; mkdir -p $W/status $W/eval; cd $W; LOG=$W/status/remote_eval.log; exec > >(tee -a $LOG) 2>&1
-MAXLEN=${MAXLEN:-262144}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
+MAXLEN=${MAXLEN:-262144}; KVDTYPE=${KVDTYPE:-auto}; GPU_UTIL=${GPU_UTIL:-0.90}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
 if [ -z "$SERVE_MODE" ]; then CONC=${CONC:-8}; else CONC=${CONC:-16}; fi
-echo "=== remote_eval start $(date -u) MAXLEN=$MAXLEN ADAPTER=${ADAPTER:-none} EVAL_SET=${EVAL_SET:-both} TRIALS=${TRIALS:-1} SERVE_MODE=${SERVE_MODE:-<unset:lora>} QUANT=$QUANT SPEC=$SPEC MTP_K=$MTP_K CONC=$CONC MAX_NUM_SEQS=$MAX_NUM_SEQS THINKING=$THINKING ==="
+echo "=== remote_eval start $(date -u) MAXLEN=$MAXLEN KVDTYPE=$KVDTYPE GPU_UTIL=$GPU_UTIL ADAPTER=${ADAPTER:-none} EVAL_SET=${EVAL_SET:-both} TRIALS=${TRIALS:-1} SERVE_MODE=${SERVE_MODE:-<unset:lora>} QUANT=$QUANT SPEC=$SPEC MTP_K=$MTP_K CONC=$CONC MAX_NUM_SEQS=$MAX_NUM_SEQS THINKING=$THINKING ==="
 case "${SERVE_MODE:-lora}" in lora|merged) ;; *) echo "bad SERVE_MODE=$SERVE_MODE"; exit 2;; esac
 case "$QUANT" in none|fp8) ;; *) echo "bad QUANT=$QUANT"; exit 2;; esac
 case "$SPEC" in none|mtp|ngram) ;; *) echo "bad SPEC=$SPEC"; exit 2;; esac
@@ -118,7 +118,7 @@ case "$SPEC" in
 esac
 [ -n "${CUDAGRAPH:-}" ] && EXTRA="$EXTRA --compilation-config {\"cudagraph_mode\":\"$CUDAGRAPH\"}"
 echo "vllm serve $SERVE_PATH --served-model-name $SERVED --max-num-seqs $MAX_NUM_SEQS $LORA $EXTRA"
-nohup $VPY -m vllm.entrypoints.openai.api_server --model $SERVE_PATH --served-model-name $SERVED --port 8000 --max-model-len $MAXLEN --max-num-seqs $MAX_NUM_SEQS --gpu-memory-utilization 0.90 \
+nohup $VPY -m vllm.entrypoints.openai.api_server --model $SERVE_PATH --served-model-name $SERVED --port 8000 --max-model-len $MAXLEN --max-num-seqs $MAX_NUM_SEQS --gpu-memory-utilization $GPU_UTIL --kv-cache-dtype $KVDTYPE \
   --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-prefix-caching $LORA $EXTRA > $W/status/vllm.log 2>&1 &
 VPID=$!; UP=0; for i in $(seq 1 150); do curl -sf localhost:8000/v1/models >/dev/null && { UP=1; break; }; kill -0 $VPID 2>/dev/null || break; sleep 10; done
 if [ "$UP" != 1 ]; then echo "STEP vllm FAILED $(date -u)" >> $W/status/step_eval.txt; grep -E "Error|error" $W/status/vllm.log | tail -20; up $W/status status_eval; exit 1; fi
@@ -160,5 +160,5 @@ if [ "${EVAL_SET:-both}" != "dev" ]; then
     cp -r data/simulations/$TAG $W/eval/ 2>/dev/null; echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_eval
   done
 fi
-echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
+echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"kv_dtype\":\"$KVDTYPE\",\"maxlen\":$MAXLEN,\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
 up $W/eval eval_${MODEL}; echo "EVAL_COMPLETE $(date -u)" | tee -a $W/status/step_eval.txt; up $W/status status_eval
