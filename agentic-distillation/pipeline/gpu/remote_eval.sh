@@ -38,7 +38,7 @@ heartbeat & HB=$!; trap 'kill $HB 2>/dev/null; echo "=== remote_eval exit $(date
 python - <<'PY'
 import os
 from huggingface_hub import snapshot_download
-snapshot_download(os.environ["WORK_REPO"], repo_type="dataset", local_dir="/workspace", token=os.environ["HF_TOKEN"], allow_patterns=["bundle/*","data/*","data_v*/*","adapter_v*/**"])
+snapshot_download(os.environ["WORK_REPO"], repo_type="dataset", local_dir="/workspace", token=os.environ["HF_TOKEN"], allow_patterns=["bundle/*","data/*","data_v*/*","adapter_v*/**"])  # bundle includes task_tiers.json
 snapshot_download("Qwen/Qwen3.8-27B", local_dir="/workspace/Qwen3.8-27B", token=os.environ["HF_TOKEN"])
 PY
 echo "=== vLLM in its own venv ==="; python -m pip install -q uv 2>&1 | tail -1; uv venv /workspace/vvenv -q --python 3.12 2>&1 | tail -1 || python -m venv /workspace/vvenv
@@ -163,9 +163,29 @@ if [ "${EVAL_SET:-both}" != "dev" ]; then
     RM=${run%%:*}; RT=${run##*:}; [ "$RM" = "$run" ] && RT=$THINKING
     RA=$(agent_args "$RT")
     TAG=test_${RM}_think${RT}_t${TEMP}
-    echo "=== TEST eval $TAG (97 real tasks, AA config, gpt-5.4-mini medium) $(date -u) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
-      --agent-llm hosted_vllm/$RM --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $CONC --save-to $TAG 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
-    cp -r data/simulations/$TAG $W/eval/ 2>/dev/null; echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_eval
+    # Two-tier schedule (KV residency): short/mid tasks at CONC_SHORT streams, the long tail (>80k-token transcripts) at CONC_LONG
+    # streams so that live contexts never oversubscribe the KV pool (single-tier runs thrashed: KV 60-97%, 1-5 gen tok/s).
+    for tier in short mid long; do
+      case $tier in short) C=${CONC_SHORT:-10};; mid) C=${CONC_MID:-6};; long) C=${CONC_LONG:-3};; esac
+      IDS=$(python - $tier <<'PY'
+import json,sys; t=json.load(open('/workspace/bundle/task_tiers.json')); print(" ".join(t[sys.argv[1]]))
+PY
+)
+      [ -z "$IDS" ] && continue
+      echo "=== TEST eval $TAG tier=$tier conc=$C n=$(echo $IDS | wc -w) $(date -u) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
+        --agent-llm hosted_vllm/$RM --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $C --save-to ${TAG}_${tier} --task-ids $IDS 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
+      cp -r data/simulations/${TAG}_${tier} $W/eval/ 2>/dev/null; echo "STEP $TAG $tier done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/${TAG}_${tier} eval_${MODEL}/${TAG}_${tier}; up $W/status status_eval
+    done
+    python - $TAG <<'PY'
+import json,sys,glob,os
+tag=sys.argv[1]; parts=sorted(glob.glob(f'/workspace/eval/{tag}_*/results.json')); merged=None
+for f in parts:
+    d=json.load(open(f))
+    if merged is None: merged=d
+    else: merged['simulations']+=d['simulations']; merged['tasks']+=[t for t in d['tasks'] if t['id'] not in {x['id'] for x in merged['tasks']}]
+if merged: os.makedirs(f'/workspace/eval/{tag}',exist_ok=True); json.dump(merged,open(f'/workspace/eval/{tag}/results.json','w')); print('merged',len(merged['simulations']),'sims from',len(parts),'tiers')
+PY
+    echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_eval
   done
 fi
 echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"temperature\":\"$TEMP\",\"kv_dtype\":\"$KVDTYPE\",\"maxlen\":$MAXLEN,\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
