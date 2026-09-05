@@ -1,0 +1,354 @@
+{
+ "dataset": "switchboard_phase1",
+ "generated": "phase1_stats.py",
+ "funnel": {
+  "scenarios_seeded": 240,
+  "traces_written": 240,
+  "validator_accepted_per_batch": 240,
+  "judge_passed": 202,
+  "final_validator_rerun_accepted": 202,
+  "final_validator_rerun_rejected": 0,
+  "final_dataset_rows": 202
+ },
+ "counts": {
+  "vertical": {
+   "retail": 74,
+   "banking": 66,
+   "telecom": 62
+  },
+  "language": {
+   "es": 120,
+   "en": 82
+  },
+  "style": {
+   "narrate": 101,
+   "silent": 101
+  },
+  "intent": {
+   "change_plan": 20,
+   "order_status": 19,
+   "change_address": 19,
+   "cancel_order": 18,
+   "book_table": 18,
+   "transfer_to_iban": 18,
+   "report_outage": 18,
+   "port_in": 17,
+   "check_transactions": 15,
+   "block_lost_card": 13,
+   "callback_request": 11,
+   "update_phone": 9,
+   "invoice_question": 7
+  },
+  "search_twist": {
+   "none": 174,
+   "near_miss_name": 11,
+   "too_many_results": 9,
+   "not_found_then_widen": 7,
+   "verification_mismatch_then_alt_id": 1
+  },
+  "identifier_kind": {
+   "date_of_birth": 117,
+   "phone": 96,
+   "dni": 70,
+   "postal_code": 37,
+   "passport": 24,
+   "nie": 23,
+   "code": 22,
+   "iban": 18,
+   "amount_eur": 18,
+   "card_last4": 13,
+   "email": 11
+  },
+  "twist": {
+   "none": 405,
+   "wrong_control_letter": 38,
+   "one_digit_wrong": 6
+  },
+  "corruption": {
+   "none": 381,
+   "fifteen_fifty": 14,
+   "b_v_confusion": 13,
+   "merged_groups": 9,
+   "zero_o": 7,
+   "dropped_group": 7,
+   "letter_dropped": 6,
+   "digit_swap": 6,
+   "m_n_confusion": 6
+  },
+  "spoken_style": {
+   "singles": 50,
+   "pairs": 41,
+   "with_dots": 38,
+   "spoken_month": 34,
+   "ambiguous_mdy_english": 31,
+   "dmy_numeric": 29,
+   "mixed_groups": 27,
+   "letter_by_word": 25,
+   "two_digit_year": 23,
+   "3-2-2-2": 22,
+   "hundreds": 20,
+   "spoken_amount": 18,
+   "3-3-3": 12,
+   "international_0034": 11,
+   "doubles": 9,
+   "nato_alphabet": 8,
+   "international_plus34": 8,
+   "plain_fast": 7,
+   "groups_of_4": 7,
+   "name_alphabet_es": 7,
+   "singles_slow": 7,
+   "todo_junto": 4,
+   "last4_only_on_file": 4,
+   "spelled_with_punto_arroba": 3,
+   "domain_guess": 2,
+   "spell_local_part": 2
+  },
+  "caller_mood": {
+   "chatty": 47,
+   "hurried": 47,
+   "calm": 40,
+   "confused": 40,
+   "irritated": 28
+  },
+  "twist_nonnone_traces": 42,
+  "corruption_nonnone_traces": 65,
+  "vertical_x_language": {
+   "banking/en": 26,
+   "banking/es": 40,
+   "retail/en": 31,
+   "retail/es": 43,
+   "telecom/en": 25,
+   "telecom/es": 37
+  }
+ },
+ "size": {
+  "assistant_turns": {
+   "mean": 10.06,
+   "median": 10.0,
+   "min": 7,
+   "max": 15,
+   "total": 2033
+  },
+  "user_turns": {
+   "mean": 7.67,
+   "median": 7.5,
+   "min": 5,
+   "max": 11,
+   "total": 1550
+  },
+  "tool_calls": {
+   "mean": 3.37,
+   "median": 3.0,
+   "min": 2,
+   "max": 5,
+   "total": 680
+  },
+  "assistant_spoken_turn_words": {
+   "mean": 14.95,
+   "median": 15.0,
+   "min": 2,
+   "max": 42,
+   "total": 26885
+  },
+  "chars_messages": {
+   "mean": 2354.74,
+   "median": 2336.0,
+   "min": 1667,
+   "max": 3486,
+   "total": 475658
+  },
+  "chars_tool_schemas": {
+   "mean": 3341.36,
+   "median": 3494.0,
+   "min": 3047,
+   "max": 3528,
+   "total": 674954
+  },
+  "tokens_est_messages_chars_over_4": {
+   "mean": 588.7,
+   "total": 118914
+  },
+  "tokens_est_with_tool_schemas": {
+   "mean": 1424.0,
+   "total": 287653
+  }
+ },
+ "duplication": {
+  "all_sentences": {
+   "sentence_occurrences": 3844,
+   "unique_sentences": 2653,
+   "occurrences_shared_across_traces": 1468,
+   "fraction_repeated_verbatim": 0.3819,
+   "unique_ratio": 0.6902
+  },
+  "sentences_ge_4_words": {
+   "sentence_occurrences": 2770,
+   "unique_sentences": 2360,
+   "occurrences_shared_across_traces": 582,
+   "fraction_repeated_verbatim": 0.2101,
+   "unique_ratio": 0.852
+  },
+  "sentences_ge_8_words": {
+   "sentence_occurrences": 1427,
+   "unique_sentences": 1370,
+   "occurrences_shared_across_traces": 88,
+   "fraction_repeated_verbatim": 0.0617,
+   "unique_ratio": 0.9601
+  },
+  "most_shared_sentences_ge_4_words": [
+   {
+    "traces": 28,
+    "text": "un momento, lo compruebo."
+   },
+   {
+    "traces": 20,
+    "text": "que tenga buen día."
+   },
+   {
+    "traces": 19,
+    "text": "and your date of birth?"
+   },
+   {
+    "traces": 15,
+    "text": "y su fecha de nacimiento?"
+   },
+   {
+    "traces": 15,
+    "text": "me dice su dni y su fecha de nacimiento?"
+   },
+   {
+    "traces": 15,
+    "text": "have a good day."
+   },
+   {
+    "traces": 11,
+    "text": "un momento, lo busco."
+   },
+   {
+    "traces": 9,
+    "text": "you're verified, thank you."
+   },
+   {
+    "traces": 9,
+    "text": "no trouble at all."
+   },
+   {
+    "traces": 9,
+    "text": "anything else i can do?"
+   },
+   {
+    "traces": 8,
+    "text": "one moment, i'll check that."
+   },
+   {
+    "traces": 8,
+    "text": "me la repite, por favor?"
+   },
+   {
+    "traces": 7,
+    "text": "le ayudo en algo más?"
+   },
+   {
+    "traces": 6,
+    "text": "happy to sort that out."
+   },
+   {
+    "traces": 5,
+    "text": "y el código postal?"
+   }
+  ],
+  "identical_assistant_scripts": 0
+ },
+ "judge": {
+  "traces_submitted_to_judge": 240,
+  "traces_with_axis_scores": 238,
+  "traces_judged_without_axis_scores": [
+   "sw_7_0112",
+   "sw_7_0136"
+  ],
+  "judge_pass_total": 202,
+  "judge_reject_total": 38,
+  "graded_traces": 238,
+  "graded_unique_scenarios": 238,
+  "judge_pass": 202,
+  "judge_reject": 36,
+  "mean_all_graded": {
+   "naturalness": 4.924,
+   "naturalness_n": 238,
+   "say_do": 4.315,
+   "say_do_n": 238,
+   "identifier_handling": 4.714,
+   "identifier_handling_n": 238,
+   "language": 4.992,
+   "language_n": 238,
+   "all_axes_mean": 4.736
+  },
+  "mean_final_dataset": {
+   "naturalness": 4.936,
+   "naturalness_n": 202,
+   "say_do": 4.545,
+   "say_do_n": 202,
+   "identifier_handling": 4.832,
+   "identifier_handling_n": 202,
+   "language": 4.99,
+   "language_n": 202,
+   "all_axes_mean": 4.825
+  },
+  "mean_judge_rejected": {
+   "naturalness": 4.861,
+   "naturalness_n": 36,
+   "say_do": 3.028,
+   "say_do_n": 36,
+   "identifier_handling": 4.056,
+   "identifier_handling_n": 36,
+   "language": 5,
+   "language_n": 36,
+   "all_axes_mean": 4.236
+  },
+  "score_histogram_final": {
+   "naturalness": {
+    "4": 13,
+    "5": 189
+   },
+   "say_do": {
+    "4": 92,
+    "5": 110
+   },
+   "identifier_handling": {
+    "4": 34,
+    "5": 168
+   },
+   "language": {
+    "4": 2,
+    "5": 200
+   }
+  },
+  "scores_file_shapes": {
+   "batch_00.scores.json": "traces",
+   "batch_01.scores.json": "traces",
+   "batch_02.scores.json": "traces",
+   "batch_03.scores.json": "traces",
+   "batch_04.scores.json": "traces",
+   "batch_05.scores.json": "traces",
+   "batch_06.scores.json": "traces",
+   "batch_07.scores.json": "scores",
+   "batch_08.scores.json": "per_trace",
+   "batch_09.scores.json": "scores",
+   "batch_10.scores.json": "per_trace",
+   "batch_11.scores.json": "scores",
+   "batch_12.scores.json": "per_trace",
+   "batch_13.scores.json": "scores",
+   "batch_14.scores.json": "scores",
+   "batch_15.scores.json": "per_trace",
+   "batch_16.scores.json": "per_trace",
+   "batch_17.scores.json": "per_trace",
+   "batch_18.scores.json": "per_trace",
+   "batch_19.scores.json": "scores",
+   "batch_20.scores.json": "per_trace",
+   "batch_21.scores.json": "per_trace",
+   "batch_22.scores.json": "traces",
+   "batch_23.scores.json": "per_trace"
+  },
+  "final_rows_without_judge_scores": []
+ }
+}
