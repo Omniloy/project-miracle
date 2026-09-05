@@ -155,43 +155,58 @@ agent_args() {  # $1 = thinking mode
 }
 AGENT_ARGS=$(agent_args "$THINKING")
 echo "agent args: $AGENT_ARGS  concurrency: $CONC  model: hosted_vllm/$MODEL"
-if [ "${EVAL_SET:-both}" != "test" ]; then
-  echo "=== DEV eval (synthetic held-out, Flash user-sim) ==="; TAU2_DATA_DIR=$W/data_synth .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials 2 --max-steps 200 --seed 5 \
-    --agent-llm hosted_vllm/$MODEL --agent-llm-args "$AGENT_ARGS" --user-llm openrouter/z-ai/glm-5.3-flash --max-concurrency $CONC --save-to dev_${MODEL} 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
-  cp -r $W/data_synth/simulations/dev_${MODEL} $W/eval/ 2>/dev/null
-fi
-if [ "${EVAL_SET:-both}" != "dev" ]; then
-  # RUNS = comma-separated model:thinking pairs evaluated sequentially on the same server, e.g. "base:default,student:default,student:off"
-  # (default: the single MODEL with $THINKING). Each run uploads its own results so partial progress survives.
-  RUNS=${RUNS:-$MODEL:$THINKING}; RUNS=${RUNS//,/ }; RUNS=${RUNS//_/ }
-  for run in $RUNS; do
-    RM=${run%%:*}; RT=${run##*:}; [ "$RM" = "$run" ] && RT=$THINKING
-    RA=$(agent_args "$RT")
-    TAG=test_${RM}_think${RT}_t${TEMP}
-    # Two-tier schedule (KV residency): short/mid tasks at CONC_SHORT streams, the long tail (>80k-token transcripts) at CONC_LONG
-    # streams so that live contexts never oversubscribe the KV pool (single-tier runs thrashed: KV 60-97%, 1-5 gen tok/s).
-    for tier in short mid long; do
-      case $tier in short) C=${CONC_SHORT:-10};; mid) C=${CONC_MID:-6};; long) C=${CONC_LONG:-3};; esac
-      IDS=$(python - $tier <<'PY'
-import json,sys; t=json.load(open('/workspace/bundle/task_tiers.json')); print(" ".join(t[sys.argv[1]]))
+# ============================ TRACE: capture every agent request/response of a small thinking-off eval ============================
+# A logging proxy sits between tau2 and vLLM: for each /v1/chat/completions call it records n_messages, prompt chars, roles of the
+# last 3 messages, the request's sampling/template kwargs, and the FULL response (content, reasoning, tool_calls, usage, finish).
+# Stuck conversations therefore leave a per-turn trail even though tau2 only checkpoints finished simulations.
+TRACE_TASKS=${TRACE_TASKS:-task_026_task_072_task_008_task_078_task_027_task_044}; TRACE_TASKS=${TRACE_TASKS//_task/ task}
+TRACE_CONC=${TRACE_CONC:-6}; TRACE_MODEL=${TRACE_MODEL:-student}; TRACE_THINKING=${TRACE_THINKING:-off}; TRACE_MINUTES=${TRACE_MINUTES:-40}
+cat > $W/proxy.py <<'PY'
+import json, time, threading, http.server, urllib.request
+UP='http://localhost:8000'; LOG='/workspace/status/trace.jsonl'; lock=threading.Lock()
+class H(http.server.BaseHTTPRequestHandler):
+    protocol_version='HTTP/1.1'
+    def log_message(self,*a): pass
+    def do_GET(self): self._fwd('GET')
+    def do_POST(self): self._fwd('POST')
+    def _fwd(self,method):
+        n=int(self.headers.get('Content-Length') or 0); body=self.rfile.read(n) if n else None
+        req=urllib.request.Request(UP+self.path,data=body,method=method,headers={k:v for k,v in self.headers.items() if k.lower() not in('host','content-length','transfer-encoding','connection')})
+        t0=time.time()
+        try:
+            with urllib.request.urlopen(req,timeout=3600) as r: status=r.status; data=r.read(); ctype=r.headers.get('Content-Type','application/json')
+        except urllib.error.HTTPError as e: status=e.code; data=e.read(); ctype='application/json'
+        self.send_response(status); self.send_header('Content-Type',ctype); self.send_header('Content-Length',str(len(data))); self.end_headers(); self.wfile.write(data)
+        if method=='POST' and body and '/chat/completions' in self.path:
+            try:
+                b=json.loads(body); msgs=b.get('messages') or []
+                rec={'t':round(time.time(),1),'wall_s':round(time.time()-t0,1),'status':status,'model':b.get('model'),'n_messages':len(msgs),
+                     'prompt_chars':len(body),'last_roles':[m.get('role') for m in msgs[-3:]],
+                     'last_user':(next((m.get('content') for m in reversed(msgs) if m.get('role')=='user'),'') or '')[:200],
+                     'last_tool':(next((str(m.get('content')) for m in reversed(msgs) if m.get('role')=='tool'),'') or '')[:200],
+                     'params':{k:b.get(k) for k in('temperature','max_tokens','chat_template_kwargs','top_p','top_k','tool_choice') if k in b},
+                     'n_tools':len(b.get('tools') or [])}
+                try:
+                    j=json.loads(data); ch=j['choices'][0]; m=ch['message']
+                    rec.update({'finish':ch.get('finish_reason'),'usage':j.get('usage'),'content':m.get('content'),'reasoning':(m.get('reasoning_content') or m.get('reasoning')),'tool_calls':m.get('tool_calls')})
+                except Exception: rec['raw_response']=data[:800].decode('utf-8','replace')
+                with lock, open(LOG,'a') as f: f.write(json.dumps(rec)+'\n')
+            except Exception as e:
+                with lock, open(LOG,'a') as f: f.write(json.dumps({'proxy_error':str(e)[:300]})+'\n')
+class TS(http.server.ThreadingHTTPServer): daemon_threads=True
+TS(('127.0.0.1',8001),H).serve_forever()
 PY
-)
-      [ -z "$IDS" ] && continue
-      echo "=== TEST eval $TAG tier=$tier conc=$C n=$(echo $IDS | wc -w) $(date -u) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
-        --agent-llm hosted_vllm/$RM --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $C --save-to ${TAG}_${tier} --task-ids $IDS 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
-      cp -r data/simulations/${TAG}_${tier} $W/eval/ 2>/dev/null; echo "STEP $TAG $tier done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/${TAG}_${tier} eval_${MODEL}/${TAG}_${tier}; up $W/status status_${STATUS_TAG:-eval}
-    done
-    python - $TAG <<'PY'
-import json,sys,glob,os
-tag=sys.argv[1]; parts=sorted(glob.glob(f'/workspace/eval/{tag}_*/results.json')); merged=None
-for f in parts:
-    d=json.load(open(f))
-    if merged is None: merged=d
-    else: merged['simulations']+=d['simulations']; merged['tasks']+=[t for t in d['tasks'] if t['id'] not in {x['id'] for x in merged['tasks']}]
-if merged: os.makedirs(f'/workspace/eval/{tag}',exist_ok=True); json.dump(merged,open(f'/workspace/eval/{tag}/results.json','w')); print('merged',len(merged['simulations']),'sims from',len(parts),'tiers')
-PY
-    echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_${STATUS_TAG:-eval}
-  done
-fi
-echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"temperature\":\"$TEMP\",\"kv_dtype\":\"$KVDTYPE\",\"maxlen\":$MAXLEN,\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
-up $W/eval eval_${MODEL}; echo "EVAL_COMPLETE $(date -u)" | tee -a $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}
+nohup $VPY $W/proxy.py > $W/status/proxy.log 2>&1 & sleep 2; curl -sf localhost:8001/v1/models | head -c 200; echo
+export HOSTED_VLLM_API_BASE=http://localhost:8001/v1
+# second uploader: tau2 checkpoints + vLLM request histograms every 3 min (status/ itself goes up with the heartbeat)
+metrics() { curl -s localhost:8000/metrics | grep -E "^vllm:(num_preemptions_total|request_(prompt|generation)_tokens_(sum|count|bucket)|gpu_cache_usage_perc|num_requests_(running|waiting))" > $W/status/metrics.txt; }
+( while true; do sleep 180; metrics; ls -d $W/tau2-bench/data/simulations/trace_* >/dev/null 2>&1 && up $W/tau2-bench/data/simulations trace_sims_${STATUS_TAG:-eval}; done ) & UP2=$!
+RA=$(agent_args "$TRACE_THINKING"); TAG=trace_${TRACE_MODEL}_think${TRACE_THINKING}
+echo "=== TRACE eval $TAG conc=$TRACE_CONC tasks=$TRACE_TASKS args=$RA cap=${TRACE_MINUTES}min $(date -u) ==="
+timeout ${TRACE_MINUTES}m .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials 1 --max-steps 200 --seed 300 \
+  --agent-llm hosted_vllm/$TRACE_MODEL --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' \
+  --max-concurrency $TRACE_CONC --save-to $TAG --task-ids $TRACE_TASKS 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error|Traceback' | tail -6
+echo "tau2 exit/timeout $(date -u)"; kill $UP2 2>/dev/null; metrics
+[ -d data/simulations/$TAG ] && up data/simulations/$TAG trace_sims_${STATUS_TAG:-eval}/$TAG
+echo "TRACE_COMPLETE $(date -u) lines=$(wc -l < $W/status/trace.jsonl)" >> $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}
+echo "=== TRACE end $(date -u) ==="
