@@ -17,7 +17,7 @@
 #   -e SERVE_MODE=merged -e QUANT=fp8 -e SPEC=mtp -e CONC=16
 set -uo pipefail; export HF_HUB_ENABLE_HF_TRANSFER=1
 W=/workspace; mkdir -p $W/status $W/eval; cd $W; LOG=$W/status/remote_eval.log; exec > >(tee -a $LOG) 2>&1
-MAXLEN=${MAXLEN:-262144}; KVDTYPE=${KVDTYPE:-auto}; GPU_UTIL=${GPU_UTIL:-0.90}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
+MAXLEN=${MAXLEN:-262144}; TEMP=${TEMP:-0}; KVDTYPE=${KVDTYPE:-auto}; GPU_UTIL=${GPU_UTIL:-0.90}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
 if [ -z "$SERVE_MODE" ]; then CONC=${CONC:-8}; else CONC=${CONC:-16}; fi
 echo "=== remote_eval start $(date -u) MAXLEN=$MAXLEN KVDTYPE=$KVDTYPE GPU_UTIL=$GPU_UTIL ADAPTER=${ADAPTER:-none} EVAL_SET=${EVAL_SET:-both} TRIALS=${TRIALS:-1} SERVE_MODE=${SERVE_MODE:-<unset:lora>} QUANT=$QUANT SPEC=$SPEC MTP_K=$MTP_K CONC=$CONC MAX_NUM_SEQS=$MAX_NUM_SEQS THINKING=$THINKING ==="
 case "${SERVE_MODE:-lora}" in lora|merged) ;; *) echo "bad SERVE_MODE=$SERVE_MODE"; exit 2;; esac
@@ -139,8 +139,16 @@ for f in glob.glob('/workspace/bundle/data_synth_tasks/task_*.json'):
     if tid in hold: shutil.copy(f,'/workspace/data_synth/tau2/domains/banking_knowledge/tasks/'); n+=1
 print('dev synthetic tasks:', n)
 PY
-if [ "$THINKING" = off ]; then AGENT_ARGS='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20,"chat_template_kwargs":{"enable_thinking":false}}}'
-else AGENT_ARGS='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'; fi
+# TEMP=0 (default) = greedy, matching the OpenRouter baseline (45.4%, llm_args temperature 0.0); TEMP=1 = Qwen sampling (1.0/0.95/top_k 20)
+agent_args() {  # $1 = thinking mode
+  local th=$1
+  if [ "$TEMP" = "0" ] || [ "$TEMP" = "0.0" ]; then
+    if [ "$th" = off ]; then echo '{"temperature":0.0,"extra_body":{"chat_template_kwargs":{"enable_thinking":false}}}'; else echo '{"temperature":0.0}'; fi
+  else
+    if [ "$th" = off ]; then echo '{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20,"chat_template_kwargs":{"enable_thinking":false}}}'; else echo '{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'; fi
+  fi
+}
+AGENT_ARGS=$(agent_args "$THINKING")
 echo "agent args: $AGENT_ARGS  concurrency: $CONC  model: hosted_vllm/$MODEL"
 if [ "${EVAL_SET:-both}" != "test" ]; then
   echo "=== DEV eval (synthetic held-out, Flash user-sim) ==="; TAU2_DATA_DIR=$W/data_synth .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials 2 --max-steps 200 --seed 5 \
@@ -153,12 +161,12 @@ if [ "${EVAL_SET:-both}" != "dev" ]; then
   RUNS=${RUNS:-$MODEL:$THINKING}; RUNS=${RUNS//,/ }; RUNS=${RUNS//_/ }
   for run in $RUNS; do
     RM=${run%%:*}; RT=${run##*:}; [ "$RM" = "$run" ] && RT=$THINKING
-    if [ "$RT" = off ]; then RA='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20,"chat_template_kwargs":{"enable_thinking":false}}}'; else RA='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'; fi
-    TAG=test_${RM}_think${RT}
+    RA=$(agent_args "$RT")
+    TAG=test_${RM}_think${RT}_t${TEMP}
     echo "=== TEST eval $TAG (97 real tasks, AA config, gpt-5.4-mini medium) $(date -u) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
       --agent-llm hosted_vllm/$RM --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $CONC --save-to $TAG 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
     cp -r data/simulations/$TAG $W/eval/ 2>/dev/null; echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_eval
   done
 fi
-echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"kv_dtype\":\"$KVDTYPE\",\"maxlen\":$MAXLEN,\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
+echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"temperature\":\"$TEMP\",\"kv_dtype\":\"$KVDTYPE\",\"maxlen\":$MAXLEN,\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
 up $W/eval eval_${MODEL}; echo "EVAL_COMPLETE $(date -u)" | tee -a $W/status/step_eval.txt; up $W/status status_eval
