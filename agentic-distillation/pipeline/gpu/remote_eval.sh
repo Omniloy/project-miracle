@@ -140,13 +140,17 @@ for f in glob.glob('/workspace/bundle/data_synth_tasks/task_*.json'):
 print('dev synthetic tasks:', n)
 PY
 # TEMP=0 (default) = greedy, matching the OpenRouter baseline (45.4%, llm_args temperature 0.0); TEMP=1 = Qwen sampling (1.0/0.95/top_k 20)
+# MAXTOK (default 0 = no cap): per-turn max_tokens for the agent. Set for thinking-off runs: greedy + LoRA + no reasoning fell into
+# unbounded repetition loops (student:off short tier: KV 80-97% with 5 streams on <=40k-token tasks, 2-5 gen tok/s) that thrash the KV pool.
 agent_args() {  # $1 = thinking mode
-  local th=$1
+  local th=$1 j
   if [ "$TEMP" = "0" ] || [ "$TEMP" = "0.0" ]; then
-    if [ "$th" = off ]; then echo '{"temperature":0.0,"extra_body":{"chat_template_kwargs":{"enable_thinking":false}}}'; else echo '{"temperature":0.0}'; fi
+    if [ "$th" = off ]; then j='{"temperature":0.0,"extra_body":{"chat_template_kwargs":{"enable_thinking":false}}}'; else j='{"temperature":0.0}'; fi
   else
-    if [ "$th" = off ]; then echo '{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20,"chat_template_kwargs":{"enable_thinking":false}}}'; else echo '{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'; fi
+    if [ "$th" = off ]; then j='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20,"chat_template_kwargs":{"enable_thinking":false}}}'; else j='{"temperature":1.0,"top_p":0.95,"extra_body":{"top_k":20}}'; fi
   fi
+  if [ "${MAXTOK:-0}" -gt 0 ] 2>/dev/null; then j="{\"max_tokens\":$MAXTOK,${j#\{}"; fi
+  echo "$j"
 }
 AGENT_ARGS=$(agent_args "$THINKING")
 echo "agent args: $AGENT_ARGS  concurrency: $CONC  model: hosted_vllm/$MODEL"
