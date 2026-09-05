@@ -7,8 +7,8 @@ def spoken(s): return E(s)
 # ---------- taxonomy ----------
 groups=collections.OrderedDict()
 for x in p["pattern_taxonomy"]: groups.setdefault(x["group"],[]).append(x)
-order=["opening/verification","before-tool","during-wait","result narration","disambiguation","empty/too-many/partial results","errors & denials","confirmations & irreversible actions","hold/transfer","repair & interruptions","closing","anti-patterns"]
-titles={"opening/verification":"Opening and verification","before-tool":"Before a tool call","during-wait":"While waiting","result narration":"Narrating results","disambiguation":"Disambiguation","empty/too-many/partial results":"Empty, too many, partial","errors & denials":"Errors and denials","confirmations & irreversible actions":"Confirmations and irreversible actions","hold/transfer":"Hold and transfer","repair & interruptions":"Repair and interruptions","closing":"Closing","anti-patterns":"Anti-patterns (reject)"}
+order=["opening/verification","identifier capture & validation","before-tool","during-wait","result narration","disambiguation","empty/too-many/partial results","errors & denials","confirmations & irreversible actions","hold/transfer","repair & interruptions","closing","anti-patterns"]
+titles={"opening/verification":"Opening and verification","identifier capture & validation":"Identifier capture and validation","before-tool":"Before a tool call","during-wait":"While waiting","result narration":"Narrating results","disambiguation":"Disambiguation","empty/too-many/partial results":"Empty, too many, partial","errors & denials":"Errors and denials","confirmations & irreversible actions":"Confirmations and irreversible actions","hold/transfer":"Hold and transfer","repair & interruptions":"Repair and interruptions","closing":"Closing","anti-patterns":"Anti-patterns (reject)"}
 tax=[]
 for g in order:
     items=groups.get(g,[])
@@ -49,6 +49,20 @@ phonellm_html=f"""<p>{E(desc)}</p>
 <div class="two"><div><p>{E(evalp)}</p><p>{E(servp)}</p></div>
 <div><div class="tw"><table><thead><tr><th>PhoneBench Alpha 1</th><th style="text-align:right">score</th></tr></thead><tbody>{board_rows}</tbody></table></div><p class="small">Fifteen models, human-calibrated judge panel, seven axes. The harness is not public, so these numbers are only comparable within Pipecat's board.</p></div></div>
 <h3>What this means for us</h3><ul class="plain">{"".join(f"<li>{E(x)}</li>" for x in fact_items)}</ul>"""
+spec=p.get("identifier_spec",[])
+spec_rows="".join(f"<tr><td><b>{E(x['identifier'])}</b></td><td>{E(x['format'])}</td><td>{E(x['checksum'])}</td><td>{E(x['spoken_forms_es'])}</td><td>{E(x['asr_confusions'])}</td><td>{E(x['readback_policy'])}</td></tr>" for x in spec)
+probes=p.get("identifier_eval_probes",[])
+probe_rows="".join(f"<tr><td>{E(x['language'].upper())}</td><td><i>{E(x['utterance'])}</i></td><td><code>{E(x['expected_normalized'])}</code></td><td>{E(x['expected_behaviour'])}</td></tr>" for x in probes[:12])
+id_html=f"""
+<h2>Identifier capture and validation</h2>
+<p>Added after review: callers hand over DNI, NIE, passport and phone numbers in dozens of spoken shapes, with dots, in pairs or hundreds, "doble cinco", "efe de Francia", "cero" versus "o", and telephony ASR mishears them in predictable ways. This family fixes what the agent must do at each step: name the document type, normalize the spoken form to the canonical string, validate the checksum where one exists (DNI and NIE mod 23, CIF mod 10, IBAN mod 97, card Luhn), read back in chunks, re-ask exactly one failing segment on a bounded budget, and never call a write tool with an unvalidated value. The {len([x for x in p["pattern_taxonomy"] if x["group"]=="identifier capture & validation"])} patterns sit in the taxonomy below; this is the reference table they lean on.</p>
+<div class="note"><b>Open design decision.</b> The research recommends that a passing checksum replaces the confirmation turn for lookups (Google conversation-design practice: explicit confirmation only for high-cost steps), while the phase-1 authoring brief requires a chunked read-back of every identifier before any write. Phase 1 keeps read-back always for consistency; phase 2 should make it per identifier: implicit for checksummable values used only in lookups, explicit for anything that feeds a write tool or has no checksum.</div>
+<div class="tw"><table><thead><tr><th>Identifier</th><th>Format</th><th>Checksum</th><th>Spoken forms (ES)</th><th>ASR confusions</th><th>Read-back policy</th></tr></thead><tbody>{spec_rows}</tbody></table></div>
+<h3>Scripted probes (first 12 of {len(probes)})</h3>
+<p class="small">Each probe is a caller utterance with the canonical value the agent must derive and the behaviour a correct agent shows. They double as unit tests for the validators and as eval items.</p>
+<div class="tw"><table><thead><tr><th>Lang</th><th>Caller says</th><th>Canonical</th><th>Expected behaviour</th></tr></thead><tbody>{probe_rows}</tbody></table></div>
+<p class="small">Validator pseudocode, the ASR-corruption spec and the full probe list are in <code>plans/switchboard_plan.json</code>; working implementations are in <code>pipeline/switchboard/validators.py</code> and <code>spoken_digits.py</code>, exercised by the phase-1 generation run.</p>
+"""
 page=f"""<title>Switchboard Plan</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -115,13 +129,13 @@ ul.src{{font-family:var(--mono);font-size:11.5px;columns:2;column-gap:28px;paddi
 </style>
 <main>
 <header>
-<div class="eyebrow">Plan · not started · 2026-09-04 · Omniloy agentic-distillation</div>
+<div class="eyebrow">Plan · phase-1 data generation in progress · updated 2026-09-05 · Omniloy agentic-distillation</div>
 <h1>Switchboard: a no-thinking phone agent on Qwen3.8-27B</h1>
 <p class="lede">Distil the way a good human agent runs a call, acknowledging before a lookup, narrating results in plain speech, handling too-many, none, and near-miss results, confirming before anything irreversible, into Qwen3.8-27B served without thinking, then compress it to NVFP4 with the multi-token-prediction head intact. Reference product: Pipecat's PhoneLLM Alpha 1. Everything below is a plan; nothing has been launched.</p>
 <div class="strip">
 <div><div class="k">Reference score</div><div class="v">72.3</div><div class="s">PhoneLLM Alpha 1 on PhoneBench</div></div>
 <div><div class="k">Our base, untuned</div><div class="v">70.0</div><div class="s">Qwen3.8-27B on the same board</div></div>
-<div><div class="k">Patterns specified</div><div class="v">{n_pat}</div><div class="s">12 groups, each with a check</div></div>
+<div><div class="k">Patterns specified</div><div class="v">{n_pat}</div><div class="s">13 groups, each with a check</div></div>
 <div><div class="k">Lean budget</div><div class="v">~$1.6k</div><div class="s">GPU ~$200 + API ~$1.35k</div></div>
 <div><div class="k">Timeline</div><div class="v">8 wk</div><div class="s">Sep 7 to Oct 30, gated</div></div>
 </div>
@@ -227,6 +241,7 @@ ul.src{{font-family:var(--mono);font-size:11.5px;columns:2;column-gap:28px;paddi
 </figure>
 {table(["Stage","What","Size","Cost","Gate"], data_rows)}
 
+{id_html}
 <h2>The pattern taxonomy</h2>
 <p>Every pattern names its trigger in terms of the tool-result shape or the conversational state, gives one utterance in the register we want, and defines a check that can score it. Open a pattern to see its example and check. Anti-patterns are rejection rules that run programmatically before any judge.</p>
 <div class="note"><b>One design choice worth flagging.</b> Pipecat's reference prompt forbids narrating tool use ("no let me check, no one moment"), while the brief for this project wants a human-like acknowledgement before a lookup. The plan trains both as prompt-conditional styles, so the same model obeys whichever the system prompt asks for. Half the dataset uses each.</div>
