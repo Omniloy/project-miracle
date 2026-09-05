@@ -17,7 +17,7 @@
 #   -e SERVE_MODE=merged -e QUANT=fp8 -e SPEC=mtp -e CONC=16
 set -uo pipefail; export HF_HUB_ENABLE_HF_TRANSFER=1
 W=/workspace; mkdir -p $W/status $W/eval; cd $W; LOG=$W/status/remote_eval.log; exec > >(tee -a $LOG) 2>&1
-MAXLEN=${MAXLEN:-262144}; TEMP=${TEMP:-0}; KVDTYPE=${KVDTYPE:-auto}; GPU_UTIL=${GPU_UTIL:-0.90}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
+STATUS_TAG=${STATUS_TAG:-eval}; MAXLEN=${MAXLEN:-262144}; TEMP=${TEMP:-0}; KVDTYPE=${KVDTYPE:-auto}; GPU_UTIL=${GPU_UTIL:-0.90}; SERVE_MODE=${SERVE_MODE:-}; QUANT=${QUANT:-none}; SPEC=${SPEC:-none}; MTP_K=${MTP_K:-2}; MAX_NUM_SEQS=${MAX_NUM_SEQS:-32}; THINKING=${THINKING:-default}
 if [ -z "$SERVE_MODE" ]; then CONC=${CONC:-8}; else CONC=${CONC:-16}; fi
 echo "=== remote_eval start $(date -u) MAXLEN=$MAXLEN KVDTYPE=$KVDTYPE GPU_UTIL=$GPU_UTIL ADAPTER=${ADAPTER:-none} EVAL_SET=${EVAL_SET:-both} TRIALS=${TRIALS:-1} SERVE_MODE=${SERVE_MODE:-<unset:lora>} QUANT=$QUANT SPEC=$SPEC MTP_K=$MTP_K CONC=$CONC MAX_NUM_SEQS=$MAX_NUM_SEQS THINKING=$THINKING ==="
 case "${SERVE_MODE:-lora}" in lora|merged) ;; *) echo "bad SERVE_MODE=$SERVE_MODE"; exit 2;; esac
@@ -31,10 +31,10 @@ api=HfApi(token=os.environ["HF_TOKEN"]); repo=os.environ["WORK_REPO"]; src,dst=s
 (api.upload_folder if os.path.isdir(src) else api.upload_file)(**({"folder_path":src} if os.path.isdir(src) else {"path_or_fileobj":src}), path_in_repo=dst, repo_id=repo, repo_type="dataset"); print("uploaded",src,"->",dst)
 PY
 }
-trap 'echo "=== remote_eval exit $(date -u) ==="; up $W/status status_eval' EXIT
-python -m pip install -q huggingface_hub hf_transfer 2>&1 | tail -1; echo "ALIVE $(date -u) $(hostname) $(nvidia-smi --query-gpu=name --format=csv,noheader)" > $W/status/step_eval.txt; up $W/status status_eval
-heartbeat() { while true; do sleep 300; nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader > $W/status/gpu.txt; date -u >> $W/status/gpu.txt; [ -f $W/status/vllm.log ] && tail -c 4000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_eval; done; }
-heartbeat & HB=$!; trap 'kill $HB 2>/dev/null; echo "=== remote_eval exit $(date -u) ==="; up $W/status status_eval' EXIT
+trap 'echo "=== remote_eval exit $(date -u) ==="; up $W/status status_${STATUS_TAG:-eval}' EXIT
+python -m pip install -q huggingface_hub hf_transfer 2>&1 | tail -1; echo "ALIVE $(date -u) $(hostname) $(nvidia-smi --query-gpu=name --format=csv,noheader)" > $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}
+heartbeat() { while true; do sleep 300; nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader > $W/status/gpu.txt; date -u >> $W/status/gpu.txt; [ -f $W/status/vllm.log ] && tail -c 4000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_${STATUS_TAG:-eval}; done; }
+heartbeat & HB=$!; trap 'kill $HB 2>/dev/null; echo "=== remote_eval exit $(date -u) ==="; up $W/status status_${STATUS_TAG:-eval}' EXIT
 python - <<'PY'
 import os
 from huggingface_hub import snapshot_download
@@ -43,7 +43,7 @@ snapshot_download("Qwen/Qwen3.8-27B", local_dir="/workspace/Qwen3.8-27B", token=
 PY
 echo "=== vLLM in its own venv ==="; python -m pip install -q uv 2>&1 | tail -1; uv venv /workspace/vvenv -q --python 3.12 2>&1 | tail -1 || python -m venv /workspace/vvenv
 uv pip install -q --python /workspace/vvenv/bin/python vllm==0.28.0 2>&1 | tail -2; VPY=/workspace/vvenv/bin/python; $VPY -c "import vllm,torch; print('vllm', vllm.__version__, 'torch', torch.__version__)"
-echo "STEP vllm installed $(date -u)" >> $W/status/step_eval.txt; up $W/status status_eval
+echo "STEP vllm installed $(date -u)" >> $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}
 MODEL=base; [ "${ADAPTER:-none}" != "none" ] && MODEL=student
 # ---- merge (SERVE_MODE=merged): same merge_lora.py as remote_bench.sh; keeps shard layout, config, tokenizer and the 15 mtp.* tensors ----
 cat > $W/merge_lora.py <<'PY'
@@ -104,9 +104,9 @@ if [ "$SERVE_MODE" = merged ]; then
   if timeout 2400 $VPY $W/merge_lora.py $W/Qwen3.8-27B $W/$ADAPTER $W/merged && [ -f $W/status/merge.json ]; then
     cat $W/status/merge.json; du -sh $W/merged; echo "STEP merge done $(date -u)" >> $W/status/step_eval.txt; SERVE_PATH=$W/merged; SERVED=$MODEL
   else
-    echo "STEP merge FAILED $(date -u)" >> $W/status/step_eval.txt; up $W/status status_eval; exit 1
+    echo "STEP merge FAILED $(date -u)" >> $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}; exit 1
   fi
-  up $W/status status_eval
+  up $W/status status_${STATUS_TAG:-eval}
 else
   [ "${ADAPTER:-none}" != "none" ] && LORA="--enable-lora --lora-modules student=$W/${ADAPTER} --max-lora-rank 64"
 fi
@@ -121,9 +121,9 @@ echo "vllm serve $SERVE_PATH --served-model-name $SERVED --max-num-seqs $MAX_NUM
 nohup $VPY -m vllm.entrypoints.openai.api_server --model $SERVE_PATH --served-model-name $SERVED --port 8000 --max-model-len $MAXLEN --max-num-seqs $MAX_NUM_SEQS --gpu-memory-utilization $GPU_UTIL --kv-cache-dtype $KVDTYPE \
   --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser qwen3 --enable-prefix-caching $LORA $EXTRA > $W/status/vllm.log 2>&1 &
 VPID=$!; UP=0; for i in $(seq 1 150); do curl -sf localhost:8000/v1/models >/dev/null && { UP=1; break; }; kill -0 $VPID 2>/dev/null || break; sleep 10; done
-if [ "$UP" != 1 ]; then echo "STEP vllm FAILED $(date -u)" >> $W/status/step_eval.txt; grep -E "Error|error" $W/status/vllm.log | tail -20; up $W/status status_eval; exit 1; fi
+if [ "$UP" != 1 ]; then echo "STEP vllm FAILED $(date -u)" >> $W/status/step_eval.txt; grep -E "Error|error" $W/status/vllm.log | tail -20; up $W/status status_${STATUS_TAG:-eval}; exit 1; fi
 curl -s localhost:8000/v1/models | head -c 400; echo; echo "STEP vllm up $(date -u)" >> $W/status/step_eval.txt
-grep -E "KV cache size|Maximum concurrency|Mamba cache|SpeculativeConfig|quantization|Using default LoRA" $W/status/vllm.log | tail -8; tail -c 3000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_eval
+grep -E "KV cache size|Maximum concurrency|Mamba cache|SpeculativeConfig|quantization|Using default LoRA" $W/status/vllm.log | tail -8; tail -c 3000 $W/status/vllm.log > $W/status/vllm_tail.log; up $W/status status_${STATUS_TAG:-eval}
 echo "=== tau2-bench ==="; cd $W; [ -d tau2-bench ] || git clone -q --depth 1 https://github.com/sierra-research/tau2-bench.git; cd tau2-bench; pip install -q uv 2>/dev/null; uv sync -q --extra knowledge 2>&1 | tail -1
 export HOSTED_VLLM_API_BASE=http://localhost:8000/v1 HOSTED_VLLM_API_KEY=dummy
 # synthetic dev set = all synthetic tasks not used for training
@@ -174,7 +174,7 @@ PY
       [ -z "$IDS" ] && continue
       echo "=== TEST eval $TAG tier=$tier conc=$C n=$(echo $IDS | wc -w) $(date -u) ==="; .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials ${TRIALS:-1} --max-steps 200 --seed 300 \
         --agent-llm hosted_vllm/$RM --agent-llm-args "$RA" --user-llm openrouter/openai/gpt-5.4-mini --user-llm-args '{"reasoning_effort":"medium"}' --max-concurrency $C --save-to ${TAG}_${tier} --task-ids $IDS 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
-      cp -r data/simulations/${TAG}_${tier} $W/eval/ 2>/dev/null; echo "STEP $TAG $tier done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/${TAG}_${tier} eval_${MODEL}/${TAG}_${tier}; up $W/status status_eval
+      cp -r data/simulations/${TAG}_${tier} $W/eval/ 2>/dev/null; echo "STEP $TAG $tier done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/${TAG}_${tier} eval_${MODEL}/${TAG}_${tier}; up $W/status status_${STATUS_TAG:-eval}
     done
     python - $TAG <<'PY'
 import json,sys,glob,os
@@ -185,8 +185,8 @@ for f in parts:
     else: merged['simulations']+=d['simulations']; merged['tasks']+=[t for t in d['tasks'] if t['id'] not in {x['id'] for x in merged['tasks']}]
 if merged: os.makedirs(f'/workspace/eval/{tag}',exist_ok=True); json.dump(merged,open(f'/workspace/eval/{tag}/results.json','w')); print('merged',len(merged['simulations']),'sims from',len(parts),'tiers')
 PY
-    echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_eval
+    echo "STEP $TAG done $(date -u)" >> $W/status/step_eval.txt; up $W/eval/$TAG eval_${MODEL}/$TAG; up $W/status status_${STATUS_TAG:-eval}
   done
 fi
 echo "{\"serve_mode\":\"${SERVE_MODE:-lora}\",\"quant\":\"$QUANT\",\"spec\":\"$SPEC\",\"mtp_k\":$MTP_K,\"conc\":$CONC,\"max_num_seqs\":$MAX_NUM_SEQS,\"thinking\":\"$THINKING\",\"temperature\":\"$TEMP\",\"kv_dtype\":\"$KVDTYPE\",\"maxlen\":$MAXLEN,\"adapter\":\"${ADAPTER:-none}\"}" > $W/eval/serving_config.json
-up $W/eval eval_${MODEL}; echo "EVAL_COMPLETE $(date -u)" | tee -a $W/status/step_eval.txt; up $W/status status_eval
+up $W/eval eval_${MODEL}; echo "EVAL_COMPLETE $(date -u)" | tee -a $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}
