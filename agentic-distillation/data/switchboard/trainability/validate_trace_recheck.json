@@ -1,0 +1,1214 @@
+[
+ {
+  "scenario_id": "sw_7_0000",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0001",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0002",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0003",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0004",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0005",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0006",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0008",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0009",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0011",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0012",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 15
+ },
+ {
+  "scenario_id": "sw_7_0014",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0015",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0016",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0017",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0018",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0019",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0020",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0021",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0022",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0023",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0026",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0027",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0028",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0029",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0030",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0032",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0034",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0035",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0037",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0038",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0039",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0040",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0041",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0042",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0043",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0044",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0045",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0046",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0047",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0048",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0049",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0050",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0051",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0053",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0054",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0056",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0058",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0059",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0061",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0062",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0063",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0065",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0067",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0068",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0069",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0070",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0071",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0072",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0073",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0074",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0075",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0076",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0077",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0078",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0079",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0080",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0081",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0082",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0083",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0084",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0086",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0087",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0088",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0090",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0091",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0092",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0093",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0095",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0096",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0097",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0098",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0099",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0100",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0102",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0103",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0104",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0105",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0106",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0107",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0109",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0110",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0111",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0113",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0114",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0115",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0116",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0117",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0118",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 14
+ },
+ {
+  "scenario_id": "sw_7_0119",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0120",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0121",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0122",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0123",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0124",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0125",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0127",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0128",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0129",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0130",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0131",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0132",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0133",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0134",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0135",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0137",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0138",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0139",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0140",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0141",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0142",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0143",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0144",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0145",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0146",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0147",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0148",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0149",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0151",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 14
+ },
+ {
+  "scenario_id": "sw_7_0152",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0154",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0155",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0156",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0157",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0158",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0160",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0161",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0162",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0163",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0164",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0165",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0166",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0168",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0169",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0170",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0171",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0172",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0173",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0174",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0175",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 14
+ },
+ {
+  "scenario_id": "sw_7_0176",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0178",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0179",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0181",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0183",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0185",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0186",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0187",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0188",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0189",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0190",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0191",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0192",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0194",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0195",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 14
+ },
+ {
+  "scenario_id": "sw_7_0196",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0197",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0198",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0199",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0201",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0203",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0204",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0205",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0206",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0207",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0209",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0210",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0211",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0212",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0213",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0214",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0215",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0216",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0217",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0218",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0219",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0220",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0221",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 8
+ },
+ {
+  "scenario_id": "sw_7_0222",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 13
+ },
+ {
+  "scenario_id": "sw_7_0223",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0224",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 7
+ },
+ {
+  "scenario_id": "sw_7_0225",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0226",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 14
+ },
+ {
+  "scenario_id": "sw_7_0227",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0228",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0229",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 10
+ },
+ {
+  "scenario_id": "sw_7_0230",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0231",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 12
+ },
+ {
+  "scenario_id": "sw_7_0233",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0235",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ },
+ {
+  "scenario_id": "sw_7_0237",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 11
+ },
+ {
+  "scenario_id": "sw_7_0239",
+  "errors": [],
+  "warnings": [],
+  "assistant_turns": 9
+ }
+]

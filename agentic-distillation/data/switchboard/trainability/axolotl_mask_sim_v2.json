@@ -1,0 +1,53 @@
+{
+  "axolotl_version_replicated": "0.19.0.dev0 (local ax/ checkout)",
+  "config": {
+    "roles_to_train": [
+      "assistant"
+    ],
+    "train_on_eos": "turn",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "sequence_len": 16384
+  },
+  "n_rows": 202,
+  "assistant_turns": 2033,
+  "total_tokens": 420250,
+  "trainable_tokens": 69386,
+  "trainable_pct": 16.51,
+  "per_row_trainable_pct": {
+    "min": 10.99,
+    "mean": 16.39,
+    "p50": 16.35,
+    "p95": 19.73,
+    "max": 22.21
+  },
+  "checks": {
+    "spans_lost": {
+      "count": 0,
+      "examples": []
+    },
+    "eos_not_trained": {
+      "count": 0,
+      "examples": []
+    },
+    "toolcall_not_in_span": {
+      "count": 0,
+      "examples": []
+    },
+    "foreign_in_span": {
+      "count": 0,
+      "examples": []
+    },
+    "header_in_span": {
+      "count": 0,
+      "examples": []
+    },
+    "locator_mismatch": {
+      "count": 0,
+      "examples": []
+    }
+  },
+  "sample_trained_span_text_no_toolcall": "Buenas tardes, ahora mismo lo vemos. ¿Me dice su DNI y su fecha de nacimiento, por favor?",
+  "sample_trained_span_text_with_toolcall": "Un momento, lo compruebo.\n\n<tool_call>\n<function=verify_identity>\n<parameter=document_number>\n72924865F\n</parameter>\n<parameter=date_of_birth>\n12/10/1958\n</parameter>\n</function>\n</tool_call>"
+}

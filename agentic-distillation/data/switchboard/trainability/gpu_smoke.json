@@ -1,0 +1,312 @@
+{
+  "task": "TASK C - cheap-GPU Axolotl smoke of the real training stack on the switchboard phase1 dataset",
+  "date_utc": "2026-09-05",
+  "dataset": {
+    "source": "HF Enriqueag26/agentic-distill-work switchboard/phase1/phase1_sft.jsonl",
+    "rows": 202,
+    "split": "first 194 train / last 8 held-out eval",
+    "modified_in_place": false
+  },
+  "model": {
+    "used": "Qwen/Qwen3-1.7B",
+    "why": "Qwen/Qwen3.8-2B and Qwen/Qwen3.8-0.8B both return HTTP 404 on the HF API (checked 2026-09-05); fell back to the third choice",
+    "hybrid": false,
+    "note": "dense attention model -> linear_attn.* LoRA targets dropped from the 27B config"
+  },
+  "stack": {
+    "image": "axolotlai/axolotl-cloud:main-latest",
+    "axolotl": "0.19.0.dev0",
+    "transformers": "5.16.1",
+    "torch": "2.12.1+cu130",
+    "config": "pipeline/gpu/remote_smoke_small.sh writes /workspace/axolotl_lora_smoke.yaml (copy saved as smoke_axolotl_lora_smoke.yaml)",
+    "deltas_vs_27b_config": [
+      "base_model -> /workspace/base_model (Qwen3-1.7B)",
+      "lora_target_modules: linear_attn.* dropped (dense model)",
+      "sequence_len 16384 -> 4096",
+      "lora_r 64->16, lora_alpha 128->32",
+      "gradient_accumulation_steps 8->4",
+      "num_epochs 2 -> num_epochs 1 + max_steps 30",
+      "evals_per_epoch/saves_per_epoch -> eval_steps 10 / save_steps 30",
+      "tf32 true -> false (see failures[0])",
+      "datasets -> switchboard phase1 split"
+    ],
+    "unchanged_from_27b_config": [
+      "chat_template: tokenizer_default",
+      "chat_template_kwargs.enable_thinking: false",
+      "type: chat_template",
+      "field_messages: messages",
+      "field_tools: tools",
+      "roles_to_train: [assistant]",
+      "train_on_eos: turn",
+      "message_property_mappings (role/content/tool_calls/tool_call_id)",
+      "sample_packing: false",
+      "bf16 LoRA, adamw_torch_fused, cosine, lr 1e-4",
+      "gradient_checkpointing, CutCrossEntropyPlugin"
+    ]
+  },
+  "preprocessing": {
+    "raw_rows_accepted": true,
+    "note": "axolotl's chat_template strategy json.loads() tool_calls[].function.arguments when it is a string (src/axolotl/prompt_strategies/chat_template.py:1170-1184), so the RAW file trains as-is even though tokenizer.apply_chat_template alone rejects it (Task A finding). No fixed copy was needed.",
+    "samples": {
+      "train": 194,
+      "eval": 8
+    },
+    "dropped_rows": 0,
+    "rows_all_masked": 0,
+    "token_lengths": {
+      "train": {
+        "n": 194,
+        "tok_min": 1584,
+        "tok_max": 2363,
+        "tok_mean": 1942.1,
+        "trainable_tok_total": 63976,
+        "trainable_pct": 16.98,
+        "rows_all_masked": 0
+      },
+      "eval": {
+        "n": 8,
+        "tok_min": 1780,
+        "tok_max": 2235,
+        "tok_mean": 1955.4,
+        "trainable_tok_total": 2663,
+        "trainable_pct": 17.02,
+        "rows_all_masked": 0
+      }
+    },
+    "warnings": {
+      "axolotl.prompt_strategies.chat_template - 'Last turn is not trainable, skipping having to find the turn indices. This may cause incorrect last EOT/EOS token to be unmasked. This is likely a dataset design issue. Please ensure last turn is trainable.'": 202,
+      "datasets.arrow_dataset - num_proc must be <= 8 (8-row eval set)": 2,
+      "axolotl.utils.schemas.config - Auto-enabling LoRA kernel optimizations": 1
+    },
+    "warning_root_cause": "all 202 rows end with a role='tool' message (verified locally: last-message roles = {'tool': 202}), so the final turn is never trainable",
+    "tool_rendering_errors": 0
+  },
+  "training": {
+    "max_steps": 30,
+    "micro_batch_size": 1,
+    "grad_accum": 4,
+    "effective_batch": 4,
+    "epochs_covered": 0.619,
+    "train_loss_by_step": [
+      [
+        1,
+        3.2928
+      ],
+      [
+        2,
+        3.2123
+      ],
+      [
+        3,
+        3.2866
+      ],
+      [
+        4,
+        2.7729
+      ],
+      [
+        5,
+        2.1145
+      ],
+      [
+        6,
+        2.1761
+      ],
+      [
+        7,
+        1.962
+      ],
+      [
+        8,
+        1.7227
+      ],
+      [
+        9,
+        1.5843
+      ],
+      [
+        10,
+        1.4166
+      ],
+      [
+        11,
+        1.8307
+      ],
+      [
+        12,
+        1.5245
+      ],
+      [
+        13,
+        1.4936
+      ],
+      [
+        14,
+        1.6074
+      ],
+      [
+        15,
+        1.3148
+      ],
+      [
+        16,
+        1.2934
+      ],
+      [
+        17,
+        1.2226
+      ],
+      [
+        18,
+        1.418
+      ],
+      [
+        19,
+        1.4207
+      ],
+      [
+        20,
+        1.2472
+      ],
+      [
+        21,
+        1.3875
+      ],
+      [
+        22,
+        1.3245
+      ],
+      [
+        23,
+        1.1124
+      ],
+      [
+        24,
+        1.3276
+      ],
+      [
+        25,
+        1.1368
+      ],
+      [
+        26,
+        1.1678
+      ],
+      [
+        27,
+        1.3098
+      ],
+      [
+        28,
+        1.2066
+      ],
+      [
+        29,
+        1.1645
+      ],
+      [
+        30,
+        1.2556
+      ]
+    ],
+    "eval_loss_by_step_(step,loss,runtime_s)": [
+      [
+        0,
+        3.7715,
+        4.07
+      ],
+      [
+        10,
+        1.575,
+        0.86
+      ],
+      [
+        20,
+        1.3181,
+        0.85
+      ],
+      [
+        30,
+        1.2808,
+        0.87
+      ]
+    ],
+    "final": {
+      "train_runtime": "54.52",
+      "train_samples_per_second": "2.201",
+      "train_steps_per_second": "0.55",
+      "train_loss": "1.677",
+      "memory/max_active (GiB)": "3.42",
+      "memory/max_allocated (GiB)": "3.42",
+      "memory/device_reserved (GiB)": "3.45",
+      "epoch": "0.6186"
+    },
+    "throughput": {
+      "train_runtime_s": 54.52,
+      "samples_per_second": 2.201,
+      "steps_per_second": 0.55,
+      "tokens_per_second_total": 4274.6,
+      "tokens_per_second_trainable": 725.8,
+      "note": "total = samples/s x mean 1942 tokens/sample (incl. masked prompt tokens); trainable = x 16.98%"
+    },
+    "peak_memory_GiB": 3.42,
+    "verdict": "loss falls 3.29 -> ~1.2 over 30 steps; held-out eval loss 3.771 (step 0) -> 1.575 -> 1.318 -> 1.281. Data is trainable, masking produces a real signal, no NaN/divergence."
+  },
+  "artifacts_on_hf": {
+    "status": "status_smoke/ (step_smoke.txt, train.log, preprocess.log, trainer_state.json, prepared_stats.json, axolotl_lora_smoke.yaml, remote_smoke.log)",
+    "adapter": "switchboard/phase1_smoke_adapter/ (adapter_model.safetensors 69.8 MB, adapter_config.json, checkpoint-30/)"
+  },
+  "vast_runs": [
+    {
+      "instance": 49959770,
+      "offer": 41247262,
+      "machine": 14909,
+      "gpu": "RTX 4090",
+      "dph": 0.3933,
+      "start": "12:21:41Z",
+      "end": "12:47:20Z",
+      "minutes": 26,
+      "result": "FAILED - transformers raised 'ValueError: --tf32 requires Ampere or a newer GPU arch, cuda>=11 and torch>=1.7' at TrainingArguments init; the box's CUDA init was broken (driver 570.211.01), so is_torch_tf32_available() returned False. Job then hung because axolotl's output was piped through tee|grep|tail and a surviving child kept the pipe open."
+    },
+    {
+      "instance": 49961534,
+      "offer": 41247279,
+      "machine": 16315,
+      "gpu": "RTX 4090",
+      "dph": 0.39,
+      "start": "12:47:33Z",
+      "end": "12:59:40Z",
+      "minutes": 12,
+      "result": "FAILED - 'RuntimeError: Unexpected error from cudaGetDeviceCount() ... Error 803: system has unsupported display driver / cuda driver combination' (driver 560.35.03 / cuda_max_good 12.6, too old for torch 2.12+cu130). Preprocess succeeded on this box (raw rows accepted); training died on the first forward."
+    },
+    {
+      "instance": 49962416,
+      "offer": 42288314,
+      "machine": 19205,
+      "gpu": "RTX 4090",
+      "dph": 0.3814,
+      "start": "13:00:20Z",
+      "end": "13:08:10Z",
+      "minutes": 8,
+      "result": "SUCCESS - JOB_COMPLETE 13:07:10Z (driver 590.48.01 / cuda 13.1)"
+    }
+  ],
+  "cost": {
+    "estimate_usd": 0.3,
+    "breakdown": "26 min @ $0.393/h = $0.17 + 12 min @ $0.39/h = $0.08 + 8 min @ $0.381/h = $0.05",
+    "budget_usd": 1.0,
+    "within_budget": true
+  },
+  "instances_destroyed": [
+    49959770,
+    49961534,
+    49962416
+  ],
+  "instance_never_touched": 49957392,
+  "actions_for_the_27b_run": [
+    "Trailing role='tool' message on every row makes axolotl skip last-turn index lookup (202/202 warnings) - trim the dangling tool observation (or append the assistant turn that consumes it) before the real run.",
+    "Keep the raw JSON-string tool_call arguments: axolotl converts them; do NOT ship the dict-args copy unless something other than axolotl consumes the file.",
+    "tf32: true is fine on a healthy box - it was a symptom of a broken CUDA driver, not a config error. Screen Vast offers on driver_version/cuda_max_good (>= 570/12.8) before renting.",
+    "Do not pipe axolotl through tee|grep|tail: redirect to a file (remote_smoke_small.sh now does 'axolotl train CFG > train.log 2>&1' under timeout)."
+  ]
+}

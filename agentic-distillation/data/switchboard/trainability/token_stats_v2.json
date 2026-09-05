@@ -1,0 +1,52 @@
+{
+  "v1_raw": {
+    "rows": 202,
+    "render_failures": 202,
+    "first_error": "TypeError: Can only get item pairs from a mapping.",
+    "tokens_with_tools": null,
+    "tokens_without_tools": null,
+    "tool_schema_cost_mean": null,
+    "over_4096": 0,
+    "over_2560": 0
+  },
+  "v2": {
+    "rows": 202,
+    "render_failures": 0,
+    "first_error": null,
+    "tokens_with_tools": {
+      "min": 1746,
+      "mean": 2080.4,
+      "p50": 2066,
+      "p95": 2392,
+      "p99": 2478,
+      "max": 2563
+    },
+    "tokens_without_tools": {
+      "min": 632,
+      "mean": 900.0,
+      "p50": 879,
+      "p95": 1180,
+      "p99": 1266,
+      "max": 1352
+    },
+    "tool_schema_cost_mean": 1180.4,
+    "over_4096": 0,
+    "over_2560": 1
+  },
+  "generation_prompt_tail": "ner el número nuevo en la cuenta, que si no no me llegan los avisos.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "render_example_head": "<|im_start|>system\n# Tools\n\nYou have access to the following functions:\n\n<tools>\n{\"type\": \"function\", \"function\": {\"name\": \"verify_identity\", \"description\": \"Verify the caller. Returns customer_id on success, or 'mismatch'.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"document_number\": {\"type\": \"string\", \"description\": \"Customer identifier: DNI (8 digits + letter), NIE (X/Y/Z + 7 digits + letter) or passport number, normalized without spaces or dashes\"}, \"date_of_birth\": {\"type\": \"string\", \"description\": \"DD/MM/YYYY\"}}, \"required\": [\"document_number\", \"date_of_birth\"]}}}\n{\"type\": \"function\", \"function\": {\"name\": \"search_customer\", \"description\": \"Find customers by name, phone or email. May return 0, 1 or many results. (slow: 2-4 s)\", \"parameters\": {\"type\": \"object\", \"properties\": {\"name\": {\"type\": \"string\"}, \"phone\": {\"type\": \"string\", \"description\": \"Phone number in E.164, e.g. +34612345678\"}, \"email\": {\"type\": \"string\"}}, \"required\": []}}}\n{\"type\": \"function\", \"function\": {\"name\": \"transfer_to_human\", \"description\": \"Warm-transfer the call to a human agent.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"reason\": {\"type\": \"string\", \"enum\": [\"policy_requires_human\", \"caller_insists\", \"fraud_suspected\", \"out_of_scope\", \"technical_failure\"]}, \"summary\": {\"type\": \"string\"}}, \"required\": [\"reason\", \"summary\"]}}}\n{\"type\": \"function\", \"function\": {\"name\": \"create_callback\", \"description\": \"Schedule a callback.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"phone\": {\"t",
+  "render_example_tail": "alizo ahora.\n\n<tool_call>\n<function=update_contact_phone>\n<parameter=customer_id>\ncus_22337\n</parameter>\n<parameter=phone>\n+34630824628\n</parameter>\n</function>\n</tool_call><|im_end|>\n<|im_start|>user\n<tool_response>\n{\"status\": \"ok\", \"customer_id\": \"cus_22337\", \"phone\": \"+34630824628\"}\n</tool_response><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nYa está actualizado, el móvil nuevo figura en su cuenta. ¿Le confirmo también el correo que tenemos?<|im_end|>\n<|im_start|>user\nSí, mírelo, que el otro era el de mi hija.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nTenemos carmen punto jimenez cincuenta y cinco arroba gmail punto com. ¿Es ese?<|im_end|>\n<|im_start|>user\nEse es el mío, sí. Pues nada más, muchas gracias.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\nGracias a usted, Carmen. Que pase buena tarde.\n\n<tool_call>\n<function=end_call>\n</function>\n</tool_call><|im_end|>\n",
+  "example_scenario": {
+    "scenario_id": "sw_7_0000",
+    "vertical": "banking",
+    "language": "es",
+    "style": "narrate",
+    "intent": "update_phone",
+    "patterns": [
+      "Checksum failure -> polite re-ask of one group",
+      "Chunked read-back before use",
+      "Email spelled aloud -> canonical",
+      "Never write with unvalidated identifier"
+    ]
+  }
+}

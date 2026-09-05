@@ -1,0 +1,235 @@
+{
+  "task": "TASK B - CPU micro-training run",
+  "date": "2026-09-05",
+  "model": "Qwen/Qwen3-0.6B",
+  "model_fallback": {
+    "requested": [
+      "Qwen/Qwen3.8-0.8B",
+      "Qwen/Qwen3.8-2B"
+    ],
+    "hf_api_status": "both 404 (authenticated); Qwen3.8 family on HF is only 27B / 27B-FP8 / Flash-Next / Flash-Next-FP8 / 2.4T-A95B",
+    "used": "Qwen/Qwen3-0.6B",
+    "rationale": "smallest Qwen3.8 is 27B (not CPU-trainable); fell back to Qwen3-0.6B, same Qwen ChatML family, chat template supports tools + enable_thinking"
+  },
+  "data": {
+    "source": "/tmp/claude-0/-home-user-project-miracle/43fff345-b582-59b0-a287-d38e1b7005e8/scratchpad/data/switchboard/phase1_sft.jsonl",
+    "used": "/tmp/claude-0/-home-user-project-miracle/43fff345-b582-59b0-a287-d38e1b7005e8/scratchpad/data/switchboard/trainability/phase1_sft_dictargs.jsonl",
+    "n_rows_selected": 8,
+    "max_len": 2048,
+    "batch_size": 1,
+    "grad_accum": 2,
+    "optimizer": "AdamW lr=1e-4",
+    "precision": "fp32",
+    "lora": "r=8 alpha=16 on q,k,v,o,gate,up,down"
+  },
+  "trainable_params": 5046272,
+  "total_params": 601096192,
+  "examples": [
+    {
+      "scenario_id": "sw_7_0000",
+      "language": "es",
+      "style": "narrate",
+      "vertical": "banking",
+      "n_tokens_full": 1924,
+      "n_tokens": 1924,
+      "truncated": false,
+      "n_assistant_turns": 9,
+      "n_trainable_tokens": 311,
+      "n_header_tokens_masked": 27,
+      "n_trainable_tokens_before_truncation": 311
+    },
+    {
+      "scenario_id": "sw_7_0008",
+      "language": "en",
+      "style": "narrate",
+      "vertical": "retail",
+      "n_tokens_full": 1763,
+      "n_tokens": 1763,
+      "truncated": false,
+      "n_assistant_turns": 9,
+      "n_trainable_tokens": 277,
+      "n_header_tokens_masked": 27,
+      "n_trainable_tokens_before_truncation": 277
+    },
+    {
+      "scenario_id": "sw_7_0005",
+      "language": "es",
+      "style": "silent",
+      "vertical": "retail",
+      "n_tokens_full": 1910,
+      "n_tokens": 1910,
+      "truncated": false,
+      "n_assistant_turns": 11,
+      "n_trainable_tokens": 360,
+      "n_header_tokens_masked": 33,
+      "n_trainable_tokens_before_truncation": 360
+    },
+    {
+      "scenario_id": "sw_7_0003",
+      "language": "en",
+      "style": "silent",
+      "vertical": "banking",
+      "n_tokens_full": 1831,
+      "n_tokens": 1831,
+      "truncated": false,
+      "n_assistant_turns": 10,
+      "n_trainable_tokens": 285,
+      "n_header_tokens_masked": 30,
+      "n_trainable_tokens_before_truncation": 285
+    },
+    {
+      "scenario_id": "sw_7_0001",
+      "language": "es",
+      "style": "narrate",
+      "vertical": "telecom",
+      "n_tokens_full": 1959,
+      "n_tokens": 1959,
+      "truncated": false,
+      "n_assistant_turns": 9,
+      "n_trainable_tokens": 340,
+      "n_header_tokens_masked": 27,
+      "n_trainable_tokens_before_truncation": 340
+    },
+    {
+      "scenario_id": "sw_7_0014",
+      "language": "en",
+      "style": "narrate",
+      "vertical": "retail",
+      "n_tokens_full": 1807,
+      "n_tokens": 1807,
+      "truncated": false,
+      "n_assistant_turns": 10,
+      "n_trainable_tokens": 292,
+      "n_header_tokens_masked": 30,
+      "n_trainable_tokens_before_truncation": 292
+    },
+    {
+      "scenario_id": "sw_7_0011",
+      "language": "es",
+      "style": "silent",
+      "vertical": "retail",
+      "n_tokens_full": 1931,
+      "n_tokens": 1931,
+      "truncated": false,
+      "n_assistant_turns": 11,
+      "n_trainable_tokens": 351,
+      "n_header_tokens_masked": 33,
+      "n_trainable_tokens_before_truncation": 351
+    },
+    {
+      "scenario_id": "sw_7_0004",
+      "language": "en",
+      "style": "silent",
+      "vertical": "telecom",
+      "n_tokens_full": 1878,
+      "n_tokens": 1878,
+      "truncated": false,
+      "n_assistant_turns": 10,
+      "n_trainable_tokens": 306,
+      "n_header_tokens_masked": 30,
+      "n_trainable_tokens_before_truncation": 306
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "loss": 2.78202,
+      "grad_norm": 3.77736,
+      "wall_s": 65.11,
+      "finite": true
+    },
+    {
+      "step": 2,
+      "loss": 2.38844,
+      "grad_norm": 3.3614,
+      "wall_s": 62.3,
+      "finite": true
+    },
+    {
+      "step": 3,
+      "loss": 2.50409,
+      "grad_norm": 4.11715,
+      "wall_s": 64.03,
+      "finite": true
+    },
+    {
+      "step": 4,
+      "loss": 2.20667,
+      "grad_norm": 3.45497,
+      "wall_s": 65.29,
+      "finite": true
+    }
+  ],
+  "total_wall_s": 256.74,
+  "probe_loss_before": 2.70829,
+  "probe_loss_after": 1.93517,
+  "probe_decreased": true,
+  "loss_first": 2.78202,
+  "loss_last": 2.20667,
+  "all_finite": true,
+  "non_increasing_overall": true,
+  "generation": {
+    "prompt_tail": "o de compañía de móvil y quiero poner el número nuevo en la cuenta, que si no no me llegan los avisos.<|im_end|>\n<|im_start|>assistant\nBuenas tardes, ahora mismo lo vemos. ¿Me dice su DNI y su fecha de nacimiento, por favor?<|im_end|>\n<|im_start|>user\nSí, apunte: siete dos, nueve dos, cuatro ocho, seis cinco, efe de Francia. Y nací el doce, diez, cincuenta y ocho.<|im_end|>\n<|im_start|>assistant\nLe repito el documento: siete dos, nueve dos, cuatro ocho, seis cinco, efe. La letra cuadra con el número. ¿La fecha es el doce de octubre?<|im_end|>\n<|im_start|>user\nDoce de octubre, sí, del cincuenta y ocho. Del Pilar, que por eso me llamo Carmen.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "greedy_40_tokens": "Buenas tardes, el documento y la fecha coinciden. ¿Quieres confirmar el nuevo número?<|im_end|>",
+    "gold_next_assistant_turn": {
+      "role": "assistant",
+      "content": "Un momento, lo compruebo.",
+      "tool_calls": [
+        {
+          "id": "call_1",
+          "type": "function",
+          "function": {
+            "name": "verify_identity",
+            "arguments": {
+              "document_number": "72924865F",
+              "date_of_birth": "12/10/1958"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "notes": [
+    "first trainable span of sw_7_0000 decodes to: 'Buenas tardes, ahora mismo lo vemos. ¿Me dice su DNI y su fecha de nacimiento, por favor?<|im_end|>\\n'"
+  ],
+  "errors": [],
+  "target_template_check": {
+    "template_file": "/tmp/claude-0/-home-user-project-miracle/43fff345-b582-59b0-a287-d38e1b7005e8/scratchpad/q38.jinja",
+    "BLOCKER_found": true,
+    "blocker": "q38.jinja renders tool calls with `{% for args_name, args_value in tool_call.arguments|items %}`. phase1_sft.jsonl stores function.arguments as a JSON *string* (OpenAI wire format), so apply_chat_template raises TypeError: 'Can only get item pairs from a mapping.' on 100% of rows (all 202 have tool_calls). Axolotl's chat_template dataset type calls the same tokenizer template -> the real 27B run would fail at dataset-prep time.",
+    "fix": "parse function.arguments from JSON string to dict; fixed copy written to trainability/phase1_sft_dictargs.jsonl (680 tool-call argument objects converted, 0 unparseable). After the fix all 202/202 rows render.",
+    "note_thinking": "q38.jinja gates the assistant <think> block on `preserve_thinking is undefined or preserve_thinking is true or loop.index0 > ns.last_query_index` -> with defaults EVERY assistant turn renders as '<|im_start|>assistant\\n<think>\\n\\n</think>\\n\\n' + content, which matches the enable_thinking=false generation prompt. No train/inference drift on the real target.",
+    "note_tool_role": "q38.jinja emits tool results inside a '<|im_start|>user ... <tool_response>' block and uses XML tool calls (<tool_call><function=name><parameter=x>), not the JSON <tool_call> form used by Qwen3-0.6B. Both families support tools; the surface form differs.",
+    "token_lengths_under_q38": {
+      "min": 1731,
+      "p50": 2098,
+      "p95": 2423,
+      "max": 2539,
+      "rows_over_2048": 119,
+      "rows_over_16384": 0,
+      "comment": "sequence_len: 16384 in axolotl_lora_q38_27b.yaml is ample; nothing is truncated. The 2048 cap in this micro-run is a task constraint, not a config concern."
+    }
+  },
+  "fallback_template_caveat": "Qwen3-0.6B's template injects '<think>\\n\\n</think>\\n\\n' only on a TRAILING assistant message (loop.last) or when reasoning_content is set, so mid-conversation assistant turns render without it while the enable_thinking=False generation prompt contains it. This is a Qwen3-0.6B-only artifact; q38.jinja does not have it.",
+  "masking_method": "incremental prefix rendering with a sentinel user message appended to every prefix, so template branches keyed on 'last message is assistant' never fire and prefixes stay strictly monotone; asserted token-prefix consistency and strict monotonicity at every boundary. The system turn's start is pinned to 0 (rendering an empty prefix is not comparable: Qwen templates synthesize a default system block when none is present). The '<|im_start|>assistant\\n' header stays masked; content + <|im_end|> are trained (== axolotl train_on_eos: turn).",
+  "errors_encountered": [
+    {
+      "error": "AssertionError: prefix drift at 0",
+      "cause": "prefix render of the empty conversation gets a synthesized default system block",
+      "fix": "pin bounds[0]=0 and start the incremental comparison at the first non-system message",
+      "status": "fixed"
+    },
+    {
+      "error": "process Killed (CPU OOM, 15 GB box) on the first backward",
+      "cause": "fp32 logits 1924x151936 plus 28 layers of un-checkpointed activations",
+      "fix": "model.gradient_checkpointing_enable(use_reentrant=False) + enable_input_require_grads()",
+      "status": "fixed"
+    },
+    {
+      "error": "TypeError: Can only get item pairs from a mapping (q38.jinja)",
+      "cause": "function.arguments stored as JSON string",
+      "fix": "phase1_sft_dictargs.jsonl with dict arguments",
+      "status": "fixed (fixed copy written; phase1_sft.jsonl untouched)"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "n_rows": 202,
+  "tokenizer": "Qwen/Qwen3.8-27B",
+  "transformers": "5.16.1",
+  "template_sha_len": 8952,
+  "stage1_raw_render": {
+    "ok": 0,
+    "failed": 202,
+    "failure_classes": {
+      "arguments_is_string_not_dict": {
+        "count": 202,
+        "example_rows": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    }
+  },
+  "fix_applied": {
+    "transformation": "tool_calls[].function.arguments: JSON string -> dict (json.loads)",
+    "tool_calls_converted": 680
+  },
+  "stage2_fixed_render": {
+    "ok": 202,
+    "failed": 0,
+    "failure_classes": {}
+  },
+  "token_lengths": {
+    "with_tools": {
+      "min": 1761,
+      "mean": 2095.4,
+      "p50": 2081,
+      "p95": 2407,
+      "max": 2578,
+      "n_over_16384": 0
+    },
+    "without_tools": {
+      "min": 647,
+      "mean": 915.0,
+      "p50": 894,
+      "p95": 1195,
+      "max": 1367,
+      "n_over_16384": 0
+    },
+    "tool_schema_overhead": {
+      "min": 1114,
+      "mean": 1180.4,
+      "p50": 1212,
+      "p95": 1226,
+      "max": 1226,
+      "n_over_16384": 0
+    }
+  },
+  "masking": {
+    "rows_checked": 202,
+    "assistant_turns": 2033,
+    "empty_spans": {
+      "count": 0,
+      "examples": []
+    },
+    "prefix_property_violations": {
+      "count": 0,
+      "examples": []
+    },
+    "toolcall_xml_outside_span": {
+      "count": 0,
+      "examples": []
+    },
+    "foreign_tokens_in_span": {
+      "count": 0,
+      "examples": []
+    },
+    "span_missing_eos": {
+      "count": 0,
+      "examples": []
+    }
+  },
+  "trainable_token_pct": {
+    "total_tokens": 423280,
+    "trainable_incl_assistant_header": 85650,
+    "pct_incl_header": 20.23,
+    "trainable_content_and_eos_only": 71419,
+    "pct_content_only": 16.87,
+    "per_row_pct": {
+      "min": 14.4,
+      "mean": 20.1,
+      "p50": 20.14,
+      "p95": 23.85,
+      "max": 26.51,
+      "n_over_16384": 0
+    }
+  },
+  "empty_think_block_strings": {
+    "<think>\n\n</think>": 2033
+  },
+  "assistant_span_example": "<|im_start|>assistant\n<think>\n\n</think>\n\nUn momento, lo compruebo.\n\n<tool_call>\n<function=verify_identity>\n<parameter=document_number>\n72924865F\n</parameter>\n<parameter=date_of_birth>\n12/10/1958\n</parameter>\n</function>\n</tool_call><|im_end|>\n",
+  "generation_prompt": {
+    "enable_thinking_false_suffix": "<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "enable_thinking_default_suffix": "<|im_start|>assistant\n<think>\n",
+    "default_render_equals_thinking_false_prefix": false,
+    "default_render_prepends_reasoning_effort_line": true,
+    "training_assistant_header": "<|im_start|>assistant\n<think>\n\n</think>\n\n",
+    "gen_prompt_matches_training_header": true
+  },
+  "preserve_thinking_false_differs": true,
+  "fixed_file": "/tmp/claude-0/-home-user-project-miracle/43fff345-b582-59b0-a287-d38e1b7005e8/scratchpad/data/switchboard/trainability/phase1_sft_render_fixed.jsonl",
+  "axolotl_mask_simulation": {
+    "axolotl_version_replicated": "0.19.0.dev0 (local ax/ checkout)",
+    "config": {
+      "roles_to_train": [
+        "assistant"
+      ],
+      "train_on_eos": "turn",
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      },
+      "sequence_len": 16384
+    },
+    "n_rows": 202,
+    "assistant_turns": 2033,
+    "total_tokens": 423280,
+    "trainable_tokens": 69386,
+    "trainable_pct": 16.39,
+    "per_row_trainable_pct": {
+      "min": 10.9,
+      "mean": 16.27,
+      "p50": 16.24,
+      "p95": 19.61,
+      "max": 22.07
+    },
+    "checks": {
+      "spans_lost": {
+        "count": 0,
+        "examples": []
+      },
+      "eos_not_trained": {
+        "count": 0,
+        "examples": []
+      },
+      "toolcall_not_in_span": {
+        "count": 0,
+        "examples": []
+      },
+      "foreign_in_span": {
+        "count": 0,
+        "examples": []
+      },
+      "header_in_span": {
+        "count": 0,
+        "examples": []
+      },
+      "locator_mismatch": {
+        "count": 0,
+        "examples": []
+      }
+    },
+    "sample_trained_span_text_no_toolcall": "Buenas tardes, ahora mismo lo vemos. ¿Me dice su DNI y su fecha de nacimiento, por favor?",
+    "sample_trained_span_text_with_toolcall": "Un momento, lo compruebo.\n\n<tool_call>\n<function=verify_identity>\n<parameter=document_number>\n72924865F\n</parameter>\n<parameter=date_of_birth>\n12/10/1958\n</parameter>\n</function>\n</tool_call>"
+  },
+  "dataset_shape": {
+    "rows": 202,
+    "messages_total": 4465,
+    "system": 202,
+    "user": 1550,
+    "assistant": 2033,
+    "tool": 680,
+    "every_row_starts_with": "system",
+    "every_row_ends_with": "tool (the end_call tool_response)",
+    "assistant_turns_with_tool_calls": 680,
+    "assistant_turns_silent_empty_content": 235,
+    "tool_calls_with_empty_arguments": 202,
+    "assistant_turns_with_multiple_tool_calls": 0,
+    "tool_call_argument_value_types": {
+      "str": 908,
+      "int": 33,
+      "float": 3
+    },
+    "tools_per_row": {
+      "9": 74,
+      "10": 128
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocker",
+      "title": "tool_calls[].function.arguments is a JSON string, not a dict",
+      "detail": "The Qwen3.8 template does `for args_name, args_value in tool_call.arguments|items`. Jinja's `items` filter requires a Mapping; a str raises TypeError('Can only get item pairs from a mapping.'). All 202/202 rows fail tokenizer.apply_chat_template on the raw file.",
+      "affects": "any direct HF apply_chat_template use: offline render, vLLM prompt building from raw messages, eval harness replay, data QA",
+      "axolotl_impact": "NOT a blocker for training: axolotl 0.19.0.dev0 chat_template.py:1170-1183 json.loads() string arguments inside transform_message before rendering. But this is an axolotl-version-specific rescue.",
+      "fix": "json.loads() arguments into a dict at the data level. Applied in phase1_sft_render_fixed.jsonl (680 tool_calls converted, semantically identical)."
+    },
+    {
+      "id": "F2",
+      "severity": "info",
+      "title": "Masking is correct end-to-end",
+      "detail": "Replicating axolotl's sentinel char-diff locator exactly: 2033/2033 assistant turns produce a non-empty trainable span; tool-call XML (<tool_call>/<function=>/<parameter=>) is fully inside every span; <|im_end|> is trained on every turn (train_on_eos: turn, gap always <=3); zero user/tool/system tokens inside any span; the assistant header is correctly excluded."
+    },
+    {
+      "id": "F3",
+      "severity": "info",
+      "title": "Empty think block is uniform",
+      "detail": "With enable_thinking=false and add_generation_prompt=false, every assistant turn renders the header '<|im_start|>assistant\\n<think>\\n\\n</think>\\n\\n' - the think block string is exactly '<think>\\n\\n</think>' in all 2033/2033 turns. It sits in the template's common prefix, so it is context, never a training target.",
+      "note": "enable_thinking=false does NOT suppress think blocks on assistant turns; it only drops the reasoning-effort system preamble and closes the generation-prompt think block. The blocks come from `preserve_thinking` (undefined -> true)."
+    },
+    {
+      "id": "F4",
+      "severity": "warning",
+      "title": "preserve_thinking=false would break train/serve alignment",
+      "detail": "Passing preserve_thinking=false changes the render (verified: differs). Do not add it to chat_template_kwargs; keep only enable_thinking: false as the config already does."
+    },
+    {
+      "id": "F5",
+      "severity": "blocker-at-serving",
+      "title": "vLLM must be called with enable_thinking=false or the prompt does not match training",
+      "detail": "Training header = '<|im_start|>assistant\\n<think>\\n\\n</think>\\n\\n' (matches add_generation_prompt=true + enable_thinking=false exactly). With enable_thinking unset (the vLLM default), the template instead (a) prepends 'Reasoning effort is set to xhigh...' to the system block (+36 tokens) and (b) emits an OPEN '<|im_start|>assistant\\n<think>\\n' generation prompt. The SFT model never saw either.",
+      "fix": "Serve/eval with chat_template_kwargs={'enable_thinking': false} on every request (or bake a template default)."
+    },
+    {
+      "id": "F6",
+      "severity": "warning",
+      "title": "vLLM tool-call parser must be the XML one",
+      "detail": "This template serializes calls as <tool_call><function=NAME><parameter=K>\\nVALUE\\n</parameter></function></tool_call>, NOT JSON. Use --tool-call-parser qwen3_xml (alias qwen3_coder, class Qwen3EngineToolParser). The 'hermes' parser expects JSON inside <tool_call> and will fail to parse every call.",
+      "extra": "202/680 calls have empty arguments and render as '<function=end_call>\\n</function>' with no <parameter=> block - smoke-test that the parser accepts a zero-parameter call."
+    },
+    {
+      "id": "F7",
+      "severity": "info",
+      "title": "Sequence length is far below the configured cap",
+      "detail": "Max row is 2578 tokens vs sequence_len: 16384 - no row is truncated. ~1180 tokens/row (56%% of every sample) is the repeated tool-schema system block; only 16.39%% of tokens carry loss.",
+      "suggestion": "sequence_len can drop to 4096 safely; with sample_packing: false and micro_batch_size: 1 there is no pad waste, but the smaller cap reduces activation buffers. Turning sample_packing on would raise the loss-bearing token fraction per step."
+    }
+  ],
+  "recommended_actions": [
+    "Train from phase1_sft_render_fixed.jsonl (arguments as dicts) rather than phase1_sft.jsonl, so axolotl, vLLM and any eval replay all render identically instead of relying on axolotl's internal json.loads rescue.",
+    "Keep chat_template: tokenizer_default and chat_template_kwargs: {enable_thinking: false}; do NOT add preserve_thinking.",
+    "Serve/evaluate with chat_template_kwargs={'enable_thinking': false} AND --tool-call-parser qwen3_xml.",
+    "Optionally lower sequence_len 16384 -> 4096."
+  ]
+}
