@@ -21,6 +21,8 @@ Rules (hard):
 - Keep every option, condition, question and policy detail the original gives, just say it the way a person would on a call. If the original
   presents several options, present them in a sentence or two each, still no bullets. Ask at most one question per turn; if the original asks
   several, combine them naturally or keep the most important one and the others in the same sentence.
+- Write amounts, dates, counts, percentages, times and IDs with the SAME digits as the original ($2,000, 3-5 business days, 10/22/2025, 4,200 points): the text is
+  read by a system, so never spell numbers out in words and never drop a number the original states.
 - Do not add facts, do not change numbers, do not promise things the original didn't.
 - Silent turns (the assistant only called tools and said nothing): write ONE short spoken sentence (max 18 words) saying what you're about to do,
   matched to the tool(s) being called, e.g. "Let me check our policy on out-of-network ATM fees for the Light Green account." or
@@ -39,15 +41,17 @@ def _norm(x):
     x=x.replace(',','')
     try: f=float(x); return str(int(f)) if f==int(f) else ('%g'%f)
     except ValueError: return x
-def nums(t): return collections.Counter(_norm(x) for x in NUM.findall(t))
+def nums(t):
+    t=re.sub(r'(?m)^\s*\d+[.)]\s+','',t)   # list enumerators (1. / 2)) are structure, not facts
+    return collections.Counter(_norm(x) for x in NUM.findall(t))
 def idents(t): return set(IDENT.findall(t))
-def valid(orig, new, silent):
+def valid(orig, new, silent, context=''):
     if not new or not new.strip(): return 'empty'
     if re.search(r'\*\*|^#|^\s*[-*•] |\|',new,flags=re.M): return 'markdown'
     if re.search(r'[\U0001F300-\U0001FAFF✅❌]',new): return 'emoji'
     if silent:
         if len(new)>200: return 'too_long_preamble'
-        if nums(new): return 'preamble_number'
+        if any(k not in nums(context) for k in nums(new)): return 'preamble_number'
         if '?' in new: return 'preamble_question'
         return None
     if len(new)>1.6*len(orig)+40: return 'too_long'
@@ -94,7 +98,8 @@ def process(row, model, key):
     stats=collections.Counter(); msgs=row['messages']
     for i,silent in targets:
         orig=msgs[i].get('content') or ''; new=got.get(i)
-        why=valid(orig,new or '',silent) if new is not None else 'missing'
+        ctx=' '.join((m.get('content') or '')+json.dumps(m.get('tool_calls') or '') for m in msgs[:i+1])
+        why=valid(orig,new or '',silent,ctx) if new is not None else 'missing'
         if why is None:
             msgs[i]['content']=new.strip(); stats['rewritten_silent' if silent else 'rewritten_text']+=1
         else:
