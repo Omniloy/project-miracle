@@ -155,6 +155,12 @@ agent_args() {  # $1 = thinking mode
 }
 AGENT_ARGS=$(agent_args "$THINKING")
 echo "agent args: $AGENT_ARGS  concurrency: $CONC  model: hosted_vllm/$MODEL"
+if [ "${PHONE_PROBE:-0}" = 1 ]; then  # phone-style probe on the held-out Switchboard traces (student vs base, thinking off, greedy)
+  echo "=== phone probe $(date -u) ==="; curl -sSL -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/datasets/$WORK_REPO/resolve/main/bundle/phone_probe.py -o $W/phone_probe.py
+  $VPY -m pip install -q requests 2>&1 | tail -1; rm -f $W/status/phone_probe.jsonl
+  MODELS=student,base $VPY $W/phone_probe.py $W/${PHONE_DATA:-data_v2/dev_sw.jsonl} $W/status/phone_probe.jsonl 2>&1 | tail -2
+  echo "STEP phone probe done $(date -u)" >> $W/status/step_eval.txt; up $W/status status_${STATUS_TAG:-eval}
+fi
 if [ "${EVAL_SET:-both}" != "test" ]; then
   echo "=== DEV eval (synthetic held-out, Flash user-sim) ==="; TAU2_DATA_DIR=$W/data_synth .venv/bin/tau2 run --domain banking_knowledge --retrieval-config bm25_grep --num-trials 2 --max-steps 200 --seed 5 \
     --agent-llm hosted_vllm/$MODEL --agent-llm-args "$AGENT_ARGS" --user-llm openrouter/z-ai/glm-5.3-flash --max-concurrency $CONC --save-to dev_${MODEL} 2>&1 | grep -E 'Average Reward|Pass\^1|Infra|Error' | tail -4
