@@ -73,6 +73,15 @@ def main():
     warm=max(1,int(total_steps*a.warmup))
     def lr_at(s): return a.lr*s/warm if s<warm else a.lr*0.5*(1+math.cos(math.pi*min(1.0,(s-warm)/max(1,total_steps-warm))))
     os.makedirs(a.out,exist_ok=True); os.makedirs(os.path.dirname(a.status),exist_ok=True)
+    def save_adapter():
+        """peft saves keys as base_model.model.model.layers.* (Qwen3_5ForCausalLM); vLLM's Qwen3_5ForConditionalGeneration
+        LoRA loader needs base_model.model.model.language_model.layers.* (adapter_v0 had those) - otherwise the adapter is
+        loaded but SILENTLY never applied (v2 lesson: student == base on every probe)."""
+        model.save_pretrained(a.out)
+        from safetensors.torch import load_file, save_file
+        f=os.path.join(a.out,'adapter_model.safetensors'); t=load_file(f)
+        t={k.replace('base_model.model.model.layers.','base_model.model.model.language_model.layers.',1):v for k,v in t.items()}
+        save_file(t,f,metadata={'format':'pt'})
     def log(d):
         d['t']=round(time.time(),1); print(json.dumps(d),flush=True); open(a.status,'a').write(json.dumps(d)+'\n')
     @torch.no_grad()
@@ -97,7 +106,7 @@ def main():
             log({'step':step,'epoch':round(ep-len(order)/len(train),3),'loss':round(acc_loss/max(1,acc_n),4),'lr':lr_at(step),'tok_s':round(tok_seen/el,1),'tokens':tok_seen,'elapsed_min':round(el/60,1),'eta_min':round(el/60*(total_steps-step)/max(1,step),1),'mem_gb':round(torch.cuda.max_memory_allocated()/1e9,1)})
             acc_tok=0; acc_loss=0.0; acc_n=0
             if dev and step%a.eval_every==0: log({'step':step,'eval_loss':round(evaluate(),4)})
-            if step%a.save_every==0: model.save_pretrained(a.out); log({'step':step,'saved':a.out})
+            if step%a.save_every==0: save_adapter(); log({'step':step,'saved':a.out})
     if dev: log({'step':step,'eval_loss':round(evaluate(),4),'final':True})
-    model.save_pretrained(a.out); log({'step':step,'saved':a.out,'done':True}); print('TRAIN_DONE',flush=True)
+    save_adapter(); log({'step':step,'saved':a.out,'done':True}); print('TRAIN_DONE',flush=True)
 if __name__=='__main__': main()
