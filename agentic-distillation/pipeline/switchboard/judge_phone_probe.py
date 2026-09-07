@@ -32,7 +32,7 @@ def main():
                         a_text=json.dumps(A.get('content'),ensure_ascii=False),a_tools=tools_str(A.get('tool_calls')),b_text=json.dumps(B.get('content'),ensure_ascii=False),b_tools=tools_str(B.get('tool_calls')))
         for att in range(3):
             try:
-                r=requests.post(URL,headers={'Authorization':f'Bearer {key}'},json={'model':a.model,'messages':[{'role':'user','content':p}],'temperature':0,'max_tokens':3000,'reasoning':{'enabled':False}},timeout=180).json()
+                r=requests.post(URL,headers={'Authorization':f'Bearer {key}'},json={'model':a.model,'messages':[{'role':'user','content':p}],'temperature':0,'max_tokens':3000},timeout=180).json()
                 j=json.loads(re.search(r'\{.*\}',r['choices'][0]['message']['content'],re.S).group(0)); break
             except Exception as e: err=str(e)+' | '+(json.dumps(r)[:300] if 'r' in dir() else ''); time.sleep(2); j=None
         if not j: return {'key':list(k),'error':err}
